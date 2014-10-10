@@ -1,11 +1,835 @@
 doctype html
-html(lang="en")
+// Conditionals for IE9 Support
+//if IE 9
+	html.ie.ie9(lang="en")
+html
 	head
-		title pageTitle
-	body
-		h1 Jade - node template engine
-		p.
-			Jade is a terse and simple
-			templating language with a
-			strong focus on performance
-			and powerful features.
+		meta(charset="utf-8")
+		title deNS
+		meta(name="description", content="")
+		meta(name="keywords", content="")
+		meta(name="author", content="")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+		// Favicon
+		link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+		link(rel="icon", href="favicon.ico", type="image/x-icon")
+		// Google Fonts
+		link(href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700", rel="stylesheet", type="text/css")
+		// Bootstrap 3.1.1
+		link(href="bower_components/ultima/css/bootstrap.min.css", rel="stylesheet", media="screen")
+		// Icon Fonts
+		link(href="bower_components/font-awesome/css/font-awesome.min.css", rel="stylesheet", media="screen")
+		link(href="bower_components/icomoon/style.css", rel="stylesheet", media="screen")
+		// Animations
+		link(href="bower_components/animate.css/animate.min.css", rel="stylesheet", media="screen")
+		// Theme Styles
+		link(href="bower_components/ultima/css/theme-styles.css", rel="stylesheet", media="screen")
+		// Color Schemes
+		link(href="bower_components/ultima/css/colors/color-default.css", rel="stylesheet", media="screen")
+		// Modernizr
+		script(src="bower_components/modernizr/modernizr.js")
+		// Adding Media Queries and Canvas Support for IE8
+		//if lt IE 9
+			script(src="js/plugins/respond.min.js")
+			script(src="js/plugins/excanvas.js")
+	// Body
+	body.space-top
+		// Page Preloading
+		#preloader
+			#spinner
+		// Login Modal
+		#loginModal.light-skin.modal.fade(tabindex="-1", role="form", aria-hidden="true")
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button.close(type="button", data-dismiss="modal", aria-hidden="true") &#215;
+						h4.modal-title Login here
+					.modal-body
+						form.login-form(role="form")
+							.form-group
+								label(for="username") Username
+								input#username.form-control(type="text", placeholder="Enter Username", required="")
+							.form-group
+								label(for="password") Password
+								input#password.form-control(type="password", placeholder="Enter Password", required="")
+							button.btn.btn-primary(type="submit") Login
+				// /.modal-content
+			// /.modal-dialog
+		// /.modal
+		// Header
+		header.stiky-header
+			.container.group
+				a.logo(href="index.html")
+					img(src="bower_components/ultima/img/logo-dark.png", alt="Ultima")
+				a.logo-mobile(href="index.html")
+					img(src="bower_components/ultima/img/logo-mobile.png", alt="Ultima")
+				.navi-toggle.group
+					span.dot
+					span.line
+					span.dot
+					span.line
+					span.dot
+					span.line
+					span.dot
+					span.line
+				a.btn.btn-primary.btn-login(href="#", data-toggle="modal", data-target="#loginModal")
+					i.icon-user
+					| Login
+				nav.main-navi
+					ul
+						li.active
+							a.scroll-up(href="#") Home
+						li.has-dropdown
+							a.scroll(href="#features")
+								| Features
+								i.fa.fa-caret-down
+							ul.dropdown
+								li
+									a(href="#") Submenu Item
+								li
+									a(href="#") Submenu Item
+								li
+									a(href="#") Submenu Item
+								li
+									a(href="#") Submenu Item
+						li.has-dropdown
+							a(href="coming-soon.html")
+								| Coming soon
+								i.fa.fa-caret-down
+							ul.dropdown
+								li
+									a(href="#") Submenu Item
+								li
+									a(href="#") Submenu Item
+								li
+									a(href="#") Submenu Item
+						li
+							a(href="cs-page.html") Components &#38; Styles
+		// Hero Unit with Slider
+		section.hero
+			.container
+				// Hero Slider
+				.row
+					.hero-slider
+						.slide.first-slide
+							.col-lg-5.col-md-5.col-sm-5.animated
+								h2.text-light.text-left(style="margin-top:50px;") deNS
+								p Update your website's security to the state of the art.
+								p Be one step ahead of criminals and government agencies.
+								a.btn.btn-primary(href="#wizard") Start using deNS now
+							.col-lg-7.col-md-7.col-sm-7.animated
+								img.pull-right(src="bower_components/ultima/img/hero-slider/imac.png", width="689", height="659", alt="Components and Styles")
+						.slide
+							.col-lg-5.col-md-5.col-sm-5.animated.fadeInUp
+								h2.text-light.text-left(style="margin-top:50px;") Coming Soon Page
+								p Have a look at Ultima Coming soon page!
+								p
+									| While your landing page is under construction show your visitors beautiful coming soon page with the coundown and subscription form.
+								p And they always stay connected.
+								a.btn.btn-primary(href="coming-soon.html") Go to Coming soon page
+							.col-lg-7.col-md-7.col-sm-7.animated.fadeInRight
+								img.iphone(src="bower_components/ultima/img/hero-slider/iphone.png", width="649", height="400", alt="Coming Soon Page")
+				// Close Hero Slider
+		// Close Hero
+		// Features
+		section#features.page-block
+			.container
+				.row.page-header
+					h2 Features
+					span Subtext for header
+				.row.features
+					.col-lg-4.col-md-4.col-sm-4
+						.feature-img
+							img(src="bower_components/ultima/img/features/feature1.png", width="124", height="120", alt="Editable colors")
+						h3 Editable colors
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo.
+					.col-lg-4.col-md-4.col-sm-4
+						.feature-img
+							img(src="bower_components/ultima/img/features/feature2.png", width="131", height="131", alt="All you need for start")
+						h3 All you need for start
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo.
+					.col-lg-4.col-md-4.col-sm-4
+						.feature-img
+							img(src="bower_components/ultima/img/features/feature3.png", width="72", height="72", alt="Clean code")
+						h3 Clean code
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo.
+			// Tabs
+			.container-fluid
+				.row
+					// Nav tabs
+					ul.nav.nav-tabs.central
+						li.active
+							a(href="#clean-code", data-toggle="tab") Clean Code
+						li
+							a(href="#font-icons", data-toggle="tab") Font Icons
+						li
+							a(href="#more", data-toggle="tab") More
+			// Tab panes
+			.container
+				.row.tab-content.central
+					#clean-code.tab-pane.fade.in.active.col-lg-12
+						.row
+							.col-lg-6.col-md-6.animated.fadeInLeft
+								img(src="bower_components/ultima/img/features/1.png", alt="Clean Code")
+							.col-lg-6.col-md-6.animated.fadeInRight
+								.row
+									.col-lg-12
+										h2 Clean code
+										p.double-space-bottom
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								.row
+									.col-lg-2
+										i.feature-icon.icon-support
+									.col-lg-10
+										p.double-space-bottom
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								.row
+									.col-lg-2
+										i.feature-icon.icon-map
+									.col-lg-10
+										p.double-space-bottom
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+								.row
+									.col-lg-2
+										i.feature-icon.icon-gift
+									.col-lg-10
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+					#font-icons.tab-pane.fade.col-lg-12
+						.row
+							.col-lg-6.col-md-6.animated.fadeInLeft
+								img(src="bower_components/ultima/img/features/2.png", alt="Font Icons")
+							.col-lg-6.col-md-6.animated.fadeInRight
+								.row
+									.col-lg-12
+										h2 800+ Font icons
+										p.double-space-bottom
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								.row
+									.col-lg-2
+										i.feature-icon.icon-scissors
+									.col-lg-10
+										p.double-space-bottom
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								.row
+									.col-lg-2
+										i.feature-icon.icon-code
+									.col-lg-10
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+					#more.tab-pane.fade.col-lg-12
+						.row
+							.col-lg-6.col-md-6.animated.fadeInLeft
+								img.img-center(src="bower_components/ultima/img/features/3.png", alt="More Features")
+							.col-lg-6.col-md-6.animated.fadeInRight
+								.row
+									.col-lg-12
+										h2 More features overview
+										p.double-space-bottom
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								.row
+									.col-lg-2
+										i.feature-icon.icon-youtube
+									.col-lg-10
+										p.double-space-bottom
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								.row
+									.col-lg-2
+										i.feature-icon.icon-compass
+									.col-lg-10
+										p.double-space-bottom
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+								.row
+									.col-lg-2
+										i.feature-icon.icon-cog
+									.col-lg-10
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+		// Charts
+		section#charts.page-block.less-space-bottom
+			.container
+				.row.page-header
+					h2 Animated charts
+					span Subtext for header
+				.row
+					.col-lg-6.col-md-6.col-sm-6.chart
+						h3 Line Chart
+						canvas#lineChart(width="550", height="320")
+					.col-lg-6.col-md-6.col-sm-6.chart
+						h3 Bar Chart
+						canvas#barChart(width="550", height="320")
+				.row
+					.col-lg-6.col-md-6.col-sm-6.chart
+						h3 Pie Chart
+						.group
+							.pie-chart
+								canvas#pieChart(width="260", height="260")
+							.pie-chart-legend.animated-legend
+								.label(style="color:#ff6f69;")
+									span 20%
+									| Item01
+								.label(style="color:#e7e7ea;")
+									span 25%
+									| Item02
+								.label(style="color:#313447;")
+									span 40%
+									| Item01
+								.label(style="color:#ffad10;")
+									span 15%
+									| Item02
+					.col-lg-6.col-md-6.col-sm-6.chart
+						h3 Doughnut Chart
+						.group
+							.pie-chart
+								canvas#doughnutChart(width="260", height="260")
+							.pie-chart-legend.animated-legend
+								.label(style="color:#ff6f69;")
+									span 20%
+									| Item01
+								.label(style="color:#e7e7ea;")
+									span 25%
+									| Item02
+								.label(style="color:#313447;")
+									span 40%
+									| Item01
+								.label(style="color:#ffad10;")
+									span 15%
+									| Item02
+		// Gallery
+		section#gallery.page-block
+			.container
+				.row.page-header
+					h2 Gallery
+					span Subtext for header
+				.row
+					ul.gallery
+						li
+							a(href="#", data-largesrc="bower_components/ultima/img/gallery/1.jpg", data-title="City Center", data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
+								img(src="bower_components/ultima/img/gallery/th_1.png", alt="thumb01")
+								span.img-caption City Center
+						li
+							a(href="#", data-largesrc="bower_components/ultima/img/gallery/2.jpg", data-title="Beach Van", data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
+								img(src="bower_components/ultima/img/gallery/th_2.png", alt="thumb02")
+								span.img-caption Beach Van
+						li
+							a(href="#", data-largesrc="bower_components/ultima/img/gallery/3.jpg", data-title="Tea Pot", data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
+								img(src="bower_components/ultima/img/gallery/th_3.png", alt="thumb03")
+								span.img-caption Tea Pot
+						li
+							a(href="#", data-largesrc="bower_components/ultima/img/gallery/4.jpg", data-title="Railway Station", data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
+								img(src="bower_components/ultima/img/gallery/th_4.png", alt="thumb04")
+								span.img-caption Railway Station
+						li
+							a(href="#", data-largesrc="bower_components/ultima/img/gallery/5.jpg", data-title="City Center", data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
+								img(src="bower_components/ultima/img/gallery/th_5.png", alt="thumb05")
+								span.img-caption City Center
+						li
+							a(href="#", data-largesrc="bower_components/ultima/img/gallery/6.jpg", data-title="Bicycle Parking", data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
+								img(src="bower_components/ultima/img/gallery/th_6.png", alt="thumb06")
+								span.img-caption Bicycle Parking
+						li
+							a(href="#", data-largesrc="bower_components/ultima/img/gallery/7.jpg", data-title="London Boat", data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
+								img(src="bower_components/ultima/img/gallery/th_7.png", alt="thumb07")
+								span.img-caption London Boat
+						li
+							a(href="#", data-largesrc="bower_components/ultima/img/gallery/8.jpg", data-title="Apple Air", data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
+								img(src="bower_components/ultima/img/gallery/th_8.png", alt="thumb08")
+								span.img-caption Apple Air
+		// Application Wizard
+		section#wizard.page-block
+			.container
+				.row.page-header
+					h2 Application wizard
+					span Subtext for header
+				.row
+					.col-lg-12
+						.wizard
+							.header
+								h3 Application Wizard
+								.progress-bar.group
+									.overlay
+									.line
+									a.step-link.left.current(href="#step01", data-toggle="tab")
+										span.status
+									a.step-link.middle(href="#step02", data-toggle="tab")
+										span.status
+									a.step-link.right(href="#step03", data-toggle="tab")
+										span.status
+							form#wizard-form.wizard-form.body(method="post", role="form")
+								// Step 1
+								#step01.wizard-step.fade.in.active
+									.tab-links-wrap
+										.overlay
+										.row.tab-links
+											.tab-link.active.col-lg-3.col-md-3.col-sm-3.col-xs-3
+												a(href="#contact", data-toggle="tab")
+													i.fa.fa-user
+													span Contact details
+											.tab-link.col-lg-3.col-md-3.col-sm-3.col-xs-3
+												a(href="#background", data-toggle="tab")
+													i.fa.fa-suitcase
+													span Background
+											.tab-link.col-lg-3.col-md-3.col-sm-3.col-xs-3
+												a(href="#id", data-toggle="tab")
+													i.fa.fa-check-circle-o
+													span ID Proof
+											.tab-link.col-lg-3.col-md-3.col-sm-3.col-xs-3
+												a(href="#agreement", data-toggle="tab")
+													i.fa.fa-file-text
+													span Agreement
+									.tabs
+										#contact.tab.row.fade.in.active
+											.col-lg-12
+												.row
+													.col-lg-6.col-md-6.col-sm-6.form-group
+														label(for="name") Name (required)
+														input#name.form-control(type="text", name="name", placeholder="Enter your name", required="")
+													.col-lg-6.col-md-6.col-sm-6.form-group
+														label(for="email") Email (required)
+														input#email.form-control(type="email", name="email", placeholder="Enter your email", required="")
+												.row
+													.col-lg-6.col-md-6.col-sm-6.form-group
+														label(for="adress") Adress
+														input#adress.form-control(type="text", name="adress", placeholder="Enter your adress")
+													.col-lg-6.col-md-6.col-sm-6.form-group
+														label(for="phone") Phone (required numbers only)
+														input#phone.form-control(type="text", name="phone", placeholder="Enter your phone")
+										#background.tab.row.fade
+											.col-lg-12
+												.row
+													.col-lg-6.col-md-6.col-sm-6.form-group
+														label(for="education") Educational background
+														textarea#education.form-control(name="education", rows="8", placeholder="Describe your educational background")
+													.col-lg-6.col-md-6.col-sm-6.form-group
+														label(for="profession") Professional background
+														textarea#profession.form-control(name="profession", rows="8", placeholder="Describe your professional background")
+										#id.tab.row.fade
+											.col-lg-12
+												.row
+													.col-lg-6.col-md-6.col-sm-6.form-group
+														label(for="security") Social security no (required numbers only)
+														input#security.form-control(type="text", name="security", placeholder="Enter social security no", required="")
+												.row
+													.col-lg-6.col-md-6.col-sm-6.form-group
+														label(for="exp_date") ID expiry date
+														input#exp_date.form-control(type="text", name="exp_date", placeholder="Enter ID expiry date")
+										#agreement.tab.row.fade
+											.col-lg-12
+												.row
+													.col-lg-6.col-md-6.col-sm-6
+														.form-group
+															label(for="agreem") Agreement no
+															input#agreem.form-control(type="text", name="agreem", placeholder="Enter agreement no")
+														.form-group
+															.checkbox.custom
+																label
+																	input.icheckbox(type="checkbox", name="terms")
+																	| I have read and agree to the terms of service
+													.col-lg-6.col-md-6.col-sm-6.form-group
+														label(for="education") Agreement
+														textarea#agr_text.form-control(name="agr_text", rows="8", placeholder="Write agreement here")
+								// Step 2
+								#step02.wizard-step.fade
+									.tab-links-wrap
+										.overlay
+										.row.tab-links
+											.tab-link.active.col-lg-6.col-md-6.col-sm-6.col-xs-6
+												a(href="#tab01", data-toggle="tab")
+													i.fa.fa-anchor
+													| Tab 01
+											.tab-link.col-lg-6.col-md-6.col-sm-6.col-xs-6
+												a(href="#tab02", data-toggle="tab")
+													i.fa.fa-anchor
+													| Tab 02
+									.tabs
+										#tab01.tab.row.fade.in.active
+											.col-lg-12
+												.row
+													.form-group.col-lg-6.col-md-6.col-sm-6
+														label(for="field01") Field 01
+														input#field01.form-control(type="text", name="field01", placeholder="Placeholder")
+													.form-group.col-lg-6.col-md-6.col-sm-6
+														label(for="field02") Field 02
+														input#field02.form-control(type="text", name="field02", placeholder="Placeholder")
+												.row
+													.col-lg-12.col-md-12.col-sm-12.form-group
+														label(for="textarea01") Textarea (required)
+														textarea#textarea01.form-control(name="textarea01", rows="8", placeholder="Placeholder", required="")
+										#tab02.tab.row.fade
+											.col-lg-12
+												.row
+													.col-lg-6.col-md-6.col-sm-6
+														.form-group
+															label(for="field03") Field 03
+															input#field03.form-control(type="text", name="field03", placeholder="Placeholder")
+														.form-group
+															label(for="field04") Field 04
+															input#field04.form-control(type="text", name="field04", placeholder="Placeholder")
+													.row
+														.col-lg-6.col-md-6.col-sm-6.form-group
+															label(for="textarea02") Textarea
+															textarea#textarea02.form-control(name="textarea02", rows="8", placeholder="Placeholder")
+								// Step 3
+								#step03.wizard-step.fade
+									.tab-links-wrap
+										.overlay
+										.row.tab-links
+											.tab-link.active.col-lg-6.col-md-6.col-sm-6.col-xs-6
+												a(href="#tab03", data-toggle="tab")
+													i.fa.fa-anchor
+													| Tab 03
+											.tab-link.col-lg-6.col-md-6.col-sm-6.col-xs-6
+												a(href="#tab04", data-toggle="tab")
+													i.fa.fa-anchor
+													| Tab 04
+									.tabs
+										#tab03.tab.row.fade.in.active
+											.col-lg-12
+												.row
+													.col-lg-6.col-md-6.col-sm-6
+														.form-group
+															label(for="field05") Field 05
+															input#field05.form-control(type="text", name="field05", placeholder="Placeholder")
+														.form-group
+															label(for="field06") Field 06
+															input#field06.form-control(type="text", name="field06", placeholder="Placeholder")
+										#tab04.tab.row.fade
+											.col-lg-12
+												.row
+													.col-lg-6.col-md-6.col-sm-6
+														.form-group
+															label(for="field07") Field 07
+															input#field07.form-control(type="text", name="field07", placeholder="Placeholder")
+														.form-group
+															label(for="field08") Field 08
+															input#field08.form-control(type="text", name="field08", placeholder="Placeholder")
+													.row
+														.col-lg-6.col-md-6.col-sm-6.form-group
+															label(for="textarea03") Textarea03
+															textarea#textarea03.form-control(name="textarea03", rows="8", placeholder="Placeholder")
+								.wizard-footer.group
+									.buttons
+										a.btn.btn-primary.prev-tab.hidden(href="#") Back
+										a.btn.btn-primary.next-tab(href="#") Continue
+										input#submit-wizard.btn.btn-primary.hidden(type="submit", value="Submit form")
+		// Pricing Plans
+		section#pricing.page-block
+			.container
+				.row.page-header
+					h2 Pricing plans
+					span Subtext for header
+				.row
+					.col-lg-4.col-md-4.col-sm-4
+						.pricing-plan
+							.header
+								h3 Pricing Plan 01
+								span.price 9.99 $
+							.body
+								ul
+									li Lots of Components
+									li Cool Icons
+									li Unlimited colors
+								.buy-btn
+									a.btn.btn-primary(href="#") Buy
+					.col-lg-4.col-md-4.col-sm-4
+						.pricing-plan.highlited
+							.header
+								h3 Pricing Plan 02
+								span.price 19.99 $
+							.body
+								ul
+									li Lots of Components
+									li Cool Icons
+									li Unlimited colors
+								.buy-btn
+									a.btn.btn-primary(href="#") Buy
+					.col-lg-4.col-md-4.col-sm-4
+						.pricing-plan
+							.header
+								h3 Pricing Plan 03
+								span.price 149.99 $
+							.body
+								ul
+									li Lots of Components
+									li Cool Icons
+									li Unlimited colors
+								.buy-btn
+									a.btn.btn-primary(href="#") Buy
+		// FAQ
+		section#faq.page-block.faq
+			.container
+				.row.page-header
+					h2 FAQ
+					span Subtext for header
+				.row
+					.col-lg-3.col-md-4.col-sm-4
+						img.img-center(src="bower_components/ultima/img/faq-icon.png", alt="FAQ")
+					.col-lg-8.col-md-8.col-sm-8
+						#accordion-faq.panel-group
+							.panel
+								a.panel-heading.collapsed(data-toggle="collapse", data-parent="#accordion-faq", href="#collapse1")
+									| FAQ 01
+									.indicator
+										.icon
+											span.hr-line
+											span.vr-line
+								#collapse1.panel-collapse.collapse
+									.panel-body
+										| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.
+							.panel
+								a.panel-heading.collapsed(data-toggle="collapse", data-parent="#accordion-faq", href="#collapse2")
+									| FAQ 02
+									.indicator
+										.icon
+											span.hr-line
+											span.vr-line
+								#collapse2.panel-collapse.collapse
+									.panel-body
+										| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.
+							.panel
+								a.panel-heading(data-toggle="collapse", data-parent="#accordion-faq", href="#collapse3")
+									| FAQ 03
+									.indicator
+										.icon
+											span.hr-line
+											span.vr-line
+								#collapse3.panel-collapse.collapse.in
+									.panel-body
+										| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.
+		// Testimonials
+		section#testimonials.page-block.color
+			.container
+				.row.page-header
+					h2.text-light Testimonials
+					span.text-light Subtext for header
+				.row
+					#testimonials-slider.testimonials-slider.carousel.slide(data-ride="carousel")
+						// Indicators
+						ol.carousel-indicators
+							li.active(data-target="#testimonials-slider", data-slide-to="0")
+							li(data-target="#testimonials-slider", data-slide-to="1")
+							li(data-target="#testimonials-slider", data-slide-to="2")
+						// Wrapper for slides
+						.carousel-inner
+							.item.active
+								.container
+									.row
+										.col-lg-3.col-md-3.col-sm-4
+											img.img-circle.img-center(src="bower_components/ultima/img/testimonials/dirk.png", width="192", height="192", alt="Dexter Dirk")
+										.col-lg-9.col-md-9.col-sm-8
+											blockquote
+												p.text-light
+													| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+												footer.text-light Dexter Dirk
+							.item
+								.container
+									.row
+										.col-lg-3.col-md-3.col-sm-4
+											img.img-circle.img-center(src="bower_components/ultima/img/testimonials/roe.png", width="192", height="192", alt="Richard Roe")
+										.col-lg-9.col-md-9.col-sm-8
+											blockquote
+												p.text-light
+													| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+												footer.text-light Richard Roe
+							.item
+								.container
+									.row
+										.col-lg-3.col-md-3.col-sm-4
+											img.img-circle.img-center(src="bower_components/ultima/img/testimonials/doe.png", width="192", height="192", alt="Jonathan Doe")
+										.col-lg-9.col-md-9.col-sm-8
+											blockquote
+												p.text-light
+													| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+												footer.text-light Jonathan Doe
+		// Mobile Apps
+		section#apps.page-block.mobile-apps
+			.container
+				.row.page-header
+					h2 Mobile apps
+					span Subtext for header
+				.row
+					.col-lg-4.col-md-4
+						.row
+							.col-lg-12.col-md-12.col-sm-12
+								.row.space-bottom
+									.col-lg-9.col-md-9
+										h3 Run on any device
+									.col-lg-3.col-md-3
+										img.img-center(src="bower_components/ultima/img/apps-icon.png", alt="Mobile Apps")
+								.row
+									.col-lg-12.col-md-12
+										p.text-justify
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								.row
+									.col-lg-10.col-md-11
+										a.btn.btn-primary.btn-block(href="#")
+											i.icon-android
+											| Available on Google Play
+										a.btn.btn-primary.btn-block(href="#")
+											i.icon-apple
+											| Available on App Store
+										a.btn.btn-primary.btn-block(href="#")
+											i.icon-windows8
+											| Windows Marketplace
+					.col-lg-8.col-md-8
+						img.double-space-top(src="bower_components/ultima/img/tablet.png", alt="Mobile Apps")
+		// Team
+		section#team.page-block.team
+			.container
+				.row.page-header
+					h2 Meet our team
+					span Subtext for header
+				.row
+					.col-lg-3.col-md-3.col-sm-3
+						img.img-circle-thumbnail.img-center(src="bower_components/ultima/img/team/dirk.jpg", alt="Dexter Dirk")
+						h3 Dexter Dirk
+						p Senior designer
+						.social-networks
+							a.icon-facebook.tooltipped(href="#", title="Facebook")
+							a.icon-instagram.tooltipped(href="#", title="Instagram")
+					.col-lg-3.col-md-3.col-sm-3
+						img.img-circle-thumbnail.img-center(src="bower_components/ultima/img/team/roe.jpg", alt="Alexander Roe")
+						h3 Alexander Roe
+						p Financial director
+						.social-networks
+							a.icon-twitter.tooltipped(href="#", title="Twitter")
+							a.icon-google-plus.tooltipped(href="#", title="Google+")
+					.col-lg-3.col-md-3.col-sm-3
+						img.img-circle-thumbnail.img-center(src="bower_components/ultima/img/team/davis.jpg", alt="Susanna Davis")
+						h3 Susanna Davis
+						p Art director
+						.social-networks
+							a.icon-youtube.tooltipped(href="#", title="Youtube")
+							a.icon-tumblr.tooltipped(href="#", title="Tumblr")
+					.col-lg-3.col-md-3.col-sm-3
+						img.img-circle-thumbnail.img-center(src="bower_components/ultima/img/team/doe.jpg", alt="Jonathan Doe")
+						h3 Jonathan Doe
+						p Technical support
+						.social-networks
+							a.icon-facebook.tooltipped(href="#", title="Facebook")
+							a.icon-twitter.tooltipped(href="#", title="Twitter")
+		// Contacts
+		section#contacts.page-block.contacts
+			.container
+				.row.page-header
+					h2 Contacts
+					span Subtext for header
+				.row
+					.col-lg-4.col-md-4
+						.row.space-bottom
+							.col-lg-9.col-md-9
+								h3 What we do
+							.col-lg-3.col-md-3
+								img.img-center(src="bower_components/ultima/img/contacts/man.png", alt="About Us")
+						.row
+							.col-lg-12
+								p.text-justify
+									| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+					.col-lg-3.col-md-4.col-lg-offset-1
+						.row.space-bottom
+							.col-lg-8.col-md-8
+								h3 Adress
+							.col-lg-4.col-md-4
+								img.img-center(src="bower_components/ultima/img/contacts/map.png", alt="Adress")
+						.row
+							.col-lg-12
+								p 4120 Lenox Avenue, New York, NY, 10035 76 Saint Nicholas Avenue
+						.row.space-bottom
+							.col-lg-8.col-md-8
+								h3 Contacts
+							.col-lg-4.col-md-4
+								img.img-center(src="bower_components/ultima/img/contacts/phone.png", alt="Contacts")
+						.row
+							.col-lg-12
+								p
+									| +48 555 234 54 34
+									br
+									| +48 555 234 54 33
+									br
+									| info@email.com
+									br
+									| support@email.com
+					.col-lg-3.col-md-4.col-lg-offset-1
+						.row.space-bottom
+							.col-lg-8.col-md-8
+								h3 Contact us
+							.col-lg-4.col-md-4
+								img.img-center(src="bower_components/ultima/img/contacts/plan.png", alt="Adress")
+						.row
+							.col-lg-12
+								form.feedback-form(role="form")
+									.form-group
+										label.sr-only(for="name1") Name
+										input#name1.form-control(type="text", name="name", placeholder="Name", required="")
+									.form-group
+										label.sr-only(for="email1") Email
+										input#email1.form-control(type="email", name="email", placeholder="Email", required="")
+									.form-group
+										label.sr-only(for="message") Message
+										textarea#message.form-control(name="message", rows="5", placeholder="Message", required="")
+									button.btn.btn-primary(type="submit") Submit
+		// Social Networks
+		section#social.page-block
+			.container
+				.row.page-header
+					h2 Find us on social networks
+					span Subtext for header
+				.row
+					.col-lg-12
+						.social-networks
+							a.icon-facebook.tooltipped(href="#", title="Facebook")
+							a.icon-instagram.tooltipped(href="#", title="Instagram")
+							a.icon-twitter.tooltipped(href="#", title="Twitter")
+							a.icon-google-plus.tooltipped(href="#", title="Google+")
+							a.icon-youtube.tooltipped(href="#", title="Youtube")
+							a.icon-tumblr.tooltipped(href="#", title="Tumblr")
+		// Footer
+		footer.footer
+			.container
+				.row
+					.col-lg-12
+						h2.text-center.text-light Subscribe to our newsletter
+						p.text-light.text-center
+							| Sign up now to our newsletter and you"ll be one of the first to know when the site is ready:
+				.row
+					// Begin MailChimp Signup Form
+					form#mc-embedded-subscribe-form.subscribe-form.validate(action="http://8guild.us3.list-manage.com/subscribe/post?u=168a366a98d3248fbc35c0b67&id=73d49e0d23", method="post", name="mc-embedded-subscribe-form", target="_blank", novalidate="")
+						.form-group.col-lg-7.col-md-8.col-sm-8.col-lg-offset-1
+							label.sr-only(for="mce-EMAIL") Email address
+							input#mce-EMAIL.form-control(type="email", name="EMAIL", placeholder="Enter email", required="")
+							// real people should not fill this in and expect good things - do not remove this or risk form bot signups
+							div(style="position: absolute; left: -5000px;")
+								input(type="text", name="b_168a366a98d3248fbc35c0b67_73d49e0d23", value="")
+						.form-group.col-lg-3.col-md-4.col-sm-4
+							input#mc-embedded-subscribe.btn.btn-primary.btn-block(type="submit", value="Subscribe", name="subscribe")
+					// Close MailChimp Signup Form
+				.row
+					.col-lg-12
+						p.copyright
+							| &#169; 2014 ULTIMA. All Rights Reserved. Designed by
+							a(href="http://8guild.com/", target="_blank") 8Guild
+		// Scroll To Top Button
+		#scroll-top.scroll-up
+			i.icon-arrow-up
+		
+		// Javascript (jQuery) Libraries and Plugins
+		script(src="bower_components/ultima/js/libs/jquery-1.10.2.min.js")
+		script(src="bower_components/ultima/js/libs/jquery.easing.1.3.js")
+		script(src="bower_components/ultima/js/plugins/bootstrap.min.js")
+		script(src="bower_components/ultima/js/plugins/jquery.touchSwipe.min.js")
+		script(src="bower_components/ultima/js/plugins/jquery.placeholder.js")
+		script(src="bower_components/ultima/js/plugins/icheck.min.js")
+		script(src="bower_components/ultima/js/plugins/jquery.validate.min.js")
+		script(src="bower_components/ultima/js/plugins/gallery.js")
+		script(src="bower_components/ultima/js/plugins/jquery.fitvids.js")
+		script(src="bower_components/ultima/js/plugins/jquery.bxslider.min.js")
+		script(src="bower_components/ultima/js/plugins/chart.js")
+		script(src="bower_components/ultima/js/plugins/waypoints.min.js")
+		script(src="bower_components/ultima/js/plugins/smoothscroll.js")
+		script(src="bower_components/ultima/js/landing2.js")
+	// Close Body
+
+
