@@ -1,0 +1,15 @@
+#loginModal.light-skin.modal.fade(tabindex="-1", role="form", aria-hidden="true")
+	.modal-dialog
+		.modal-content
+			.modal-header
+				button.close(type="button", data-dismiss="modal", aria-hidden="true") &#215;
+				h4.modal-title Login here
+			.modal-body
+				form.login-form(role="form")
+					.form-group
+						label(for="username") Username
+						input#username.form-control(type="text", placeholder="Enter Username", required="")
+					.form-group
+						label(for="password") Password
+						input#password.form-control(type="password", placeholder="Enter Password", required="")
+					button.btn.btn-primary(type="submit") Login

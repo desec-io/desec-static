@@ -1,0 +1,50 @@
+section#charts.page-block.less-space-bottom
+	.container
+		.row.page-header
+			h2 Animated charts
+			span Subtext for header
+		.row
+			.col-lg-6.col-md-6.col-sm-6.chart
+				h3 Line Chart
+				canvas#lineChart(width="550", height="320")
+			.col-lg-6.col-md-6.col-sm-6.chart
+				h3 Bar Chart
+				canvas#barChart(width="550", height="320")
+		.row
+			.col-lg-6.col-md-6.col-sm-6.chart
+				h3 Pie Chart
+				.group
+					.pie-chart
+						canvas#pieChart(width="260", height="260")
+					.pie-chart-legend.animated-legend
+						.label(style="color:#ff6f69;")
+							span 20%
+							| Item01
+						.label(style="color:#e7e7ea;")
+							span 25%
+							| Item02
+						.label(style="color:#313447;")
+							span 40%
+							| Item01
+						.label(style="color:#ffad10;")
+							span 15%
+							| Item02
+			.col-lg-6.col-md-6.col-sm-6.chart
+				h3 Doughnut Chart
+				.group
+					.pie-chart
+						canvas#doughnutChart(width="260", height="260")
+					.pie-chart-legend.animated-legend
+						.label(style="color:#ff6f69;")
+							span 20%
+							| Item01
+						.label(style="color:#e7e7ea;")
+							span 25%
+							| Item02
+						.label(style="color:#313447;")
+							span 40%
+							| Item01
+						.label(style="color:#ffad10;")
+							span 15%
+							| Item02
+		

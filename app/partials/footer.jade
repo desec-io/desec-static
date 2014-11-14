@@ -1,0 +1,24 @@
+footer.footer
+	.container
+		.row
+			.col-lg-12
+				h2.text-center.text-light Subscribe to our newsletter
+				p.text-light.text-center
+					| Sign up now to our newsletter and you"ll be one of the first to know when the site is ready:
+		.row
+			// Begin MailChimp Signup Form
+			form#mc-embedded-subscribe-form.subscribe-form.validate(action="http://8guild.us3.list-manage.com/subscribe/post?u=168a366a98d3248fbc35c0b67&id=73d49e0d23", method="post", name="mc-embedded-subscribe-form", target="_blank", novalidate="")
+				.form-group.col-lg-7.col-md-8.col-sm-8.col-lg-offset-1
+					label.sr-only(for="mce-EMAIL") Email address
+					input#mce-EMAIL.form-control(type="email", name="EMAIL", placeholder="Enter email", required="")
+					// real people should not fill this in and expect good things - do not remove this or risk form bot signups
+					div(style="position: absolute; left: -5000px;")
+						input(type="text", name="b_168a366a98d3248fbc35c0b67_73d49e0d23", value="")
+				.form-group.col-lg-3.col-md-4.col-sm-4
+					input#mc-embedded-subscribe.btn.btn-primary.btn-block(type="submit", value="Subscribe", name="subscribe")
+			// Close MailChimp Signup Form
+		.row
+			.col-lg-12
+				p.copyright
+					| &#169; 2014 ULTIMA. All Rights Reserved. Designed by
+					a(href="http://8guild.com/", target="_blank") 8Guild

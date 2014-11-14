@@ -1,0 +1,138 @@
+section#wizard.page-block(ng-controller="SignUpCtrl")
+	.container
+		.row.page-header
+			h2 Sign up
+			span Join the beta
+		.row
+			.col-lg-12
+				.wizard
+					.header
+						h3 Apply for the free beta
+						.progress-bar.group
+							.overlay
+							.line
+							a.step-link.left(href="",ng-class="{current:step>=1&&step<=3}")
+								span.status
+							a.step-link.middle(href="",ng-class="{current:step>=4&&step<=5}")
+								span.status
+							a.step-link.right(href="",ng-class="{current:step==6}")
+								span.status
+					div.body
+						// Step 1
+						form#step01.wizard-step(novalidate, name="signupform",ng-class="{active: step>=1&&step<=3}",ng-show="step>=1&&step<=3")
+							.tab-links-wrap
+								.overlay
+								.row.tab-links
+									.tab-link.col-lg-4.col-md-4.col-sm-4.col-xs-4(ng-class="{active:step==1}")
+										a(href="")
+											i.fa.fa-user
+											span Contact Details
+									.tab-link.col-lg-4.col-md-4.col-sm-4.col-xs-4(ng-class="{active:step==2}")
+										a(href="")
+											i.fa.fa-suitcase
+											span Domain Information
+									.tab-link.col-lg-4.col-md-4.col-sm-4.col-xs-4(ng-class="{active:step==3}")
+										a(href="")
+											i.fa.fa-file-text
+											span Agreement
+							.tabs
+								#contact.tab.row.active(ng-show="step==1",ng-form="forms.step1")
+									.col-lg-12
+										.row
+											.col-lg-6.col-md-6.col-sm-6.form-group
+												label(for="name") Name (required)
+												input#name.form-control(type="text", name="name", ng-model="signup.name", placeholder="Enter your name", required)
+											.col-lg-6.col-md-6.col-sm-6.form-group
+												label(for="email") Email (required)
+												input#email.form-control(type="email", name="email", ng-model="signup.email", placeholder="Enter your email", required)
+								#domain.tab.row.active(ng-show="step==2")
+									.col-lg-12
+										.row
+											.col-lg-6.col-md-6.col-sm-6.form-group
+												label(for="domain") Domian Name (required)
+												input#name.form-control(type="text", name="domain", ng-model="signup.domain", placeholder="example.com", required)
+											.col-lg-6.col-md-6.col-sm-6.form-group
+												label(for="cert") Certificate information
+												textarea#profession.form-control(name="cert",ng-model="signup.cert", rows="8", placeholder="paste any of your certificate files (NOT your private key)")
+								#agreement.tab.row.active(ng-show="step==3")
+									.col-lg-12
+										.row
+											.col-lg-6.col-md-6.col-sm-6
+												p Pellentesque urna ante, tempor ac placerat quis, luctus sit amet nibh. Donec at augue pharetra velit accumsan ullamcorper. Sed consectetur erat ut magna tempus commodo. Praesent posuere metus a tristique finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sodales velit id ipsum euismod commodo. Curabitur eu leo lobortis, lacinia lacus nec, tempus enim. Curabitur ac dolor ante.
+												.form-group
+													div
+														label
+															input(type="checkbox", name="terms", ng-model="signup.terms", required)
+															| I have read and agree to the terms of service
+						// Step 2
+						#step02.wizard-step(ng-class="{active: step>=4&&step<=5}",ng-show="step>=4&&step<=5")
+							.tab-links-wrap
+								.overlay
+								.row.tab-links
+									.tab-link.active.col-lg-6.col-md-6.col-sm-6.col-xs-6
+										a(href="#tab01", data-toggle="tab")
+											i.fa.fa-anchor
+											| Tab 01
+									.tab-link.col-lg-6.col-md-6.col-sm-6.col-xs-6
+										a(href="#tab02", data-toggle="tab")
+											i.fa.fa-anchor
+											| Tab 02
+							.tabs
+								#tab01.tab.row(ng-show="step==4")
+									.col-lg-12
+										.row
+											.form-group.col-lg-6.col-md-6.col-sm-6
+												label(for="field01") Field 01
+												input#field01.form-control(type="text", name="field01", placeholder="Placeholder")
+											.form-group.col-lg-6.col-md-6.col-sm-6
+												label(for="field02") Field 02
+												input#field02.form-control(type="text", name="field02", placeholder="Placeholder")
+										.row
+											.col-lg-12.col-md-12.col-sm-12.form-group
+												label(for="textarea01") Textarea (required)
+												textarea#textarea01.form-control(name="textarea01", rows="8", placeholder="Placeholder", required="")
+								#tab02.tab.row(ng-show="step==5")
+									.col-lg-12
+										.row
+											.col-lg-6.col-md-6.col-sm-6
+												.form-group
+													label(for="field03") Field 03
+													input#field03.form-control(type="text", name="field03", placeholder="Placeholder")
+												.form-group
+													label(for="field04") Field 04
+													input#field04.form-control(type="text", name="field04", placeholder="Placeholder")
+										.row
+											.col-lg-6.col-md-6.col-sm-6.form-group
+												label(for="textarea02") Textarea
+												textarea#textarea02.form-control(name="textarea02", rows="8", placeholder="Placeholder")
+						#step03.wizard-step(ng-class="{active: step==6}",ng-show="step==6")
+							.tab-links-wrap
+								.overlay
+								.row.tab-links
+									.tab-link.active.col-lg-6.col-md-6.col-sm-6.col-xs-6
+										a(href="#tab01", data-toggle="tab")
+											i.fa.fa-anchor
+											| Tab 01
+									.tab-link.col-lg-6.col-md-6.col-sm-6.col-xs-6
+										a(href="#tab02", data-toggle="tab")
+											i.fa.fa-anchor
+											| Tab 02
+							.tabs
+								#tab01.tab.row.fade.in.active
+									.col-lg-12
+										.row
+											.form-group.col-lg-6.col-md-6.col-sm-6
+												label(for="field01") Field 01
+												input#field01.form-control(type="text", name="field01", placeholder="Placeholder")
+											.form-group.col-lg-6.col-md-6.col-sm-6
+												label(for="field02") Field 02
+												input#field02.form-control(type="text", name="field02", placeholder="Placeholder")
+										.row
+											.col-lg-12.col-md-12.col-sm-12.form-group
+												label(for="textarea01") Textarea (required)
+												textarea#textarea01.form-control(name="textarea01", rows="8", placeholder="Placeholder", required="")
+						.wizard-footer.group
+							.buttons
+								a.btn.btn-primary(href="",ng-click="step=step-1",ng-show="step>1") Back
+								a.btn.btn-primary(href="",ng-click="step=step+1",ng-show="step<3",ng-enabled="forms['step'+step].$valid") Continue
+								a.btn.btn-success(href="",ng-click="step=4",ng-show="step==3",ng-disabled="signupform.$invalid") Sign Up

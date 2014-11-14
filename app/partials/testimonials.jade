@@ -1,0 +1,45 @@
+section#testimonials.page-block.color
+	.container
+		.row.page-header
+			h2.text-light Testimonials
+			span.text-light Subtext for header
+		.row
+			#testimonials-slider.testimonials-slider.carousel.slide(data-ride="carousel")
+				// Indicators
+				ol.carousel-indicators
+					li.active(data-target="#testimonials-slider", data-slide-to="0")
+					li(data-target="#testimonials-slider", data-slide-to="1")
+					li(data-target="#testimonials-slider", data-slide-to="2")
+				// Wrapper for slides
+				.carousel-inner
+					.item.active
+						.container
+							.row
+								.col-lg-3.col-md-3.col-sm-4
+									img.img-circle.img-center(src="bower_components/ultima/img/testimonials/dirk.png", width="192", height="192", alt="Dexter Dirk")
+								.col-lg-9.col-md-9.col-sm-8
+									blockquote
+										p.text-light
+											| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+										footer.text-light Dexter Dirk
+					.item
+						.container
+							.row
+								.col-lg-3.col-md-3.col-sm-4
+									img.img-circle.img-center(src="bower_components/ultima/img/testimonials/roe.png", width="192", height="192", alt="Richard Roe")
+								.col-lg-9.col-md-9.col-sm-8
+									blockquote
+										p.text-light
+											| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+										footer.text-light Richard Roe
+					.item
+						.container
+							.row
+								.col-lg-3.col-md-3.col-sm-4
+									img.img-circle.img-center(src="bower_components/ultima/img/testimonials/doe.png", width="192", height="192", alt="Jonathan Doe")
+								.col-lg-9.col-md-9.col-sm-8
+									blockquote
+										p.text-light
+											| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+										footer.text-light Jonathan Doe
+		

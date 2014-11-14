@@ -1,0 +1,48 @@
+header.stiky-header
+	.container.group
+		a.logo(href="index.html")
+			img(src="bower_components/ultima/img/logo-dark.png", alt="Ultima")
+		a.logo-mobile(href="index.html")
+			img(src="bower_components/ultima/img/logo-mobile.png", alt="Ultima")
+		.navi-toggle.group
+			span.dot
+			span.line
+			span.dot
+			span.line
+			span.dot
+			span.line
+			span.dot
+			span.line
+		a.btn.btn-primary.btn-login(href="#", data-toggle="modal", data-target="#loginModal")
+			i.icon-user
+			| Login
+		nav.main-navi
+			ul
+				li.active
+					a.scroll-up(href="#") Home
+				li.has-dropdown
+					a.scroll(href="#features")
+						| Features
+						i.fa.fa-caret-down
+					ul.dropdown
+						li
+							a(href="#") Submenu Item
+						li
+							a(href="#") Submenu Item
+						li
+							a(href="#") Submenu Item
+						li
+							a(href="#") Submenu Item
+				li.has-dropdown
+					a(href="coming-soon.html")
+						| Coming soon
+						i.fa.fa-caret-down
+					ul.dropdown
+						li
+							a(href="#") Submenu Item
+						li
+							a(href="#") Submenu Item
+						li
+							a(href="#") Submenu Item
+				li
+					a(href="cs-page.html") Components &#38; Styles
