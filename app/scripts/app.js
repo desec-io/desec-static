@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc overview
- * @name densClientApp
+ * @name desecClientApp
  * @description
- * # densClientApp
+ * # desecClientApp
  *
  * Main module of the application.
  */
 angular
-  .module('densClientApp', [])
+  .module('desecClientApp', [])

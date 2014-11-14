@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name densClientApp.controller:AboutCtrl
+ * @name desecClientApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the densClientApp
+ * Controller of the desecClientApp
  */
-angular.module('densClientApp')
+angular.module('desecClientApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
