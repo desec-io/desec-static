@@ -1,0 +1,36 @@
+#clean-code.tab-pane.fade.in.active.col-lg-12
+	.row
+		.col-lg-6.col-md-6.animated.fadeInLeft
+			img(src="bower_components/ultima/img/features/1.png", alt="Clean Code")
+		.col-lg-6.col-md-6.animated.fadeInRight
+			.row
+				.col-lg-12
+					h2 Test Your Domain
+					p.double-space-bottom
+						| To see if your Domain is protected by DANE, use this test.
+			.row
+				.col-lg-2
+					i.feature-icon.icon-support
+				.col-lg-10(ng-controller="DomainTestCtrl")
+					p Test your domain now to see if it needs protection.
+					p(ng-show="state==3") There was a problem with the server. Please check your input.
+					form.form-inline(role="form",name="domaintestform",novalidate,ng-enabled="state!=1")
+						.form-group
+							.input-group
+								input(type="text",ng-model="domain",required,placeholder="Domain Name")
+						button.btn.btn-default(ng-click="domaintest(domain)") Test
+					p(ng-show="state==2&&protected==0") Your domain is not yet protected by DANE.
+					p(ng-show="state==2&&protected==1") Your domain is protected by DANE.
+						
+			.row
+				.col-lg-2
+					i.feature-icon.icon-map
+				.col-lg-10
+					p.double-space-bottom
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+			.row
+				.col-lg-2
+					i.feature-icon.icon-gift
+				.col-lg-10
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.

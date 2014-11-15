@@ -1,0 +1,44 @@
+doctype html
+#clean-code.tab-pane.fade.in.active.col-lg-12
+	.row
+		.col-lg-6.col-md-6.animated.fadeInLeft
+			img(src="bower_components/ultima/img/features/1.png", alt="Clean Code")
+		.col-lg-6.col-md-6.animated.fadeInRight
+			.row
+				.col-lg-12(ng-controller="DomainAddCtrl")
+					h2 Add New Domain
+
+					p Start using deSEC for your Domain.
+					p(ng-show="state==3") There was a problem with the server. Please check your input.
+					form.form-inline(role="form",name="domainaddform",novalidate,ng-show="state==0")
+						.form-group
+							.input-group
+								input(type="text",ng-model="domainname",required,placeholder="Domain Name")
+						button.btn.btn-default(ng-click="domainadd(domainname)") Add
+					p(ng-show="state==2")
+						b {{ domain.name }} 
+						| is ready to use with dane! 
+						a(ng-click="state=0",href) Add more
+					
+					p.double-space-bottom
+						| Using deSEC for your domains gives you awesome benefits, such as:
+			.row
+				.col-lg-2
+					i.feature-icon.icon-support
+				.col-lg-10(ng-controller="DomainTestCtrl")
+					p
+						| Paying money to our startup.
+						
+			.row
+				.col-lg-2
+					i.feature-icon.icon-map
+				.col-lg-10
+					p.double-space-bottom
+						| Ending up on the terrorist watchlist.
+			.row
+				.col-lg-2
+					i.feature-icon.icon-gift
+				.col-lg-10
+					p
+						| Complicating your server setup.
+			

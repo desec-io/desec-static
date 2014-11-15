@@ -1,0 +1,19 @@
+doctype html
+p
+
+// Tabs
+.container-fluid
+	.row
+		// Nav tabs
+		ul.nav.nav-tabs.central
+			// TODO add 'active' class to the active tab
+			li
+				a(ui-sref="dashboard.domainadd") Add Domain
+			li
+				a(ui-sref="dashboard.domaintest") Check Domain
+			li
+				a(ui-sref="dashboard.domainlist") Your Domains
+
+.container
+	.row.tab-content.central
+		div(ui-view)

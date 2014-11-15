@@ -9,4 +9,6 @@
  * Main module of the application.
  */
 angular
-  .module('desecClientApp', [])
+  .module('desecClientApp', [
+		'ui.router',
+	]);
