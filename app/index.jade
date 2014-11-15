@@ -33,26 +33,19 @@ html(ng-app="desecClientApp")
 			script(src="js/plugins/excanvas.js")
 		
 		script(src="bower_components/angular/angular.js")
+		script(src="bower_components/angular-ui-router/release/angular-ui-router.js")
 		script(src="scripts/app.js")
-		script(src="scripts/controllers/signup.js")
+		script(src="scripts/states.js")
+		script(src="scripts/services/auth.js")
+		script(src="scripts/controllers/register.js")
+		script(src="scripts/controllers/domaintest.js")
+		script(src="scripts/controllers/domainadd.js")
 	// Body
 	body.space-top
 		include partials/preloader.jade
 		include partials/login.jade
 		include partials/header.jade
-		include partials/hero.jade
-		include partials/signup.jade
-		include partials/features.jade
-		include partials/charts.jade
-		include partials/gallery.jade
-		include partials/pricing.jade
-		include partials/faq.jade
-		include partials/testimonials.jade
-		include partials/mobileapps.jade
-		include partials/team.jade
-		include partials/contacts.jade
-		include partials/social.jade
-		include partials/footer.jade
+		div(ui-view)
 		
 		// Scroll To Top Button
 		#scroll-top.scroll-up
