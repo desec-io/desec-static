@@ -32,7 +32,10 @@ module.exports = function(config) {
     ],
 
     // list of files / patterns to exclude
-    exclude: [],
+    exclude: [
+	  'app/scripts/landing1.js',
+	  'app/scripts/landing2.js'
+	],
 
     // web server port
     port: 8080,
