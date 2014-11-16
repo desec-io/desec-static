@@ -10,11 +10,15 @@ doctype html
 
 					p Start using deSEC for your Domain.
 					p(ng-show="state==3") There was a problem with the server. Please check your input.
-					form.form-inline(role="form",name="domainaddform",novalidate,ng-show="state==0")
+					form(role="form",name="domainaddform",novalidate,ng-show="state==0")
 						.form-group
-							.input-group
-								input(type="text",ng-model="domainname",required,placeholder="Domain Name")
-						button.btn.btn-default(ng-click="domainadd(domainname)") Add
+							label(for="domainname") Domain Name
+							input(type="text",ng-model="domainname",required,placeholder="Domain Name",name="domainname")
+						.form-group
+							label(for="cert") Certificate
+								small PEM format
+							textarea(ng-model="cert",required,placeholder="Paste your certificate",name="cert")
+						button.btn.btn-default(ng-click="domainadd(domainname,cert)") Add
 					p(ng-show="state==2")
 						b {{ domain.name }} 
 						| is ready to use with dane! 
