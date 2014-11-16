@@ -28,6 +28,7 @@ angular.module('desecClientApp').config(function($stateProvider, $urlRouterProvi
 		})
 		.state('dashboard.domainlist', {
 			url: "/dashboard/list",
-			templateUrl: "views/domainlist.html"
+			templateUrl: "views/domainlist.html",
+			controller: "DomainListCtrl"
 		})
 });
