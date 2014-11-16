@@ -1,6 +1,17 @@
 #clean-code.tab-pane.fade.in.active.col-lg-12
 	.row
 		h1 Domain List
-		ul
-			li(ng-repeat="d in domains") {{ d.id }}: {{ d.name }}
-			li(ng-if="domains.length == 0") Nothing here yet
+		p(ng-if="domains.length == 0")
+			| Nothing here yet. 
+			a(ui-sref="dashboard.domainadd") Add a Domain.
+		table.table.table-hover(ng-if="domains.length != 0")
+			thead
+				tr
+					td Name
+					td Serial No
+					td Fingerprint
+			tbody
+				tr(ng-repeat="d in domains",ng-class="{'danger': !d.cert_serial_no}")
+					td {{ d.name }}
+					td {{ d.cert_serial_no }}
+					td {{ d.cert_fingerprint }}
