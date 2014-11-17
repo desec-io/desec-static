@@ -30,7 +30,8 @@
     "grunt-contrib-jade": "~0.13.0",
     "grunt-connect-proxy": "~0.1.11",
     "karma": "~0.12.25",
-    "grunt-karma": "~0.9.0"
+    "grunt-karma": "~0.9.0",
+    "grunt-sftp-deploy": "~0.2.2"
   },
   "engines": {
     "node": ">=0.10.0"

@@ -235,14 +235,14 @@ module.exports = function (grunt) {
 		// concat, minify and revision files. Creates configurations in memory so
 		// additional tasks can operate on them
 		useminPrepare: {
-			html: '<%= yeoman.app %>/index.html',
+			html: '.tmp/index.html',
 			options: {
 				dest: '<%= yeoman.dist %>',
 				flow: {
 					html: {
 						steps: {
-							js: ['concat', 'uglifyjs'],
-							css: ['cssmin']
+							js: ['concat'], // 'uglifyjs'],
+							css: ['concat', 'cssmin']
 						},
 						post: {}
 					}
@@ -252,8 +252,8 @@ module.exports = function (grunt) {
 
 		// Performs rewrites based on filerev and the useminPrepare configuration
 		usemin: {
-			html: ['<%= yeoman.dist %>/{,*/}*.html'],
-			css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+			html: ['.tmp/{,*/}*.html'],
+			css: ['.tmp/{,*/}*.css'],
 			options: {
 				assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images']
 			}
@@ -284,6 +284,12 @@ module.exports = function (grunt) {
 		// concat: {
 		//   dist: {}
 		// },
+		
+		concat: {
+			options: {
+				separator: ';',
+			},
+		},
 
 		imagemin: {
 			dist: {
@@ -323,7 +329,7 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						cwd: '<%= yeoman.dist %>',
+						cwd: '.tmp',
 						src: ['*.html', 'views/{,*/}*.html'],
 						dest: '<%= yeoman.dist %>'
 					}
@@ -380,7 +386,7 @@ module.exports = function (grunt) {
 					{
 						expand: true,
 						cwd: '.',
-						src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+						src: 'bower_components/ultima/**/*',
 						dest: '<%= yeoman.dist %>'
 					}
 				]
@@ -433,6 +439,24 @@ module.exports = function (grunt) {
 				]
 			}
 		},
+
+		// Deploy via sftp
+		// authentication information stored in .ftppass (not under version control)
+		'sftp-deploy': {
+			staging: {
+				auth: {
+					host: 'desec.io',
+					port: 22,
+					authKey: 'desec-io'
+				},
+				src: '<%= yeoman.dist %>',
+				dest: '/var/www/webclient',
+				exclusions: [],
+				serverSep: '/',
+				concurrency: 4,
+				progress: true
+			}
+		},
 	});
 
 
@@ -469,21 +493,25 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('build', [
 		'clean:dist',
-		'wiredep',
+		'jade',
+		'compass',
 		'useminPrepare',
+		'concat',
 		'concurrent:dist',
 		'autoprefixer',
-		'jade',
-		'concat',
 		'ngAnnotate',
 		'copy:dist',
-		'cdnify',
 		'cssmin',
-		'uglify',
-		'filerev',
+		//'uglify',
+		//'filerev',
 		'usemin',
 		'htmlmin'
 	]);
+
+	grunt.registerTask('deploy', [
+		'build',
+		'sftp-deploy'
+	]);	
 
 	grunt.registerTask('default', [
 		'newer:jshint',
