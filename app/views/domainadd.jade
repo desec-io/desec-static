@@ -15,10 +15,13 @@ doctype html
 							label(for="domainname") Domain Name
 							input(type="text",ng-model="domainname",required,placeholder="Domain Name",name="domainname")
 						.form-group
+							label(for="port") TCP Port
+							input(type="text",ng-model="port",required,placeholder="TCP Port",name="port")
+						.form-group
 							label(for="cert") Certificate
 								small PEM format
 							textarea(ng-model="cert",required,placeholder="Paste your certificate",name="cert")
-						button.btn.btn-default(ng-click="domainadd(domainname,cert)") Add
+						button.btn.btn-default(ng-click="domainadd(domainname,port,cert)") Add
 					p(ng-show="state==2")
 						b {{ domain.name }} 
 						| is ready to use with dane! 

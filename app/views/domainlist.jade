@@ -8,10 +8,16 @@
 			thead
 				tr
 					td Name
+					td Port
 					td Serial No
 					td Fingerprint
+					td TSLA record
 			tbody
 				tr(ng-repeat="d in domains",ng-class="{'danger': !d.cert_serial_no}")
 					td {{ d.name }}
+					td {{ d.port }}
 					td {{ d.cert_serial_no }}
 					td {{ d.cert_fingerprint }}
+					td
+						pre _{{ d.port }}._tcp.{{ d.name }}. IN TLSA 3 1 1 {{ d.cert_fingerprint }}
+					

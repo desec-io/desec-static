@@ -19,10 +19,11 @@ angular.module('desecClientApp')
 		 */
 		$scope.state = 0;
 		
-		$scope.domainadd = function(domain, cert) {
+		$scope.domainadd = function(domain, port, cert) {
 			$scope.state = 1;
 			$http.post('/api/domains/', {
 				name: domain,
+				port: port,
 				cert_info: cert,
 			})
 			.success(function(data, status, headers, config) {
