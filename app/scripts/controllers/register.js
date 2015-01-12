@@ -8,7 +8,7 @@
  * Controller that manages the sign up form
  */
 angular.module('desecClientApp')
-	.controller('RegisterCtrl', function ($scope, $http, $state, auth) {
+	.controller('RegisterCtrl', function ($scope, $http, auth) {
 		/**
 		 * The current state of the sign up form.
 		 * 0: starting state
@@ -30,7 +30,7 @@ angular.module('desecClientApp')
 					auth.login(email, password).then(
 						function() {
 							$scope.state = 4;
-							$state.go('dashboard');
+							// success TODO do something
 						},
 						function() {
 							$scope.state = 3;

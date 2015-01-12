@@ -10,5 +10,5 @@
  */
 angular
   .module('desecClientApp', [
-		'ui.router',
+		//'ui.router',
 	]);
