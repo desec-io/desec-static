@@ -3,8 +3,11 @@
 /**
  * Configure the states of the application.
  */
-angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProvider, $translateProvider) {
+angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProvider, $translateProvider, $locationProvider) {
 
+	// enable hashbang
+	$locationProvider.hashPrefix('!');
+	
 	// available languages, first one is preferred
 	var languages = ['en', 'de'];
 
