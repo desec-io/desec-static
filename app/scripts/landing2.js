@@ -68,10 +68,7 @@ $(document).ready(function(e) {
 		// All list items
 		menuItems = topMenu.find("a"),
 		// Anchors corresponding to menu items
-		scrollItems = menuItems.map(function(){
-		  var item = $($(this).attr("href"));
-		  if (item.length) { return item; }
-		});
+		scrollItems = menuItems.map(angular.noop);
 	
 	// Bind to scroll
 	$(window).scroll(function(){

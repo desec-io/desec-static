@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<url>
+		<loc>https://sneak.desec.io/#!/en/</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://sneak.desec.io/#!/de/" />
+	</url>
+	<url>
+		<loc>https://sneak.desec.io/#!/en/product/silver</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://sneak.desec.io/#!/de/product/silver" />
+	</url>
+	<url>
+		<loc>https://sneak.desec.io/#!/de/</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://sneak.desec.io/#!/en/" />
+	</url>
+	<url>
+		<loc>https://sneak.desec.io/#!/en/product/gold</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://sneak.desec.io/#!/de/product/gold" />
+	</url>
+	<url>
+		<loc>https://sneak.desec.io/#!/en/product/platinum</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://sneak.desec.io/#!/de/product/platinum" />
+	</url>
+	<url>
+		<loc>https://sneak.desec.io/#!/imprint</loc>
+	</url>
+	<url>
+		<loc>https://sneak.desec.io/#!/de/product/silver</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://sneak.desec.io/#!/en/product/silver" />
+	</url>
+	<url>
+		<loc>https://sneak.desec.io/#!/de/product/gold</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://sneak.desec.io/#!/en/product/gold" />
+	</url>
+	<url>
+		<loc>https://sneak.desec.io/#!/de/product/platinum</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://sneak.desec.io/#!/en/product/platinum" />
+	</url>
+</urlset>

@@ -1,9 +1,9 @@
 header.stiky-header
 	.container.group
-		a.logo(href="index.html")
-			img(src="/bower_components/ultima/img/logo-dark.png", alt="Ultima")
-		a.logo-mobile(href="index.html")
-			img(src="/bower_components/ultima/img/logo-mobile.png", alt="Ultima")
+		a.logo(ui-sref="i18n.home({lang: lang})")
+			img(src="/bower_components/ultima/img/logo-dark.png", alt="deSEC")
+		a.logo-mobile(ui-sref="i18n.home({lang: lang})")
+			img(src="/bower_components/ultima/img/logo-mobile.png", alt="deSEC")
 		.navi-toggle.group
 			span.dot
 			span.line
@@ -13,36 +13,25 @@ header.stiky-header
 			span.line
 			span.dot
 			span.line
-		a.btn.btn-primary.btn-login(href="#", data-toggle="modal", data-target="#loginModal")
-			i.icon-user
-			| Login
 		nav.main-navi
 			ul
 				li.active
-					a.scroll-up(href="#") Home
+					a.scroll-up(ui-sref="i18n.home({lang: lang})",translate="menu.home")
 				li.has-dropdown
-					a.scroll(href="#features")
-						| Features
+					a.scroll(ui-sref="i18n.home({lang: lang})")
+						| {{ 'menu.products.headline' | translate }}
 						i.fa.fa-caret-down
 					ul.dropdown
 						li
-							a(href="#") Submenu Item
+							a(ui-sref="i18n.product.silver({lang: lang})",translate="menu.products.silver")
 						li
-							a(href="#") Submenu Item
+							a(ui-sref="i18n.product.gold({lang: lang})",translate="menu.products.gold")
 						li
-							a(href="#") Submenu Item
-						li
-							a(href="#") Submenu Item
-				li.has-dropdown
-					a(href="coming-soon.html")
-						| Coming soon
+							a(ui-sref="i18n.product.platinum({lang: lang})",translate="menu.products.platinum")
+				li.has-dropdown(ng-controller="LangChooserCtrl")
+					a.scroll(ng-show="i18n")
+						| Language
 						i.fa.fa-caret-down
-					ul.dropdown
-						li
-							a(href="#") Submenu Item
-						li
-							a(href="#") Submenu Item
-						li
-							a(href="#") Submenu Item
-				li
-					a(href="cs-page.html") Components &#38; Styles
+					ul.dropdown(ng-show="i18n")
+						li(ng-repeat="l in i18n.otherLang")
+							a(href="{{ i18n.href[l] }}") {{ l | translate }}

@@ -2,13 +2,17 @@ doctype html
 //if IE 9
 	html.ie.ie9(lang="en",ng-app="desecClientApp")
 html(ng-app="desecClientApp")
-	head
+	head(ng-controller="LangChooserCtrl")
 		meta(charset="utf-8")
 		title deSEC
 		meta(name="description", content="")
 		meta(name="keywords", content="")
 		meta(name="author", content="")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+		// Google ajax crawling
+		meta(name="fragment",content="!")
+		
 		// Favicon
 		link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
 		link(rel="icon", href="favicon.ico", type="image/x-icon")
@@ -30,14 +34,16 @@ html(ng-app="desecClientApp")
 		// Modernizr
 		script(src="/bower_components/ultima/js/libs/modernizr.custom.js")
 		// endbuild
+	
+		link(ng-repeat="l in i18n.otherLang",rel="alternative",hreflang="{{ l }}",href="{{ i18n.href[l] }}")
 
 	// Body
-	body.space-top 
+	body.space-top
 		include partials/preloader.jade
 		include partials/header.jade
-
+		
 		ui-view()
-
+		
 		include partials/footer.jade
 
 		// Scroll To Top Button
@@ -68,9 +74,5 @@ html(ng-app="desecClientApp")
 		script(src="/scripts/landing2.js")
 		script(src="/scripts/app.js")
 		script(src="/scripts/states.js")
-		script(src="/scripts/services/auth.js")
-		script(src="/scripts/controllers/register.js")
-		script(src="/scripts/controllers/domaintest.js")
-		script(src="/scripts/controllers/domainadd.js")
-		script(src="/scripts/controllers/domainlist.js")
+		script(src="/scripts/controllers/langChooser.js")
 		// endbuild
