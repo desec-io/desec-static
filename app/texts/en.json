@@ -1,0 +1,66 @@
+{
+    "about": {
+        "team": {
+            "content": "Behind deSEC is a team of six academics with both scientific as well as legal and buisiness education. We can already rely on more than 10 years experience in running of server infrastructure and provision of internet services.",
+            "title": "The Team"
+        }
+    },
+    "faq": {
+        "q1": {
+            "content": "deSEC is commited to making the Internet more secure. Our main goal is to spread the use of secure encryption technology. Private customer data are stored securely in Germany where they are protected from illegitimate third-party access (like foreign intelligence agencies).\n\nThe German privacy laws are amongst the most restrictive ones world-wide, and the Supreme Court has set strong limits to what is legally possible. For example, unlike other member states of the European Union, Germany does not force Internet companies to store information about their clients' activities (data retention) since 2010. In this ruling, the Supreme Court ruled against a European law (which has been rendered invalid on the European level by a court decision in 2014 as well).",
+            "title": "What is deSEC?"
+        },
+        "q2": {
+            "content": "deSEC's first goal is to increase the security level of the DNS system. The DNS technology ensures that Internet users can connect to the intended web or e-mail server when browsing the web or communicating online.\n\nBeing from the 80s and not initially meant for the masses, the Internet was not designed with security in mind. Data transmitted through the Internet is by default not protected against espionage and manipulation. deSEC uses recent innovative technologies to avert such abuse, and to make the Internet more secure.\n\nWe start by cryptographically securing DNS information, to protect it from manipulation. To that end, we operated DNS servers world-wide equipped with the DNSSEC technology and based on Google-scale infrastructure. Additionally, we increase the security of encrypted connections using DANE (see below).",
+            "title": "What is deSEC working on? What is DNS hosting?"
+        },
+        "q3": {
+            "content": "With DNSSEC, a client computer can verify whether DNS information was manipulated or not. That way, an Internet user can be certain to be directed to the intended web server. This is analogous to a secured phonebook lookup: If you want to talk to your bank privately, you better be certain to have the right phone number.",
+            "title": "What is DNSSEC?"
+        },
+        "q4": {
+            "content": "\u003cp\u003eAs described above, DNSSEC ensures that your data is directed to the right server – eventually. But even then, attackers can intercept and read traffic before forwarding it to the intended destination. This is also even true for encrypted connections. Although an attacker would have to show an electronic certificate comparable to a passport in order to decrypt the traffic, this does not pose a significant problem to professional hackers. It is not very difficult to obtain an illegitimate decryption passport that looks valid but should not have been issued in the first place.\u003c/p\u003e\n\n\u003cp\u003eDANE allows to identify such attacks by adding additional passport information to the DNS database. This passport information is secured against manipulation by DNSSEC. The combination of DNSSEC and DANE has two benefits:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eA connection to the correct server is established (for example, you're connected to your bank's server, as intended).\u003c/li\u003e\n\u003cli\u003eOnly the bank's passport is accepted for encrypted connections. If an attacker has a duplicate passport, the connection fails.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eTogether, these technologies allow secure and reliable online communication.\u003c/p\u003e",
+            "title": "What is DANE?"
+        },
+        "q5": {
+            "content": "We are offering DNS services. Essentially, the DNS is a public lookup system to have your computer connected to the right destination (e.g. your bank). This information is, of course, public.\n\nHowever, DNS information at deSEC is protected against manipulation using an additional security layer, DNSSEC. This requires a secret key which we use to lock the DNS information against manipulation. Whoever posses the secret key can introduce manipulations.\n\nTherefore, the secret key is located in Germany exlusively, and not accessible through the public Internet. Our DNS information is locked against manipulation using this key in a protected space. Only after that, this secured information is made public in the DNS lookup database so that Internet users can rely on it to establish secure connections.",
+            "title": "What makes deSEC secure?"
+        },
+        "q6": {
+            "content": "deSEC has won a startup competition and is funded by the Heinz Nixdorf Foundation and the Foundation of German Business, from Q4/2014 to Q4/2015. This provides us with sufficient funds.",
+            "title": "Why is deSEC free?"
+        },
+        "q7": {
+            "content": "No, that's not possible. deSEC is not a registrar. However, each domain has DNS information that needs to be stored somewhere. Often, this is handled by the registrar where the domain was ordered. However, by switching to deSEC, you can benefit from DANE and other neat features like dynDNS, tunnelDNS, and geoDNS.",
+            "title": "Can I register a domain name with deSEC? Is deSEC a registrar?"
+        }
+    },
+    "products": {
+        "anydns": {
+            "content": "By means of physically redundant DNS servers at different geographic locations we ensure that all DNS requests can be at any time served reliably and as fast as possible. All deSEC servers can be accessed through a single anycast IP. The best route through the Internet is determined automatically.",
+            "title": "anyDNS – The high-availability solution for DNS services"
+        },
+        "content": "deSEC offers a range of DNS services each with DNSSEC and DANE, based on Google-scale infrastructure with IPv6 support. Professional users can automate all necessary settings through the standard REST interface. We also optionally offer dnscrypt or dnscurve for those who not only want to ensure the correctnes of DNS replies via DNSSEC, but also want to encrypt the requests themselves.",
+        "dyndns": {
+            "content": "You need to access your network attached storage at home? dynDNS allows you to assign a fixed URL to devices with frequently changing IP address, based on your domain.",
+            "title": "dynDNS – Fixed URLs for connections with frequently changing IP"
+        },
+        "geodns": {
+            "content": "Are you planning to provide your service with spatially distributed servers? geoDNS allows you to serve requests for your URL based on their geographic origin. This allows you to always direct your visitors to the geographically closest server or to geographically tailored content, and to compensate for server failures. To guarantee maximum availability, geoDNS includes the anyDNS service.",
+            "title": "geoDNS – Location based DNS replies"
+        },
+        "golddns": {
+            "content": "Professional DNS users get access to all deSEC features with this bundle, including unlimited calls to the REST API for automated updates of DNS entries.",
+            "title": "goldDNS – All in One"
+        },
+        "title": "Products",
+        "tunneldns": {
+            "content": "tunnelDNS allows the technically sophisticated user to use public wifi networks by creative means even in cases where all other possibilities are ruled out: DNS services work almost everywhere without log-in, and can act as a tunnel for other content.",
+            "title": "tunnelDNS – Internet connection under minimal conditions"
+        }
+    },
+    "registration": {
+        "content": "Are you interested in our DNS services with DNSSEC and DANE? We will be happy to keep you informed about the latest developments – just leave us your e-mail address.",
+        "title": "Preregistration"
+    }
+}
