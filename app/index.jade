@@ -34,6 +34,10 @@ html(ng-app="desecClientApp")
 		// Modernizr
 		script(src="/bower_components/ultima/js/libs/modernizr.custom.js")
 		// endbuild
+		
+		// build:css(.) custom.css
+		link(href="styles/main.css", rel="stylesheet", media="screen")
+		// endbuild
 	
 		link(ng-repeat="l in i18n.otherLang",rel="alternative",hreflang="{{ l }}",href="{{ i18n.href[l] }}")
 
