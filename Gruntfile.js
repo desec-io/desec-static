@@ -31,7 +31,10 @@ module.exports = function (grunt) {
 		watch: {
 			jade: {
 				files: ['<%= yeoman.app %>/**/*.jade'],
-				tasks: ['jade']
+				tasks: ['jade'],
+				options: {
+					livereload: '<%= connect.options.livereload %>'
+				}
 			},
 			bower: {
 				files: ['bower.json'],
