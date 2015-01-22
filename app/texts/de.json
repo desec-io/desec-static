@@ -1,10 +1,4 @@
 {
-    "about": {
-        "team": {
-            "content": "Hinter deSEC steht ein sechsköpfiges Team aus Akademikern mit naturwissenschaftlich-mathematischem sowie rechtswisschenschaftlichen und unternehmerischen Hintergrund. Wir können bereits auf mehr als 10 Jahre Erfahrung im Betrieb von Serverinfrastruktur und Bereitstellung von Internetdienstleistungen zurückgreifen.",
-            "title": "Das Team"
-        }
-    },
     "faq": {
         "q1": {
             "content": "deSEC will die Sicherheit des Internets verbessern. Der Schwerpunkt liegt auf der Verbreitung sicherer Verschlüsselungstechnologien. Sensible Kundendaten werden nur in Deutschland gespeichert und sind vor unberechtigtem Zugriff, z.B. durch amerikanische Geheimdienste, geschützt.\n\nDie deutschen Datenschutzgesetze gehören zu den schärfsten weltweit. Das Bundesverfassungsgericht hat strenge Vorgaben gemacht. Anders als in anderen EU-Staaten gibt es in Deutschland beispielsweise seit 2010 keine Vorratsdatenspeicherung, obwohl damals noch eine entsprechende EU-Richtlinie existierte (die 2014 ebenfalls von einem europäischen Gericht kassiert wurde).",
@@ -62,5 +56,9 @@
     "registration": {
         "content": "Interessieren Sie sich für unsere DNS-Dienstleistungen mit DNSSEC und DANE? Gerne halten wir Sie auf dem neuesten Stand unserer Entwicklungen – hinterlassen Sie einfach hier Ihre E-Mail-Adresse.",
         "title": "Vorregistrierung"
+    },
+    "team": {
+        "headline": "Das Team",
+        "subheadline": "Hinter deSEC steht ein Team aus Akademikern mit naturwissenschaftlich-mathematischem sowie rechtswisschenschaftlichen und unternehmerischen Hintergrund. Wir können bereits auf mehr als 10 Jahre Erfahrung im Betrieb von Serverinfrastruktur und Bereitstellung von Internetdienstleistungen zurückgreifen."
     }
 }

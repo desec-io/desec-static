@@ -1,10 +1,4 @@
 {
-    "about": {
-        "team": {
-            "content": "Behind deSEC is a team of six academics with both scientific as well as legal and buisiness education. We can already rely on more than 10 years experience in running of server infrastructure and provision of internet services.",
-            "title": "The Team"
-        }
-    },
     "faq": {
         "q1": {
             "content": "deSEC is commited to making the Internet more secure. Our main goal is to spread the use of secure encryption technology. Private customer data are stored securely in Germany where they are protected from illegitimate third-party access (like foreign intelligence agencies).\n\nThe German privacy laws are amongst the most restrictive ones world-wide, and the Supreme Court has set strong limits to what is legally possible. For example, unlike other member states of the European Union, Germany does not force Internet companies to store information about their clients' activities (data retention) since 2010. In this ruling, the Supreme Court ruled against a European law (which has been rendered invalid on the European level by a court decision in 2014 as well).",
@@ -62,5 +56,9 @@
     "registration": {
         "content": "Are you interested in our DNS services with DNSSEC and DANE? We will be happy to keep you informed about the latest developments – just leave us your e-mail address.",
         "title": "Preregistration"
+    },
+    "team": {
+        "headline": "The Team",
+        "subheadline": "Behind deSEC is a team of academics with both scientific as well as legal and business education. We can already rely on more than 10 years experience in running of server infrastructure and provision of internet services."
     }
 }
