@@ -82,19 +82,29 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 			template: '<ui-view/>'
 		})
 	
-		.state('i18n.product.silver', {
-			url: "/silver",
-			templateUrl: "views/products/silver.html"
+		.state('i18n.product.dyndns', {
+			url: "/dyndns",
+			templateUrl: "views/products/dyndns.html"
 		})
 
-		.state('i18n.product.gold', {
-			url: "/gold",
-			templateUrl: "views/products/gold.html"
+		.state('i18n.product.tunneldns', {
+			url: "/tunneldns",
+			templateUrl: "views/products/tunneldns.html"
 		})
 
-		.state('i18n.product.platinum', {
-			url: "/platinum",
-			templateUrl: "views/products/platinum.html"
+		.state('i18n.product.anydns', {
+			url: "/anydns",
+			templateUrl: "views/products/anydns.html"
+		})
+
+		.state('i18n.product.geodns', {
+			url: "/geodns",
+			templateUrl: "views/products/geodns.html"
+		})
+
+		.state('i18n.product.golddns', {
+			url: "/golddns",
+			templateUrl: "views/products/golddns.html"
 		})
 
 	$urlRouterProvider.otherwise('/');
