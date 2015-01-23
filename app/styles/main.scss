@@ -26,3 +26,24 @@
 		float: left;
 	}
 }
+
+@media (min-width: 768px) {
+	.row-vertical-sm-flex-end {
+		display: flex;
+		align-items: flex-end;
+	}
+}
+
+@media (min-width: 992px) {
+	.row-vertical-md-flex-end {
+		display: flex;
+		align-items: flex-end;
+	}
+}
+
+@media (min-width: 1200px) {
+	.row-vertical-lg-flex-end {
+		display: flex;
+		align-items: flex-end;
+	}
+}
