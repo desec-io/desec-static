@@ -32,24 +32,56 @@
     "products": {
         "anydns": {
             "content": "By means of physically redundant DNS servers at different geographic locations we ensure that all DNS requests can be at any time served reliably and as fast as possible. All deSEC servers can be accessed through a single anycast IP. The best route through the Internet is determined automatically.",
+            "feature1": "100% SLA",
+            "feature2": "anycast",
+            "feature3": "REST API",
+            "link": "Set up",
+            "name": "anyDNS",
+            "price": "TODO",
             "title": "anyDNS – The high-availability solution for DNS services"
         },
         "content": "deSEC offers a range of DNS services each with DNSSEC and DANE, based on Google-scale infrastructure with IPv6 support. Professional users can automate all necessary settings through the standard REST interface. We also optionally offer dnscrypt or dnscurve for those who not only want to ensure the correctnes of DNS replies via DNSSEC, but also want to encrypt the requests themselves.",
         "dyndns": {
             "content": "You need to access your network attached storage at home? dynDNS allows you to assign a fixed URL to devices with frequently changing IP address, based on your domain.",
+            "feature1": "99% SLA",
+            "feature2": "dyndns",
+            "link": "Set up",
+            "name": "dynDNS",
+            "price": "free",
             "title": "dynDNS – Fixed URLs for connections with frequently changing IP"
         },
         "geodns": {
             "content": "Are you planning to provide your service with spatially distributed servers? geoDNS allows you to serve requests for your URL based on their geographic origin. This allows you to always direct your visitors to the geographically closest server or to geographically tailored content, and to compensate for server failures. To guarantee maximum availability, geoDNS includes the anyDNS service.",
-            "title": "geoDNS – Location based DNS replies"
+            "feature1": "100% SLA",
+            "feature2": "anycast",
+            "feature3": "geo",
+            "feature4": "REST API",
+            "link": "Set up",
+            "name": "geoDNS",
+            "price": "TODO",
+            "title": "geoDNS – Location-based DNS replies"
         },
         "golddns": {
             "content": "Professional DNS users get access to all deSEC features with this bundle, including unlimited calls to the REST API for automated updates of DNS entries.",
+            "feature1": "100% SLA",
+            "feature2": "anycast",
+            "feature3": "geo",
+            "feature4": "DNS tunnel",
+            "feature5": "REST API",
+            "link": "Set up",
+            "name": "goldDNS",
+            "price": "TODO",
             "title": "goldDNS – All in One"
         },
-        "title": "Products",
+        "headline": "Plans",
+        "title": "Plans",
         "tunneldns": {
             "content": "tunnelDNS allows the technically sophisticated user to use public wifi networks by creative means even in cases where all other possibilities are ruled out: DNS services work almost everywhere without log-in, and can act as a tunnel for other content.",
+            "feature1": "99% SLA",
+            "feature2": "DNS tunnel",
+            "link": "Set up",
+            "name": "tunnelDNS",
+            "price": "free",
             "title": "tunnelDNS – Internet connection under minimal conditions"
         }
     },
@@ -59,6 +91,6 @@
     },
     "team": {
         "headline": "The Team",
-        "subheadline": "Behind deSEC is a team of academics with both scientific as well as legal and business education. We can already rely on more than 10 years experience in running of server infrastructure and provision of internet services."
+        "subheadline": "Behind deSEC is a team of academics with both scientific as well as legal and business education. We can rely on more than 10 years experience in running of server infrastructure and provisioning of Internet services."
     }
 }
