@@ -14,7 +14,8 @@
     "ultima": "git@github.com:nils-wisiol/ultima",
     "angular-translate": "~2.5.2",
     "angular-ui-router": "~0.2.13",
-    "angular-translate-loader-static-files": "~2.5.2"
+    "angular-translate-loader-static-files": "~2.5.2",
+    "angular-mailchimp": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",

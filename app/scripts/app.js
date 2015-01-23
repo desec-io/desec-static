@@ -11,4 +11,5 @@
 angular.module('desecClientApp', [
 		'ui.router',
 		'pascalprecht.translate',
+		'mailchimp',
 	])
