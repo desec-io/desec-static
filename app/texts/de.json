@@ -1,5 +1,6 @@
 {
     "faq": {
+        "headline": "FAQ",
         "q1": {
             "content": "deSEC will die Sicherheit des Internets verbessern. Der Schwerpunkt liegt auf der Verbreitung sicherer Verschlüsselungstechnologien. Sensible Kundendaten werden nur in Deutschland gespeichert und sind vor unberechtigtem Zugriff, z.B. durch amerikanische Geheimdienste, geschützt.\n\nDie deutschen Datenschutzgesetze gehören zu den schärfsten weltweit. Das Bundesverfassungsgericht hat strenge Vorgaben gemacht. Anders als in anderen EU-Staaten gibt es in Deutschland beispielsweise seit 2010 keine Vorratsdatenspeicherung, obwohl damals noch eine entsprechende EU-Richtlinie existierte (die 2014 ebenfalls von einem europäischen Gericht kassiert wurde).",
             "title": "Was ist deSEC?"
@@ -29,6 +30,29 @@
             "title": "Kann ich bei deSEC eine Domain anmelden? Ist deSEC ein Registrar?"
         }
     },
+    "features": {
+        "anycast": {
+            "content": "Unsere DNS-Informationen sind durch Anycast hochverfügbar. Es wird automatisch das nächstgelegene Rechenzentrum gewählt, um stets die beste Zugriffsgeschwindigkeit zu erreichen.",
+            "title": "Anycast"
+        },
+        "dyn": {
+            "content": "Mittels dynamischem DNS können Sie einen mit dem Internet verbundenen Computer unter Ihrer Domain verfügbar machen und aus der Ferne darauf zugreifen. Ein ganz normaler Internetanschluss genügt.",
+            "title": "DynDNS"
+        },
+        "geo": {
+            "content": "DNS-Antworten können auf die geographische Position des Clients zugeschnitten werden und ermöglichen so ortsabhängige Einsatzszenarien.",
+            "title": "GeoDNS"
+        },
+        "tunnel": {
+            "content": "Mancherorts ist der Internetzugang technisch beschränkt; der Zugriff auf das DNS funktioniert jedoch meist. Nutzen Sie das DNS als Tunnel, um auch anderen Datenverkehr darüber zu transportieren – wie in einem VPN.",
+            "title": "DNS-Tunnel"
+        }
+    },
+    "hero": {
+        "button": "",
+        "content": "Sichere DNS Dienstleistungen.",
+        "title": "deSEC"
+    },
     "products": {
         "anydns": {
             "content": "Durch physikalisch redundante DNS-Server an verschiedenen geographischen Standorten wird sichergestellt, dass alle DNS-Anfragen zu jeder Zeit zuverlässig und schnellstmöglich beantwortert werden. Alle deSEC-Server sind über eine einheitliche anycast-IP erreichbar. Die optimale Route wird automatisch errechnet.",
@@ -40,11 +64,28 @@
             "price": "TODO",
             "title": "anyDNS – Die Hochverfügbarkeitslösung für DNS Dienste"
         },
+        "beta": {
+            "apply": {
+                "again": "Zurück",
+                "back": "Zurück",
+                "email": {
+                    "label": "Benachrichtigung, sobald Kapazität verfügbar",
+                    "placeholder": "max@desec.io"
+                },
+                "headline": "Jetzt für den Betatest anmelden",
+                "product": {
+                    "label": "Produkt"
+                },
+                "submit": "Anmelden",
+                "waiting": "Anmeldung läuft ..."
+            }
+        },
         "content": "deSEC bietet verschiedene DNS-Dienstleistungen jeweils mit DNSSEC und DANE auf modernster Infrastruktur mit IPv6-Unterstützung an. Alle nötigen Einstellungen können von professionellen Anwendern grundsätzlich auch über die gängige REST-Schnittstelle automatisiert vorgenommen werden. Wer nicht nur per DNSSEC die Richtigkeit unserer DNS-Antworten sicherstellen will, sondern auch die eigentlichen Anfragen verschlüsseln will, kann optional dnscrypt oder dnscurve nutzen.",
         "dyndns": {
             "content": "Sie wollen auf ihren heimischen Netzwerkspeicher zugreifen? Mit dynDNS haben Sie die Möglichkeit, auch private Internetanschlüsse mit wechselnder IP-Adresse anhand einer festen URL unter Ihrer eigenen Domain zu erreichen.",
             "feature1": "99% SLA",
             "feature2": "dyndns",
+            "feature3": "REST-API",
             "link": "Anmelden",
             "name": "dynDNS",
             "price": "kostenfrei",
@@ -54,7 +95,7 @@
             "content": "Wenn sie ihren eigenen Dienst durch räumlich verteilte Server bereitstellen wollen, bietet geoDNS ihnen die Möglichkeit, Anfragen auf ihre URL abhängig von deren geographischen Ursprungs zu beantworten. So können Sie Besucher immer mit ihrem geographisch nächstgelegenen Server oder mit speziellen Inhalten bedienen und auch Serverausfälle kompensieren. Um eine maximale Verfügbarkeit zu garantieren, schließt geoDNS den anyDNS-Dienst mit ein.",
             "feature1": "100% SLA",
             "feature2": "anycast",
-            "feature3": "geo",
+            "feature3": "geoDNS",
             "feature4": "REST-API",
             "link": "Anmelden",
             "name": "geoDNS",
@@ -65,7 +106,7 @@
             "content": "Professionelle DNS-Nutzer erhalten mit diesem Paket das gesamte Leistungsspektrum von deSEC, einschließlich unlimitierten Zugangs zur REST-API für die automatisierte Anpassung von DNS-Einträgen.",
             "feature1": "100% SLA",
             "feature2": "anycast",
-            "feature3": "geo",
+            "feature3": "geoDNS",
             "feature4": "DNS-Tunnel",
             "feature5": "REST-API",
             "link": "Anmelden",
@@ -73,12 +114,14 @@
             "price": "TODO",
             "title": "goldDNS – Alles in Einem"
         },
-        "headline": "",
+        "headline": "Produkte",
+        "note": "Alle Produkte enthalten DNSSEC, DANE, IPv6-Unterstützung und Zugriff via REST-API. Anzahl und Typ der DNS-Einträge sind nicht beschränkt.",
         "title": "Produkte",
         "tunneldns": {
             "content": "tunnelDNS bietet dem technisch versierten Anwender die Möglichkeit, öffentliche WLANs auf kreativem Wege auch dann nutzen zu können, wenn alle anderen Möglichkeiten ausscheiden: DNS-Dienste funktionieren fast überall auch ohne Anmeldung, und können als Tunnel für andere Inhalte fungieren.",
             "feature1": "99% SLA",
             "feature2": "DNS-Tunnel",
+            "feature3": "REST-API",
             "link": "Anmelden",
             "name": "tunnelDNS",
             "price": "kostenfrei",

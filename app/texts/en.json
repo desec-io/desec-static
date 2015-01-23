@@ -1,5 +1,6 @@
 {
     "faq": {
+        "headline": "FAQ",
         "q1": {
             "content": "deSEC is commited to making the Internet more secure. Our main goal is to spread the use of secure encryption technology. Private customer data are stored securely in Germany where they are protected from illegitimate third-party access (like foreign intelligence agencies).\n\nThe German privacy laws are amongst the most restrictive ones world-wide, and the Supreme Court has set strong limits to what is legally possible. For example, unlike other member states of the European Union, Germany does not force Internet companies to store information about their clients' activities (data retention) since 2010. In this ruling, the Supreme Court ruled against a European law (which has been rendered invalid on the European level by a court decision in 2014 as well).",
             "title": "What is deSEC?"
@@ -22,12 +23,35 @@
         },
         "q6": {
             "content": "deSEC has won a startup competition and is funded by the Heinz Nixdorf Foundation and the Foundation of German Business, from Q4/2014 to Q4/2015. This provides us with sufficient funds.",
-            "title": "Why is deSEC free?"
+            "title": "How can deSEC provide free services?"
         },
         "q7": {
             "content": "No, that's not possible. deSEC is not a registrar. However, each domain has DNS information that needs to be stored somewhere. Often, this is handled by the registrar where the domain was ordered. However, by switching to deSEC, you can benefit from DANE and other neat features like dynDNS, tunnelDNS, and geoDNS.",
             "title": "Can I register a domain name with deSEC? Is deSEC a registrar?"
         }
+    },
+    "features": {
+        "anycast": {
+            "content": "With anycast, our DNS information is replicated to several datacenters world-wide. Besides being highly reliable and fault-tolerant, users are served with superior performance from the closest location.",
+            "title": "Anycast"
+        },
+        "dyn": {
+            "content": "Having a box sitting at home or in your company that you would like to access from the public Internet? Use dynamical DNS to make any computer available under your domain and access it remotely.",
+            "title": "DynDNS"
+        },
+        "geo": {
+            "content": "Using the geographical position of the DNS client, replies can be tailored to your specific needs.",
+            "title": "GeoDNS"
+        },
+        "tunnel": {
+            "content": "Sometimes, Internet access is limited, but DNS works most of the time. You can use DNS to encapsulate other traffic, opening your access point to arbitrary traffic – just like a VPN.",
+            "title": "DNS tunnel"
+        }
+    },
+    "hero": {
+        "button": "",
+        "content": "We offer secure DNS hosting.",
+        "title": "deSEC"
     },
     "products": {
         "anydns": {
@@ -40,11 +64,28 @@
             "price": "TODO",
             "title": "anyDNS – The high-availability solution for DNS services"
         },
+        "beta": {
+            "apply": {
+                "again": "Back",
+                "back": "Try Again",
+                "email": {
+                    "label": "Email address for access notification",
+                    "placeholder": "johndoe@example.com"
+                },
+                "headline": "Apply for Beta Access",
+                "product": {
+                    "label": "Plan to sign up for"
+                },
+                "submit": "Apply",
+                "waiting": "Applying ..."
+            }
+        },
         "content": "deSEC offers a range of DNS services each with DNSSEC and DANE, based on Google-scale infrastructure with IPv6 support. Professional users can automate all necessary settings through the standard REST interface. We also optionally offer dnscrypt or dnscurve for those who not only want to ensure the correctnes of DNS replies via DNSSEC, but also want to encrypt the requests themselves.",
         "dyndns": {
             "content": "You need to access your network attached storage at home? dynDNS allows you to assign a fixed URL to devices with frequently changing IP address, based on your domain.",
             "feature1": "99% SLA",
             "feature2": "dyndns",
+            "feature3": "REST API",
             "link": "Set up",
             "name": "dynDNS",
             "price": "free",
@@ -54,7 +95,7 @@
             "content": "Are you planning to provide your service with spatially distributed servers? geoDNS allows you to serve requests for your URL based on their geographic origin. This allows you to always direct your visitors to the geographically closest server or to geographically tailored content, and to compensate for server failures. To guarantee maximum availability, geoDNS includes the anyDNS service.",
             "feature1": "100% SLA",
             "feature2": "anycast",
-            "feature3": "geo",
+            "feature3": "geoDNS",
             "feature4": "REST API",
             "link": "Set up",
             "name": "geoDNS",
@@ -65,7 +106,7 @@
             "content": "Professional DNS users get access to all deSEC features with this bundle, including unlimited calls to the REST API for automated updates of DNS entries.",
             "feature1": "100% SLA",
             "feature2": "anycast",
-            "feature3": "geo",
+            "feature3": "geoDNS",
             "feature4": "DNS tunnel",
             "feature5": "REST API",
             "link": "Set up",
@@ -74,11 +115,13 @@
             "title": "goldDNS – All in One"
         },
         "headline": "Plans",
+        "note": "All plans have support for DNSSEC, DANE, IPv6, and access through our REST API. You can set up any number and any type of DNS records.",
         "title": "Plans",
         "tunneldns": {
             "content": "tunnelDNS allows the technically sophisticated user to use public wifi networks by creative means even in cases where all other possibilities are ruled out: DNS services work almost everywhere without log-in, and can act as a tunnel for other content.",
             "feature1": "99% SLA",
             "feature2": "DNS tunnel",
+            "feature3": "REST API",
             "link": "Set up",
             "name": "tunnelDNS",
             "price": "free",
