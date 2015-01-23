@@ -32,24 +32,56 @@
     "products": {
         "anydns": {
             "content": "Durch physikalisch redundante DNS-Server an verschiedenen geographischen Standorten wird sichergestellt, dass alle DNS-Anfragen zu jeder Zeit zuverlässig und schnellstmöglich beantwortert werden. Alle deSEC-Server sind über eine einheitliche anycast-IP erreichbar. Die optimale Route wird automatisch errechnet.",
+            "feature1": "100% SLA",
+            "feature2": "anycast",
+            "feature3": "REST-API",
+            "link": "Anmelden",
+            "name": "anyDNS",
+            "price": "TODO",
             "title": "anyDNS – Die Hochverfügbarkeitslösung für DNS Dienste"
         },
         "content": "deSEC bietet verschiedene DNS-Dienstleistungen jeweils mit DNSSEC und DANE auf modernster Infrastruktur mit IPv6-Unterstützung an. Alle nötigen Einstellungen können von professionellen Anwendern grundsätzlich auch über die gängige REST-Schnittstelle automatisiert vorgenommen werden. Wer nicht nur per DNSSEC die Richtigkeit unserer DNS-Antworten sicherstellen will, sondern auch die eigentlichen Anfragen verschlüsseln will, kann optional dnscrypt oder dnscurve nutzen.",
         "dyndns": {
             "content": "Sie wollen auf ihren heimischen Netzwerkspeicher zugreifen? Mit dynDNS haben Sie die Möglichkeit, auch private Internetanschlüsse mit wechselnder IP-Adresse anhand einer festen URL unter Ihrer eigenen Domain zu erreichen.",
+            "feature1": "99% SLA",
+            "feature2": "dyndns",
+            "link": "Anmelden",
+            "name": "dynDNS",
+            "price": "kostenfrei",
             "title": "dynDNS – Feste URLs für Anschlüsse mit wechselnder IP"
         },
         "geodns": {
             "content": "Wenn sie ihren eigenen Dienst durch räumlich verteilte Server bereitstellen wollen, bietet geoDNS ihnen die Möglichkeit, Anfragen auf ihre URL abhängig von deren geographischen Ursprungs zu beantworten. So können Sie Besucher immer mit ihrem geographisch nächstgelegenen Server oder mit speziellen Inhalten bedienen und auch Serverausfälle kompensieren. Um eine maximale Verfügbarkeit zu garantieren, schließt geoDNS den anyDNS-Dienst mit ein.",
+            "feature1": "100% SLA",
+            "feature2": "anycast",
+            "feature3": "geo",
+            "feature4": "REST-API",
+            "link": "Anmelden",
+            "name": "geoDNS",
+            "price": "TODO",
             "title": "geoDNS – Standortabhängige DNS-Antworten"
         },
         "golddns": {
             "content": "Professionelle DNS-Nutzer erhalten mit diesem Paket das gesamte Leistungsspektrum von deSEC, einschließlich unlimitierten Zugangs zur REST-API für die automatisierte Anpassung von DNS-Einträgen.",
+            "feature1": "100% SLA",
+            "feature2": "anycast",
+            "feature3": "geo",
+            "feature4": "DNS-Tunnel",
+            "feature5": "REST-API",
+            "link": "Anmelden",
+            "name": "goldDNS",
+            "price": "TODO",
             "title": "goldDNS – Alles in Einem"
         },
+        "headline": "",
         "title": "Produkte",
         "tunneldns": {
             "content": "tunnelDNS bietet dem technisch versierten Anwender die Möglichkeit, öffentliche WLANs auf kreativem Wege auch dann nutzen zu können, wenn alle anderen Möglichkeiten ausscheiden: DNS-Dienste funktionieren fast überall auch ohne Anmeldung, und können als Tunnel für andere Inhalte fungieren.",
+            "feature1": "99% SLA",
+            "feature2": "DNS-Tunnel",
+            "link": "Anmelden",
+            "name": "tunnelDNS",
+            "price": "kostenfrei",
             "title": "tunnelDNS – Internetzugang unter Minimalbedingungen"
         }
     },
@@ -59,6 +91,6 @@
     },
     "team": {
         "headline": "Das Team",
-        "subheadline": "Hinter deSEC steht ein Team aus Akademikern mit naturwissenschaftlich-mathematischem sowie rechtswisschenschaftlichen und unternehmerischen Hintergrund. Wir können bereits auf mehr als 10 Jahre Erfahrung im Betrieb von Serverinfrastruktur und Bereitstellung von Internetdienstleistungen zurückgreifen."
+        "subheadline": "Hinter deSEC steht ein Team aus Akademikern mit naturwissenschaftlich-mathematischem sowie rechtswisschenschaftlichen und unternehmerischen Hintergrund. Wir können auf mehr als 10 Jahre Erfahrung im Betrieb von Serverinfrastruktur und Bereitstellung von Internetdienstleistungen zurückgreifen."
     }
 }
