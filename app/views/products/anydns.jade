@@ -2,7 +2,12 @@ section#features.page-block
 	.container
 		.row.page-header
 			h2(translate="products.anydns.title")
-			span(translate="products.anydns.content")
-		.row(ng-init="product='anydns'")
-			.col-lg-12()
+		.row.product-page
+			.col-lg-3
+				.pricing-plan
+					.header
+						h3(translate="products.anydns.name")
+						span.price(translate="products.anydns.price")
+			.col-lg-9(ng-init="product='anydns'")
+				div(translate="products.anydns.content")
 				include ../../partials/newsletter.jade

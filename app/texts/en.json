@@ -28,6 +28,10 @@
         "q7": {
             "content": "No, that's not possible. deSEC is not a registrar. However, each domain has DNS information that needs to be stored somewhere. Often, this is handled by the registrar where the domain was ordered. However, by switching to deSEC, you can benefit from DANE and other neat features like dynDNS, tunnelDNS, and geoDNS.",
             "title": "Can I register a domain name with deSEC? Is deSEC a registrar?"
+        },
+        "q8": {
+            "content": "You can set up any number of DNS records, of any type. Access to your settings through our REST interface is limited to 30 requests per day. The goldDNS plan is exempt from this limitation.",
+            "title": "Are there any usage limitations or quotas?"
         }
     },
     "features": {
@@ -43,25 +47,25 @@
             "content": "Using the geographical position of the DNS client, replies can be tailored to your specific needs.",
             "title": "GeoDNS"
         },
+        "headline": "Features",
         "tunnel": {
             "content": "Sometimes, Internet access is limited, but DNS works most of the time. You can use DNS to encapsulate other traffic, opening your access point to arbitrary traffic – just like a VPN.",
             "title": "DNS tunnel"
         }
     },
     "hero": {
-        "button": "",
-        "content": "We offer secure DNS hosting.",
+        "content": "We offer secure DNS hosting with DNSSEC and DANE.\u003cbr /\u003eWe spread innovative technologies.\u003cbr /\u003eWe make the Internet a better place.",
         "title": "deSEC"
     },
     "products": {
         "anydns": {
-            "content": "By means of physically redundant DNS servers at different geographic locations we ensure that all DNS requests can be at any time served reliably and as fast as possible. All deSEC servers can be accessed through a single anycast IP. The best route through the Internet is determined automatically.",
-            "feature1": "100% SLA",
+            "content": "\u003cp\u003eIn addition to our standard features (DNSSEC, DANE, IPv6, and REST API), this package offers advanced reliability using the anycast technology with a 100% Service Level Agreement.\u003c/p\u003e\u003cp\u003eBy means of physically redundant DNS servers at different geographic locations we ensure that all DNS requests can be served reliably and as fast as possible at any time. All deSEC servers can be accessed through a single anycast IP. The best route through the Internet is determined automatically.\u003c/p\u003e\u003cp\u003eanyDNS will be free of charge during the 2015 beta test and cost x € per month from 2016 on.\u003c/p\u003e",
+            "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "anycast",
             "feature3": "REST API",
             "link": "Set up",
             "name": "anyDNS",
-            "price": "TODO",
+            "price": "free\u003cbr /\u003e\u003csmall\u003e(x €/mo starting 2016)\u003c/small\u003e",
             "title": "anyDNS – The high-availability solution for DNS services"
         },
         "beta": {
@@ -72,7 +76,7 @@
                     "label": "Email address for access notification",
                     "placeholder": "johndoe@example.com"
                 },
-                "headline": "Apply for Beta Access",
+                "headline": "Apply for Free Beta Access",
                 "product": {
                     "label": "Plan to sign up for"
                 },
@@ -80,46 +84,45 @@
                 "waiting": "Applying ..."
             }
         },
-        "content": "deSEC offers a range of DNS services each with DNSSEC and DANE, based on Google-scale infrastructure with IPv6 support. Professional users can automate all necessary settings through the standard REST interface. We also optionally offer dnscrypt or dnscurve for those who not only want to ensure the correctnes of DNS replies via DNSSEC, but also want to encrypt the requests themselves.",
+        "content": "\u003cp\u003edeSEC offers a range of DNS services each with DNSSEC and DANE, based on Google-scale infrastructure with IPv6 support. You can set up any number and any type of DNS records. Professional users can automate all necessary settings through our REST interface.\u003c/p\u003e\u003cp\u003eOptionally, we offer dnscrypt or dnscurve for those who not only want to ensure the correctnes of DNS replies via DNSSEC, but also want to encrypt the requests themselves.\u003c/p\u003e",
         "dyndns": {
-            "content": "You need to access your network attached storage at home? dynDNS allows you to assign a fixed URL to devices with frequently changing IP address, based on your domain.",
-            "feature1": "99% SLA",
+            "content": "\u003cp\u003eYou need to access your network attached storage at home? dynDNS allows you to assign a fixed URL to devices with frequently changing IP address, based on your domain.\u003c/p\u003e\u003cp\u003eThis service will be offered for free. It also supports our standard features DNSSEC, DANE, IPv6, and REST.\u003c/p\u003e",
+            "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "dyndns",
             "feature3": "REST API",
             "link": "Set up",
             "name": "dynDNS",
             "price": "free",
-            "title": "dynDNS – Fixed URLs for connections with frequently changing IP"
+            "title": "dynDNS – Fixed URLs for connections with frequently changing IP address"
         },
         "geodns": {
-            "content": "Are you planning to provide your service with spatially distributed servers? geoDNS allows you to serve requests for your URL based on their geographic origin. This allows you to always direct your visitors to the geographically closest server or to geographically tailored content, and to compensate for server failures. To guarantee maximum availability, geoDNS includes the anyDNS service.",
-            "feature1": "100% SLA",
+            "content": "\u003cp\u003eAre you planning to provide your service with spatially distributed servers? geoDNS allows you to serve requests for your URL based on their geographic origin. This allows you to always direct your visitors to the geographically closest server or to geographically tailored content, and to compensate for server failures.\u003c/p\u003e\u003cp\u003eTo guarantee maximum availability, geoDNS includes the anyDNS service. It thus supports our standard features DNSSEC, DANE, IPv6, and REST.\u003c/p\u003e\u003cp\u003egeoDNS will be free of charge during the 2015 beta test and cost x € per month from 2016 on.\u003c/p\u003e",
+            "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "anycast",
             "feature3": "geoDNS",
             "feature4": "REST API",
             "link": "Set up",
             "name": "geoDNS",
-            "price": "TODO",
+            "price": "free\u003cbr /\u003e\u003csmall\u003e(x €/mo starting 2016)\u003c/small\u003e",
             "title": "geoDNS – Location-based DNS replies"
         },
         "golddns": {
-            "content": "Professional DNS users get access to all deSEC features with this bundle, including unlimited calls to the REST API for automated updates of DNS entries.",
-            "feature1": "100% SLA",
+            "content": "\u003cp\u003eProfessional DNS users get access to all deSEC features (including DNSSEC, DANE, IPv6, REST, anycast, geoDNS, dynDNS, tunnelDNS) with this bundle, plus unlimited calls to the REST API for automated updates of DNS entries.\u003c/p\u003e\u003cp\u003egoldDNS will be free of charge during the 2015 beta test and cost x € per month from 2016 on.\u003c/p\u003e",
+            "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "anycast",
             "feature3": "geoDNS",
             "feature4": "DNS tunnel",
             "feature5": "REST API",
             "link": "Set up",
             "name": "goldDNS",
-            "price": "TODO",
+            "price": "free\u003cbr /\u003e\u003csmall\u003e(x €/mo starting 2016)\u003c/small\u003e",
             "title": "goldDNS – All in One"
         },
         "headline": "Plans",
-        "note": "All plans have support for DNSSEC, DANE, IPv6, and access through our REST API. You can set up any number and any type of DNS records.",
         "title": "Plans",
         "tunneldns": {
-            "content": "tunnelDNS allows the technically sophisticated user to use public wifi networks by creative means even in cases where all other possibilities are ruled out: DNS services work almost everywhere without log-in, and can act as a tunnel for other content.",
-            "feature1": "99% SLA",
+            "content": "\u003cp\u003etunnelDNS allows the technically sophisticated user to use public wifi networks by creative means even in cases where all other possibilities are ruled out: DNS services work almost everywhere without log-in, and can act as a tunnel for other content.\u003c/p\u003e\u003cp\u003eThis service will be offered for free. It also supports our standard features DNSSEC, DANE, IPv6, and REST.\u003c/p\u003e",
+            "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "DNS tunnel",
             "feature3": "REST API",
             "link": "Set up",

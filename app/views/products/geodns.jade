@@ -2,7 +2,12 @@ section#features.page-block
 	.container
 		.row.page-header
 			h2(translate="products.geodns.title")
-			span(translate="products.geodns.content")
-		.row(ng-init="product='geodns'")
-			.col-lg-12()
+		.row.product-page
+			.col-lg-3
+				.pricing-plan
+					.header
+						h3(translate="products.geodns.name")
+						span.price(translate="products.geodns.price")
+			.col-lg-9(ng-init="product='geodns'")
+				div(translate="products.geodns.content")
 				include ../../partials/newsletter.jade

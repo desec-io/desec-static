@@ -28,6 +28,10 @@
         "q7": {
             "content": "Nein. Es ist nicht möglich, bei deSEC eine Domain (z.B. desec.io) anzumelden, denn deSEC ist kein sog. Registrar. Für jede registrierte Domain müssen aber auch DNS-Informationen abgelegt werden. Das übernimmt häufig der Registrar. Wer zu deSEC wechselst, kann jedoch von DANE und anderen Profi-Features wie dynDNS, tunnelDNS oder geoDNS profitieren.",
             "title": "Kann ich bei deSEC eine Domain anmelden? Ist deSEC ein Registrar?"
+        },
+        "q8": {
+            "content": "Die Anzahl und der Typ von DNS-Einträgen sind bei uns nicht beschränkt. Zugriffe zum Verwalten Ihrer Einstellungen via REST-API sind auf täglich 30 beschränkt. Der goldDNS-Tarif ist von dieser Einschränkung ausgenommen.",
+            "title": "Gibt es Nutzungsbeschränkungen?"
         }
     },
     "features": {
@@ -43,25 +47,25 @@
             "content": "DNS-Antworten können auf die geographische Position des Clients zugeschnitten werden und ermöglichen so ortsabhängige Einsatzszenarien.",
             "title": "GeoDNS"
         },
+        "headline": "Features",
         "tunnel": {
             "content": "Mancherorts ist der Internetzugang technisch beschränkt; der Zugriff auf das DNS funktioniert jedoch meist. Nutzen Sie das DNS als Tunnel, um auch anderen Datenverkehr darüber zu transportieren – wie in einem VPN.",
             "title": "DNS-Tunnel"
         }
     },
     "hero": {
-        "button": "",
-        "content": "Sichere DNS Dienstleistungen.",
+        "content": "Sicheres DNS-Hosting mit DNSSEC und DANE.\u003cbr /\u003eZukunftsträchtige Technologien.\u003cbr /\u003eEin besseres Internet.",
         "title": "deSEC"
     },
     "products": {
         "anydns": {
-            "content": "Durch physikalisch redundante DNS-Server an verschiedenen geographischen Standorten wird sichergestellt, dass alle DNS-Anfragen zu jeder Zeit zuverlässig und schnellstmöglich beantwortert werden. Alle deSEC-Server sind über eine einheitliche anycast-IP erreichbar. Die optimale Route wird automatisch errechnet.",
-            "feature1": "100% SLA",
+            "content": "\u003cp\u003eNeben unseren Standard-Features (DNSSEC, DANE, IPv6, and REST API) garantiert dieses Paket 100% Hochverfügbarkeit durch die anycast-Technologie.\u003c/p\u003e\u003cp\u003eDurch physikalisch redundante DNS-Server an verschiedenen geographischen Standorten wird sichergestellt, dass alle DNS-Anfragen zu jeder Zeit zuverlässig und schnellstmöglich beantwortert werden. Alle deSEC-Server sind über eine einheitliche anycast-IP erreichbar. Die optimale Route wird automatisch errechnet.\u003c/p\u003e\u003cp\u003eanyDNS ist während des Betatests 2015 kostenfrei und kostet danach x € / Monat.\u003c/p\u003e",
+            "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "anycast",
             "feature3": "REST-API",
             "link": "Anmelden",
             "name": "anyDNS",
-            "price": "TODO",
+            "price": "kostenlos\u003cbr /\u003e\u003csmall\u003e(x € monatlich ab 2016)\u003c/small\u003e",
             "title": "anyDNS – Die Hochverfügbarkeitslösung für DNS Dienste"
         },
         "beta": {
@@ -72,7 +76,7 @@
                     "label": "Benachrichtigung, sobald Kapazität verfügbar",
                     "placeholder": "max@desec.io"
                 },
-                "headline": "Jetzt für den Betatest anmelden",
+                "headline": "Jetzt für den kostenlosen Betatest anmelden",
                 "product": {
                     "label": "Produkt"
                 },
@@ -80,51 +84,50 @@
                 "waiting": "Anmeldung läuft ..."
             }
         },
-        "content": "deSEC bietet verschiedene DNS-Dienstleistungen jeweils mit DNSSEC und DANE auf modernster Infrastruktur mit IPv6-Unterstützung an. Alle nötigen Einstellungen können von professionellen Anwendern grundsätzlich auch über die gängige REST-Schnittstelle automatisiert vorgenommen werden. Wer nicht nur per DNSSEC die Richtigkeit unserer DNS-Antworten sicherstellen will, sondern auch die eigentlichen Anfragen verschlüsseln will, kann optional dnscrypt oder dnscurve nutzen.",
+        "content": "\u003cp\u003edeSEC bietet verschiedene DNS-Dienstleistungen jeweils mit DNSSEC und DANE auf modernster Infrastruktur mit IPv6-Unterstützung an. Anzahl und Typ der DNS-Einträge sind nicht beschränkt.Alle nötigen Einstellungen können von professionellen Anwendern auch über unsere REST-Schnittstelle automatisiert vorgenommen werden.\u003c/p\u003e\u003cp\u003eZusätzlich bietet jedes Paket eine Krypto-Option (dnscrypt/dnscurve), damit nicht nur die Richtigkeit unserer DNS-Antworten per DNSSEC sichergestellt, sondern auch die DNS-Daten selbst verschlüsselt werden können.\u003c/p\u003e",
         "dyndns": {
-            "content": "Sie wollen auf ihren heimischen Netzwerkspeicher zugreifen? Mit dynDNS haben Sie die Möglichkeit, auch private Internetanschlüsse mit wechselnder IP-Adresse anhand einer festen URL unter Ihrer eigenen Domain zu erreichen.",
-            "feature1": "99% SLA",
+            "content": "\u003cp\u003eSie wollen auf ihren heimischen Netzwerkspeicher zugreifen? Mit dynDNS haben Sie die Möglichkeit, auch private Internetanschlüsse mit wechselnder IP-Adresse anhand einer festen URL unter Ihrer eigenen Domain zu erreichen.\u003c/p\u003e\u003cp\u003eDieses Paket unterstützt unserer Standard-Features DNSSEC, DANE, IPv6 sowie die REST-API und ist dauerhaft kostenfrei.\u003c/p\u003e",
+            "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "dyndns",
             "feature3": "REST-API",
             "link": "Anmelden",
             "name": "dynDNS",
-            "price": "kostenfrei",
+            "price": "kostenlos",
             "title": "dynDNS – Feste URLs für Anschlüsse mit wechselnder IP"
         },
         "geodns": {
-            "content": "Wenn sie ihren eigenen Dienst durch räumlich verteilte Server bereitstellen wollen, bietet geoDNS ihnen die Möglichkeit, Anfragen auf ihre URL abhängig von deren geographischen Ursprungs zu beantworten. So können Sie Besucher immer mit ihrem geographisch nächstgelegenen Server oder mit speziellen Inhalten bedienen und auch Serverausfälle kompensieren. Um eine maximale Verfügbarkeit zu garantieren, schließt geoDNS den anyDNS-Dienst mit ein.",
-            "feature1": "100% SLA",
+            "content": "\u003cp\u003eWenn sie ihren eigenen Dienst durch räumlich verteilte Server bereitstellen wollen, bietet geoDNS ihnen die Möglichkeit, Anfragen auf ihre URL abhängig von deren geographischen Ursprungs zu beantworten. So können Sie Besucher immer mit ihrem geographisch nächstgelegenen Server oder mit speziellen Inhalten bedienen und auch Serverausfälle kompensieren.\u003c/p\u003e\u003cp\u003eUm maximale Verfügbarkeit zu garantieren, schließt geoDNS den anyDNS-Dienst und damit auch unsere Standard-Features DNSSEC, DANE, IPv6 und REST mit ein.\u003c/p\u003e\u003cp\u003egeoDNS ist während des Betatests 2015 kostenfrei und kostet danach x € / Monat.\u003c/p\u003e",
+            "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "anycast",
             "feature3": "geoDNS",
             "feature4": "REST-API",
             "link": "Anmelden",
             "name": "geoDNS",
-            "price": "TODO",
+            "price": "kostenlos\u003cbr /\u003e\u003csmall\u003e(x € monatlich ab 2016)\u003c/small\u003e",
             "title": "geoDNS – Standortabhängige DNS-Antworten"
         },
         "golddns": {
-            "content": "Professionelle DNS-Nutzer erhalten mit diesem Paket das gesamte Leistungsspektrum von deSEC, einschließlich unlimitierten Zugangs zur REST-API für die automatisierte Anpassung von DNS-Einträgen.",
-            "feature1": "100% SLA",
+            "content": "\u003cp\u003eProfessionelle DNS-Nutzer erhalten mit diesem Paket das gesamte Leistungsspektrum von deSEC (einschließlich DNSSEC, DANE, IPv6, REST, anycast, geoDNS, dynDNS, tunnelDNS), und zusätzlich unlimitierten Zugangs zur REST-API für die automatisierte Anpassung von DNS-Einträgen.\u003c/p\u003e\u003cp\u003egoldDNS ist während des Betatests 2015 kostenfrei und kostet danach x € / Monat.\u003c/p\u003e",
+            "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "anycast",
             "feature3": "geoDNS",
             "feature4": "DNS-Tunnel",
             "feature5": "REST-API",
             "link": "Anmelden",
             "name": "goldDNS",
-            "price": "TODO",
+            "price": "kostenlos\u003cbr /\u003e\u003csmall\u003e(x € monatlich ab 2016)\u003c/small\u003e",
             "title": "goldDNS – Alles in Einem"
         },
         "headline": "Produkte",
-        "note": "Alle Produkte enthalten DNSSEC, DANE, IPv6-Unterstützung und Zugriff via REST-API. Anzahl und Typ der DNS-Einträge sind nicht beschränkt.",
         "title": "Produkte",
         "tunneldns": {
-            "content": "tunnelDNS bietet dem technisch versierten Anwender die Möglichkeit, öffentliche WLANs auf kreativem Wege auch dann nutzen zu können, wenn alle anderen Möglichkeiten ausscheiden: DNS-Dienste funktionieren fast überall auch ohne Anmeldung, und können als Tunnel für andere Inhalte fungieren.",
-            "feature1": "99% SLA",
+            "content": "\u003cp\u003etunnelDNS bietet dem technisch versierten Anwender die Möglichkeit, öffentliche WLANs auf kreativem Wege auch dann nutzen zu können, wenn alle anderen Möglichkeiten ausscheiden: DNS-Dienste funktionieren fast überall auch ohne Anmeldung, und können als Tunnel für andere Inhalte fungieren.\u003c/p\u003e\u003cp\u003eDieses Paket unterstützt unserer Standard-Features DNSSEC, DANE, IPv6 sowie die REST-API undist dauerhaft kostenfrei.\u003c/p\u003e",
+            "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "DNS-Tunnel",
             "feature3": "REST-API",
             "link": "Anmelden",
             "name": "tunnelDNS",
-            "price": "kostenfrei",
+            "price": "kostenlos",
             "title": "tunnelDNS – Internetzugang unter Minimalbedingungen"
         }
     },

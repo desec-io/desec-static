@@ -8,7 +8,7 @@ section#faq.page-block.faq
 				img.img-center(src="bower_components/ultima/img/faq-icon.png", alt="FAQ")
 			.col-lg-8.col-md-8.col-sm-8
 				#accordion-faq.panel-group(ng-controller="FaqCtrl")
-					.panel(ng-repeat="n in [1,2,3,4,5,6,7]")
+					.panel(ng-repeat="n in [1,2,3,4,5,6,7,8]")
 						a.panel-heading.collapsed(ng-click="showFaq($index+1)",ng-class="{collapsed: faq!={{n}} }",href="")
 							span(translate="faq.q{{n}}.title")
 							.indicator
