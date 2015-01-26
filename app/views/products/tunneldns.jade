@@ -2,7 +2,12 @@ section#features.page-block
 	.container
 		.row.page-header
 			h2(translate="products.tunneldns.title")
-			span(translate="products.tunneldns.content")
-		.row(ng-init="product='tunneldns'")
-			.col-lg-12()
+		.row.product-page
+			.col-lg-3
+				.pricing-plan
+					.header
+						h3(translate="products.tunneldns.name")
+						span.price(translate="products.tunneldns.price")
+			.col-lg-9(ng-init="product='tunneldns'")
+				div(translate="products.tunneldns.content")
 				include ../../partials/newsletter.jade

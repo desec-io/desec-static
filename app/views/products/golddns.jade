@@ -2,7 +2,12 @@ section#features.page-block
 	.container
 		.row.page-header
 			h2(translate="products.golddns.title")
-			span(translate="products.golddns.content")
-		.row(ng-init="product='golddns'")
-			.col-lg-12()
+		.row.product-page
+			.col-lg-3
+				.pricing-plan
+					.header
+						h3(translate="products.golddns.name")
+						span.price(translate="products.golddns.price")
+			.col-lg-9(ng-init="product='golddns'")
+				div(translate="products.golddns.content")
 				include ../../partials/newsletter.jade
