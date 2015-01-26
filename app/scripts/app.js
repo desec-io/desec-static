@@ -12,4 +12,7 @@ angular.module('desecClientApp', [
 		'ui.router',
 		'pascalprecht.translate',
 		'mailchimp',
+		'angulartics',
+		'angulartics.google.analytics',
+		'angulartics.scroll',
 	])
