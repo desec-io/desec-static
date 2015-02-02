@@ -25,10 +25,7 @@ div.wizard
 									option(value="golddns") goldDNS
 									option(value="tunneldns") tunnelDNS
 					.row
-						.col-sm-6
-							pre {{ mailchimp }}
-						.col-sm-6
-							//.col-sm-offset-6
+						.col-sm-6.col-sm-offset-6
 							.checkbox
 								label
 									input(type="checkbox", name="securedns", ng-init="mailchimp.SECURE='plain'", ng-model="mailchimp.SECURE", ng-true-value="secure", ng-false-value="plain")
