@@ -54,8 +54,12 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 			
 			// Save requested language as preferred and use it.
 			$translate.preferredLanguage($stateParams.lang);
-			$rootScope.lang = $stateParams.lang;
-			$translate.use($stateParams.lang).then(function() { $rootScope.$emit('langChanged') });
+			if ($stateParams.lang)
+				$rootScope.lang = $stateParams.lang;
+			if ($translate.use() !== $stateParams.lang)
+				$translate.use($stateParams.lang).then(function() { $rootScope.$emit('langChanged') });
+			else
+				$rootScope.$emit('langChanged');
 		}
 	});
 	

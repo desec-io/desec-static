@@ -2,8 +2,6 @@ angular.module('desecClientApp').controller('LangChooserCtrl', function($statePa
 
 	function updateScopeI18n() {
 		
-		console.log('lang changed')
-		$scope.i18n = $state.includes('i18n');
 		var languages = ['en', 'de'];
 		
 		// create stateParams for language switch, one for each language
@@ -23,10 +21,12 @@ angular.module('desecClientApp').controller('LangChooserCtrl', function($statePa
 			otherLang: otherLang,
 			languages: languages,
 			href: href,
+			enabled: $state.includes('i18n'),
 		};
 		
 	}
 	
 	$rootScope.$on('langChanged', updateScopeI18n);
+	$rootScope.$on('$stateChangeSuccess', updateScopeI18n);
 
 });

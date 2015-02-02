@@ -32,10 +32,10 @@ header.stiky-header
 							a(ui-sref="i18n.product.geodns({lang: lang})",translate="menu.products.geodns")
 						li
 							a(ui-sref="i18n.product.golddns({lang: lang})",translate="menu.products.golddns")
-				li.has-dropdown(ng-controller="LangChooserCtrl")
+				li.has-dropdown(ng-controller="LangChooserCtrl",ng-show="i18n.enabled")
 					a.scroll(ng-show="i18n")
 						| Language
 						i.fa.fa-caret-down
-					ul.dropdown(ng-show="i18n")
+					ul.dropdown
 						li(ng-repeat="l in i18n.otherLang")
 							a(href="{{ i18n.href[l] }}") {{ l | translate }}
