@@ -26,7 +26,7 @@
             "title": "Wie finanziert sich deSEC?"
         },
         "q7": {
-            "content": "Nein. Es ist nicht möglich, bei deSEC eine Domain (z.B. desec.io) anzumelden, denn deSEC ist kein sog. Registrar. Für jede registrierte Domain müssen aber auch DNS-Informationen abgelegt werden. Das übernimmt häufig der Registrar. Wer zu deSEC wechselst, kann jedoch von DANE und anderen Profi-Features wie dynDNS, tunnelDNS oder geoDNS profitieren.",
+            "content": "Nein. Es ist nicht möglich, bei deSEC eine Domain (z.B. desec.io) anzumelden, denn deSEC ist kein sog. Registrar. Für jede registrierte Domain müssen aber auch DNS-Informationen abgelegt werden. Das übernimmt häufig der Registrar. Wer zu deSEC wechselt, kann jedoch von DANE und anderen Profi-Features wie dynDNS, tunnelDNS oder geoDNS profitieren.",
             "title": "Kann ich bei deSEC eine Domain anmelden? Ist deSEC ein Registrar?"
         },
         "q8": {
@@ -41,11 +41,11 @@
         },
         "dyn": {
             "content": "Mittels dynamischem DNS können Sie einen mit dem Internet verbundenen Computer unter Ihrer Domain verfügbar machen und aus der Ferne darauf zugreifen. Ein ganz normaler Internetanschluss genügt.",
-            "title": "DynDNS"
+            "title": "Dynamisches DNS"
         },
         "geo": {
             "content": "DNS-Antworten können auf die geographische Position des Clients zugeschnitten werden und ermöglichen so ortsabhängige Einsatzszenarien.",
-            "title": "GeoDNS"
+            "title": "GeoIP-basiertes DNS"
         },
         "headline": "Features",
         "tunnel": {
@@ -57,6 +57,17 @@
         "content": "Sicheres DNS-Hosting mit DNSSEC und DANE.\u003cbr /\u003eZukunftsträchtige Technologien.\u003cbr /\u003eEin besseres Internet.",
         "title": "deSEC"
     },
+    "menu": {
+        "home": "Menü",
+        "products": {
+            "anydns": "Anycast",
+            "dyndns": "DynDNS",
+            "geodns": "GeoDNS",
+            "golddns": "Gold DNS",
+            "headline": "Unsere Produkte",
+            "tunneldns": "DNS Tunnel"
+        }
+    },
     "products": {
         "anydns": {
             "content": "\u003cp\u003eNeben unseren Standard-Features (DNSSEC, DANE, IPv6, and REST API) garantiert dieses Paket 100% Hochverfügbarkeit durch die anycast-Technologie.\u003c/p\u003e\u003cp\u003eDurch physikalisch redundante DNS-Server an verschiedenen geographischen Standorten wird sichergestellt, dass alle DNS-Anfragen zu jeder Zeit zuverlässig und schnellstmöglich beantwortert werden. Alle deSEC-Server sind über eine einheitliche anycast-IP erreichbar. Die optimale Route wird automatisch errechnet.\u003c/p\u003e\u003cp\u003eanyDNS ist während des Betatests 2015 kostenfrei und kostet danach x € / Monat.\u003c/p\u003e",
@@ -65,7 +76,7 @@
             "feature3": "REST-API",
             "link": "Anmelden",
             "name": "anyDNS",
-            "price": "kostenlos\u003cbr /\u003e\u003csmall\u003e(x € monatlich ab 2016)\u003c/small\u003e",
+            "price": "kostenlos\u003csmall\u003e(x € monatlich ab 2016)\u003c/small\u003e",
             "title": "anyDNS – Die Hochverfügbarkeitslösung für DNS Dienste"
         },
         "beta": {
@@ -73,7 +84,7 @@
                 "again": "Zurück",
                 "back": "Zurück",
                 "email": {
-                    "label": "Benachrichtigung, sobald Kapazität verfügbar",
+                    "label": "E-Mail-Adresse für Teilnahmebestätigung",
                     "placeholder": "max@desec.io"
                 },
                 "headline": "Jetzt für den kostenlosen Betatest anmelden",
@@ -103,7 +114,7 @@
             "feature4": "REST-API",
             "link": "Anmelden",
             "name": "geoDNS",
-            "price": "kostenlos\u003cbr /\u003e\u003csmall\u003e(x € monatlich ab 2016)\u003c/small\u003e",
+            "price": "kostenlos\u003csmall\u003e(x € monatlich ab 2016)\u003c/small\u003e",
             "title": "geoDNS – Standortabhängige DNS-Antworten"
         },
         "golddns": {
@@ -115,13 +126,13 @@
             "feature5": "REST-API",
             "link": "Anmelden",
             "name": "goldDNS",
-            "price": "kostenlos\u003cbr /\u003e\u003csmall\u003e(x € monatlich ab 2016)\u003c/small\u003e",
+            "price": "kostenlos\u003csmall\u003e(x € monatlich ab 2016)\u003c/small\u003e",
             "title": "goldDNS – Alles in Einem"
         },
         "headline": "Produkte",
         "title": "Produkte",
         "tunneldns": {
-            "content": "\u003cp\u003etunnelDNS bietet dem technisch versierten Anwender die Möglichkeit, öffentliche WLANs auf kreativem Wege auch dann nutzen zu können, wenn alle anderen Möglichkeiten ausscheiden: DNS-Dienste funktionieren fast überall auch ohne Anmeldung, und können als Tunnel für andere Inhalte fungieren.\u003c/p\u003e\u003cp\u003eDieses Paket unterstützt unserer Standard-Features DNSSEC, DANE, IPv6 sowie die REST-API undist dauerhaft kostenfrei.\u003c/p\u003e",
+            "content": "\u003cp\u003etunnelDNS bietet dem technisch versierten Anwender die Möglichkeit, öffentliche WLANs auf kreativem Wege auch dann nutzen zu können, wenn alle anderen Möglichkeiten ausscheiden: DNS-Dienste funktionieren fast überall auch ohne Anmeldung, und können als Tunnel für andere Inhalte fungieren.\u003c/p\u003e\u003cp\u003eDieses Paket unterstützt unserer Standard-Features DNSSEC, DANE, IPv6 sowie die REST-API und ist dauerhaft kostenfrei.\u003c/p\u003e",
             "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "DNS-Tunnel",
             "feature3": "REST-API",

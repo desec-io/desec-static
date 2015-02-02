@@ -14,11 +14,11 @@
             "title": "What is DNSSEC?"
         },
         "q4": {
-            "content": "\u003cp\u003eAs described above, DNSSEC ensures that your data is directed to the right server – eventually. But even then, attackers can intercept and read traffic before forwarding it to the intended destination. This is also even true for encrypted connections. Although an attacker would have to show an electronic certificate comparable to a passport in order to decrypt the traffic, this does not pose a significant problem to professional hackers. It is not very difficult to obtain an illegitimate decryption passport that looks valid but should not have been issued in the first place.\u003c/p\u003e\n\n\u003cp\u003eDANE allows to identify such attacks by adding additional passport information to the DNS database. This passport information is secured against manipulation by DNSSEC. The combination of DNSSEC and DANE has two benefits:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eA connection to the correct server is established (for example, you're connected to your bank's server, as intended).\u003c/li\u003e\n\u003cli\u003eOnly the bank's passport is accepted for encrypted connections. If an attacker has a duplicate passport, the connection fails.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eTogether, these technologies allow secure and reliable online communication.\u003c/p\u003e",
+            "content": "\u003cp\u003eAs described above, DNSSEC ensures that your data is directed to the right server. But even then, attackers can intercept and read traffic before forwarding it to the intended destination. This is also even true for encrypted connections. Although an attacker would have to show an electronic certificate comparable to a passport in order to decrypt the traffic, this does not pose a significant problem to professional hackers. It is not very difficult to obtain an illegitimate decryption passport that looks valid but should not have been issued in the first place.\u003c/p\u003e\n\n\u003cp\u003eDANE allows to identify such attacks by adding additional passport information to the DNS database. This passport information is secured against manipulation by DNSSEC. The combination of DNSSEC and DANE has two benefits:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eA connection to the correct server is established (for example, you're connected to your bank's server, as intended).\u003c/li\u003e\n\u003cli\u003eOnly the bank's passport is accepted for encrypted connections. If an attacker has a duplicate passport, the connection fails.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eTogether, these technologies allow secure and reliable online communication.\u003c/p\u003e",
             "title": "What is DANE?"
         },
         "q5": {
-            "content": "We are offering DNS services. Essentially, the DNS is a public lookup system to have your computer connected to the right destination (e.g. your bank). This information is, of course, public.\n\nHowever, DNS information at deSEC is protected against manipulation using an additional security layer, DNSSEC. This requires a secret key which we use to lock the DNS information against manipulation. Whoever posses the secret key can introduce manipulations.\n\nTherefore, the secret key is located in Germany exlusively, and not accessible through the public Internet. Our DNS information is locked against manipulation using this key in a protected space. Only after that, this secured information is made public in the DNS lookup database so that Internet users can rely on it to establish secure connections.",
+            "content": "We are offering DNS services. Essentially, the DNS is a public lookup system to have your computer connected to the right destination (e.g. your bank). This information is, of course, public.\n\nHowever, DNS information at deSEC is protected against manipulation using an additional security layer, DNSSEC. This requires a secret key which we use to lock the DNS information against manipulation. Whoever possesses the secret key can introduce manipulations.\n\nTherefore, the secret key is located in Germany exlusively, and not accessible through the public Internet. Our DNS information is locked against manipulation using this key in a protected space. Only after this locking procedure, the secured information is made public in the DNS lookup database so that Internet users can rely on it to establish secure connections.",
             "title": "What makes deSEC secure?"
         },
         "q6": {
@@ -41,11 +41,11 @@
         },
         "dyn": {
             "content": "Having a box sitting at home or in your company that you would like to access from the public Internet? Use dynamical DNS to make any computer available under your domain and access it remotely.",
-            "title": "DynDNS"
+            "title": "Dynamic DNS"
         },
         "geo": {
             "content": "Using the geographical position of the DNS client, replies can be tailored to your specific needs.",
-            "title": "GeoDNS"
+            "title": "GeoIP-based DNS"
         },
         "headline": "Features",
         "tunnel": {
@@ -54,8 +54,19 @@
         }
     },
     "hero": {
-        "content": "We offer secure DNS hosting with DNSSEC and DANE.\u003cbr /\u003eWe spread innovative technologies.\u003cbr /\u003eWe make the Internet a better place.",
+        "content": "We provide secure DNS hosting with DNSSEC and DANE.\u003cbr /\u003eWe spread innovative technologies.\u003cbr /\u003eWe make the Internet a better place.",
         "title": "deSEC"
+    },
+    "menu": {
+        "home": "Menu",
+        "products": {
+            "anydns": "Anycast",
+            "dyndns": "DynDNS",
+            "geodns": "GeoDNS",
+            "golddns": "Gold DNS",
+            "headline": "Our Products",
+            "tunneldns": "DNS Tunnel"
+        }
     },
     "products": {
         "anydns": {
@@ -65,7 +76,7 @@
             "feature3": "REST API",
             "link": "Set up",
             "name": "anyDNS",
-            "price": "free\u003cbr /\u003e\u003csmall\u003e(x €/mo starting 2016)\u003c/small\u003e",
+            "price": "free\u003csmall\u003e(x €/mo starting 2016)\u003c/small\u003e",
             "title": "anyDNS – The high-availability solution for DNS services"
         },
         "beta": {
@@ -73,7 +84,7 @@
                 "again": "Back",
                 "back": "Try Again",
                 "email": {
-                    "label": "Email address for access notification",
+                    "label": "E-mail address for access notification",
                     "placeholder": "johndoe@example.com"
                 },
                 "headline": "Apply for Free Beta Access",
@@ -103,7 +114,7 @@
             "feature4": "REST API",
             "link": "Set up",
             "name": "geoDNS",
-            "price": "free\u003cbr /\u003e\u003csmall\u003e(x €/mo starting 2016)\u003c/small\u003e",
+            "price": "free\u003csmall\u003e(x €/mo starting 2016)\u003c/small\u003e",
             "title": "geoDNS – Location-based DNS replies"
         },
         "golddns": {
@@ -115,7 +126,7 @@
             "feature5": "REST API",
             "link": "Set up",
             "name": "goldDNS",
-            "price": "free\u003cbr /\u003e\u003csmall\u003e(x €/mo starting 2016)\u003c/small\u003e",
+            "price": "free\u003csmall\u003e(x €/mo starting 2016)\u003c/small\u003e",
             "title": "goldDNS – All in One"
         },
         "headline": "Plans",
