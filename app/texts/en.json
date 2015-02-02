@@ -53,19 +53,49 @@
             "title": "DNS tunnel"
         }
     },
+    "footer": {
+        "content": "© 2015 deSEC GbR, Berlin • Icons by \u003ca href=\"http://www.iconarchive.com/\"\u003eIconArchive\u003c/a\u003e (colors modified) •",
+        "imprint": "Imprint"
+    },
     "hero": {
         "content": "We provide secure DNS hosting with DNSSEC and DANE.\u003cbr /\u003eWe spread innovative technologies.\u003cbr /\u003eWe make the Internet a better place.",
-        "title": "deSEC"
+        "title": "Securely made in Germany."
     },
     "menu": {
         "home": "Menu",
         "products": {
-            "anydns": "Anycast",
-            "dyndns": "DynDNS",
-            "geodns": "GeoDNS",
-            "golddns": "Gold DNS",
-            "headline": "Our Products",
-            "tunneldns": "DNS Tunnel"
+            "anydns": "anyDNS",
+            "dyndns": "dynDNS",
+            "geodns": "geoDNS",
+            "golddns": "goldDNS",
+            "headline": "Plans",
+            "tunneldns": "tunnelDNS"
+        }
+    },
+    "meta": {
+        "anydns": {
+            "desc": "",
+            "title": ""
+        },
+        "dyndns": {
+            "desc": "",
+            "title": ""
+        },
+        "geodns": {
+            "desc": "",
+            "title": ""
+        },
+        "golddns": {
+            "desc": "",
+            "title": ""
+        },
+        "homepage": {
+            "desc": "",
+            "title": ""
+        },
+        "tunneldns": {
+            "desc": "",
+            "title": ""
         }
     },
     "products": {
