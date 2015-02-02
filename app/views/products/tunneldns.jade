@@ -6,7 +6,9 @@ section#features.page-block
 			.col-lg-3
 				.pricing-plan
 					.header
-						h3(translate="products.tunneldns.name")
+						h3
+							img(src="/images/plans/tunnelDNS-128i.png")
+							{{'products.tunneldns.name'|translate}}
 						span.price(translate="products.tunneldns.price")
 			.col-lg-9(ng-init="product='tunneldns'")
 				div(translate="products.tunneldns.content")

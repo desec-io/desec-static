@@ -60,3 +60,25 @@
 	font-weight: 300;
 	line-height: 1.42857143;
 }
+
+.features .feature-img {
+	height: 96px;
+	width: 96px;
+}
+
+#pricing h3 img {
+	display: inline;
+	margin-bottom: -10px;
+	margin-right: 8px;
+	vertical-align: baseline;
+}
+
+#features h3 img {
+	margin: 0 auto 24px;
+}
+
+#features .pricing-plan small {
+	color: #FFF;
+	display: block;
+	font-weight: normal;
+}
