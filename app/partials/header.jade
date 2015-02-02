@@ -37,5 +37,5 @@ header.stiky-header
 						| Language
 						i.fa.fa-caret-down
 					ul.dropdown(ng-show="i18n")
-						li(ng-repeat="l in i18n.otherLang")
+						li(ng-repeat="l in i18n.languages")
 							a(href="{{ i18n.href[l] }}") {{ l | translate }}

@@ -2,19 +2,12 @@ angular.module('desecClientApp').controller('LangChooserCtrl', function($statePa
 
 	function updateScopeI18n() {
 		
-		if (!$state.includes('i18n')) {
-			$scope.i18n = false;
-			$rootScope.lang = $translate.use();
-			return;
-		}
-	
+		$scope.i18n = $state.includes('i18n');
 		var languages = ['en', 'de'];
 		
 		// create stateParams for language switch, one for each language
 		var href = {};
-		var otherLang = angular.copy(languages);
-		otherLang.splice(languages.indexOf($stateParams.lang), 1);
-		angular.forEach(otherLang, function(lang) {
+		angular.forEach(languages, function(lang) {
 			var params = angular.copy($stateParams);
 			params.lang = lang;
 			href[lang] = $state.href($state.$current.toString(), params);
@@ -22,12 +15,10 @@ angular.module('desecClientApp').controller('LangChooserCtrl', function($statePa
 		
 		$scope.i18n = {
 			currentState: $state.$current.toString(),
-			currentLang: $stateParams.lang,
-			otherLang: otherLang,
+			currentLang: $translate.use(),
+			languages: languages,
 			href: href,
 		};
-		
-		$rootScope.lang = $translate.use();
 		
 	}
 	

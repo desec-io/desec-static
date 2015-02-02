@@ -35,7 +35,7 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 		template: '<ui-view/>',
 		url: '/:lang',
 		abstract: true,
-		controller: function($translate, $stateParams, $state) {
+		controller: function($translate, $stateParams, $state, $rootScope) {
 			if (!$stateParams.lang) {
 				// No language requested. Use preferred language as determined by angular-translate.
 				$state.go($state.$current, {lang: $translate.preferredLanguage()});
@@ -55,6 +55,7 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 			// Save requested language as preferred and use it.
 			$translate.preferredLanguage($stateParams.lang);
 			$translate.use($stateParams.lang);
+			$rootScope.lang = $stateParams.lang;
 		}
 	});
 	
