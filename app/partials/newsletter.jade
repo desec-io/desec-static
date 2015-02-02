@@ -9,20 +9,30 @@ div.wizard
 		input.hidden(type="hidden", ng-model="mailchimp.product", ng-init="mailchimp.PRODUCT=product")
 		.wizard-step(ng-class="{active: !mailchimp.result}")
 			.tabs
-				.tab.active.row
-					.col-sm-6
-						.form-group
-							label(for="email", translate="products.beta.apply.email.label")
-							input.form-control(type="email", name="email", ng-model="mailchimp.EMAIL", placeholder="{{ 'products.beta.apply.email.placeholder' | translate }}", required="")
-					.col-sm-6
-						.form-group
-							label(for="product", translate="products.beta.apply.product.label")
-							select.form-control(type="email", name="email", ng-model="mailchimp.PRODUCT", placeholder="{{ 'products.beta.apply.email.placeholder' | translate }}", required="")
-								option(value="anydns") anyDNS
-								option(value="dyndns") dynDNS
-								option(value="geodns") geoDNS
-								option(value="golddns") goldDNS
-								option(value="tunneldns") tunnelDNS
+				.tab.active
+					.row
+						.col-sm-6
+							.form-group
+								label(for="email", translate="products.beta.apply.email.label")
+								input.form-control(type="email", name="email", ng-model="mailchimp.EMAIL", placeholder="{{ 'products.beta.apply.email.placeholder' | translate }}", required="")
+						.col-sm-6
+							.form-group
+								label(for="product", translate="products.beta.apply.product.label")
+								select.form-control(type="email", name="email", ng-model="mailchimp.PRODUCT", placeholder="{{ 'products.beta.apply.email.placeholder' | translate }}", required="")
+									option(value="anydns") anyDNS
+									option(value="dyndns") dynDNS
+									option(value="geodns") geoDNS
+									option(value="golddns") goldDNS
+									option(value="tunneldns") tunnelDNS
+					.row
+						.col-sm-6
+							pre {{ mailchimp }}
+						.col-sm-6
+							//.col-sm-offset-6
+							.checkbox
+								label
+									input(type="checkbox", name="securedns", ng-init="mailchimp.SECURE='plain'", ng-model="mailchimp.SECURE", ng-true-value="secure", ng-false-value="plain")
+									| {{ 'products.beta.apply.securedns.label' | translate }}
 		.wizard-step(ng-class="{active: mailchimp.result}")
 			.tabs
 				.tab.active.row
