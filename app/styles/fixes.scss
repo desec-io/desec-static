@@ -20,3 +20,8 @@
 	font-weight: normal;
 	font-style: normal
 }
+
+// ultima uses relative path in hero background definition, we need to fix that
+.hero {
+	background-image: url(/images/hero-bg.png);
+}
