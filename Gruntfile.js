@@ -275,7 +275,10 @@ module.exports = function (grunt) {
 		
 		concat: {
 			options: {
-				separator: ';',
+				separator: '',
+				process: function(src, filepath) {
+					return (filepath.length > 2 && filepath.substr(-2) == 'js' ? ';' : '') + src;
+				},
 			},
 		},
 
