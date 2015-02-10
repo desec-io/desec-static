@@ -59,7 +59,7 @@
     },
     "hero": {
         "content": "We provide secure DNS hosting with DNSSEC and DANE.\u003cbr /\u003eWe spread innovative technologies.\u003cbr /\u003eWe make the Internet a better place.",
-        "title": "Securely made in Germany."
+        "title": "Security made in Germany."
     },
     "menu": {
         "home": "Menu",
@@ -120,6 +120,9 @@
                 "headline": "Apply for Free Beta Access",
                 "product": {
                     "label": "Plan to sign up for"
+                },
+                "securedns": {
+                    "label": "I would like to use encrypted transmission of DNS information using DNSCrypt/DNSCurve.\u003cbr /\u003e\u003csmall\u003eNote: Client-side support is very limited a this time.\u003c/small\u003e"
                 },
                 "submit": "Apply",
                 "waiting": "Applying ..."

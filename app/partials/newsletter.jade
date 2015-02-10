@@ -29,7 +29,7 @@ div.wizard
 							.checkbox
 								label
 									input(type="checkbox", name="securedns", ng-init="mailchimp.SECURE='plain'", ng-model="mailchimp.SECURE", ng-true-value="secure", ng-false-value="plain")
-									| {{ 'products.beta.apply.securedns.label' | translate }}
+									div(translate="products.beta.apply.securedns.label")
 		.wizard-step(ng-class="{active: mailchimp.result}")
 			.tabs
 				.tab.active.row

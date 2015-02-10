@@ -115,17 +115,20 @@
                 "back": "Zurück",
                 "email": {
                     "label": "E-Mail-Adresse für Teilnahmebestätigung",
-                    "placeholder": "max@desec.io"
+                    "placeholder": "max@example.com"
                 },
                 "headline": "Jetzt für den kostenlosen Betatest anmelden",
                 "product": {
                     "label": "Produkt"
                 },
+                "securedns": {
+                    "label": "Ich interessiere mich verschlüsselte DNS-Datenübertragung mit DNSCrypt/DNSCurve.\u003cbr /\u003e\u003csmall\u003eHinweis: Bisher nur sehr eingeschränkte Unterstützung auf Clientseite.\u003c/small\u003e"
+                },
                 "submit": "Anmelden",
                 "waiting": "Anmeldung läuft ..."
             }
         },
-        "content": "\u003cp\u003edeSEC bietet verschiedene DNS-Dienstleistungen jeweils mit DNSSEC und DANE auf modernster Infrastruktur mit IPv6-Unterstützung an. Anzahl und Typ der DNS-Einträge sind nicht beschränkt.Alle nötigen Einstellungen können von professionellen Anwendern auch über unsere REST-Schnittstelle automatisiert vorgenommen werden.\u003c/p\u003e\u003cp\u003eZusätzlich bietet jedes Paket eine Krypto-Option (dnscrypt/dnscurve), damit nicht nur die Richtigkeit unserer DNS-Antworten per DNSSEC sichergestellt, sondern auch die DNS-Daten selbst verschlüsselt werden können.\u003c/p\u003e",
+        "content": "\u003cp\u003edeSEC bietet verschiedene DNS-Dienstleistungen jeweils mit DNSSEC und DANE auf modernster Infrastruktur mit IPv6-Unterstützung an. Anzahl und Typ der DNS-Einträge sind nicht beschränkt. Alle nötigen Einstellungen können von professionellen Anwendern auch über unsere REST-Schnittstelle automatisiert vorgenommen werden.\u003c/p\u003e\u003cp\u003eZusätzlich bietet jedes Paket eine Krypto-Option (dnscrypt/dnscurve), damit nicht nur die Richtigkeit unserer DNS-Antworten per DNSSEC sichergestellt, sondern auch die DNS-Daten selbst verschlüsselt werden können.\u003c/p\u003e",
         "dyndns": {
             "content": "\u003cp\u003eSie wollen auf ihren heimischen Netzwerkspeicher zugreifen? Mit dynDNS haben Sie die Möglichkeit, auch private Internetanschlüsse mit wechselnder IP-Adresse anhand einer festen URL unter Ihrer eigenen Domain zu erreichen.\u003c/p\u003e\u003cp\u003eDieses Paket unterstützt unserer Standard-Features DNSSEC, DANE, IPv6 sowie die REST-API und ist dauerhaft kostenfrei.\u003c/p\u003e",
             "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
