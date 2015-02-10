@@ -101,7 +101,12 @@ a.logo-mobile {
 	padding: 13px 0;
 }
 .pricing-plan .buy-btn {
-	padding: 0 16px;
+	padding: 0 45px;
+}
+@media (min-width: 768px) {
+	.pricing-plan .buy-btn {
+		padding: 0 16px;
+	}
 }
 @media (min-width: 992px) {
 	.pricing-plan .buy-btn {
