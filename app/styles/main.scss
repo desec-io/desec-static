@@ -90,3 +90,26 @@
 a.logo-mobile {
 	margin-bottom: 8px;
 }
+
+.pricing-plan .header {
+	padding: 25px 0 18px 0;
+}
+.pricing-plan .body ul li {
+	padding: 18px 10px;
+}
+.btn {
+	padding: 13px 0;
+}
+.pricing-plan .buy-btn {
+	padding: 0 16px;
+}
+@media (min-width: 992px) {
+	.pricing-plan .buy-btn {
+		padding: 0 32px;
+	}
+}
+@media (min-width: 1200px) {
+	.pricing-plan .buy-btn {
+		padding: 0 45px;
+	}
+}
