@@ -104,7 +104,7 @@
             "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "anycast",
             "feature3": "REST API",
-            "link": "Set up",
+            "link": "Sign up",
             "name": "anyDNS",
             "price": "free\u003csmall\u003e(x €/mo starting 2016)\u003c/small\u003e",
             "title": "anyDNS – The high-availability solution for DNS services"
@@ -134,7 +134,7 @@
             "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "dyndns",
             "feature3": "REST API",
-            "link": "Set up",
+            "link": "Sign up",
             "name": "dynDNS",
             "price": "free",
             "title": "dynDNS – Fixed URLs for connections with frequently changing IP address"
@@ -145,7 +145,7 @@
             "feature2": "anycast",
             "feature3": "geoDNS",
             "feature4": "REST API",
-            "link": "Set up",
+            "link": "Sign up",
             "name": "geoDNS",
             "price": "free\u003csmall\u003e(x €/mo starting 2016)\u003c/small\u003e",
             "title": "geoDNS – Location-based DNS replies"
@@ -157,7 +157,7 @@
             "feature3": "geoDNS",
             "feature4": "DNS tunnel",
             "feature5": "REST API",
-            "link": "Set up",
+            "link": "Sign up",
             "name": "goldDNS",
             "price": "free\u003csmall\u003e(x €/mo starting 2016)\u003c/small\u003e",
             "title": "goldDNS – All in One"
@@ -169,7 +169,7 @@
             "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "DNS tunnel",
             "feature3": "REST API",
-            "link": "Set up",
+            "link": "Sign up",
             "name": "tunnelDNS",
             "price": "free",
             "title": "tunnelDNS – Internet connection under minimal conditions"
