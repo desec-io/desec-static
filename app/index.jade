@@ -43,7 +43,7 @@ html(ng-app="desecClientApp")
 		link(ng-repeat="l in i18n.otherLang",rel="alternative",hreflang="{{ l }}",href="{{ i18n.href[l] }}")
 
 	// Body
-	body.space-top
+	body.space-top(ng-controller="ScrollToTopCtrl")
 		include partials/googleanalytics.jade
 		
 		include partials/preloader.jade
@@ -79,4 +79,5 @@ html(ng-app="desecClientApp")
 		script(src="/scripts/states.js")
 		script(src="/scripts/controllers/langChooser.js")
 		script(src="/scripts/controllers/faq.js")
+		script(src="/scripts/controllers/scrolltotop.js")
 		// endbuild
