@@ -1,10 +1,10 @@
-header.stiky-header
+header.stiky-header(ng-controller="NavigationCtrl")
 	.container.group
 		a.logo(ui-sref="i18n.home({lang: lang})",ng-click="top()")
 			img(src="/images/logo.png", alt="deSEC")
 		a.logo-mobile(ui-sref="i18n.home({lang: lang})",ng-click="top()")
 			img(src="/images/umbrella.png", alt="deSEC")
-		.navi-toggle.group
+		.navi-toggle.group(ng-click="open=!open")
 			span.dot
 			span.line
 			span.dot
@@ -13,29 +13,27 @@ header.stiky-header
 			span.line
 			span.dot
 			span.line
-		nav.main-navi
+		nav.main-navi(ng-show="open")
 			ul
-				//li.active
-					a.scroll-up(ui-sref="i18n.home({lang: lang})",translate="menu.home")
 				li.has-dropdown
-					a.scroll(ui-sref="i18n.home({lang: lang})")
+					a()
 						| {{ 'menu.products.headline' | translate }}
 						i.fa.fa-caret-down
 					ul.dropdown
 						li
-							a(ui-sref="i18n.product.dyndns({lang: lang})",translate="menu.products.dyndns")
+							a(ui-sref="i18n.product.dyndns({lang: lang})",translate="menu.products.dyndns",ng-click="close()")
 						li
-							a(ui-sref="i18n.product.tunneldns({lang: lang})",translate="menu.products.tunneldns")
+							a(ui-sref="i18n.product.tunneldns({lang: lang})",translate="menu.products.tunneldns",ng-click="close()")
 						li
-							a(ui-sref="i18n.product.anydns({lang: lang})",translate="menu.products.anydns")
+							a(ui-sref="i18n.product.anydns({lang: lang})",translate="menu.products.anydns",ng-click="close()")
 						li
-							a(ui-sref="i18n.product.geodns({lang: lang})",translate="menu.products.geodns")
+							a(ui-sref="i18n.product.geodns({lang: lang})",translate="menu.products.geodns",ng-click="close()")
 						li
-							a(ui-sref="i18n.product.golddns({lang: lang})",translate="menu.products.golddns")
+							a(ui-sref="i18n.product.golddns({lang: lang})",translate="menu.products.golddns",ng-click="close()")
 				li.has-dropdown(ng-controller="LangChooserCtrl",ng-show="i18n.enabled")
-					a.scroll(ng-show="i18n")
+					a(ng-show="i18n")
 						| Language
 						i.fa.fa-caret-down
 					ul.dropdown
 						li(ng-repeat="l in i18n.otherLang")
-							a(href="{{ i18n.href[l] }}") {{ l | translate }}
+							a(href="{{ i18n.href[l] }}",ng-click="close()") {{ l | translate }}

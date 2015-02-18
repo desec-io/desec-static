@@ -25,3 +25,8 @@
 .hero {
 	background-image: url(/images/hero-bg.png);
 }
+
+// replace jQuery implementation of navigation show/hide and use ng-show instead
+.main-navi {
+	display: block; // hiding is done by element style with angularJS
+}

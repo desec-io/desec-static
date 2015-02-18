@@ -14,14 +14,11 @@ $(window).load(function() {
 /*Document Ready*/
 $(document).ready(function(e) {
 	
-	
-	/********Responsive Navigation**********/
-	$('.navi-toggle').on('click',function(){
-		$('.main-navi').toggleClass('open');
-	});
-	
-	$('.main-navi .has-dropdown a i').click(function(){
-		$(this).parent().parent().find('.dropdown').toggleClass('expanded');
+	$('.navi-toggle').click(function() {
+		$(this).parent().find('.dropdown').removeClass('expanded');
+	})
+	$('.main-navi .has-dropdown a').click(function(){
+		$(this).parent().find('.dropdown').toggleClass('expanded');
 		return false
 	});
 	
