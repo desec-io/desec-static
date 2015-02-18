@@ -32,12 +32,6 @@ $(document).ready(function(e) {
 		$('html, body').animate({scrollTop:$(this.hash).offset().top-80}, 1000, 'easeInOutQuart');
 	});
 	
-	/*Scroll Up*/
-	$('.scroll-up').click(function(){
-    $("html, body").animate({ scrollTop: 0 }, 1000, 'easeInOutQuart');
-    return false;
-	});
-	
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 500) {
 			$('#scroll-top').addClass('visible');

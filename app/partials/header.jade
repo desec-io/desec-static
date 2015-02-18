@@ -1,8 +1,8 @@
 header.stiky-header
 	.container.group
-		a.logo(ui-sref="i18n.home({lang: lang})")
+		a.logo(ui-sref="i18n.home({lang: lang})",ng-click="top()")
 			img(src="/images/logo.png", alt="deSEC")
-		a.logo-mobile(ui-sref="i18n.home({lang: lang})")
+		a.logo-mobile(ui-sref="i18n.home({lang: lang})",ng-click="top()")
 			img(src="/images/logo.png", alt="deSEC")
 		.navi-toggle.group
 			span.dot

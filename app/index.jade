@@ -54,7 +54,7 @@ html(ng-app="desecClientApp")
 		include partials/footer.jade
 
 		// Scroll To Top Button
-		#scroll-top.scroll-up
+		#scroll-top.scroll-up(ng-click="top()")
 			i.icon-arrow-up
 
 		// build:js(.) scripts/vendor.js
