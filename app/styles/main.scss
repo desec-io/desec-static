@@ -66,6 +66,10 @@
 	width: 96px;
 }
 
+#pricing h3 {
+	line-height: 1.8em;
+}
+
 #pricing h3 img {
 	display: inline;
 	margin-bottom: -10px;
@@ -83,11 +87,37 @@
 	font-weight: normal;
 }
 
-a.logo {
-	color: #000;
-	font-size: 48px;
+a.logo-mobile {
+	margin-bottom: 8px;
 }
 
-a.logo img {
-	display: inline;
+.pricing-plan .header {
+	padding: 25px 0 18px 0;
+}
+.pricing-plan .body ul li {
+	padding: 18px 10px;
+}
+.pricing-plan .body ul {
+	margin-bottom: 30px;
+}
+.col-sm-5ths .btn {
+	padding: 13px 0;
+}
+.pricing-plan .buy-btn {
+	padding: 0 45px;
+}
+@media (min-width: 768px) {
+	.pricing-plan .buy-btn {
+		padding: 0 16px;
+	}
+}
+@media (min-width: 992px) {
+	.pricing-plan .buy-btn {
+		padding: 0 32px;
+	}
+}
+@media (min-width: 1200px) {
+	.pricing-plan .buy-btn {
+		padding: 0 45px;
+	}
 }
