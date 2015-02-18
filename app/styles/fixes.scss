@@ -30,3 +30,9 @@
 .main-navi {
 	display: block; // hiding is done by element style with angularJS
 }
+
+@media (min-width: 992px) {
+	.main-navi {
+		display: block !important;
+	}
+}
