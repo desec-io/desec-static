@@ -4,55 +4,55 @@
 		xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
 	<url>
-		<loc>https://www.desec.io/#!/en/</loc>
-		<xhtml:link rel="alternative" hreflang="de" href="https://www.desec.io/#!/de/" />
+		<loc>https://desec.io/#!/en/</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/" />
 	</url>
 	<url>
-		<loc>https://www.desec.io/#!/en/product/dyndns</loc>
-		<xhtml:link rel="alternative" hreflang="de" href="https://www.desec.io/#!/de/product/dyndns" />
+		<loc>https://desec.io/#!/en/product/dyndns</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/dyndns" />
 	</url>
 	<url>
-		<loc>https://www.desec.io/#!/en/product/tunneldns</loc>
-		<xhtml:link rel="alternative" hreflang="de" href="https://www.desec.io/#!/de/product/tunneldns" />
+		<loc>https://desec.io/#!/en/product/anydns</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/anydns" />
 	</url>
 	<url>
-		<loc>https://www.desec.io/#!/en/product/anydns</loc>
-		<xhtml:link rel="alternative" hreflang="de" href="https://www.desec.io/#!/de/product/anydns" />
+		<loc>https://desec.io/#!/en/product/tunneldns</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/tunneldns" />
 	</url>
 	<url>
-		<loc>https://www.desec.io/#!/en/product/geodns</loc>
-		<xhtml:link rel="alternative" hreflang="de" href="https://www.desec.io/#!/de/product/geodns" />
+		<loc>https://desec.io/#!/en/product/geodns</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/geodns" />
 	</url>
 	<url>
-		<loc>https://www.desec.io/#!/de/</loc>
-		<xhtml:link rel="alternative" hreflang="en" href="https://www.desec.io/#!/en/" />
+		<loc>https://desec.io/#!/de/</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/" />
 	</url>
 	<url>
-		<loc>https://www.desec.io/#!/en/product/golddns</loc>
-		<xhtml:link rel="alternative" hreflang="de" href="https://www.desec.io/#!/de/product/golddns" />
+		<loc>https://desec.io/#!/en/product/golddns</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/golddns" />
 	</url>
 	<url>
-		<loc>https://www.desec.io/#!/imprint</loc>
-		<xhtml:link rel="alternative" hreflang="en" href="https://www.desec.io/#!/imprint" />
+		<loc>https://desec.io/#!/imprint</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/imprint" />
 	</url>
 	<url>
-		<loc>https://www.desec.io/#!/de/product/dyndns</loc>
-		<xhtml:link rel="alternative" hreflang="en" href="https://www.desec.io/#!/en/product/dyndns" />
+		<loc>https://desec.io/#!/de/product/tunneldns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/tunneldns" />
 	</url>
 	<url>
-		<loc>https://www.desec.io/#!/de/product/anydns</loc>
-		<xhtml:link rel="alternative" hreflang="en" href="https://www.desec.io/#!/en/product/anydns" />
+		<loc>https://desec.io/#!/de/product/dyndns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/dyndns" />
 	</url>
 	<url>
-		<loc>https://www.desec.io/#!/de/product/tunneldns</loc>
-		<xhtml:link rel="alternative" hreflang="en" href="https://www.desec.io/#!/en/product/tunneldns" />
+		<loc>https://desec.io/#!/de/product/anydns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/anydns" />
 	</url>
 	<url>
-		<loc>https://www.desec.io/#!/de/product/geodns</loc>
-		<xhtml:link rel="alternative" hreflang="en" href="https://www.desec.io/#!/en/product/geodns" />
+		<loc>https://desec.io/#!/de/product/geodns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/geodns" />
 	</url>
 	<url>
-		<loc>https://www.desec.io/#!/de/product/golddns</loc>
-		<xhtml:link rel="alternative" hreflang="en" href="https://www.desec.io/#!/en/product/golddns" />
+		<loc>https://desec.io/#!/de/product/golddns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/golddns" />
 	</url>
 </urlset>
