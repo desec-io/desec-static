@@ -130,7 +130,7 @@
                 "waiting": "Anmeldung läuft ..."
             }
         },
-        "content": "deSEC bietet professionelles DNS-Hosting auf modernster Infrastruktur mit IPv6-Unterstützung an. Zudem ermöglichen wir es unseren Kunden, ihre DNS-Informationen zusätzlich mit DNSSEC und DANE abzusichern und mit Hilfe von DNSCrypt / DNSCurve auch den übertragenen DNS-Verkehr selbst zu verschlüsseln. Und das Beste: Zu unserer Launch-Phase sind alle unsere angeboten Leistungen kostenlos!",
+        "content": "deSEC bietet professionelles DNS-Hosting auf modernster Infrastruktur mit IPv6-Unterstützung an. Zudem ermöglichen wir es unseren Kunden, ihre DNS-Informationen zusätzlich mit DNSSEC und DANE abzusichern und mit Hilfe von DNSCrypt / DNSCurve auch den übertragenen DNS-Verkehr selbst zu verschlüsseln. Und das Beste: Zu unserer Launch-Phase sind alle unsere angebotenen Leistungen kostenlos!",
         "dyndns": {
             "content": "\u003cp\u003eSie wollen auf ihren heimischen Netzwerkspeicher zugreifen? Mit dynDNS haben Sie die Möglichkeit, auch private Internetanschlüsse mit wechselnder IP-Adresse anhand einer festen URL unter Ihrer eigenen Domain zu erreichen.\u003c/p\u003e\u003cp\u003eDieses Paket unterstützt unserer Standard-Features DNSSEC, DANE, IPv6 sowie die REST-API.\u003c/p\u003e",
             "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
