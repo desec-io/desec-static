@@ -1,40 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>
 
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 		xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
 	<url>
-		<loc>https://sneak.desec.io/#!/en/</loc>
-		<xhtml:link rel="alternative" hreflang="de" href="https://sneak.desec.io/#!/de/" />
+		<loc>https://www.desec.io/#!/en/</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://www.desec.io/#!/de/" />
 	</url>
 	<url>
-		<loc>https://sneak.desec.io/#!/en/product/silver</loc>
-		<xhtml:link rel="alternative" hreflang="de" href="https://sneak.desec.io/#!/de/product/silver" />
+		<loc>https://www.desec.io/#!/en/product/dyndns</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://www.desec.io/#!/de/product/dyndns" />
 	</url>
 	<url>
-		<loc>https://sneak.desec.io/#!/de/</loc>
-		<xhtml:link rel="alternative" hreflang="en" href="https://sneak.desec.io/#!/en/" />
+		<loc>https://www.desec.io/#!/en/product/tunneldns</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://www.desec.io/#!/de/product/tunneldns" />
 	</url>
 	<url>
-		<loc>https://sneak.desec.io/#!/en/product/gold</loc>
-		<xhtml:link rel="alternative" hreflang="de" href="https://sneak.desec.io/#!/de/product/gold" />
+		<loc>https://www.desec.io/#!/en/product/anydns</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://www.desec.io/#!/de/product/anydns" />
 	</url>
 	<url>
-		<loc>https://sneak.desec.io/#!/en/product/platinum</loc>
-		<xhtml:link rel="alternative" hreflang="de" href="https://sneak.desec.io/#!/de/product/platinum" />
+		<loc>https://www.desec.io/#!/en/product/geodns</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://www.desec.io/#!/de/product/geodns" />
 	</url>
 	<url>
-		<loc>https://sneak.desec.io/#!/imprint</loc>
+		<loc>https://www.desec.io/#!/de/</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://www.desec.io/#!/en/" />
 	</url>
 	<url>
-		<loc>https://sneak.desec.io/#!/de/product/silver</loc>
-		<xhtml:link rel="alternative" hreflang="en" href="https://sneak.desec.io/#!/en/product/silver" />
+		<loc>https://www.desec.io/#!/en/product/golddns</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://www.desec.io/#!/de/product/golddns" />
 	</url>
 	<url>
-		<loc>https://sneak.desec.io/#!/de/product/gold</loc>
-		<xhtml:link rel="alternative" hreflang="en" href="https://sneak.desec.io/#!/en/product/gold" />
+		<loc>https://www.desec.io/#!/imprint</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://www.desec.io/#!/imprint" />
 	</url>
 	<url>
-		<loc>https://sneak.desec.io/#!/de/product/platinum</loc>
-		<xhtml:link rel="alternative" hreflang="en" href="https://sneak.desec.io/#!/en/product/platinum" />
+		<loc>https://www.desec.io/#!/de/product/dyndns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://www.desec.io/#!/en/product/dyndns" />
+	</url>
+	<url>
+		<loc>https://www.desec.io/#!/de/product/anydns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://www.desec.io/#!/en/product/anydns" />
+	</url>
+	<url>
+		<loc>https://www.desec.io/#!/de/product/tunneldns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://www.desec.io/#!/en/product/tunneldns" />
+	</url>
+	<url>
+		<loc>https://www.desec.io/#!/de/product/geodns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://www.desec.io/#!/en/product/geodns" />
+	</url>
+	<url>
+		<loc>https://www.desec.io/#!/de/product/golddns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://www.desec.io/#!/en/product/golddns" />
 	</url>
 </urlset>
