@@ -451,6 +451,33 @@ module.exports = function (grunt) {
 			}
 		},
 	});
+	
+	grunt.registerTask('fillcache', 'Request all known application URLs from the sitemap once with _escaped_fragment_, discarding the reply', function() {
+		var done = this.async();
+		var sitemap = grunt.file.read('app/sitemap.xml');
+		var urls = (sitemap.match(/<loc>[^<>]*<\/loc>/g) || []).map(function(s) { return s.substr(5, s.length - 11).replace('#!', '?_escaped_fragment_=') });
+		var https = require('https');
+		var completed = 0;
+		var requested = 0;
+		var timing = {};
+		
+		function printProgress() {
+			console.log('Status: ' + completed + '/' + requested + ', ' + Math.round(completed/requested*100) + '%');
+		}
+		
+		urls.forEach(function(url) {
+			timing[url] = Date.now();
+			requested++;
+			https.get(url, function() {
+				timing[url] = Date.now() - timing[url];
+				completed++;
+				console.log(url + ' -- ' + timing[url] + 'ms');
+				printProgress();
+				if (completed-requested === 0)
+					done();
+			});
+		});
+	});
 
 
 	grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
