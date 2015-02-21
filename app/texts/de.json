@@ -120,11 +120,12 @@
                     "placeholder": "max@example.com"
                 },
                 "headline": "Jetzt für den kostenlosen Betatest anmelden",
+                "more": "weitere Adresse anmelden",
                 "product": {
                     "label": "Produkt"
                 },
                 "securedns": {
-                    "label": "Ich interessiere mich für verschlüsselte DNS-Datenübertragung mit DNSCrypt/DNSCurve.\u003cbr /\u003e\u003csmall\u003eHinweis: Bisher nur sehr eingeschränkte Unterstützung auf Clientseite.\u003c/small\u003e"
+                    "label": "Optional: Ich interessiere mich für verschlüsselte DNS-Datenübertragung mit DNSCrypt/DNSCurve.\u003cbr /\u003e\u003csmall\u003eHinweis: Bisher nur sehr eingeschränkte Unterstützung auf Clientseite.\u003c/small\u003e"
                 },
                 "submit": "Anmelden",
                 "waiting": "Anmeldung läuft ..."

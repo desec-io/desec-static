@@ -120,11 +120,12 @@
                     "placeholder": "johndoe@example.com"
                 },
                 "headline": "Apply for Free Beta Access",
+                "more": "enter another e-mail address",
                 "product": {
                     "label": "Plan to sign up for"
                 },
                 "securedns": {
-                    "label": "I would like to use encrypted transmission of DNS information using DNSCrypt/DNSCurve.\u003cbr /\u003e\u003csmall\u003eNote: Client-side support is very limited a this time.\u003c/small\u003e"
+                    "label": "Optional: I would like to use encrypted transmission of DNS information using DNSCrypt/DNSCurve.\u003cbr /\u003e\u003csmall\u003eNote: Client-side support is very limited a this time.\u003c/small\u003e"
                 },
                 "submit": "Apply",
                 "waiting": "Applying ..."
