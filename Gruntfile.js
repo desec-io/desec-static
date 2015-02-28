@@ -443,7 +443,20 @@ module.exports = function (grunt) {
 					authKey: 'desec-io'
 				},
 				src: '<%= yeoman.dist %>',
-				dest: '/var/www/webclient',
+				dest: '/var/www/webclient-staging',
+				exclusions: [],
+				serverSep: '/',
+				concurrency: 4,
+				progress: true
+			},
+			live: {
+				auth: {
+					host: 'desec.io',
+					port: 22,
+					authKey: 'desec-io'
+				},
+				src: '<%= yeoman.dist %>',
+				dest: '/var/www/webclient-live',
 				exclusions: [],
 				serverSep: '/',
 				concurrency: 4,
@@ -527,10 +540,15 @@ module.exports = function (grunt) {
 		'htmlmin'
 	]);
 
+	grunt.registerTask('deploylive', [
+		'build',
+		'sftp-deploy:live'
+	]);
+
 	grunt.registerTask('deploy', [
 		'build',
-		'sftp-deploy'
-	]);	
+		'sftp-deploy:staging'
+	]);
 
 	grunt.registerTask('default', [
 		'newer:jshint',
