@@ -19,7 +19,6 @@ $(document).ready(function(e) {
 	})
 	$('.main-navi .has-dropdown a').click(function(){
 		$(this).parent().find('.dropdown').toggleClass('expanded');
-		return false
 	});
 	
 	////////////////////////////////////////////////////////////
