@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 		xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -6,53 +5,96 @@
 	<url>
 		<loc>https://desec.io/#!/en/</loc>
 		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/" />
+		<xhtml:link rel="alternative" hreflang="cn" href="https://desec.io/#!/cn/" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/en/product/dyndns</loc>
 		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/dyndns" />
-	</url>
-	<url>
-		<loc>https://desec.io/#!/en/product/anydns</loc>
-		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/anydns" />
-	</url>
-	<url>
-		<loc>https://desec.io/#!/en/product/tunneldns</loc>
-		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/tunneldns" />
-	</url>
-	<url>
-		<loc>https://desec.io/#!/en/product/geodns</loc>
-		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/geodns" />
+		<xhtml:link rel="alternative" hreflang="cn" href="https://desec.io/#!/cn/product/dyndns" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/de/</loc>
 		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/" />
+		<xhtml:link rel="alternative" hreflang="cn" href="https://desec.io/#!/cn/" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/en/product/tunneldns</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/tunneldns" />
+		<xhtml:link rel="alternative" hreflang="cn" href="https://desec.io/#!/cn/product/tunneldns" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/en/product/anydns</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/anydns" />
+		<xhtml:link rel="alternative" hreflang="cn" href="https://desec.io/#!/cn/product/anydns" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/cn/</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/" />
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/en/product/geodns</loc>
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/geodns" />
+		<xhtml:link rel="alternative" hreflang="cn" href="https://desec.io/#!/cn/product/geodns" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/en/product/golddns</loc>
 		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/golddns" />
+		<xhtml:link rel="alternative" hreflang="cn" href="https://desec.io/#!/cn/product/golddns" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/imprint</loc>
 		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/imprint" />
-	</url>
-	<url>
-		<loc>https://desec.io/#!/de/product/tunneldns</loc>
-		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/tunneldns" />
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/imprint" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/de/product/dyndns</loc>
 		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/dyndns" />
+		<xhtml:link rel="alternative" hreflang="cn" href="https://desec.io/#!/cn/product/dyndns" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/cn/product/dyndns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/dyndns" />
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/dyndns" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/de/product/anydns</loc>
 		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/anydns" />
+		<xhtml:link rel="alternative" hreflang="cn" href="https://desec.io/#!/cn/product/anydns" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/de/product/geodns</loc>
 		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/geodns" />
+		<xhtml:link rel="alternative" hreflang="cn" href="https://desec.io/#!/cn/product/geodns" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/de/product/tunneldns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/tunneldns" />
+		<xhtml:link rel="alternative" hreflang="cn" href="https://desec.io/#!/cn/product/tunneldns" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/de/product/golddns</loc>
 		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/golddns" />
+		<xhtml:link rel="alternative" hreflang="cn" href="https://desec.io/#!/cn/product/golddns" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/cn/product/tunneldns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/tunneldns" />
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/tunneldns" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/cn/product/anydns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/anydns" />
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/anydns" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/cn/product/geodns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/geodns" />
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/geodns" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/cn/product/golddns</loc>
+		<xhtml:link rel="alternative" hreflang="en" href="https://desec.io/#!/en/product/golddns" />
+		<xhtml:link rel="alternative" hreflang="de" href="https://desec.io/#!/de/product/golddns" />
 	</url>
 </urlset>

@@ -2,7 +2,7 @@ angular.module('desecClientApp').controller('LangChooserCtrl', function($statePa
 
 	function updateScopeI18n() {
 		
-		var languages = ['en', 'de'];
+		var languages = ['en', 'de', 'cn'];
 		
 		// create stateParams for language switch, one for each language
 		var href = {};

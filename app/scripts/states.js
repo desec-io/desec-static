@@ -9,18 +9,23 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 	$locationProvider.hashPrefix('!');
 	
 	// available languages, first one is preferred
-	var languages = ['en', 'de'];
+	var languages = ['en', 'de', 'cn'];
 
 	// preferred language
 	$translateProvider
-		.registerAvailableLanguageKeys(['en', 'de'], {
+		.registerAvailableLanguageKeys(languages, {
 			'en_US': 'en',
 			'en_UK': 'en',
 			'en_AU': 'en',
 			'en_NZ': 'en',
 			'de_DE': 'de',
 			'de_CH': 'de',
-			'de_AT': 'de'
+			'de_AT': 'de',
+			'zh_CN': 'cn',
+			'zh_HK': 'cn',
+			'zh_MO': 'cn',
+			'zh_SG': 'cn',
+			'zh_TW': 'cn',
 		})
 		.determinePreferredLanguage();
 	
