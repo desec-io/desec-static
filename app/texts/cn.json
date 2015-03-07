@@ -1,6 +1,6 @@
 {
     "faq": {
-        "headline": "FAQ",
+        "headline": "更多疑问",
         "q1": {
             "content": "\u003cp\u003edeSEC is commited to making the Internet more secure. Our main goal is to spread the use of secure encryption technology. Private customer data are stored securely in Germany where they are protected from illegitimate third-party access (like foreign intelligence agencies): The German privacy laws are amongst the most restrictive ones world-wide.\u003c/p\u003e\n\u003cp\u003edeSEC's first product is a highly secure DNS service. Being from the 80s and not initially meant for the masses, the Internet was not designed with security in mind. Data transmitted through the Internet is by default not protected against espionage and manipulation. deSEC uses recent innovative technologies to avert such abuse, and to make the Internet more secure.\u003c/p\u003e\n\u003cp\u003eWe start by cryptographically securing DNS information, to protect it from manipulation. To that end, we operated DNS servers world-wide equipped with the DNSSEC technology and based on Google-scale infrastructure. Additionally, we increase the security of encrypted connections using DANE (see below).\u003c/p\u003e",
             "title": "What is deSEC working on?"
@@ -36,39 +36,39 @@
     },
     "features": {
         "availability": {
-            "content": "Don't worry about availability of your DNS services anymore. We guarantee 100% availability of our DNS servers anytime, worldwide.",
-            "title": "Guaranteed Availability"
+            "content": "不用再担心您的DNS服务器是否有效，我们将百分百保证提供您24小时全天候全球服务。",
+            "title": "我们将保证有效的服务"
         },
         "dane": {
-            "content": "deSEC makes it easy to generate DANE records for your site that improve encryption and security of e-mail transportation in transit between servers and lets you use self-signed SSL certificates in a secure way.",
-            "title": "DANE Records"
+            "content": "我们将帮助客户快速生成DANE记录，从而优化和保障您的系统安全性。同时，我们将提供更安全的SSL证书。",
+            "title": "DANE记录"
         },
         "dnssec": {
-            "content": "All zones hosted by deSEC are secured with DNSSEC to protect them from being tampered with during transmission. This helps preventing man-in-the-middle attacks on your site.",
-            "title": "Bullet-proof Security with DNSSEC"
+            "content": "所有主机的区段在信息传送的过程中由DNSSEC提供安全保障，防止黑客入侵您的信息。",
+            "title": "更可靠的系统：DNSSEC"
         },
         "easy": {
-            "content": "We at deSEC know your pain when it comes to updating your DNS zones. No matter if you need to change a lot of zones at once, update single records or add records for special applications. We have an easy-to-use tool handy.",
-            "title": "Easy to Use"
+            "content": "我们深知在更换DNS zones时的操作不便给用户们带来的长期困扰，我们将提供简易的操作使更换DNS zones变得更快捷，高效。",
+            "title": "操作简易"
         },
-        "headline": "Features"
+        "headline": "特色"
     },
     "footer": {
         "content": "© 2015 deSEC GbR, Berlin • Icons by \u003ca href=\"http://www.iconarchive.com/\"\u003eIconArchive\u003c/a\u003e (colors modified) •",
-        "imprint": "Imprint"
+        "imprint": "版本说明"
     },
     "hero": {
-        "content": "We provide secure DNS hosting with DNSSEC and DANE.\u003cbr /\u003eWe spread innovative technologies.\u003cbr /\u003eWe make the Internet a better place.",
-        "title": "Security made in Germany."
+        "content": "我们用DNSSEC和DANE给与DNS更高安全性。\u003cbr /\u003e我们传播先进科技。\u003cbr /\u003e我们致力于把网络变得更好。",
+        "title": "服务质量德国保障"
     },
     "menu": {
-        "home": "Menu",
+        "home": "选择",
         "products": {
             "anydns": "anyDNS",
             "dyndns": "dynDNS",
             "geodns": "geoDNS",
             "golddns": "goldDNS",
-            "headline": "Plans",
+            "headline": "套餐",
             "tunneldns": "tunnelDNS"
         }
     },
@@ -91,7 +91,7 @@
         },
         "homepage": {
             "desc": "",
-            "title": "deSEC - Security made in Germany"
+            "title": "deSEC - 服务质量德国保障"
         },
         "tunneldns": {
             "desc": "",
@@ -106,29 +106,29 @@
             "feature3": "IPv6",
             "feature4": "DNSSEC, DANE",
             "feature5": "REST-API",
-            "link": "Sign up",
+            "link": "马上试用",
             "name": "anyDNS",
-            "price": "free",
+            "price": "免费",
             "title": "anyDNS – The high-availability solution for DNS services"
         },
         "beta": {
             "apply": {
-                "again": "Back",
-                "back": "Try Again",
+                "again": "返回",
+                "back": "重试",
                 "email": {
-                    "label": "E-mail address for access notification",
+                    "label": "使用通知邮箱",
                     "placeholder": "johndoe@example.com"
                 },
-                "headline": "Apply for Free Beta Access",
-                "more": "enter another e-mail address",
+                "headline": "申请免费使用Beta",
+                "more": "请输入另一个邮箱",
                 "product": {
-                    "label": "Plan to sign up for"
+                    "label": "套餐试用："
                 },
                 "securedns": {
                     "label": "Optional: I would like to use encrypted transmission of DNS information using DNSCrypt/DNSCurve.\u003cbr /\u003e\u003csmall\u003eNote: Client-side support is very limited a this time.\u003c/small\u003e"
                 },
-                "submit": "Apply",
-                "waiting": "Applying ..."
+                "submit": "申请",
+                "waiting": "申请中…"
             }
         },
         "content": "deSEC provides professional DNS hosting with IPv6 support on Google-scale infrastructure. As a matter of course, we enable our customers to secure their DNS information with DNSSEC and DANE. Moreover, DNS traffic itself can be encrypted with DNSCrypt / DNSCurve. And best of all: During our launch phase, all services are offered free or charge.",
@@ -139,9 +139,9 @@
             "feature3": "IPv6",
             "feature4": "DNSSEC, DANE",
             "feature5": "REST-API",
-            "link": "Sign up",
+            "link": "马上试用",
             "name": "dynDNS",
-            "price": "free",
+            "price": "免费",
             "title": "dynDNS – Fixed URLs for connections with frequently changing IP address"
         },
         "geodns": {
@@ -152,9 +152,9 @@
             "feature4": "IPv6",
             "feature5": "DNSSEC, DANE",
             "feature6": "REST-API",
-            "link": "Sign up",
+            "link": "马上试用",
             "name": "geoDNS",
-            "price": "free",
+            "price": "免费",
             "title": "geoDNS – Location-based DNS replies"
         },
         "golddns": {
@@ -166,13 +166,13 @@
             "feature5": "IPv6",
             "feature6": "DNSSEC, DANE",
             "feature7": "REST-API",
-            "link": "Sign up",
+            "link": "马上试用",
             "name": "goldDNS",
-            "price": "free",
+            "price": "免费",
             "title": "goldDNS – All in One"
         },
-        "headline": "Plans",
-        "title": "Plans",
+        "headline": "套餐",
+        "title": "五种套餐",
         "tunneldns": {
             "content": "\u003cp\u003etunnelDNS allows the technically sophisticated user to use public wifi networks by creative means even in cases where all other possibilities are ruled out: DNS services work almost everywhere without log-in, and can act as a tunnel for other content.\u003c/p\u003e\u003cp\u003eThis plan supports our standard features DNSSEC, DANE, IPv6, and REST.\u003c/p\u003e",
             "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
@@ -180,9 +180,9 @@
             "feature3": "IPv6",
             "feature4": "DNSSEC, DANE",
             "feature5": "REST-API",
-            "link": "Sign up",
+            "link": "马上试用",
             "name": "tunnelDNS",
-            "price": "free",
+            "price": "免费",
             "title": "tunnelDNS – Internet connection under minimal conditions"
         }
     },
@@ -191,7 +191,7 @@
         "title": "Preregistration"
     },
     "team": {
-        "headline": "The Team",
-        "subheadline": "Behind deSEC is a team of academics with both scientific as well as legal and business education. We can rely on more than 10 years experience in running of server infrastructure and provisioning of Internet services."
+        "headline": "团队成员",
+        "subheadline": "deSEC由五位在IT，法律事务以及金融方面有着超过十年专业背景的人员组成。他们旨在网络安全及服务器结构领域提供给客户专业意见与服务。"
     }
 }

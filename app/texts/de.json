@@ -35,23 +35,23 @@
         }
     },
     "features": {
-        "anycast": {
-            "content": "Unsere DNS-Informationen sind durch Anycast hochverfügbar. Es wird automatisch das nächstgelegene Rechenzentrum gewählt, um stets die beste Zugriffsgeschwindigkeit zu erreichen.",
-            "title": "Anycast"
+        "availability": {
+            "content": "deSEC garantiert die Verfügbarkeit des DNS-Dienstes weltweit.",
+            "title": "Verfügbarkeit garantiert"
         },
-        "dyn": {
-            "content": "Mittels dynamischem DNS können Sie einen mit dem Internet verbundenen Computer unter Ihrer Domain verfügbar machen und aus der Ferne darauf zugreifen. Ein ganz normaler Internetanschluss genügt.",
-            "title": "Dynamisches DNS"
+        "dane": {
+            "content": "deSEC generiert Ihre DANE Records aus Ihren SSL-Zertifikatsinformationen, um E-Mail-Übertragung und die Benutzung von selbstsignierten Zertifikaten so einfach und sicher wie möglich zu machen..",
+            "title": "DANE Records"
         },
-        "geo": {
-            "content": "DNS-Antworten können auf die geographische Position des Clients zugeschnitten werden und ermöglichen so ortsabhängige Einsatzszenarien.",
-            "title": "GeoIP-basiertes DNS"
+        "dnssec": {
+            "content": "Alle von deSEC bereitgestellten DNS-Zonen werden mit DNSSEC vor Fälschung geschützt. Das beugt man-in-the-middle-Angriffen auf Ihre Server vor.",
+            "title": "Sicherheit garantiert durch DNSSEC"
         },
-        "headline": "Features",
-        "tunnel": {
-            "content": "Mancherorts ist der Internetzugang technisch beschränkt; der Zugriff auf das DNS funktioniert jedoch meist. Nutzen Sie das DNS als Tunnel, um auch anderen Datenverkehr darüber zu transportieren – wie in einem VPN.",
-            "title": "DNS-Tunnel"
-        }
+        "easy": {
+            "content": "Wir kennen das Problem: Verwaltung von DNS-Zonen dauert immer länger als es sollte. Egal ob Sie etliche Zonen auf einmal, nur einzele Einträge aktualisieren oder Einträge für spezielle Anwendungen hinzufügen möchten, wir haben einen einfachen und komfortablen Weg um Ihr Ziel zu erreichen.",
+            "title": "Komfortable Bedienung"
+        },
+        "headline": "Features"
     },
     "footer": {
         "content": "© 2015 deSEC GbR, Berlin • Icons von \u003ca href=\"http://www.iconarchive.com/\"\u003eIconArchive\u003c/a\u003e (Farben modifiziert) •",
@@ -91,7 +91,7 @@
         },
         "homepage": {
             "desc": "",
-            "title": ""
+            "title": "deSEC - Sicherheit aus Deutschland"
         },
         "tunneldns": {
             "desc": "",
@@ -145,7 +145,7 @@
             "title": "dynDNS – Feste URLs für Anschlüsse mit wechselnder IP"
         },
         "geodns": {
-            "content": "\u003cp\u003eWenn sie ihren eigenen Dienst durch räumlich verteilte Server bereitstellen wollen, bietet geoDNS ihnen die Möglichkeit, Anfragen auf ihre URL abhängig von deren geographischen Ursprungs zu beantworten. So können Sie Besucher immer mit ihrem geographisch nächstgelegenen Server oder mit speziellen Inhalten bedienen und auch Serverausfälle kompensieren.\u003c/p\u003e\u003cp\u003eUm maximale Verfügbarkeit zu garantieren, schließt geoDNS den anyDNS-Dienst und damit auch unsere Standard-Features DNSSEC, DANE, IPv6 und REST mit ein.\u003c/p\u003e",
+            "content": "\u003cp\u003eWenn Sie ihren eigenen Dienst durch räumlich verteilte Server bereitstellen wollen, bietet geoDNS ihnen die Möglichkeit, Anfragen auf ihre URL abhängig von deren geographischen Ursprungs zu beantworten. So können Sie Besucher immer mit ihrem geographisch nächstgelegenen Server oder mit speziellen Inhalten bedienen und auch Serverausfälle kompensieren.\u003c/p\u003e\u003cp\u003eUm maximale Verfügbarkeit zu garantieren, schließt geoDNS den anyDNS-Dienst und damit auch unsere Standard-Features DNSSEC, DANE, IPv6 und REST mit ein.\u003c/p\u003e",
             "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "anycast",
             "feature3": "geoDNS",
@@ -192,6 +192,6 @@
     },
     "team": {
         "headline": "Das Team",
-        "subheadline": "Hinter deSEC steht ein Team aus Akademikern mit naturwissenschaftlich-mathematischem sowie rechtswisschenschaftlichen und unternehmerischen Hintergrund. Wir können auf mehr als 10 Jahre Erfahrung im Betrieb von Serverinfrastruktur und Bereitstellung von Internetdienstleistungen zurückgreifen."
+        "subheadline": "Hinter deSEC steht ein Team aus Akademikern mit naturwissenschaftlich-mathematischem sowie rechtswisschenschaftlichem und unternehmerischem Hintergrund. Wir können auf mehr als 10 Jahre Erfahrung im Betrieb von Serverinfrastruktur und Bereitstellung von Internetdienstleistungen zurückgreifen."
     }
 }
