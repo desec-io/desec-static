@@ -469,6 +469,7 @@ module.exports = function (grunt) {
 		var done = this.async();
 		var sitemap = grunt.file.read('app/sitemap.xml');
 		var urls = (sitemap.match(/<loc>[^<>]*<\/loc>/g) || []).map(function(s) { return s.substr(5, s.length - 11).replace('#!', '?_escaped_fragment_=') });
+		urls.push("https://desec.io/?_escaped_fragment_=");
 		var https = require('https');
 		var completed = 0;
 		var requested = 0;
