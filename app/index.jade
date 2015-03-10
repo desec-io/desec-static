@@ -43,7 +43,7 @@ html(ng-app="desecClientApp")
 		link(href="/styles/colors.css", rel="stylesheet", media="screen")
 		// endbuild
 	
-		link(ng-repeat="l in i18n.otherLang",rel="alternative",hreflang="{{ l }}",href="{{ i18n.href[l] }}")
+		link(ng-if="i18n.enabled",ng-repeat="l in i18n.otherLang",rel="alternate",hreflang="{{ l }}",href="{{ i18n.href[l] }}")
 
 	// Body
 	body.space-top(ng-controller="ScrollToTopCtrl")

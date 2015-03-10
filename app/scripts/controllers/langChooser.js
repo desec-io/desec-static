@@ -9,7 +9,7 @@ angular.module('desecClientApp').controller('LangChooserCtrl', function($statePa
 		angular.forEach(languages, function(lang) {
 			var params = angular.copy($stateParams);
 			params.lang = lang;
-			href[lang] = $state.href($state.$current.toString(), params);
+			href[lang] = $state.href($state.$current.toString(), params, { absolute: true });
 		});
 		
 		var otherLang = angular.copy(languages);
