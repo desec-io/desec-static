@@ -36,3 +36,8 @@
 		display: block !important;
 	}
 }
+
+// allow wider mobile logos
+.stiky-header .logo-mobile {
+	max-width: 205px;
+}
