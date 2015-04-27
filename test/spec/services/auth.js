@@ -20,6 +20,7 @@ describe('auth service', function () {
 		$http = _$http_;
 		$httpBackend = _$httpBackend_;
 		auth = _auth_;
+		$httpBackend.when('GET', 'texts/en.json').respond({});
 	}));
 
 	afterEach(function () {
