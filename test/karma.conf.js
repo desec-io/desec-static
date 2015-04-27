@@ -20,15 +20,19 @@ module.exports = function (config) {
 		files: [
 			'bower_components/angular/angular.js',
 			'bower_components/angular-mocks/angular-mocks.js',
-			'bower_components/angular-animate/angular-animate.js',
-			'bower_components/angular-cookies/angular-cookies.js',
+			'bower_components/angular-ui-router/release/angular-ui-router.js',
+			'bower_components/angular-translate/angular-translate.js',
+			'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
 			'bower_components/angular-resource/angular-resource.js',
-			'bower_components/angular-route/angular-route.js',
 			'bower_components/angular-sanitize/angular-sanitize.js',
-			'bower_components/angular-touch/angular-touch.js',
+			'bower_components/angular-mailchimp/angular-mailchimp.js',
+			'bower_components/angulartics/src/angulartics.js',
+			'bower_components/angulartics/src/angulartics-ga.js',
+			'bower_components/ultima/js/libs/jquery-1.10.2.min.js',
+			'bower_components/ultima/js/plugins/waypoints.min.js',
 			'app/scripts/**/*.js',
 			'test/mock/**/*.js',
-			'test/spec/**/*.js'
+			'test/spec/**/*.js',
 		],
 
 		// list of files / patterns to exclude
