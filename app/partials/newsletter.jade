@@ -21,15 +21,15 @@ div.wizard(ng-controller="SubscribeCtrl")
 								select.form-control(type="email", name="email", ng-model="mailchimp.PRODUCT", placeholder="{{ 'products.beta.apply.email.placeholder' | translate }}", required="")
 									option(value="anydns") anyDNS
 									option(value="dyndns") dynDNS
-									option(value="geodns") geoDNS
-									option(value="golddns") goldDNS
-									option(value="tunneldns") tunnelDNS
+									//option(value="geodns") geoDNS
+									//option(value="golddns") goldDNS
+									//option(value="tunneldns") tunnelDNS
 					.row
 						.col-sm-6.col-sm-offset-6
 							.checkbox
 								label
-									input(type="checkbox", name="securedns", ng-init="mailchimp.SECURE='plain'", ng-model="mailchimp.SECURE", ng-true-value="secure", ng-false-value="plain")
-									div(translate="products.beta.apply.securedns.label")
+									input(type="checkbox", name="geodns", ng-init="mailchimp.GEODNS='plain'", ng-model="mailchimp.GEODNS", ng-true-value="geodns", ng-false-value="plain")
+									div(translate="products.beta.apply.geodns.label")
 		.wizard-step(ng-class="{active: mailchimp.result}")
 			.tabs
 				.tab.active.row

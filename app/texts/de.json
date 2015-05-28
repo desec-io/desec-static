@@ -61,6 +61,47 @@
         "content": "Sicheres DNS-Hosting mit DNSSEC und DANE.\u003cbr /\u003eZukunftsträchtige Technologien.\u003cbr /\u003eEin besseres Internet.",
         "title": "Sicherheit aus Deutschland."
     },
+    "logjamscanner": {
+        "error": {
+            "headline": "Ein Fehler ist aufgetreten",
+            "scan": "Einen weiteren Dienst prüfen",
+            "text": "Bitte überprüfen Sie den Hostnamen, Port und die STARTTLS-Einstellungen auf Korrektheit."
+        },
+        "form": {
+            "host": {
+                "label": "Hostname"
+            },
+            "port": {
+                "label": "TCP Port"
+            },
+            "scan": "Dienst überprüfen",
+            "starttls": {
+                "label": "STARTTLS benutzen für:",
+                "no": "(STARTTLS nicht benutzen, direkt mit TLS verbinden)"
+            }
+        },
+        "headline": "Logjam Scanner",
+        "intro": "Im Mai 2015 haben Sicherheitsforscher die Logjam-Attacke auf TLS \u003ca href=\"https://weakdh.org/\"\u003everöffentlicht\u003c/a\u003e. Logjam verwendet eine Schwachstelle im TLS-Protokoll um die Verschlüsselungsstärke der Verbindung auf \"export\" herunterzusetzen, es werden 512bit Diffie-Hellman Parameter verwendet. Gleichzeitig kann das diskrete Logarithmus-Problem, auf dem die Sicherheit vom DH Schlüsselaustausch basiert, nach einer etwa einwöchentlichen Vorberechnung in wenigen Minuten geknackt werden kann. Kombiniert man beide Methoden, kann ein man-in-the-middle Angreifer TLS-Verbindungen abhören und übermittelte Daten verändern. Daher müssen der 512bit DH Schlüsselaustausch als unsicher betrachtet werden; für den Schlüsselaustausch mit 1024bit muss davon ausgegangen werden, dass ein Angreifer mit staatlichen Ressourcen diesen ebenfalls kompromittieren kann. Dieser Test überprüft, ob der angegebene Dienst 512bit DH Parameter verwendet, und ob Verbindungen zum Dienst von downgrade-Attacken betroffen sind. Die beste Wertung dieses Tests erreicht man, wenn der Dienst mehr als 1024bit zum DH-Schlüsselaustausch verwendet, und export cipher suits vom Server nicht akzeptiert werden.",
+        "result": {
+            "danger": {
+                "headline": "Dieser Dienst ist unsicher!",
+                "text": "Die Unterstützung von export cipher suits sollte \u003ca href=\"https://weakdh.org/sysadmin.html\"\u003esofort abgestellt\u003c/a\u003e werden!"
+            },
+            "good": {
+                "headline": "Sieht gut aus, dieser Dienst ist nicht von Logjam betroffen",
+                "text": "Dieser Dienst unterstützt keine export cipher suits, and benutzt entweder EDH überhaupt nicht, oder mit Parametern, die länger sind als 1024bit."
+            },
+            "scan": "Einen weiteren Dienst prüfen",
+            "warning": {
+                "headline": "Ugh, dieser Dienst ist mit staatlichen Resourcen angreifbar",
+                "text": "Gewöhnliche Kriminelle sind wohl nicht in der Lage, diesen Dienst abzuhören; aber große Organisationen mit staatlichen Resourcen können es wohl. Besser auf große (wenigstens 2048bit) DH-Parameter \u003ca href=\"https://weakdh.org/sysadmin.html\"\u003eumstellen\u003c/a\u003e."
+            }
+        },
+        "scanning": {
+            "cancel": "Prüfung abbrechen",
+            "headline": "Moment, Prüfung läuft ..."
+        }
+    },
     "menu": {
         "home": "Menü",
         "products": {
@@ -100,7 +141,7 @@
     },
     "products": {
         "anydns": {
-            "content": "\u003cp\u003eNeben unseren Standard-Features (DNSSEC, DANE, IPv6, and REST API) garantiert dieses Paket 100% Hochverfügbarkeit mittels anycast-Technologie.\u003c/p\u003e\u003cp\u003eDurch physikalisch redundante DNS-Server an verschiedenen Standorten ist sichergestellt, dass alle DNS-Anfragen zu jeder Zeit zuverlässig und schnellstmöglich beantwortert werden. Unsere Nameserver sind über einheitliche anycast-IP-Adressen erreichbar. Die optimale Route wird automatisch errechnet.\u003c/p\u003e",
+            "content": "\u003cp\u003eNeben unseren Standard-Features (DNSSEC, IPv6, und REST API) bietet diese Paket DANE und garantiert 100% Hochverfügbarkeit.\u003c/p\u003e\u003cp\u003eDurch physikalisch redundante DNS-Server an verschiedenen Standorten ist sichergestellt, dass alle DNS-Anfragen zu jeder Zeit zuverlässig und schnellstmöglich beantwortert werden.\u003c/p\u003e",
             "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "anycast",
             "feature3": "IPv6",
@@ -119,25 +160,25 @@
                     "label": "E-Mail-Adresse für Teilnahmebestätigung",
                     "placeholder": "max@example.com"
                 },
+                "geodns": {
+                    "label": "Optional: Ich interessiere mich für geoDNS, d.h. Besucherstandort-abhängige DNS-Antworten, für einen Aufpreis von 25€ je Zone"
+                },
                 "headline": "Jetzt für den kostenlosen Betatest anmelden",
                 "more": "weitere Adresse anmelden",
                 "product": {
                     "label": "Produkt"
                 },
-                "securedns": {
-                    "label": "Optional: Ich interessiere mich für verschlüsselte DNS-Datenübertragung mit DNScrypt/DNScurve.\u003cbr /\u003e\u003csmall\u003eHinweis: Bisher nur sehr eingeschränkte Unterstützung auf Clientseite.\u003c/small\u003e"
-                },
                 "submit": "Anmelden",
                 "waiting": "Anmeldung läuft ..."
             }
         },
-        "content": "deSEC bietet professionelles DNS-Hosting auf modernster Infrastruktur mit IPv6-Unterstützung an. Zudem ermöglichen wir es unseren Kunden, ihre DNS-Informationen zusätzlich mit DNSSEC und DANE abzusichern und mit Hilfe von DNScrypt / DNScurve auch den übertragenen DNS-Verkehr selbst zu verschlüsseln. Und das Beste: Zu unserer Launch-Phase sind alle unsere angebotenen Leistungen kostenlos!",
+        "content": "deSEC bietet professionelles DNS-Hosting auf modernster Infrastruktur mit IPv6-Unterstützung an. Zudem ermöglichen wir es unseren Kunden, ihre DNS-Informationen zusätzlich mit DNSSEC und DANE abzusichern. Und das Beste: Zu unserer Launch-Phase sind alle unsere angebotenen Leistungen kostenlos!",
         "dyndns": {
-            "content": "\u003cp\u003eSie wollen auf ihren heimischen Netzwerkspeicher zugreifen? Mit dynDNS haben Sie die Möglichkeit, auch private Internetanschlüsse mit wechselnder IP-Adresse anhand einer festen URL unter Ihrer eigenen Domain zu erreichen.\u003c/p\u003e\u003cp\u003eDieses Paket unterstützt unserer Standard-Features DNSSEC, DANE, IPv6 sowie die REST-API.\u003c/p\u003e",
+            "content": "\u003cp\u003eSie wollen auf ihren heimischen Netzwerkspeicher zugreifen? Mit dynDNS haben Sie die Möglichkeit, auch private Internetanschlüsse mit wechselnder IP-Adresse anhand einer festen URL unter Ihrer eigenen Domain zu erreichen.\u003c/p\u003e\u003cp\u003eDieses Paket unterstützt unsere Standard-Features DNSSEC, IPv6 sowie die REST-API.\u003c/p\u003e",
             "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "dyndns",
             "feature3": "IPv6",
-            "feature4": "DNSSEC, DANE",
+            "feature4": "DNSSEC",
             "feature5": "REST-API",
             "link": "Anmelden",
             "name": "dynDNS",

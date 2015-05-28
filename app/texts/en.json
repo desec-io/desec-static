@@ -61,6 +61,47 @@
         "content": "We provide secure DNS hosting with DNSSEC and DANE.\u003cbr /\u003eWe spread innovative technologies.\u003cbr /\u003eWe make the Internet a better place.",
         "title": "Security made in Germany."
     },
+    "logjamscanner": {
+        "error": {
+            "headline": "Error While Scanning",
+            "scan": "Scan Another Service",
+            "text": "Please make sure the hostname is valid, and there is a TLS-enabled service listening on the given TCP port."
+        },
+        "form": {
+            "host": {
+                "label": "server host name"
+            },
+            "port": {
+                "label": "TCP port"
+            },
+            "scan": "Scan Host",
+            "starttls": {
+                "label": "Use STARTTLS with protocol:",
+                "no": "(don't use STARTTLS, connect directly with TLS)"
+            }
+        },
+        "headline": "Logjam Scanner",
+        "intro": "In May 2015, researchers \u003ca href=\"https://weakdh.org/\"\u003epublished\u003c/a\u003e the logjam attack on TLS. Logjam uses a weakness in the TLS protocol to downgrade a connection to use 512bit Diffie-Hellman parameters. At the same time, the discrete logarithm problem, on which the security of a ephemeral Diffie-Hellman key exchange relies, can be broken within minutes for 512bit parameter size, after a precomputation of just a week. Together, these weaknesses enable a man-in-the-middle attacker to eavesdrop on the data transmitted over TLS and tamper with it. Therefore, DH key exchange with 512bit should be considered insecure in general, and parameters with 1024bit or less should be considered to be broken for an attacker with nation-level computational resources. This test checks the ephemeral DH parameters size of a given server and checks if the connection is vulnerable to downgrade attacks. Green rating of this test is achieved by using more than 1024bit DH parameter size (or no ephemeral DH key exchange at all), and no support for 512bit DH key exchange (\"export ciphers\").",
+        "result": {
+            "danger": {
+                "headline": "This Service is Seriously Insecure!",
+                "text": "\u003ca href=\"https://weakdh.org/sysadmin.html\"\u003eImmediately disable\u003c/a\u003e export cipher suits to secure your TLS connections!"
+            },
+            "good": {
+                "headline": "Looks good, your service is not affected by Logjam",
+                "text": "Your server does not support 512bit export-grade DH key exchange, and either uses large DH parameters, or does not use ephemeral DH at all."
+            },
+            "scan": "Scan Another Service",
+            "warning": {
+                "headline": "Ugh, Your Service Is Vulnerable To Nation-State Resource Attackers",
+                "text": "While the common criminal is unlikely to eavasdrop on your connections, large government agencies may. Best \u003ca href=\"https://weakdh.org/sysadmin.html\"\u003eupgrade\u003c/a\u003e to larger (at least 2048bit) DH parameters."
+            }
+        },
+        "scanning": {
+            "cancel": "Cancel Scan",
+            "headline": "scanning, please hang on ..."
+        }
+    },
     "menu": {
         "home": "Menu",
         "products": {
@@ -100,7 +141,7 @@
     },
     "products": {
         "anydns": {
-            "content": "\u003cp\u003eIn addition to our standard features (DNSSEC, DANE, IPv6, and REST API), this package offers advanced reliability using the anycast technology with a 100% Service Level Agreement.\u003c/p\u003e\u003cp\u003eBy means of physically redundant DNS servers at various geographic locations we ensure that all DNS requests can be served reliably and as fast as possible at any time. Our name servers can be accessed through a single anycast IP. The best route through the Internet is determined automatically.\u003c/p\u003e",
+            "content": "\u003cp\u003eIn addition to our standard features (DNSSEC, IPv6, and REST API), this package offers DANE as well as advanced reliability with a 100% Service Level Agreement.\u003c/p\u003e\u003cp\u003eBy means of physically redundant DNS servers at various geographic locations we ensure that all DNS requests can be served reliably and as fast as possible at any time.\u003c/p\u003e",
             "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "anycast",
             "feature3": "IPv6",
@@ -119,25 +160,25 @@
                     "label": "E-mail address for access notification",
                     "placeholder": "johndoe@example.com"
                 },
+                "geodns": {
+                    "label": "Optional: I am interested in geoDNS, i.e. visitor location dependent DNS replies, for an additional fee of 25€ per zone"
+                },
                 "headline": "Apply for Free Beta Access",
                 "more": "enter another e-mail address",
                 "product": {
                     "label": "Plan to sign up for"
                 },
-                "securedns": {
-                    "label": "Optional: I would like to use encrypted transmission of DNS information using DNScrypt/DNScurve.\u003cbr /\u003e\u003csmall\u003eNote: Client-side support is very limited a this time.\u003c/small\u003e"
-                },
                 "submit": "Apply",
                 "waiting": "Applying ..."
             }
         },
-        "content": "deSEC provides professional DNS hosting with IPv6 support on Google-scale infrastructure. As a matter of course, we enable our customers to secure their DNS information with DNSSEC and DANE. Moreover, DNS traffic itself can be encrypted with DNScrypt / DNScurve. And best of all: During our launch phase, all services are offered free or charge.",
+        "content": "deSEC provides professional DNS hosting with IPv6 support on Google-scale infrastructure. As a matter of course, we enable our customers to secure their DNS information with DNSSEC and DANE. And best of all: During our launch phase, all services are offered free of charge.",
         "dyndns": {
-            "content": "\u003cp\u003eNeed to access your network attached storage at home? dynDNS allows you to assign a fixed URL to devices with frequently changing IP address, based on your domain.\u003c/p\u003e\u003cp\u003eThis plan supports our standard features DNSSEC, DANE, IPv6, and REST.\u003c/p\u003e",
+            "content": "\u003cp\u003eNeed to access your network attached storage at home? dynDNS allows you to assign a fixed URL to devices with frequently changing IP address, based on your domain.\u003c/p\u003e\u003cp\u003eThis plan supports our standard features DNSSEC, IPv6, and REST API.\u003c/p\u003e",
             "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "dyndns",
             "feature3": "IPv6",
-            "feature4": "DNSSEC, DANE",
+            "feature4": "DNSSEC",
             "feature5": "REST-API",
             "link": "Sign up",
             "name": "dynDNS",

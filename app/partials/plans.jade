@@ -4,7 +4,8 @@ section#pricing.page-block.color(analytics-on="scrollby", analytics-event="prici
 			h2(translate="products.headline")
 			span(translate="products.content")
 		.row.row-vertical-sm-flex-end
-			.col-sm-5ths.pointer(ui-sref="i18n.product.dyndns")
+			//.col-sm-5ths.pointer(ui-sref="i18n.product.dyndns")
+			.col-lg-6.col-md-6.col-sm-6
 				.pricing-plan
 					.header
 						h3
@@ -12,6 +13,8 @@ section#pricing.page-block.color(analytics-on="scrollby", analytics-event="prici
 							|{{'products.dyndns.name'|translate}}
 					.body
 						ul
+							li(translate="products.dyndns.content")  
+						//ul
 							li(translate="products.dyndns.feature1")
 							li(translate="products.dyndns.feature2")
 							li(translate="products.dyndns.feature3")
@@ -19,7 +22,7 @@ section#pricing.page-block.color(analytics-on="scrollby", analytics-event="prici
 							li(translate="products.dyndns.feature5")
 						.buy-btn
 							a.btn.btn-primary(ui-sref="i18n.product.dyndns",translate="products.dyndns.link")
-			.col-sm-5ths.pointer(ui-sref="i18n.product.tunneldns")
+			//.col-sm-5ths.pointer(ui-sref="i18n.product.tunneldns")
 				.pricing-plan
 					.header
 						h3
@@ -34,7 +37,8 @@ section#pricing.page-block.color(analytics-on="scrollby", analytics-event="prici
 							li(translate="products.tunneldns.feature5")
 						.buy-btn
 							a.btn.btn-primary(ui-sref="i18n.product.tunneldns",translate="products.tunneldns.link")
-			.col-sm-5ths.pointer(ui-sref="i18n.product.anydns")
+			//.col-sm-5ths.pointer(ui-sref="i18n.product.anydns")
+			.col-lg-6.col-md-6.col-sm-6
 				.pricing-plan
 					.header
 						h3
@@ -42,6 +46,8 @@ section#pricing.page-block.color(analytics-on="scrollby", analytics-event="prici
 							|{{'products.anydns.name'|translate}}
 					.body
 						ul
+							li(translate="products.anydns.content")
+						//ul
 							li(translate="products.anydns.feature1")
 							li(translate="products.anydns.feature2")
 							li(translate="products.anydns.feature3")
@@ -49,7 +55,7 @@ section#pricing.page-block.color(analytics-on="scrollby", analytics-event="prici
 							li(translate="products.anydns.feature5")
 						.buy-btn
 							a.btn.btn-primary(ui-sref="i18n.product.anydns",translate="products.anydns.link")
-			.col-sm-5ths.pointer(ui-sref="i18n.product.geodns")
+			//.col-sm-5ths.pointer(ui-sref="i18n.product.geodns")
 				.pricing-plan
 					.header
 						h3
@@ -65,7 +71,7 @@ section#pricing.page-block.color(analytics-on="scrollby", analytics-event="prici
 							li(translate="products.geodns.feature6")
 						.buy-btn
 							a.btn.btn-primary(ui-sref="i18n.product.geodns",translate="products.geodns.link")
-			.col-sm-5ths.pointer(ui-sref="i18n.product.golddns")
+			//.col-sm-5ths.pointer(ui-sref="i18n.product.golddns")
 				.pricing-plan
 					.header
 						h3
