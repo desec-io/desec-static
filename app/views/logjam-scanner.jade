@@ -4,32 +4,35 @@
 		p(translate="logjamscanner.intro")
 		
 		div(ng-show="status=='input'")
-			.form-inline
-				.form-group
-					label(for="host") logjamscanner.form.host.label
+			form.row
+				.form-group.col-md-12
+					label(for="host",translate="logjamscanner.form.host.label")
 					input.form-control(type="text",id="host",name="host",ng-model="host")
-				a.btn(ng-repeat="p in presets",ng-click="preset(p)") {{ p.name }}/{{ p.port }}	
-				.form-group
-					label(for="port") logjamscanner.form.port.label
-					input.form-control(type="text",id="port",name="port",ng-model="port")
-				.form-group
-					label(for="starttls") logjamscanner.form.starttls.label
-					select.form-control(id="starttls",name="starttls",ng-model="starttls")
-						option(value="") (no, connect directly)
-						option(value="smtp") smtp
-						option(value="pop3") pop3
-						option(value="imap") imap
-						option(value="ftp") ftp
-						option(value="xmpp") xmpp
-				button.btn.btn-default(ng-click="scan()") logjamscanner.form.scan
+				.col-md-6
+					.form-group
+						label(for="port",translate="logjamscanner.form.port.label")
+						input.form-control(type="text",id="port",name="port",ng-model="port")
+					.form-group
+						label(for="starttls",translate="logjamscanner.form.starttls.label")
+						select.form-control(id="starttls",name="starttls",ng-model="starttls")
+							option(value="",translate="logjamscanner.form.starttls.no") 
+							option(value="smtp") smtp
+							option(value="pop3") pop3
+							option(value="imap") imap
+							option(value="ftp") ftp
+							option(value="xmpp") xmpp
+				.form-group.col-md-6
+					a.btn.btn-default(ng-repeat="p in presets",ng-click="preset(p)") {{ p.name }}/{{ p.port }}
+				.col-md-12
+					button.btn.btn-default(ng-click="scan()",translate="logjamscanner.form.scan")
 		
 		div(ng-show="status=='scanning'")
 			h2(translate="logjamscanner.scanning.headline")
-			a.btn.btn-default(ng-click="startover()") logjamscanner.scanning.cancel
+			a.btn.btn-default(ng-click="startover()",translate="logjamscanner.scanning.cancel") 
 			
 		div(ng-show="status=='result'")
 			.alert.alert-success(role="alert",ng-if="(result.openssl.logjam.dhsize > 1024 || !result.openssl.logjam.dhsize) && !result.openssl.logjam.expcipher")
-				h4 {{ 'logjamscanner.result.good.headline' | translate }} for {{ host }}:{{ port }}{{ starttls ? '/STARTTLS' : '' }}
+				h4 {{ host }}:{{ port }}{{ starttls ? '/STARTTLS' : '' }}: {{ 'logjamscanner.result.good.headline' | translate }}
 				p(translate="logjamscanner.result.good.text")
 				p
 					ul
@@ -37,7 +40,7 @@
 						li Export Ciphers: disabled
 
 			.alert.alert-warning(role="alert",ng-if="result.openssl.logjam.dhsize > 512 && result.openssl.logjam.dhsize <= 1024 && !result.openssl.logjam.expcipher")
-				h4 {{ 'logjamscanner.result.warning.headline' | translate }} for {{ host }}:{{ port }}{{ starttls ? '/STARTTLS' : '' }}
+				h4 {{ host }}:{{ port }}{{ starttls ? '/STARTTLS' : '' }}: {{ 'logjamscanner.result.warning.headline' | translate }}
 				p(translate="logjamscanner.result.warning.text")
 				p
 					ul
@@ -45,17 +48,17 @@
 						li Export Ciphers: disabled					
 
 			.alert.alert-danger(role="alert",ng-if="result.openssl.logjam.expcipher")
-				h4 {{ 'logjamscanner.result.danger.headline' | translate }} for {{ host }}:{{ port }}{{ starttls ? '/STARTTLS' : '' }}
+				h4 {{ host }}:{{ port }}{{ starttls ? '/STARTTLS' : '' }}: {{ 'logjamscanner.result.danger.headline' | translate }}
 				p(translate="logjamscanner.result.danger.text")
 				p
 					ul
 						li Diffie-Hellman Group Size: {{ result.openssl.logjam.dhsize }} bit
 						li Export Ciphers: enabled
 
-			a.btn.btn-default(ng-click="startover()") logjamscanner.result.scan
+			a.btn.btn-default(ng-click="startover()",translate="logjamscanner.result.scan")
 
 
 		div(ng-show="status=='error'")
 			h2(translate="logjamscanner.error.headline")
 			p(translate="logjamscanner.error.text")
-			a.btn.btn-default(ng-click="startover()") logjamscanner.error.scan
+			a.btn.btn-default(ng-click="startover()",translate="logjamscanner.error.scan")
