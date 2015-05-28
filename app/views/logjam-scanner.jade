@@ -24,7 +24,7 @@
 				.form-group.col-md-6
 					a.btn.btn-default(ng-repeat="p in presets",ng-click="preset(p)") {{ p.name }}/{{ p.port }}
 				.col-md-12
-					button.btn.btn-default(ng-click="scan()",translate="logjamscanner.form.scan")
+					button.btn.btn-primary(ng-click="scan()",translate="logjamscanner.form.scan")
 		
 		div(ng-show="status=='scanning'")
 			h2(translate="logjamscanner.scanning.headline")

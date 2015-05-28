@@ -80,12 +80,12 @@
                 "no": "(don't use STARTTLS, connect directly with TLS)"
             }
         },
-        "headline": "Logjam-Scanner",
-        "intro": "In May 2015, researchers published the logjam attack on TLS. Logjam uses a weakness in the TLS protocol to downgrade a connection to use 512bit Diffie-Hellman parameters. At the same time, the discrete logarithm problem, on which the security of a ephemeral Diffie-Hellman key exchange relies, can be broken within minutes for 512bit parameter size, after a precomputation of just a week. Together, these weaknesses enable a man-in-the-middle attacker to eavesdrop on the data transmitted over TLS and tamper with it. Therefore, DH key exchange with 512bit should be considered insecure in general, and parameters with 1024bit or less should be considered to be broken for an attacker with nation-level computational resources. This test checks the ephemeral DH parameters size of a given server and checks if the connection is vulnerable to downgrade attacks. Green rating of this test is achieved by using more than 1024bit DH parameter size (or no ephemeral DH key exchange at all), and no support for 512bit DH key exchange (\"export ciphers\").",
+        "headline": "Logjam Scanner",
+        "intro": "In May 2015, researchers \u003ca href=\"https://weakdh.org/\"\u003epublished\u003c/a\u003e the logjam attack on TLS. Logjam uses a weakness in the TLS protocol to downgrade a connection to use 512bit Diffie-Hellman parameters. At the same time, the discrete logarithm problem, on which the security of a ephemeral Diffie-Hellman key exchange relies, can be broken within minutes for 512bit parameter size, after a precomputation of just a week. Together, these weaknesses enable a man-in-the-middle attacker to eavesdrop on the data transmitted over TLS and tamper with it. Therefore, DH key exchange with 512bit should be considered insecure in general, and parameters with 1024bit or less should be considered to be broken for an attacker with nation-level computational resources. This test checks the ephemeral DH parameters size of a given server and checks if the connection is vulnerable to downgrade attacks. Green rating of this test is achieved by using more than 1024bit DH parameter size (or no ephemeral DH key exchange at all), and no support for 512bit DH key exchange (\"export ciphers\").",
         "result": {
             "danger": {
                 "headline": "This Service is Seriously Insecure!",
-                "text": "Immediately disable export cipher suits to secure your TLS connections!"
+                "text": "\u003ca href=\"https://weakdh.org/sysadmin.html\"\u003eImmediately disable\u003c/a\u003e export cipher suits to secure your TLS connections!"
             },
             "good": {
                 "headline": "Looks good, your service is not affected by Logjam",
@@ -94,7 +94,7 @@
             "scan": "Scan Another Service",
             "warning": {
                 "headline": "Ugh, Your Service Is Vulnerable To Nation-State Resource Attackers",
-                "text": "While the common criminal is unlikely to eavasdrop on your connections, large government agencies may. Best upgrade to larger (at least 2048bit) DH parameters."
+                "text": "While the common criminal is unlikely to eavasdrop on your connections, large government agencies may. Best \u003ca href=\"https://weakdh.org/sysadmin.html\"\u003eupgrade\u003c/a\u003e to larger (at least 2048bit) DH parameters."
             }
         },
         "scanning": {

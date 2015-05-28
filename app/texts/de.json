@@ -80,12 +80,12 @@
                 "no": "(STARTTLS nicht benutzen, direkt mit TLS verbinden)"
             }
         },
-        "headline": "Logjam-Scanner",
-        "intro": "Im Mai 2015 haben Sicherheitsforscher die Logjam-Attacke auf TLS veröffentlicht. Logjam verwendet eine Schwachstelle im TLS-Protokoll um die Verschlüsselungsstärke der Verbindung auf \"export\" herunterzusetzen, es werden 512bit Diffie-Hellman Parameter verwendet. Gleichzeitig kann das diskrete Logarithmus-Problem, auf dem die Sicherheit vom DH Schlüsselaustausch basiert, nach einer etwa einwöchentlichen Vorberechnung in wenigen Minuten geknackt werden kann. Kombiniert man beide Methoden, kann ein man-in-the-middle Angreifer TLS-Verbindungen abhören und übermittelte Daten verändern. Daher müssen der 512bit DH Schlüsselaustausch als unsicher betrachtet werden; für den Schlüsselaustausch mit 1024bit muss davon ausgegangen werden, dass ein Angreifer mit staatlichen Ressourcen diesen ebenfalls kompromittieren kann. Dieser Test überprüft, ob der angegebene Dienst 512bit DH Parameter verwendet, und ob Verbindungen zum Dienst von downgrade-Attacken betroffen sind. Die beste Wertung dieses Tests erreicht man, wenn der Dienst mehr als 1024bit zum DH-Schlüsselaustausch verwendet, und export cipher suits vom Server nicht akzeptiert werden.",
+        "headline": "Logjam Scanner",
+        "intro": "Im Mai 2015 haben Sicherheitsforscher die Logjam-Attacke auf TLS \u003ca href=\"https://weakdh.org/\"\u003everöffentlicht\u003c/a\u003e. Logjam verwendet eine Schwachstelle im TLS-Protokoll um die Verschlüsselungsstärke der Verbindung auf \"export\" herunterzusetzen, es werden 512bit Diffie-Hellman Parameter verwendet. Gleichzeitig kann das diskrete Logarithmus-Problem, auf dem die Sicherheit vom DH Schlüsselaustausch basiert, nach einer etwa einwöchentlichen Vorberechnung in wenigen Minuten geknackt werden kann. Kombiniert man beide Methoden, kann ein man-in-the-middle Angreifer TLS-Verbindungen abhören und übermittelte Daten verändern. Daher müssen der 512bit DH Schlüsselaustausch als unsicher betrachtet werden; für den Schlüsselaustausch mit 1024bit muss davon ausgegangen werden, dass ein Angreifer mit staatlichen Ressourcen diesen ebenfalls kompromittieren kann. Dieser Test überprüft, ob der angegebene Dienst 512bit DH Parameter verwendet, und ob Verbindungen zum Dienst von downgrade-Attacken betroffen sind. Die beste Wertung dieses Tests erreicht man, wenn der Dienst mehr als 1024bit zum DH-Schlüsselaustausch verwendet, und export cipher suits vom Server nicht akzeptiert werden.",
         "result": {
             "danger": {
                 "headline": "Dieser Dienst ist unsicher!",
-                "text": "Die Unterstützung von export cipher suits sollte sofort abgestellt werden!"
+                "text": "Die Unterstützung von export cipher suits sollte \u003ca href=\"https://weakdh.org/sysadmin.html\"\u003esofort abgestellt\u003c/a\u003e werden!"
             },
             "good": {
                 "headline": "Sieht gut aus, dieser Dienst ist nicht von Logjam betroffen",
@@ -94,7 +94,7 @@
             "scan": "Einen weiteren Dienst prüfen",
             "warning": {
                 "headline": "Ugh, dieser Dienst ist mit staatlichen Resourcen angreifbar",
-                "text": "Gewöhnliche Kriminelle sind wohl nicht in der Lage, diesen Dienst abzuhören; aber große Organisationen mit staatlichen Resourcen können es wohl. Besser auf große (wenigstens 2048bit) DH-Parameter umstellen."
+                "text": "Gewöhnliche Kriminelle sind wohl nicht in der Lage, diesen Dienst abzuhören; aber große Organisationen mit staatlichen Resourcen können es wohl. Besser auf große (wenigstens 2048bit) DH-Parameter \u003ca href=\"https://weakdh.org/sysadmin.html\"\u003eumstellen\u003c/a\u003e."
             }
         },
         "scanning": {
