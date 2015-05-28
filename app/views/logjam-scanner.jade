@@ -1,0 +1,47 @@
+.container(ng-controller="LogjamScannerCtrl")
+	.col-lg-12
+		h1(translate="logjamscanner.headline")
+		p(translate="logjamscanner.intro")
+		
+		p Status: {{ status }}
+		
+		div(ng-if="status=='input'")
+			form.form-inline
+				.form-group
+					label(for="host") logjamscanner.form.host.label
+					input.form-control(type="text",id="host",name="host",ng-model="host")
+				.form-group
+					label(for="port") logjamscanner.form.port.label
+					input.form-control(type="text",id="port",name="port",ng-model="port")
+				button.btn.btn-default(ng-click="scan(host,port)") logjamscanner.form.scan
+		
+		div(ng-if="status=='scanning'")
+			h2(translate="logjamscanner.scanning")
+			
+		div(ng-if="status=='result'")
+			pre {{ result }}
+			a.btn(ng-click="status='input'") logjamscanner.result.scan
+			.alert.alert-success(role="alert",ng-if="result.openssl.logjam.dhsize > 1024 && !result.openssl.logjam.exp")
+				h2(translate="logjamscanner.result.good.headline")
+				p(translate="logjamscanner.result.good.text")
+				ul
+					li Diffie-Hellman Group Size: {{ result.openssl.logjam.dhsize }} bit
+					li Export Ciphers: disabled
+
+			.alert.alert-warning(role="alert",ng-if="result.openssl.logjam.dhsize > 512 && result.openssl.logjam.dhsize <= 1024 && !result.openssl.logjam.exp")
+				h2(translate="logjamscanner.result.warning.headline")
+				p(translate="logjamscanner.result.warning.text")
+				ul
+					li Diffie-Hellman Group Size: {{ result.openssl.logjam.dhsize }} bit
+					li Export Ciphers: disabled					
+
+			.alert.alert-danger(role="alert",ng-if="result.openssl.logjam.exp")
+				h2(translate="logjamscanner.result.warning.headline")
+				p(translate="logjamscanner.result.warning.text")
+				ul
+					li Diffie-Hellman Group Size: {{ result.openssl.logjam.dhsize }} bit
+					li Export Ciphers: enabled
+					
+		div(ng-if="status=='error'")
+			h2(translate="logjamscanner.error.headline")
+			p(translate="logjamscanner.error.text")
