@@ -66,6 +66,26 @@
 	width: 96px;
 }
 
+.features [class^="icon-"], .features [class*=" icon-"] {
+	font-size: 8em;
+}
+
+#pricing [class^="icon-"], #pricing [class*=" icon-"] {
+	font-size: 2em;
+	margin-right: 8px;
+	vertical-align: -15%;
+}
+
+#faq .icon {
+	font-size: 12em;
+	margin-bottom: .2em;
+	text-align: center;
+}
+
+#hero .icon {
+	font-size: 20em;
+}
+
 #pricing h3 {
 	line-height: 1.8em;
 }

@@ -72,7 +72,7 @@
                 "label": "Hostname"
             },
             "port": {
-                "label": "TCP Port"
+                "label": "TCP-Port"
             },
             "scan": "Dienst überprüfen",
             "starttls": {
@@ -80,7 +80,7 @@
                 "no": "(STARTTLS nicht benutzen, direkt mit TLS verbinden)"
             }
         },
-        "headline": "Logjam Scanner",
+        "headline": "Logjam-Scanner",
         "intro": "Im Mai 2015 haben Sicherheitsforscher die Logjam-Attacke auf TLS \u003ca href=\"https://weakdh.org/\"\u003everöffentlicht\u003c/a\u003e. Logjam verwendet eine Schwachstelle im TLS-Protokoll um die Verschlüsselungsstärke der Verbindung auf \"export\" herunterzusetzen, es werden 512bit Diffie-Hellman Parameter verwendet. Gleichzeitig kann das diskrete Logarithmus-Problem, auf dem die Sicherheit vom DH Schlüsselaustausch basiert, nach einer etwa einwöchentlichen Vorberechnung in wenigen Minuten geknackt werden kann. Kombiniert man beide Methoden, kann ein man-in-the-middle Angreifer TLS-Verbindungen abhören und übermittelte Daten verändern. Daher müssen der 512bit DH Schlüsselaustausch als unsicher betrachtet werden; für den Schlüsselaustausch mit 1024bit muss davon ausgegangen werden, dass ein Angreifer mit staatlichen Ressourcen diesen ebenfalls kompromittieren kann. Dieser Test überprüft, ob der angegebene Dienst 512bit DH Parameter verwendet, und ob Verbindungen zum Dienst von downgrade-Attacken betroffen sind. Die beste Wertung dieses Tests erreicht man, wenn der Dienst mehr als 1024bit zum DH-Schlüsselaustausch verwendet, und export cipher suits vom Server nicht akzeptiert werden.",
         "result": {
             "danger": {
@@ -107,10 +107,7 @@
         "products": {
             "anydns": "anyDNS",
             "dyndns": "dynDNS",
-            "geodns": "geoDNS",
-            "golddns": "goldDNS",
-            "headline": "Produkte",
-            "tunneldns": "tunnelDNS"
+            "headline": "Produkte"
         }
     },
     "meta": {
@@ -122,21 +119,9 @@
             "desc": "",
             "title": ""
         },
-        "geodns": {
-            "desc": "",
-            "title": ""
-        },
-        "golddns": {
-            "desc": "",
-            "title": ""
-        },
         "homepage": {
             "desc": "",
             "title": "deSEC - Sicherheit aus Deutschland"
-        },
-        "tunneldns": {
-            "desc": "",
-            "title": ""
         }
     },
     "products": {
@@ -161,7 +146,7 @@
                     "placeholder": "max@example.com"
                 },
                 "geodns": {
-                    "label": "Optional: Ich interessiere mich für geoDNS, d.h. Besucherstandort-abhängige DNS-Antworten, für einen Aufpreis von 25€ je Zone"
+                    "label": "Optional: Ich interessiere mich für geoDNS, d.h. Besucherstandort-abhängige DNS-Antworten, für einen Aufpreis von 25 € je Zone."
                 },
                 "headline": "Jetzt für den kostenlosen Betatest anmelden",
                 "more": "weitere Adresse anmelden",
@@ -185,47 +170,8 @@
             "price": "kostenlos",
             "title": "dynDNS – Feste URLs für Anschlüsse mit wechselnder IP"
         },
-        "geodns": {
-            "content": "\u003cp\u003eWenn Sie ihren eigenen Dienst durch räumlich verteilte Server bereitstellen wollen, bietet geoDNS ihnen die Möglichkeit, Anfragen an Ihre Domain abhängig von deren geographischem Ursprung zu beantworten. So können Sie Besucher immer mit ihrem geographisch nächstgelegenen Server oder mit speziellen Inhalten bedienen sowie Serverausfälle kompensieren.\u003c/p\u003e\u003cp\u003eUm maximale Verfügbarkeit zu garantieren, schließt geoDNS den anyDNS-Dienst und damit auch unsere Standard-Features DNSSEC, DANE, IPv6 und REST mit ein.\u003c/p\u003e",
-            "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
-            "feature2": "anycast",
-            "feature3": "geoDNS",
-            "feature4": "IPv6",
-            "feature5": "DNSSEC, DANE",
-            "feature6": "REST-API",
-            "link": "Anmelden",
-            "name": "geoDNS",
-            "price": "kostenlos",
-            "title": "geoDNS – Standortabhängige DNS-Antworten"
-        },
-        "golddns": {
-            "content": "\u003cp\u003eProfessionelle DNS-Nutzer erhalten mit diesem Paket das gesamte Leistungsspektrum von deSEC (einschließlich DNSSEC, DANE, IPv6, REST, anycast, geoDNS, dynDNS, tunnelDNS) sowie erweiterten Zugang zur REST-API für die automatisierte Anpassung von DNS-Einträgen.\u003c/p\u003e",
-            "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
-            "feature2": "anycast",
-            "feature3": "geoDNS",
-            "feature4": "DNS-Tunnel",
-            "feature5": "IPv6",
-            "feature6": "DNSSEC, DANE",
-            "feature7": "REST-API",
-            "link": "Anmelden",
-            "name": "goldDNS",
-            "price": "kostenlos",
-            "title": "goldDNS – Alles in Einem"
-        },
         "headline": "Produkte",
-        "title": "Produkte",
-        "tunneldns": {
-            "content": "\u003cp\u003etunnelDNS bietet dem technisch versierten Anwender die Möglichkeit, öffentliche WLANs auf kreativem Wege auch dann nutzen zu können, wenn alle anderen Möglichkeiten ausscheiden: DNS-Dienste funktionieren fast überall auch ohne Anmeldung, und können als Tunnel für andere Inhalte fungieren.\u003c/p\u003e\u003cp\u003eDieses Paket unterstützt unserer Standard-Features DNSSEC, DANE, IPv6 sowie die REST-API.\u003c/p\u003e",
-            "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
-            "feature2": "DNS-Tunnel",
-            "feature3": "IPv6",
-            "feature4": "DNSSEC, DANE",
-            "feature5": "REST-API",
-            "link": "Anmelden",
-            "name": "tunnelDNS",
-            "price": "kostenlos",
-            "title": "tunnelDNS – Internetzugang unter Minimalbedingungen"
-        }
+        "title": "Produkte"
     },
     "registration": {
         "content": "Interessieren Sie sich für unsere DNS-Dienstleistungen mit DNSSEC und DANE? Gerne halten wir Sie auf dem neuesten Stand unserer Entwicklungen – hinterlassen Sie einfach hier Ihre E-Mail-Adresse.",

@@ -107,10 +107,7 @@
         "products": {
             "anydns": "anyDNS",
             "dyndns": "dynDNS",
-            "geodns": "geoDNS",
-            "golddns": "goldDNS",
-            "headline": "Plans",
-            "tunneldns": "tunnelDNS"
+            "headline": "Plans"
         }
     },
     "meta": {
@@ -122,21 +119,9 @@
             "desc": "",
             "title": ""
         },
-        "geodns": {
-            "desc": "",
-            "title": ""
-        },
-        "golddns": {
-            "desc": "",
-            "title": ""
-        },
         "homepage": {
             "desc": "",
             "title": "deSEC - Security made in Germany"
-        },
-        "tunneldns": {
-            "desc": "",
-            "title": ""
         }
     },
     "products": {
@@ -161,7 +146,7 @@
                     "placeholder": "johndoe@example.com"
                 },
                 "geodns": {
-                    "label": "Optional: I am interested in geoDNS, i.e. visitor location dependent DNS replies, for an additional fee of 25€ per zone"
+                    "label": "Optional: I am interested in geoDNS, i.e. visitor-location-dependent DNS replies, for an additional fee of 25 € per zone."
                 },
                 "headline": "Apply for Free Beta Access",
                 "more": "enter another e-mail address",
@@ -185,47 +170,8 @@
             "price": "free",
             "title": "dynDNS – Fixed URLs for connections with frequently changing IP address"
         },
-        "geodns": {
-            "content": "\u003cp\u003eAre you planning to provide your service with servers in multiple locations? geoDNS allows you to serve requests for your URL based on their geographic origin. This allows you to always direct your visitors to the geographically closest server or to geographically tailored content, and to compensate for server failures.\u003c/p\u003e\u003cp\u003eTo guarantee maximum availability, geoDNS includes the anyDNS service as well as our standard features DNSSEC, DANE, IPv6, and REST.\u003c/p\u003e",
-            "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
-            "feature2": "anycast",
-            "feature3": "geoDNS",
-            "feature4": "IPv6",
-            "feature5": "DNSSEC, DANE",
-            "feature6": "REST-API",
-            "link": "Sign up",
-            "name": "geoDNS",
-            "price": "free",
-            "title": "geoDNS – Location-based DNS replies"
-        },
-        "golddns": {
-            "content": "\u003cp\u003eProfessional DNS users get access to all deSEC features (including DNSSEC, DANE, IPv6, REST, anycast, geoDNS, dynDNS, tunnelDNS) with this bundle as well as extended access to our REST API for automated updates of DNS entries.\u003c/p\u003e",
-            "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
-            "feature2": "anycast",
-            "feature3": "geoDNS",
-            "feature4": "DNS tunnel",
-            "feature5": "IPv6",
-            "feature6": "DNSSEC, DANE",
-            "feature7": "REST-API",
-            "link": "Sign up",
-            "name": "goldDNS",
-            "price": "free",
-            "title": "goldDNS – All in One"
-        },
         "headline": "Plans",
-        "title": "Plans",
-        "tunneldns": {
-            "content": "\u003cp\u003etunnelDNS allows the technically sophisticated user to use public wifi networks by creative means even in cases where all other possibilities are ruled out: DNS services work almost everywhere without log-in, and can act as a tunnel for other content.\u003c/p\u003e\u003cp\u003eThis plan supports our standard features DNSSEC, DANE, IPv6, and REST.\u003c/p\u003e",
-            "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
-            "feature2": "DNS tunnel",
-            "feature3": "IPv6",
-            "feature4": "DNSSEC, DANE",
-            "feature5": "REST-API",
-            "link": "Sign up",
-            "name": "tunnelDNS",
-            "price": "free",
-            "title": "tunnelDNS – Internet connection under minimal conditions"
-        }
+        "title": "Plans"
     },
     "registration": {
         "content": "Did we spark interest in our DNS services with DNSSEC and DANE? We will be happy to keep you informed about the latest developments – just leave us your e-mail address.",
