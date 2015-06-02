@@ -70,7 +70,7 @@
 	font-size: 8em;
 }
 
-#pricing [class^="icon-"], #pricing [class*=" icon-"] {
+.pricing-plan [class^="icon-"], .pricing-plan [class*=" icon-"] {
 	font-size: 2em;
 	margin-right: 8px;
 	vertical-align: -15%;
@@ -84,6 +84,11 @@
 
 #hero .icon {
 	font-size: 20em;
+}
+
+#hero a {
+	color: #660000;
+	font-weight: bold;
 }
 
 #pricing h3 {
@@ -105,6 +110,10 @@
 	color: #FFF;
 	display: block;
 	font-weight: normal;
+}
+
+#footer {
+	padding-top: 0;
 }
 
 a.logo-mobile {

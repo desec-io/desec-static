@@ -26,7 +26,7 @@
             "title": "Wie finanziert sich deSEC?"
         },
         "q7": {
-            "content": "Nein. Es ist nicht möglich, bei deSEC eine Domain (z.B. desec.io) anzumelden, denn deSEC ist kein sog. Registrar. Für jede registrierte Domain müssen aber auch DNS-Informationen abgelegt werden. Das übernimmt häufig der Registrar. Wer jedoch deSEC beauftragt, die DNS-Informationen für eine bereits registrierte Domain zu verwalten, kann dabei von DANE und anderen Profi-Features wie dynDNS, tunnelDNS oder geoDNS profitieren.",
+            "content": "Nein. Es ist nicht möglich, bei deSEC eine Domain (z.B. desec.io) anzumelden, denn deSEC ist kein sog. Registrar. Für jede registrierte Domain müssen aber auch DNS-Informationen abgelegt werden. Das übernimmt häufig der Registrar. Wer jedoch deSEC beauftragt, die DNS-Informationen für eine bereits registrierte Domain zu verwalten, kann dabei von DANE und anderen Profi-Features profitieren.",
             "title": "Kann ich bei deSEC eine Domain anmelden? Ist deSEC ein Registrar?"
         },
         "q8": {
@@ -58,7 +58,7 @@
         "imprint": "Impressum"
     },
     "hero": {
-        "content": "Sicheres DNS-Hosting mit DNSSEC und DANE.\u003cbr /\u003eZukunftsträchtige Technologien.\u003cbr /\u003eEin besseres Internet.",
+        "content": "\u003cp\u003eSicheres DNS-Hosting mit DNSSEC und DANE.\u003cbr /\u003eZukunftsträchtige Technologien.\u003cbr /\u003eEin besseres Internet.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eAktuelle Logjam-SSL-Sicherheitslücke:\u003c/strong\u003e\u003cbr /\u003eNutzen Sie unseren \u003ca href=\"#!/de/tools/logjam-scanner\"\u003eLogjam-Scanner\u003c/a\u003e, um Ihre Server zu testen\u003c/a\u003e!\u003c/p\u003e",
         "title": "Sicherheit aus Deutschland."
     },
     "logjamscanner": {
@@ -74,6 +74,9 @@
             "port": {
                 "label": "TCP-Port"
             },
+            "presets": {
+                "label": "Vorauswahlen"
+            },
             "scan": "Dienst überprüfen",
             "starttls": {
                 "label": "STARTTLS benutzen für:",
@@ -81,7 +84,7 @@
             }
         },
         "headline": "Logjam-Scanner",
-        "intro": "Im Mai 2015 haben Sicherheitsforscher die Logjam-Attacke auf TLS \u003ca href=\"https://weakdh.org/\"\u003everöffentlicht\u003c/a\u003e. Logjam verwendet eine Schwachstelle im TLS-Protokoll um die Verschlüsselungsstärke der Verbindung auf \"export\" herunterzusetzen, es werden 512bit Diffie-Hellman Parameter verwendet. Gleichzeitig kann das diskrete Logarithmus-Problem, auf dem die Sicherheit vom DH Schlüsselaustausch basiert, nach einer etwa einwöchentlichen Vorberechnung in wenigen Minuten geknackt werden kann. Kombiniert man beide Methoden, kann ein man-in-the-middle Angreifer TLS-Verbindungen abhören und übermittelte Daten verändern. Daher müssen der 512bit DH Schlüsselaustausch als unsicher betrachtet werden; für den Schlüsselaustausch mit 1024bit muss davon ausgegangen werden, dass ein Angreifer mit staatlichen Ressourcen diesen ebenfalls kompromittieren kann. Dieser Test überprüft, ob der angegebene Dienst 512bit DH Parameter verwendet, und ob Verbindungen zum Dienst von downgrade-Attacken betroffen sind. Die beste Wertung dieses Tests erreicht man, wenn der Dienst mehr als 1024bit zum DH-Schlüsselaustausch verwendet, und export cipher suits vom Server nicht akzeptiert werden.",
+        "intro": "\u003cp\u003eIm Mai 2015 haben Sicherheitsforscher die Logjam-Attacke auf TLS \u003ca href=\"https://weakdh.org/\"\u003everöffentlicht\u003c/a\u003e. Logjam verwendet eine Schwachstelle im TLS-Protokoll um die Verschlüsselungsstärke der Verbindung auf \"export\" herunterzusetzen, es werden 512bit Diffie-Hellman Parameter verwendet. Gleichzeitig kann das diskrete Logarithmus-Problem, auf dem die Sicherheit vom DH Schlüsselaustausch basiert, nach einer etwa einwöchentlichen Vorberechnung in wenigen Minuten geknackt werden kann. Kombiniert man beide Methoden, kann ein man-in-the-middle Angreifer TLS-Verbindungen abhören und übermittelte Daten verändern.\u003c/p\u003e\n\u003cp\u003eDaher müssen der 512bit DH Schlüsselaustausch als unsicher betrachtet werden; für den Schlüsselaustausch mit 1024bit muss davon ausgegangen werden, dass ein Angreifer mit der Ressourcenstärke eines Staates diesen ebenfalls kompromittieren kann.\u003c/p\u003e\n\u003cp\u003eDieser Test überprüft, ob der angegebene Dienst 512bit DH Parameter verwendet, und ob Verbindungen zum Dienst von downgrade-Attacken betroffen sind. Die beste Wertung dieses Tests erreicht man, wenn der Dienst mehr als 1024bit zum DH-Schlüsselaustausch verwendet, und Export Cipher Suites vom Server nicht akzeptiert werden.\u003c/p\u003e\n\u003cp\u003edeSEC ist ein Internetsicherheitsdienstleister. Wir laden Sie ein, uns auf \u003ca href=\"#!/de/\"\u003eunserer Website\u003c/a\u003e besser kennenzulernen.\u003cp\u003e",
         "result": {
             "danger": {
                 "headline": "Dieser Dienst ist unsicher!",
@@ -108,6 +111,10 @@
             "anydns": "anyDNS",
             "dyndns": "dynDNS",
             "headline": "Produkte"
+        },
+        "tools": {
+            "headline": "Tools",
+            "logjam": "Logjam-Scanner"
         }
     },
     "meta": {

@@ -17,6 +17,13 @@ header.stiky-header(ng-controller="NavigationCtrl")
 			ul
 				li.has-dropdown
 					a(href="")
+						| {{ 'menu.tools.headline' | translate }}
+						i.fa.fa-caret-down
+					ul.dropdown
+						li
+							a(ui-sref="i18n.tools.logjam({lang: lang})",translate="menu.tools.logjam",ng-click="close()")
+				li.has-dropdown
+					a(href="")
 						| {{ 'menu.products.headline' | translate }}
 						i.fa.fa-caret-down
 					ul.dropdown

@@ -26,7 +26,7 @@
             "title": "How can deSEC provide free services?"
         },
         "q7": {
-            "content": "No, that's not possible. deSEC is not a registrar. However, each domain has DNS information that needs to be stored somewhere. Often, this is handled by the registrar where the domain was ordered. However, by letting deSEC manage the DNS information of your domain, you can benefit from DANE and other neat features like dynDNS, tunnelDNS, and geoDNS.",
+            "content": "No, that's not possible. deSEC is not a registrar. However, each domain has DNS information that needs to be stored somewhere. Often, this is handled by the registrar where the domain was ordered. However, by letting deSEC manage the DNS information of your domain, you can benefit from DANE and other neat features.",
             "title": "Can I register a domain name with deSEC? Is deSEC a registrar?"
         },
         "q8": {
@@ -58,7 +58,7 @@
         "imprint": "版本说明"
     },
     "hero": {
-        "content": "我们用DNSSEC和DANE给与DNS更高安全性。\u003cbr /\u003e我们传播先进科技。\u003cbr /\u003e我们致力于把网络变得更好。",
+        "content": "\u003cp\u003e我们用DNSSEC和DANE给与DNS更高安全性。\u003cbr /\u003e我们传播先进科技。\u003cbr /\u003e我们致力于把网络变得更好。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eRecent Logjam SSL security breach:\u003c/strong\u003e\u003cbr /\u003eUse our \u003ca href=\"#!/cn/tools/logjam-scanner\"\u003eLogjam Scanner\u003c/a\u003e to test your servers!\u003c/p\u003e",
         "title": "服务质量德国保障"
     },
     "logjamscanner": {
@@ -69,10 +69,13 @@
         },
         "form": {
             "host": {
-                "label": "server host name"
+                "label": "Server host name"
             },
             "port": {
                 "label": "TCP port"
+            },
+            "presets": {
+                "label": "Presets"
             },
             "scan": "Scan Host",
             "starttls": {
@@ -81,7 +84,7 @@
             }
         },
         "headline": "Logjam Scanner",
-        "intro": "In May 2015, researchers \u003ca href=\"https://weakdh.org/\"\u003epublished\u003c/a\u003e the logjam attack on TLS. Logjam uses a weakness in the TLS protocol to downgrade a connection to use 512bit Diffie-Hellman parameters. At the same time, the discrete logarithm problem, on which the security of a ephemeral Diffie-Hellman key exchange relies, can be broken within minutes for 512bit parameter size, after a precomputation of just a week. Together, these weaknesses enable a man-in-the-middle attacker to eavesdrop on the data transmitted over TLS and tamper with it. Therefore, DH key exchange with 512bit should be considered insecure in general, and parameters with 1024bit or less should be considered to be broken for an attacker with nation-level computational resources. This test checks the ephemeral DH parameters size of a given server and checks if the connection is vulnerable to downgrade attacks. Green rating of this test is achieved by using more than 1024bit DH parameter size (or no ephemeral DH key exchange at all), and no support for 512bit DH key exchange (\"export ciphers\").",
+        "intro": "\u003cp\u003eIn May 2015, researchers \u003ca href=\"https://weakdh.org/\"\u003epublished\u003c/a\u003e the logjam attack on TLS. Logjam uses a weakness in the TLS protocol to downgrade a connection to use 512bit Diffie-Hellman parameters. At the same time, the discrete logarithm problem, on which the security of a ephemeral Diffie-Hellman key exchange relies, can be broken within minutes for 512bit parameter size, after a precomputation of just a week. Together, these weaknesses enable a man-in-the-middle attacker to eavesdrop on the data transmitted over TLS and tamper with it.\u003c/p\u003e\n\u003cp\u003eTherefore, DH key exchange with 512bit should be considered insecure in general, and parameters with 1024bit or less should be considered to be broken for an attacker with nation-level computational resources.\u003c/p\u003e\n\u003cp\u003eThis test checks the ephemeral DH parameters size of a given server and checks if the connection is vulnerable to downgrade attacks. Green rating of this test is achieved by using more than 1024bit DH parameter size (or no ephemeral DH key exchange at all), and no support for 512bit DH key exchange (\"export ciphers\").\u003c/p\u003e\n\u003cp\u003edeSEC is an Internet security service provider. To learn more about us, please \u003ca href=\"#!/cn/\"\u003evisit our web site\u003c/a\u003e.\u003c/p\u003e",
         "result": {
             "danger": {
                 "headline": "This Service is Seriously Insecure!",
@@ -99,7 +102,7 @@
         },
         "scanning": {
             "cancel": "Cancel Scan",
-            "headline": "scanning, please hang on ..."
+            "headline": "Scanning, please hang on ..."
         }
     },
     "menu": {
@@ -108,6 +111,10 @@
             "anydns": "anyDNS",
             "dyndns": "dynDNS",
             "headline": "套餐"
+        },
+        "tools": {
+            "headline": "Tools",
+            "logjam": "Logjam Scanner"
         }
     },
     "meta": {

@@ -117,7 +117,12 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 			templateUrl: "views/products/golddns.html"
 		})
 
-		.state('i18n.logjam', {
+		.state('i18n.tools', {
+			url: '/tools',
+			template: '<ui-view/>'
+		})
+	
+		.state('i18n.tools.logjam', {
 			url: "/logjam-scanner",
 			templateUrl: "views/logjam-scanner.html"
 		})

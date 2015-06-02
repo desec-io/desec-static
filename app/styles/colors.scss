@@ -1,13 +1,18 @@
-$color1: #e7c156;
+$color1: #EBC14B;
 $color2: #000000;
 $color3: #f7f8f3;
-$color4: #e7c156;
+$color4: #E3BA48;
 $color5: #FFFFFF;
-$color6: #e7c156;
+$color6: #EBC14B;
 $color7: #5d645a;
 
-body, header.stiky-header {
+body {
 	background-color: $color3;
+}
+
+header.stiky-header {
+	border-bottom: 2px solid $color3;
+	background-color: $color4;
 }
 
 .side-navi ul li.current a {
@@ -43,6 +48,7 @@ body, header.stiky-header {
 	background-color: $color5;
 }
 .hero {
+	border-top: 20px solid $color3;
 	background-color: $color1;
 }
 .page-block.color {
@@ -70,11 +76,11 @@ body, header.stiky-header {
 	border-bottom-color: $color1;
 }
 .main-navi ul li:hover a {
-	color: $color1;
+	color: $color3;
 }
 .main-navi ul li.active a {
-	color: $color1;
-	border-top-color: $color1;
+	color: $color3;
+	border-top-color: $color3;
 }
 
 @media screen and (max-width: 991px) {
@@ -82,7 +88,7 @@ body, header.stiky-header {
 		border-bottom-color: $color1;
 	}
 	.main-navi ul li a:hover {
-		color: $color1;
+		color: $color3;
 	}
 	.main-navi ul li.active a {
 		color: $color1;

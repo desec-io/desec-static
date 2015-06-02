@@ -4,4 +4,5 @@ section.hero#hero(analytics-on="scrollby", analytics-event="hero", analytics-cat
 			.hero-slider
 				.slide.first-slide
 					h2.text-light.text-left(style="margin-top:50px;",translate="hero.title")
-					p(translate="hero.content")
+					//| {{ 'hero.content' | translate }}
+					span(translate="hero.content")
