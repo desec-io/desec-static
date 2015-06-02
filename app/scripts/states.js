@@ -117,6 +117,11 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 			templateUrl: "views/products/golddns.html"
 		})
 
+		.state('i18n.logjam', {
+			url: "/logjam-scanner",
+			templateUrl: "views/logjam-scanner.html"
+		})
+
 	$urlRouterProvider.otherwise('/');
 	
 });
