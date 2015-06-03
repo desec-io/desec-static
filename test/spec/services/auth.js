@@ -34,6 +34,35 @@ describe('auth service', function () {
 		//dealoc(element); // TODO see if we need to dealoc
 	});
 
+	describe('register function', function() {
+		
+		it('POSTs the email address and password to /api/auth/register', function() {
+			$httpBackend.expect('POST', '/api/auth/register', {'email':'shitman@desec.io', 'password':'shit'})
+				.respond(201, '{"email":"shitman@desec.io"}');
+			auth.register('shitman@desec.io', 'shit');
+			$httpBackend.flush();
+		});
+
+		it('resolves the returned promise when successfully registered', function() {
+			$httpBackend.expect('POST', '/api/auth/register', {'email':'shitman@desec.io', 'password':'shit'})
+				.respond(200, '{"auth_token":"ThisIsATestAuthToken"}');
+			var result = 0;
+			auth.register('shitman@desec.io', 'shit').then(function() { result = 1; }, function() { result = 2; });
+			$httpBackend.flush();
+			expect(result).toBe(1);
+		});
+
+		it('rejects the returned promise when registration fails', function() {
+			$httpBackend.expect('POST', '/api/auth/register', {'email':'shitman@desec.io', 'password':'shit'})
+				.respond(400);
+			var result = 0;
+			auth.register('shitman@desec.io', 'shit').then(function() { result = 1; }, function() { result = 2; });
+			$httpBackend.flush();
+			expect(result).toBe(2);
+		});
+		
+	});
+	
 	describe('login function', function() {
 		
 		it('POSTs the credentials to /api/auth/login', function() {

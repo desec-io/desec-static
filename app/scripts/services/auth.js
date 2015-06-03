@@ -35,6 +35,23 @@ angular.module('desecClientApp')
 			}
 		}
 		
+		function register(email, password) {
+			var deferred = $q.defer();
+			
+			$http.post('/api/auth/register', {
+				email: email,
+				password: password,
+			})
+			.success(function() {
+					deferred.resolve(email);
+				})
+			.error(function() {
+					deferred.reject();
+				});
+
+			return deferred.promise;
+		}
+		
 		function login(email, password) {
 			var deferred = $q.defer();
 
@@ -94,6 +111,7 @@ angular.module('desecClientApp')
 		set$httpAuthInfo();
 		
 		return {
+			register: register,
 			login: login,
 			logout: logout,
 			user: user,
