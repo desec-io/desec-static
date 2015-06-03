@@ -32,7 +32,7 @@
 }
 
 @media (min-width: 992px) {
-	.main-navi {
+	.main-navi, .main-navi.ng-hide:not(.ng-hide-animate) {
 		display: block !important;
 	}
 }
