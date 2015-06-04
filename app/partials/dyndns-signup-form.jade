@@ -27,5 +27,5 @@ div.wizard(ng-controller="DyndnsSignupCtrl")
 		.wizard-footer.group
 			.buttons
 				button.btn.btn-primary(ng-disabled="loading || success", ng-click="signup()",translate="products.dyndns.signup.signup")
-				button.btn.btn-primary(ng-hide="!success", ng-disabled="!success", ng-click="check()",translate="products.dyndns.signup.check")
+				button.btn.btn-primary(ng-hide="!success", ng-disabled="!success", ui-sref="i18n.tools.dyndns({lang: lang,domain: domain + '.dedyn.io'})",translate="products.dyndns.signup.check")
 				

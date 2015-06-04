@@ -42,12 +42,6 @@ angular.module('desecClientApp')
 			
 		};
 		
-		$scope.check = function() {
-			
-			// TODO forward user to check page
-			
-		}
-		
 		function registerDomain() {
 			var d = new domain({
 				'name': $scope.domain + '.dedyn.io',
