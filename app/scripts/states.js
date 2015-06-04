@@ -130,6 +130,11 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 			templateUrl: "views/logjam-scanner.html"
 		})
 
+		.state('i18n.tools.dyndns', {
+			url: "/dyndns-check",
+			templateUrl: "views/dyndns-check.html"
+		})
+
 	$urlRouterProvider.otherwise('/');
 	
 });

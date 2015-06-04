@@ -1,0 +1,26 @@
+section.page-block
+	.container(ng-controller="DyndnsCheckCtrl")
+		.row
+			.col-md-12
+				h1(translate="dyndnscheck.headline")
+				p(translate="dyndnscheck.intro")
+				
+		.row
+			.col-md-12
+				.spinner(ng-show="loading")
+				
+				.alert.alert-success(ng-show="domain.a.length>0||domain.aaaa.length>0")
+					h4(translate="dyndnscheck.success.headline",translate-values="{domainname:domainname}")
+					p(translate="dyndnscheck.success.text",translate-values="{ipaddr:ipaddr}")
+					p(translate="dyndnscheck.success.ipv6only",ng-show="domain.a.length==0")
+					p
+						a(ui-sref="i18n.tools.logjam({lang: lang})",translate="dyndnscheck.success.logjam")
+					
+				.alert.alert-warning(ng-show="domain.a.length==0&&domain.aaaa.length==0")
+					h4(translate="dyndnscheck.error.headline",translate-values="{domainname:domainname}")
+					p(translate="dyndnscheck.error.text")
+					
+		.row
+			.col-md-4.col-md-offset-4
+				button.btn.btn-primary.btn-lg.btn-block(ng-click="check()",translate="dyndnscheck.check")
+				

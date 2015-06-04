@@ -1,4 +1,19 @@
 {
+    "dyndnscheck": {
+        "check": "Nochmal überprüfen",
+        "error": {
+            "headline": "Noch keine Adresse bei {{domainname}} hinterlegt",
+            "text": "Bisher wurde noch keine IP-Adresse für Ihre Domain hinterlegt."
+        },
+        "headline": "DynDNS-Configuration überprüfen",
+        "intro": "Überprüfen Sie, ob dynDNS-Client unserem Server bereits eine IP-Adresse mitgeteilt hat.",
+        "success": {
+            "headline": "{{domainname}} ist bereit!",
+            "ipv6only": "Ihre Domain hat aktuell nur eine IPv6-Adresse, jedoch keine IPv4-Adresse.",
+            "logjam": "Testen Sie Ihre Dienste auf die Logjam-Schwachstelle.",
+            "text": "Sie haben {{ipaddr}} als IP-Adresse hinterlegt."
+        }
+    },
     "faq": {
         "headline": "FAQ",
         "q1": {

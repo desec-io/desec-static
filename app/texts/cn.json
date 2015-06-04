@@ -1,4 +1,19 @@
 {
+    "dyndnscheck": {
+        "check": "Recheck",
+        "error": {
+            "headline": "No Address Recorded Yet",
+            "text": "So far no IP address was provided to our servers for your domain."
+        },
+        "headline": "Check dynDNS-Settings",
+        "intro": "Check if your dynDNS-client already supplied an IP address to our servers.",
+        "success": {
+            "headline": "{{domainname}} is ready to use!",
+            "ipv6only": "Your domain only has an IPv6 address, but no IPv4 address.",
+            "logjam": "Check the services you provide with our scanner for the logjam vulnerability.",
+            "text": "We have your IP address {{ipaddr}} on record."
+        }
+    },
     "faq": {
         "headline": "更多疑问",
         "q1": {
