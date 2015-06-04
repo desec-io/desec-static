@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('desecClientApp')
-	.controller('LogjamScannerCtrl', function ($scope, $http, $q) {
+	.controller('LogjamScannerCtrl', function ($scope, $http, $q, $stateParams) {
 
 		// This page is a state machine.
 		// -> input -> scanning -> result -|
@@ -11,7 +11,7 @@ angular.module('desecClientApp')
 		$scope.status = 'input';
 		
 		$scope.result = $scope.error = undefined;
-		$scope.host = 'desec.io';
+		$scope.host = $stateParams.domain || 'desec.io';
 		$scope.port = 443;
 		$scope.starttls = '';
 		
