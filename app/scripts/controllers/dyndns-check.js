@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('desecClientApp')
-	.controller('DyndnsCheckCtrl', function ($scope, $location, $http) {
+	.controller('DyndnsCheckCtrl', function ($scope, $stateParams, $http) {
 		
 		$scope.check = function() {
 			$scope.loading = true;
-			$scope.domainname = $location.search().domain;
+			$scope.domainname = $stateParams.domain;
 			$http.get('/api/dns', { params: { domain: $scope.domainname } })
 				.success(function(data) {
 					$scope.domain = data;

@@ -131,7 +131,7 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 		})
 
 		.state('i18n.tools.dyndns', {
-			url: "/dyndns-check",
+			url: "/dyndns-check?domain",
 			templateUrl: "views/dyndns-check.html"
 		})
 
