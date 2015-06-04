@@ -1,0 +1,31 @@
+div.wizard(ng-controller="DyndnsSignupCtrl")
+	div.header
+		h3(translate="products.dyndns.signup.headline")
+	form.wizard-form.body(novalidate)
+		.wizard-step.active
+			.tabs
+				.tab.active
+					.row(ng-show="loading")
+						.spinner
+					.row(ng-show="error")
+						.col-sm-12
+							.alert.alert-danger(translate="{{error}}")
+					.row(ng-show="success")
+						.col-sm-12
+							.alert.alert-success(translate="products.dyndns.signup.success")
+					.row
+						.col-sm-6
+							.form-group
+								label(for="email", translate="products.dyndns.signup.email.label")
+								input.form-control(type="email", name="email", ng-model="email", ng-disabled="user || loading || success", placeholder="{{ 'products.dyndns.signup.email.placeholder' | translate }}", required="")
+						.col-sm-6
+							.form-group
+								label(for="domain", translate="products.dyndns.signup.domains.label")
+								.input-group
+									input.form-control.text-right(type="text", name="domain", ng-model="domain", ng-disabled="loading || success", placeholder="{{ 'products.dyndns.signup.domains.placeholder' | translate }}", required="")
+									span.input-group-addon .dedyn.io
+		.wizard-footer.group
+			.buttons
+				button.btn.btn-primary(ng-disabled="loading || success", ng-click="signup()",translate="products.dyndns.signup.signup")
+				button.btn.btn-primary(ng-hide="!success", ng-disabled="!success", ng-click="check()",translate="products.dyndns.signup.check")
+				

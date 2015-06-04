@@ -154,3 +154,13 @@ a.logo-mobile {
 .pointer {
 	cursor: pointer;
 }
+
+.spinner {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	top: 50%;
+	left: 50%;
+	margin: -40px 0 0 -40px;
+	background: url(../img/spinner.GIF) no-repeat;
+}

@@ -1,4 +1,4 @@
-section#features.page-block
+section#features.page-block(ng-controller="DyndnsSignupCtrl")
 	.container
 		.row.page-header
 			h2(translate="products.dyndns.title")
@@ -17,5 +17,5 @@ section#features.page-block
 						li(translate="products.dyndns.feature4")
 						li(translate="products.dyndns.feature5")
 			.col-lg-9(ng-init="product='dyndns'")
-				include ../../partials/newsletter.jade
+				include ../../partials/dyndns-signup-form.jade
 				div(translate="products.dyndns.content")

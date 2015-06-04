@@ -175,6 +175,25 @@
             "link": "Anmelden",
             "name": "dynDNS",
             "price": "kostenlos",
+            "signup": {
+                "check": "Account einrichten",
+                "domains": {
+                    "label": "Domain-Name",
+                    "placeholder": ""
+                },
+                "email": {
+                    "label": "Email-Adresse",
+                    "placeholder": ""
+                },
+                "error": {
+                    "domain": "Die gewählte Domain ist ungültig oder bereits vergeben.",
+                    "email": "Die gewählte Email-Adresse hat bereits einen deSEC-Benutzerkonto, bitte wenden Sie sich an den \u003ca href=\"mailto:support@desec.io\"\u003eSupport\u003c/a\u003e.",
+                    "unknown": "Ein Fehler ist aufgetreten, bitte versuchen Sie es später noch einmal."
+                },
+                "headline": "Jetzt für dynDNS anmelden",
+                "signup": "Anmelden",
+                "success": "Glückwunsch, Ihre Domain wurde registriert. Wir haben Ihnen eine Email mit Ihren Zugangsdaten zugeschickt."
+            },
             "title": "dynDNS – Feste URLs für Anschlüsse mit wechselnder IP"
         },
         "headline": "Produkte",

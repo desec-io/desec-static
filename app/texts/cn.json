@@ -175,6 +175,25 @@
             "link": "马上试用",
             "name": "dynDNS",
             "price": "免费",
+            "signup": {
+                "check": "account setup",
+                "domains": {
+                    "label": "domain name",
+                    "placeholder": ""
+                },
+                "email": {
+                    "label": "email address",
+                    "placeholder": ""
+                },
+                "error": {
+                    "domain": "This domain name is invalid or already in use.",
+                    "email": "This email address is already associated with a deSEC user account. Please contact \u003ca href=\"mailto:support@desec.io\"\u003eour support\u003c/a\u003e to retrieve your account.",
+                    "unknown": "Sorry, there was an error. Please try again later."
+                },
+                "headline": "Sign up for dynDNS now",
+                "signup": "sign up",
+                "success": "Congratulations, your domain was registered. We sent you an email with your account details."
+            },
             "title": "dynDNS – Fixed URLs for connections with frequently changing IP address"
         },
         "headline": "套餐",
