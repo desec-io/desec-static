@@ -3,8 +3,11 @@
 /**
  * Configure the states of the application.
  */
-angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProvider, $translateProvider, $locationProvider) {
+angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProvider, $translateProvider, $locationProvider, $resourceProvider) {
 
+	// don't remove trailing slashes from resources (this is an API requirement)
+	$resourceProvider.defaults.stripTrailingSlashes = false;
+	
 	// enable hashbang
 	$locationProvider.hashPrefix('!');
 	
