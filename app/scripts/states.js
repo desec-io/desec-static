@@ -126,7 +126,7 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 		})
 	
 		.state('i18n.tools.logjam', {
-			url: "/logjam-scanner?domain",
+			url: "/logjam-scanner?domain&port&starttls&showresult",
 			templateUrl: "views/logjam-scanner.html"
 		})
 

@@ -109,6 +109,7 @@
                 "headline": "Sieht gut aus, dieser Dienst ist nicht von Logjam betroffen",
                 "text": "Dieser Dienst unterstützt keine export cipher suits, and benutzt entweder EDH überhaupt nicht, oder mit Parametern, die länger sind als 1024bit."
             },
+            "link": "Link zu diesem Scan",
             "scan": "Einen weiteren Dienst prüfen",
             "warning": {
                 "headline": "Ugh, dieser Dienst ist mit staatlichen Resourcen angreifbar",

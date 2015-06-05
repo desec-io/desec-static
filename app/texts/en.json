@@ -109,6 +109,7 @@
                 "headline": "Looks good, your service is not affected by Logjam",
                 "text": "Your server does not support 512bit export-grade DH key exchange, and either uses large DH parameters, or does not use ephemeral DH at all."
             },
+            "link": "Link to this scan",
             "scan": "Scan Another Service",
             "warning": {
                 "headline": "Ugh, Your Service Is Vulnerable To Nation-State Resource Attackers",

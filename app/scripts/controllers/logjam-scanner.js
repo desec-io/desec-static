@@ -12,18 +12,18 @@ angular.module('desecClientApp')
 		
 		$scope.result = $scope.error = undefined;
 		$scope.host = $stateParams.domain || 'desec.io';
-		$scope.port = 443;
-		$scope.starttls = '';
+		$scope.port = $stateParams.port || 443;
+		$scope.starttls = $stateParams.starttls || 'none';
 		
 		$scope.presets = [
 			{ name: 'FTP', port: '21', starttls: 'ftp' },
 			{ name: 'SMTP', port: '25', starttls: 'smtp' },
 			{ name: 'POP3', port: '110', starttls: 'pop3' },
 			{ name: 'IMAP', port: '143', starttls: 'imap' },
-			{ name: 'HTTPS', port: '443', starttls: '' },
+			{ name: 'HTTPS', port: '443', starttls: 'none' },
 			{ name: 'SMTP', port: '587', starttls: 'smtp' },
-			{ name: 'IMAPS', port: '993', starttls: '' },
-			{ name: 'POP3S', port: '995', starttls: '' },
+			{ name: 'IMAPS', port: '993', starttls: 'none' },
+			{ name: 'POP3S', port: '995', starttls: 'none' },
 			{ name: 'XMPP', port: '5222', starttls: 'xmpp' },
 		];
 		
@@ -68,4 +68,9 @@ angular.module('desecClientApp')
 			if (canceler)
 				canceler.resolve();
 		}
+		
+		if ($stateParams.showresult) {
+			$scope.scan();
+		}
+		
 	});
