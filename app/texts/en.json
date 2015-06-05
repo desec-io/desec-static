@@ -193,7 +193,7 @@
                 "again": "Back",
                 "back": "Try Again",
                 "email": {
-                    "label": "E-mail address for access notification",
+                    "label": "Email address",
                     "placeholder": "johndoe@example.com"
                 },
                 "geodns": {
@@ -202,7 +202,7 @@
                 "headline": "Apply for Free Beta Access",
                 "more": "enter another e-mail address",
                 "product": {
-                    "label": "Plan to sign up for"
+                    "label": "Intended pricing plan (after free evaluation; optional)"
                 },
                 "submit": "Apply",
                 "waiting": "Applying ..."

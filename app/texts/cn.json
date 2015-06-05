@@ -193,7 +193,7 @@
                 "again": "返回",
                 "back": "重试",
                 "email": {
-                    "label": "使用通知邮箱",
+                    "label": "Email address",
                     "placeholder": "johndoe@example.com"
                 },
                 "geodns": {
@@ -202,7 +202,7 @@
                 "headline": "申请免费使用Beta",
                 "more": "请输入另一个邮箱",
                 "product": {
-                    "label": "套餐试用："
+                    "label": "Intended pricing plan (after free evaluation; optional)"
                 },
                 "submit": "申请",
                 "waiting": "申请中…"

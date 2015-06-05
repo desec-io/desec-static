@@ -193,7 +193,7 @@
                 "again": "Zurück",
                 "back": "Zurück",
                 "email": {
-                    "label": "E-Mail-Adresse für Teilnahmebestätigung",
+                    "label": "E-Mail-Adresse",
                     "placeholder": "max@example.com"
                 },
                 "geodns": {
@@ -202,7 +202,7 @@
                 "headline": "Jetzt für den kostenlosen Betatest anmelden",
                 "more": "weitere Adresse anmelden",
                 "product": {
-                    "label": "Produkt"
+                    "label": "Bevorzugter Tarif (nach dem Test; optional)"
                 },
                 "submit": "Anmelden",
                 "waiting": "Anmeldung läuft ..."
