@@ -157,7 +157,35 @@
             "feature5": "REST-API",
             "link": "Anmelden",
             "name": "anyDNS",
-            "price": "kostenlos",
+            "price": "ab 0 €",
+            "pricing": {
+                "td": {
+                    "nQueries1": "unbegrenzt",
+                    "nQueries2": "unbegrenzt",
+                    "nQueries3": "unbegrenzt",
+                    "nQueries4": "unbegrenzt",
+                    "nRecords1": "0–10",
+                    "nRecords2": "11–250",
+                    "nRecords3": "251–1000",
+                    "nRecords4": "1001–5000",
+                    "price1": "kostenlos",
+                    "price2": "5 € / Monat",
+                    "price3": "10 € / Monat",
+                    "price4": "25 € / Monat",
+                    "product1": "free",
+                    "product2": "standard",
+                    "product3": "premium",
+                    "product4": "gold"
+                },
+                "text": "\u003cp\u003eWenn Sie größere Record-Volumina benötigen, wenden Sie sich bitte direkt an uns.\u003c/p\u003e\n",
+                "th": {
+                    "nQueries": "Anzahl Queries",
+                    "nRecords": "Anzahl DNS-Records",
+                    "price": "Preis (brutto)",
+                    "product": "Tarif"
+                },
+                "title": "Preise"
+            },
             "title": "anyDNS – Die Hochverfügbarkeitslösung für DNS-Dienste"
         },
         "beta": {

@@ -17,5 +17,35 @@ section#features.page-block
 						li(translate="products.anydns.feature4")
 						li(translate="products.anydns.feature5")
 			.col-lg-9(ng-init="product='anydns'")
-				include ../../partials/newsletter.jade
 				div(translate="products.anydns.content")
+				
+				h3(translate="products.anydns.pricing.title")
+				table.table
+					tr
+						th(translate="products.anydns.pricing.th.product")
+						th(translate="products.anydns.pricing.th.nRecords")
+						th(translate="products.anydns.pricing.th.nQueries")
+						th(translate="products.anydns.pricing.th.price")
+					tr
+						td(translate="products.anydns.pricing.td.product1")
+						td(translate="products.anydns.pricing.td.nRecords1")
+						td(translate="products.anydns.pricing.td.nQueries1")
+						td(translate="products.anydns.pricing.td.price1")
+					tr
+						td(translate="products.anydns.pricing.td.product2")
+						td(translate="products.anydns.pricing.td.nRecords2")
+						td(translate="products.anydns.pricing.td.nQueries2")
+						td(translate="products.anydns.pricing.td.price2")
+					tr
+						td(translate="products.anydns.pricing.td.product3")
+						td(translate="products.anydns.pricing.td.nRecords3")
+						td(translate="products.anydns.pricing.td.nQueries3")
+						td(translate="products.anydns.pricing.td.price3")
+					tr
+						td(translate="products.anydns.pricing.td.product4")
+						td(translate="products.anydns.pricing.td.nRecords4")
+						td(translate="products.anydns.pricing.td.nQueries4")
+						td(translate="products.anydns.pricing.td.price4")
+				p(translate="products.anydns.pricing.text")
+				
+				include ../../partials/newsletter.jade

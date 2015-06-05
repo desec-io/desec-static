@@ -158,6 +158,34 @@
             "link": "马上试用",
             "name": "anyDNS",
             "price": "免费",
+            "pricing": {
+                "td": {
+                    "nQueries1": "unlimited",
+                    "nQueries2": "unlimited",
+                    "nQueries3": "unlimited",
+                    "nQueries4": "unlimited",
+                    "nRecords1": "0–10",
+                    "nRecords2": "11–250",
+                    "nRecords3": "251–1000",
+                    "nRecords4": "1001–5000",
+                    "price1": "free",
+                    "price2": "5 € / mo",
+                    "price3": "10 € / mo",
+                    "price4": "25 € / mo",
+                    "product1": "free",
+                    "product2": "standard",
+                    "product3": "premium",
+                    "product4": "gold"
+                },
+                "text": "\u003cp\u003eIf you need more records, please get in touch with us directly.\u003c/p\u003e",
+                "th": {
+                    "nQueries": "Number of Queries",
+                    "nRecords": "Number of DNS records",
+                    "price": "Price",
+                    "product": "Plan"
+                },
+                "title": "Pricing"
+            },
             "title": "anyDNS – The high-availability solution for DNS services"
         },
         "beta": {

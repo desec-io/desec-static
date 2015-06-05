@@ -55,12 +55,6 @@
 	padding-bottom: 35px;
 }
 
-.product-page p {
-	font-size: 1.7em;
-	font-weight: 300;
-	line-height: 1.42857143;
-}
-
 .features .feature-img {
 	height: 96px;
 	width: 96px;
@@ -179,4 +173,12 @@ a.logo-mobile {
 	-webkit-animation: anim-rotate8 1s linear infinite;
 	transition: opacity .6s;
 	display: inline-block;
+}
+
+p {
+	margin-top: 5px;
+}
+
+.table {
+	margin-bottom: 20px;
 }
