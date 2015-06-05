@@ -5,8 +5,6 @@ div.wizard(ng-controller="DyndnsSignupCtrl")
 		.wizard-step.active
 			.tabs
 				.tab.active
-					.row(ng-show="loading")
-						.spinner
 					.row(ng-show="error")
 						.col-sm-12
 							.alert.alert-danger(translate="{{error}}")
@@ -26,6 +24,9 @@ div.wizard(ng-controller="DyndnsSignupCtrl")
 									span.input-group-addon .dedyn.io
 		.wizard-footer.group
 			.buttons
-				button.btn.btn-primary(ng-disabled="loading || success", ng-click="signup()",translate="products.dyndns.signup.signup")
+				button.btn.btn-primary(ng-disabled="loading || success", ng-click="signup()")
+					span.icon-spinner.spinner(ng-show="loading")
+					|  
+					| {{ 'products.dyndns.signup.signup' | translate }}
 				button.btn.btn-primary(ng-hide="!success", ng-disabled="!success", ui-sref="i18n.tools.dyndns({lang: lang,domain: domain + '.dedyn.io'})",translate="products.dyndns.signup.check")
 				

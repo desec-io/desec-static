@@ -7,7 +7,8 @@ section.page-block
 				
 		.row
 			.col-md-12
-				.spinner(ng-show="loading")
+				h3.text-center(ng-show="loading")
+					span.icon-spinner.spinner
 				
 				.alert.alert-success(ng-show="domain.a.length>0||domain.aaaa.length>0")
 					h4(translate="dyndnscheck.success.headline",translate-values="{domainname:domainname}")

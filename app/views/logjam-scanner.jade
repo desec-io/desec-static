@@ -35,7 +35,10 @@ section.page-block
 						button.btn.btn-primary.btn-lg.btn-block(ng-click="scan()",translate="logjamscanner.form.scan")
 		
 		div(ng-show="status=='scanning'")
-			h2(translate="logjamscanner.scanning.headline")
+			h2
+				span(translate="logjamscanner.scanning.headline")
+				|  
+				span.icon-spinner.spinner
 			a.btn.btn-default.btn-lg.btn-center(ng-click="startover()",translate="logjamscanner.scanning.cancel") 
 			
 		div(ng-show="status=='result'")
