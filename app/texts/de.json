@@ -73,7 +73,8 @@
         "imprint": "Impressum"
     },
     "hero": {
-        "content": "\u003cp\u003eSicheres DNS-Hosting mit DNSSEC und DANE.\u003cbr /\u003eZukunftsträchtige Technologien.\u003cbr /\u003eEin besseres Internet.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eAktuelle Logjam-SSL-Sicherheitslücke:\u003c/strong\u003e\u003cbr /\u003eNutzen Sie unseren \u003ca href=\"#!/de/tools/logjam-scanner\"\u003eLogjam-Scanner\u003c/a\u003e, um Ihre Server zu testen\u003c/a\u003e!\u003c/p\u003e",
+        "content": "\u003cp\u003eSicheres DNS-Hosting mit DNSSEC und DANE.\u003cbr /\u003eZukunftsträchtige Technologien.\u003cbr /\u003eEin besseres Internet.\u003c/p\u003e",
+        "content2": "\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eAktuelle Logjam-SSL-Sicherheitslücke:\u003c/strong\u003e\u003cbr /\u003eNutzen Sie unseren \u003ca href=\"#!/de/tools/logjam-scanner\"\u003eLogjam-Scanner\u003c/a\u003e, um Ihre Server zu testen!\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ca href=\"#!/de/product/dyndns\"\u003edynDNS\u003c/a\u003e ist nun verfügbar!\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e",
         "title": "Sicherheit aus Deutschland."
     },
     "logjamscanner": {
@@ -149,13 +150,13 @@
     },
     "products": {
         "anydns": {
-            "content": "\u003cp\u003eNeben unseren Standard-Features (DNSSEC, IPv6, und REST API) bietet diese Paket DANE und garantiert 100% Hochverfügbarkeit.\u003c/p\u003e\u003cp\u003eDurch physikalisch redundante DNS-Server an verschiedenen Standorten ist sichergestellt, dass alle DNS-Anfragen zu jeder Zeit zuverlässig und schnellstmöglich beantwortert werden.\u003c/p\u003e",
+            "content": "\u003cp\u003eNeben unseren Standard-Features (DNSSEC, IPv6, und REST API) bietet dieses Paket DANE und garantiert 100% Hochverfügbarkeit.\u003c/p\u003e\u003cp\u003eDurch physikalisch redundante DNS-Server an verschiedenen Standorten ist sichergestellt, dass alle DNS-Anfragen zu jeder Zeit zuverlässig und schnellstmöglich beantwortert werden.\u003c/p\u003e",
             "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "anycast",
             "feature3": "IPv6",
             "feature4": "DNSSEC, DANE",
             "feature5": "REST-API",
-            "link": "Anmelden",
+            "link": "Für Betatest registrieren",
             "name": "anyDNS",
             "price": "ab 0 €",
             "pricing": {
@@ -184,9 +185,9 @@
                     "price": "Preis (brutto)",
                     "product": "Tarif"
                 },
-                "title": "Preise"
+                "title": "Voraussichtliche Preise (nach dem Beta-Test)"
             },
-            "title": "anyDNS – Die Hochverfügbarkeitslösung für DNS-Dienste"
+            "title": "anyDNS – Die verlässliche DNS-Lösung"
         },
         "beta": {
             "apply": {
@@ -210,7 +211,7 @@
         },
         "content": "deSEC bietet professionelles DNS-Hosting auf modernster Infrastruktur mit IPv6-Unterstützung an. Zudem ermöglichen wir es unseren Kunden, ihre DNS-Informationen zusätzlich mit DNSSEC und DANE abzusichern. Und das Beste: Zu unserer Launch-Phase sind alle unsere angebotenen Leistungen kostenlos!",
         "dyndns": {
-            "content": "\u003cp\u003eSie wollen auf ihren heimischen Netzwerkspeicher zugreifen? Mit dynDNS haben Sie die Möglichkeit, auch private Internetanschlüsse mit wechselnder IP-Adresse anhand einer festen URL unter Ihrer eigenen Domain zu erreichen.\u003c/p\u003e\u003cp\u003eDieses Paket unterstützt unsere Standard-Features DNSSEC, IPv6 sowie die REST-API.\u003c/p\u003e",
+            "content": "\u003cp\u003eSie wollen auf ihren heimischen Netzwerkspeicher zugreifen? Mit dynDNS haben Sie die Möglichkeit, auch private Internetanschlüsse mit wechselnder IP-Adresse anhand einer festen URL unter Ihrer eigenen Domain zu erreichen.\u003c/p\u003e\u003cp\u003eDieses Paket unterstützt unsere Standard-Features DNSSEC sowie die REST-API.\u003c/p\u003e",
             "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "dyndns",
             "feature3": "IPv6",
@@ -238,7 +239,7 @@
                 "signup": "Anmelden",
                 "success": "Glückwunsch, Ihre Domain wurde registriert. Wir haben Ihnen eine Email mit Ihren Zugangsdaten zugeschickt."
             },
-            "title": "dynDNS – Feste URLs für Anschlüsse mit wechselnder IP"
+            "title": "dynDNS – Feste URLs mit wechselnder IP"
         },
         "headline": "Produkte",
         "title": "Produkte"

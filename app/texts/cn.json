@@ -73,7 +73,8 @@
         "imprint": "版本说明"
     },
     "hero": {
-        "content": "\u003cp\u003e我们用DNSSEC和DANE给与DNS更高安全性。\u003cbr /\u003e我们传播先进科技。\u003cbr /\u003e我们致力于把网络变得更好。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eRecent Logjam SSL security breach:\u003c/strong\u003e\u003cbr /\u003eUse our \u003ca href=\"#!/cn/tools/logjam-scanner\"\u003eLogjam Scanner\u003c/a\u003e to test your servers!\u003c/p\u003e",
+        "content": "\u003cp\u003e我们用DNSSEC和DANE给与DNS更高安全性。\u003cbr /\u003e我们传播先进科技。\u003cbr /\u003e我们致力于把网络变得更好。\u003c/p\u003e",
+        "content2": "\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eRecent Logjam SSL security breach:\u003c/strong\u003e\u003cbr /\u003eUse our \u003ca href=\"#!/cn/tools/logjam-scanner\"\u003eLogjam Scanner\u003c/a\u003e to test your servers!\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ca href=\"#!/cn/product/dyndns\"\u003edynDNS\u003c/a\u003e is now available!\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e",
         "title": "服务质量德国保障"
     },
     "logjamscanner": {
@@ -184,9 +185,9 @@
                     "price": "Price",
                     "product": "Plan"
                 },
-                "title": "Pricing"
+                "title": "Preliminary Pricing (after Beta Test)"
             },
-            "title": "anyDNS – The high-availability solution for DNS services"
+            "title": "anyDNS – Highly Reliable DNS"
         },
         "beta": {
             "apply": {
@@ -210,7 +211,7 @@
         },
         "content": "deSEC provides professional DNS hosting with IPv6 support on Google-scale infrastructure. As a matter of course, we enable our customers to secure their DNS information with DNSSEC and DANE. And best of all: During our launch phase, all services are offered free of charge.",
         "dyndns": {
-            "content": "\u003cp\u003eNeed to access your network attached storage at home? dynDNS allows you to assign a fixed URL to devices with frequently changing IP address, based on your domain.\u003c/p\u003e\u003cp\u003eThis plan supports our standard features DNSSEC, IPv6, and REST API.\u003c/p\u003e",
+            "content": "\u003cp\u003eNeed to access your network attached storage at home? dynDNS allows you to assign a fixed URL to devices with frequently changing IP address, based on your domain.\u003c/p\u003e\u003cp\u003eThis plan supports our standard features DNSSEC and REST API.\u003c/p\u003e",
             "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "dyndns",
             "feature3": "IPv6",
@@ -238,7 +239,7 @@
                 "signup": "sign up",
                 "success": "Congratulations, your domain was registered. We sent you an email with your account details."
             },
-            "title": "dynDNS – Fixed URLs for connections with frequently changing IP address"
+            "title": "dynDNS – Fixed URLs with varying IP address"
         },
         "headline": "套餐",
         "title": "五种套餐"
