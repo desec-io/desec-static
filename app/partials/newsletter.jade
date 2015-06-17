@@ -9,6 +9,7 @@ div.wizard(ng-controller="SubscribeCtrl")
 		input.hidden(type="hidden", ng-model="mailchimp.product", ng-init="mailchimp.PRODUCT=product")
 		.wizard-step(ng-class="{active: !mailchimp.result}")
 			.tabs
+				p(translate="products.anydns.content")
 				.tab.active
 					.row
 						.col-sm-6

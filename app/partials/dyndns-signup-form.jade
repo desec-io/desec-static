@@ -2,8 +2,10 @@ div.wizard(ng-controller="DyndnsSignupCtrl")
 	div.header
 		h3(translate="products.dyndns.signup.headline")
 	form.wizard-form.body(novalidate)
+		
 		.wizard-step.active
 			.tabs
+				p(translate="products.dyndns.content")
 				.tab.active
 					.row(ng-show="error")
 						.col-sm-12
