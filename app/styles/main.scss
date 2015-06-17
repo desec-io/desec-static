@@ -186,3 +186,31 @@ p {
 .wizard .header h3 {
 	margin-bottom: 7px;
 }
+
+.hero li {
+	font-size: 1.3em;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+	.hero li {
+		list-style: initial;
+	}
+
+	.hero li:before {
+		content: "";
+		margin: auto;
+	}
+
+	.hero-slider .row {
+		display: table;
+		margin: 0;
+	}
+
+	.hero-slider .col-lg-6, .hero-slider .col-md-6 {
+		display: table-cell;
+		vertical-align: bottom;
+		float: none;
+	}
+}

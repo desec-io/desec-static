@@ -3,6 +3,9 @@ section.hero#hero(analytics-on="scrollby", analytics-event="hero", analytics-cat
 		.row
 			.hero-slider
 				.slide.first-slide
-					h2.text-light.text-left(style="margin-top:50px;",translate="hero.title")
-					//| {{ 'hero.content' | translate }}
-					span(translate="hero.content")
+					.row
+						.col-lg-6.col-md-6.col-sm-6
+							h2.text-light.text-left(style="margin-top:50px;",translate="hero.title")
+							span(translate="hero.content")
+						.col-lg-6.col-md-6.col-sm-6
+							span(translate="hero.content2")

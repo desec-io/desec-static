@@ -42,7 +42,7 @@ header.stiky-header {
 	background-color: $color1;
 }
 .pricing-plan .body {
-	background-color: $color3;
+	background-color: $color5;
 }
 .pricing-plan:hover .body {
 	background-color: $color5;
@@ -50,6 +50,10 @@ header.stiky-header {
 .hero {
 	border-top: 20px solid $color3;
 	background-color: $color1;
+	color: $color5;
+}
+.hero li:before {
+	color: $color5;
 }
 .page-block.color {
 	background-color: $color1;
