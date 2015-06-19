@@ -74,7 +74,6 @@
     },
     "hero": {
         "content": "\u003cp\u003e我们用DNSSEC和DANE给与DNS更高安全性。\u003cbr /\u003e我们传播先进科技。\u003cbr /\u003e我们致力于把网络变得更好。\u003c/p\u003e",
-        "content2": "\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eRecent Logjam SSL security breach:\u003c/strong\u003e\u003cbr /\u003eUse our \u003ca href=\"#!/cn/tools/logjam-scanner\"\u003eLogjam Scanner\u003c/a\u003e to test your servers!\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ca href=\"#!/cn/product/dyndns\"\u003edynDNS\u003c/a\u003e is now available!\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e",
         "title": "服务质量德国保障"
     },
     "logjamscanner": {
@@ -120,6 +119,10 @@
         "scanning": {
             "cancel": "Cancel Scan",
             "headline": "Scanning, please hang on ..."
+        },
+        "teaser": {
+            "button": "Logjam-Scanner",
+            "text": "\u003cp\u003eWe developed a scanner for the Logjam vulnerability that is not only able to scan web servers on port 443, but also mail servers (IMAP, POP and SMTP) and jabber servers, to help people see if they need to update their servers and services.\u003c/p\u003e"
         }
     },
     "menu": {

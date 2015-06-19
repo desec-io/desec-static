@@ -74,7 +74,6 @@
     },
     "hero": {
         "content": "\u003cp\u003eSicheres DNS-Hosting mit DNSSEC und DANE.\u003cbr /\u003eZukunftsträchtige Technologien.\u003cbr /\u003eEin besseres Internet.\u003c/p\u003e",
-        "content2": "\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eAktuelle Logjam-SSL-Sicherheitslücke:\u003c/strong\u003e\u003cbr /\u003eNutzen Sie unseren \u003ca href=\"#!/de/tools/logjam-scanner\"\u003eLogjam-Scanner\u003c/a\u003e, um Ihre Server zu testen!\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e\u003ca href=\"#!/de/product/dyndns\"\u003edynDNS\u003c/a\u003e ist nun verfügbar!\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e",
         "title": "Sicherheit aus Deutschland."
     },
     "logjamscanner": {
@@ -120,6 +119,10 @@
         "scanning": {
             "cancel": "Prüfung abbrechen",
             "headline": "Moment, Prüfung läuft ..."
+        },
+        "teaser": {
+            "button": "Logjam-Scanner",
+            "text": "\u003cp\u003eWir haben einen Scanner für die Logjam-Sicherheitslücke entwickelt, der nicht nur Webservers, sondern auch Email- (IMAP, POP und SMTP) und Jabber-Server überprüfen kann, um Administratoren beim Beseitigen der Sicherheitslücke zu unterstützen.\u003c/p\u003e"
         }
     },
     "menu": {

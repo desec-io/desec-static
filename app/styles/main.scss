@@ -221,6 +221,7 @@ dd {
 	display: table-cell;
 	transition: all .5s ease-in-out;
 	width: 33.33333%;
+	vertical-align: top;
 	
 	&.ng-hide-add { opacity: 1; }
 	&.ng-hide-add-active { opacity: 0; }

@@ -22,10 +22,12 @@ section.hero#hero(analytics-on="scrollby", analytics-event="hero", analytics-cat
 									iframe(src='//player.vimeo.com/video/79036490?byline=0&portrait=0&color=ffeeac', style="height: 324px; width: 577px")
 				.slide(ng-show="slideIndex == 3")
 					.row
-						.col-lg-12.col-md-12.col-sm-12
+						.col-md-5
 							h1(translate="logjamscanner.headline")
-							| {{'logjamscanner.teaser'|translate}}
+							div(translate="logjamscanner.teaser.text")
 							a.btn.btn-primary(ui-sref="i18n.tools.logjam",translate="logjamscanner.teaser.button")
+						.col-md-7
+							img(src='/images/tablet.png',alt='')
 		.bx-controls.bx-has-pager
 			.bx-pager.bx-default-pager
 				.bx-pager-item
