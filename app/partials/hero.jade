@@ -1,6 +1,69 @@
 section.hero#hero(analytics-on="scrollby", analytics-event="hero", analytics-category="scroll")
 	.container
-		.row
+		.hero-wrapper
+			.hero-slider(ng-init="slideIndex = 1", ng-class="{slide1: slideIndex == 1, slide2: slideIndex == 2, slide3: slideIndex == 3}")
+				.slide(ng-show="slideIndex == 1")
+					.row
+						.col-lg-12.col-md-12.col-sm-12
+							h1.text-light.text-left(style="margin-top:50px;",translate="hero.title")
+							span(translate="hero.content")
+				.slide(ng-show="slideIndex == 2")
+					.row
+						.col-lg-4.col-md-4.col-sm-4
+							h1
+								span.icon-home
+								| {{'products.dyndns.name'|translate}}
+							| {{'products.dyndns.teaser'|translate}}
+							a.btn.btn-primary(ui-sref="i18n.product.dyndns",translate="products.dyndns.link")
+						.col-lg-8.col-md-8.col-sm-8
+							.video
+								img(src='/bower_components/ultima/img/hero-slider/macbook.png', style='height: 422px; width: 782px', alt='')
+								.vide-holder
+									iframe(src='//player.vimeo.com/video/79036490?byline=0&portrait=0&color=ffeeac', style="height: 324px; width: 577px")
+				.slide(ng-show="slideIndex == 3")
+					.row
+						.col-lg-12.col-md-12.col-sm-12
+							h1(translate="logjamscanner.headline")
+							| {{'logjamscanner.teaser'|translate}}
+							a.btn.btn-primary(ui-sref="i18n.tools.logjam",translate="logjamscanner.teaser.button")
+		.bx-controls.bx-has-pager
+			.bx-pager.bx-default-pager
+				.bx-pager-item
+					a.bx-pager-link(href='', ng-click="slideIndex = 1", ng-class="{active: slideIndex == 1}") 1
+				.bx-pager-item
+					a.bx-pager-link(href='', ng-click="slideIndex = 2", ng-class="{active: slideIndex == 2}") 2
+				.bx-pager-item
+					a.bx-pager-link(href='', ng-click="slideIndex = 3", ng-class="{active: slideIndex == 3}") 3
+
+			//.hero-slider
+				.slide.first-slide
+					//.row
+					.col-lg-6.col-md-6.col-sm-6
+						h2.text-light.text-left(style="margin-top:50px;",translate="hero.title")
+						span(translate="hero.content")
+					.col-lg-6.col-md-6.col-sm-6
+						span(translate="hero.content2")
+				//.slide.first-slide
+					.col-lg-5.col-md-5.col-sm-5.animated
+						img.logo-image(style='margin-top:30px;', src='img/logo.png', width='208', height='71', alt='Ultima')
+						p Check Ultima Components & Styles page for more features and components.
+						p
+							| Wish to extend your landing page? We offer you simple copy and paste solution with new Components & Styles page.
+						a.btn.btn-primary(href='cs-page.html') Go to Components & Styles
+					.col-lg-7.col-md-7.col-sm-7.animated
+						img.pull-right(src='img/hero-slider/imac.png', width='689', height='659', alt='Components and Styles')
+				//.slide
+					.col-lg-5.col-md-5.col-sm-5.animated.fadeInUp
+						img.logo-image(style='margin-top:30px;', src='img/logo.png', width='208', height='71', alt='Ultima')
+						p Have a look at Ultima Coming soon page!
+						p
+							| While your landing page is under construction show your visitors beautiful coming soon page with the coundown and subscription form.
+						p And they always stay connected.
+						a.btn.btn-primary(href='coming-soon.html') Go to Coming soon page
+					.col-lg-7.col-md-7.col-sm-7.animated.fadeInRight
+						img.iphone(src='img/hero-slider/iphone.png', width='649', height='400', alt='Coming Soon Page')
+				//.slide
+//		.row
 			.hero-slider
 				.slide.first-slide
 					.row
