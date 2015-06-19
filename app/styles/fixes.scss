@@ -146,3 +146,7 @@ $alert-danger-border:         $state-danger-border !default;
 
 // ultima didn't change the input addon border color
 .input-group-addon { border-color: #313447; }
+
+#spinner {
+	background: url(/images/spinner.gif) no-repeat;
+}
