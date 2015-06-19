@@ -15,4 +15,5 @@ angular.module('desecClientApp', [
 		'angulartics',
 		'angulartics.google.analytics',
 		'angulartics.scroll',
+		'ngAnimate',
 	])
