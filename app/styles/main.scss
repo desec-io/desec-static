@@ -220,7 +220,7 @@ dd {
 .slide {
 	display: table-cell;
 	transition: all .5s ease-in-out;
-	width: calc(100%/3);
+	width: 33.33333%;
 	
 	&.ng-hide-add { opacity: 1; }
 	&.ng-hide-add-active { opacity: 0; }
