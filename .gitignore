@@ -7,3 +7,6 @@ bower_components
 npm-debug.log
 .ftppass
 .editorconfig
+tools/translations-updater
+tools/converted
+tools/texts.csv
