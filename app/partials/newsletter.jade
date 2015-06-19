@@ -9,14 +9,14 @@ div.wizard(ng-controller="SubscribeCtrl")
 		input.hidden(type="hidden", ng-model="mailchimp.product", ng-init="mailchimp.PRODUCT=product")
 		.wizard-step(ng-class="{active: !mailchimp.result}")
 			.tabs
-				p(translate="products.anydns.content")
+				//p(translate="products.anydns.content")
 				.tab.active
 					.row
-						.col-sm-6
+						.col-sm-12
 							.form-group
 								label(for="email", translate="products.beta.apply.email.label")
 								input.form-control(type="email", name="email", ng-model="mailchimp.EMAIL", placeholder="{{ 'products.beta.apply.email.placeholder' | translate }}", required="")
-						.col-sm-6
+						.col-sm-12
 							.form-group
 								label(for="product", translate="products.beta.apply.product.label")
 								select.form-control(name="pricingplan", ng-model="mailchimp.PRICINGPLA")
@@ -26,7 +26,7 @@ div.wizard(ng-controller="SubscribeCtrl")
 									option(value="gold") gold
 									option(value="undecided") (undecided)
 					.row
-						.col-sm-6.col-sm-offset-6
+						.col-sm-12
 							.checkbox
 								label
 									input(type="checkbox", name="geodns", ng-init="mailchimp.GEODNS='plain'", ng-model="mailchimp.GEODNS", ng-true-value="'geodns'", ng-false-value="'plain'")

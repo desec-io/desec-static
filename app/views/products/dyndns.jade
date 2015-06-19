@@ -1,20 +1,16 @@
-section#features.page-block(ng-controller="DyndnsSignupCtrl")
+section.product.page-block(ng-controller="DyndnsSignupCtrl")
 	.container
 		.row.page-header
 			h2(translate="products.dyndns.title")
-		.row.product-page
-			.col-lg-3
-				.pricing-plan
-					.header
-						h3
-							span.icon-home
-							| {{'products.dyndns.name'|translate}}
-						span.price(translate="products.dyndns.price")
-					//ul
+		.row
+			.col-lg-6
+				p(translate="products.anydns.content")
+				//.pricing-plan
+					ul
 						li(translate="products.dyndns.feature1")
 						li(translate="products.dyndns.feature2")
 						li(translate="products.dyndns.feature3")
 						li(translate="products.dyndns.feature4")
 						li(translate="products.dyndns.feature5")
-			.col-lg-9(ng-init="product='dyndns'")
+			.col-lg-6(ng-init="product='dyndns'")
 				include ../../partials/dyndns-signup-form.jade

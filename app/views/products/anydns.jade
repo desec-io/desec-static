@@ -1,13 +1,13 @@
-section#features.page-block
+section.product.page-block
 	.container
 		.row.page-header
 			h2(translate="products.anydns.title")
-		.row.product-page
-			.col-lg-3
+		.row
+			//.col-lg-3
 				.pricing-plan
 					.header
 						h3
-							span.icon-spinner3
+							span.icon-earth
 							| {{'products.anydns.name'|translate}}
 						span.price(translate="products.anydns.price")
 					//ul
@@ -16,7 +16,8 @@ section#features.page-block
 						li(translate="products.anydns.feature3")
 						li(translate="products.anydns.feature4")
 						li(translate="products.anydns.feature5")
-			.col-lg-9(ng-init="product='anydns'")
+			.col-lg-6(ng-init="product='anydns'")
+				p(translate="products.anydns.content")
 				h3(translate="products.anydns.pricing.title")
 				table.table
 					tr
@@ -45,5 +46,5 @@ section#features.page-block
 						td(translate="products.anydns.pricing.td.nQueries4")
 						td(translate="products.anydns.pricing.td.price4")
 				p(translate="products.anydns.pricing.text")
-
+			.col-lg-6
 				include ../../partials/newsletter.jade

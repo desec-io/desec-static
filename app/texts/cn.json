@@ -187,7 +187,7 @@
                 },
                 "title": "Preliminary Pricing (after Beta Test)"
             },
-            "title": "anyDNS – Highly Reliable DNS"
+            "title": "\u003cspan class=\"icon-earth\"\u003e\u003c/span\u003e anyDNS – Highly Reliable DNS"
         },
         "beta": {
             "apply": {
@@ -239,7 +239,7 @@
                 "signup": "sign up",
                 "success": "Congratulations, your domain was registered. We sent you an email with your account details."
             },
-            "title": "dynDNS – Fixed URLs with varying IP address"
+            "title": "\u003cspan class=\"icon-home\"\u003e\u003c/span\u003e dynDNS – Fixed URLs with varying IP address"
         },
         "headline": "套餐",
         "title": "五种套餐"

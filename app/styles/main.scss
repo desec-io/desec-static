@@ -55,11 +55,6 @@
 	padding-bottom: 35px;
 }
 
-.features .feature-img {
-	height: 96px;
-	width: 96px;
-}
-
 .features [class^="icon-"], .features [class*=" icon-"] {
 	font-size: 8em;
 }
@@ -96,14 +91,9 @@
 	vertical-align: baseline;
 }
 
-#features h3 img {
-	margin: 0 auto 24px;
-}
-
-#features .pricing-plan small {
-	color: #FFF;
-	display: block;
-	font-weight: normal;
+.product h2 [class^="icon-"], .product h2 [class*=" icon-"] {
+	font-size: 1.2em;
+	vertical-align: -15%;
 }
 
 #footer {
