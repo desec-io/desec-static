@@ -242,6 +242,9 @@
                 "signup": "Anmelden",
                 "success": "Glückwunsch, Ihre Domain wurde registriert. Wir haben Ihnen eine Email mit Ihren Zugangsdaten zugeschickt."
             },
+            "teaser": {
+                "text": "\u003cp\u003edynDNS gibt Ihrem Router zu hause einen gleichbleibenden Namen. Damit können Sie beispielsweise von unterwegs auf Ihren heimischen Computer zugreifen, mit Ihrem smart home Verbindung aufnehmen oder auf Ihr NAS zugreifen.\u003c/p\u003e\u003cp\u003edeSEC bietet diesen Dienst dauerhaft kostenlos und mit DNSSEC gegen Manipulation gesichert für alle Privatpersonen an!\u003c/p\u003e"
+            },
             "title": "\u003cspan class=\"icon-home\"\u003e\u003c/span\u003edynDNS – Feste URLs mit wechselnder IP"
         },
         "headline": "Produkte",

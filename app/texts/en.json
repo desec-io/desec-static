@@ -242,6 +242,9 @@
                 "signup": "sign up",
                 "success": "Congratulations, your domain was registered. We sent you an email with your account details."
             },
+            "teaser": {
+                "text": "\u003cp\u003edynDNS gives your Internet router at home a name, so that you can access it remotely to control your smart home, access your network attached storage device or connect to your PC at home.\u003c/p\u003e\u003cp\u003edeSEC offers this service permanently for free and secured with DNSSEC for home use.\u003c/p\u003e"
+            },
             "title": "\u003cspan class=\"icon-home\"\u003e\u003c/span\u003edynDNS – Fixed URLs with varying IP address"
         },
         "headline": "Products",
