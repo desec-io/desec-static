@@ -204,3 +204,16 @@ p {
 		float: none;
 	}
 }
+
+dt [class^="icon-"], dt [class*=" icon-"] {
+	margin-right: 10px;
+}
+dd {
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+	dl {
+		text-align: center;
+	}
+}
