@@ -200,7 +200,7 @@ dd {
 .hero-slider {
 	display: table;
 	transition: all 1s ease-in-out;
-	width: calc(3*100%);
+	width: calc(2*100%);
 
 	&.slide1 {
 		margin-left: calc(0*-100%);
@@ -208,19 +208,38 @@ dd {
 	&.slide2 {
 		margin-left: calc(1*-100%);
 	}
-	&.slide3 {
-		margin-left: calc(2*-100%);
+
+	/* https://remino.net/css-responsive-scalable-iframe/ */
+	.scalable {
+		background: url(/bower_components/ultima/img/hero-slider/macbook.png);
+		background-size: 100% 100%;
+		overflow: hidden;
+		padding: 3.3% 11.4% 5% 11.7%;
+
+		iframe {
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		.scalable-content {
+			height: 0;
+			position: relative;
+		}
 	}
 
-	.video {
-		margin-top: 20px;
+	.scalable-16-9 .scalable-content {
+		/* Percentage from 9 divided by 16 for ratio of 16:9. */
+		padding-bottom: 56.25%;
 	}
 }
 
 .slide {
 	display: table-cell;
 	transition: all .5s ease-in-out;
-	width: 33.33333%;
+	width: 50%;
 	vertical-align: top;
 	
 	&.ng-hide-add { opacity: 1; }

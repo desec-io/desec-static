@@ -1,26 +1,25 @@
 section.hero#hero(analytics-on="scrollby", analytics-event="hero", analytics-category="scroll")
 	.container
 		.hero-wrapper
-			.hero-slider(ng-init="slideIndex = 1", ng-class="{slide1: slideIndex == 1, slide2: slideIndex == 2, slide3: slideIndex == 3}")
-				.slide(ng-show="slideIndex == 1")
+			.hero-slider(ng-init="slideIndex = 1", ng-class="{slide1: slideIndex == 1, slide2: slideIndex == 2}")
+				//.slide(ng-show="slideIndex == 1")
 					.row
 						.col-lg-12.col-md-12.col-sm-12
 							h1.text-light.text-left(style="margin-top:50px;",translate="hero.title")
 							span(translate="hero.content")
-				.slide(ng-show="slideIndex == 2")
+				.slide(ng-show="slideIndex == 1")
+					h1
+						span.icon-home
+						| {{'products.dyndns.name'|translate}}
 					.row
-						.col-lg-4.col-md-4.col-sm-4
-							h1
-								span.icon-home
-								| {{'products.dyndns.name'|translate}}
+						.col-lg-6.col-md-6.col-sm-6
 							div(translate="products.dyndns.teaser.text")
 							a.btn.btn-primary(ui-sref="i18n.product.dyndns",translate="products.dyndns.link")
-						.col-lg-8.col-md-8.col-sm-8
-							.video
-								img(src='/bower_components/ultima/img/hero-slider/macbook.png', style='height: 422px; width: 782px', alt='')
-								.vide-holder
-									iframe(src='//player.vimeo.com/video/79036490?byline=0&portrait=0&color=ffeeac', style="height: 324px; width: 577px")
-				.slide(ng-show="slideIndex == 3")
+						.col-lg-6.col-md-6.col-sm-6
+							.scalable.scalable-16-9
+								.scalable-content
+									iframe(src='//player.vimeo.com/video/79036490?byline=0&portrait=0&color=ffeeac')
+				.slide(ng-show="slideIndex == 2")
 					.row
 						.col-md-5
 							h1(translate="logjamscanner.headline")
@@ -34,5 +33,5 @@ section.hero#hero(analytics-on="scrollby", analytics-event="hero", analytics-cat
 					a.bx-pager-link(href='', ng-click="slideIndex = 1", ng-class="{active: slideIndex == 1}") 1
 				.bx-pager-item
 					a.bx-pager-link(href='', ng-click="slideIndex = 2", ng-class="{active: slideIndex == 2}") 2
-				.bx-pager-item
+				//.bx-pager-item
 					a.bx-pager-link(href='', ng-click="slideIndex = 3", ng-class="{active: slideIndex == 3}") 3
