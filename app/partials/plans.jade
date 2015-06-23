@@ -1,8 +1,7 @@
 section#pricing.page-block(analytics-on="scrollby", analytics-event="pricing", analytics-category="scroll")
 	.container
-		//.row.page-header
-			h2(translate="products.headline")
-			span(translate="products.content")
+		.row.page-header
+			h2(translate="plans.headline")
 		.row.row-vertical-sm-flex-end
 			.col-lg-6.col-md-6.col-sm-6
 				.pricing-plan
@@ -12,7 +11,7 @@ section#pricing.page-block(analytics-on="scrollby", analytics-event="pricing", a
 							| {{'products.dyndns.name'|translate}}
 					.body
 						ul
-							li(translate="products.dyndns.content")  
+							li(translate="plans.dyndns.content")  
 						.buy-btn
 							a.btn.btn-primary(ui-sref="i18n.product.dyndns",translate="products.dyndns.link")
 			.col-lg-6.col-md-6.col-sm-6
@@ -23,6 +22,6 @@ section#pricing.page-block(analytics-on="scrollby", analytics-event="pricing", a
 							| {{'products.anydns.name'|translate}}
 					.body
 						ul
-							li(translate="products.anydns.content")
+							li(translate="plans.anydns.content")
 						.buy-btn
 							a.btn.btn-primary(ui-sref="i18n.product.anydns",translate="products.anydns.link")
