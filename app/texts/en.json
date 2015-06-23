@@ -51,7 +51,7 @@
     },
     "features": {
         "availability": {
-            "content": "Don't worry about availability of your DNS services anymore. We guarantee 100% availability of our DNS servers anytime, world-wide.",
+            "content": "Don't worry about availability of your DNS services anymore. We guarantee 100% availability of our DNS servers anytime, world-wide. A decade of experience in webhosting has made us well aware of the mission critical character of domain reachability. Therefore, we rely on redundant server infrastructure to ensure that your zones are available 24/7 for your customers. For our paid services, we commit to a 100% SLA.",
             "title": "Guaranteed Availability"
         },
         "dane": {
@@ -59,11 +59,11 @@
             "title": "DANE Records"
         },
         "dnssec": {
-            "content": "All zones hosted by deSEC are secured with DNSSEC to protect them from being tampered with during transmission. This helps preventing man-in-the-middle attacks on your site.",
+            "content": "All zones hosted by deSEC are secured with DNSSEC to protect them from being tampered with during transmission. DNSSEC records are checked by modern operating systems and browsers by default when DNS requests are being processed. The DNSSEC standard currently is the safest technology to protect DNS lookups from manipulation. Our advanced DNS service thus closes a critical loophole for man-in-the-middle attacks, ensuring that you are always connected to the right server.",
             "title": "Bullet-proof Security with DNSSEC"
         },
         "easy": {
-            "content": "We at deSEC know your pain when it comes to updating your DNS zones. No matter if you need to change a lot of zones at once, update single records or add records for special applications: We have an easy-to-use tool ready for you.",
+            "content": "We at deSEC know your pain when it comes to updating your DNS zones. No matter if you want to edit single records, rearrange multiple zones at the same time or add records for particular applications: Our innovative interface offers you a simple and user-friendly way to achieve your goal.",
             "title": "Easy to Use"
         },
         "headline": "Features"
@@ -151,15 +151,33 @@
             "title": "deSEC - Security made in Germany"
         }
     },
+    "plans": {
+        "anydns": {
+            "content": "\u003cp\u003eLooking for enterprise-level DNS hosting? With anyDNS, you can benefit from the most up-to-date security technologies, a user-friendly interface, and guaranteed availability of your zones.\u003c/p\u003e\n\u003cp\u003eIn addition to our standard features (DNSSEC, IPv6, and REST API), this package supports DANE as well as advanced reliability with a 100% Service Level Agreement.\u003c/p\u003e"
+        },
+        "dyndns": {
+            "content": "\u003cp\u003eNeed to access your network attached storage at home from everywhere? dynDNS allows you to assign a fixed domain name to devices with frequently changing IP address, like your Internet router at home.\u003c/p\u003e\u003cp\u003eThis plan supports our standard features DNSSEC as well as dynamic updates via our REST API.\u003c/p\u003e"
+        },
+        "headline": "Products"
+    },
+    "product": {
+        "anydns": {
+            "content": "\u003cp\u003eanyDNS, our managed DNS hosting service, comes with supreme security technologies as well as with a user-friendly interface and a 100% SLA. DNSSEC, DANE, IPv6, and REST API access are included. Just give it try during our free test!\u003c/p\u003e",
+            "title": "\u003cspan class=\"icon-earth\"\u003e\u003c/span\u003eanyDNS – Highly Reliable DNS"
+        },
+        "dyndns": {
+            "content": "\u003cp\u003eWith dynDNS, you can make your router available under a static name (e.g. max.dedyn.io) so that you can access your computer, NAS, IP webcam remotely. This is not rocket science:\u003c/p\u003e\n\n\u003col\u003e\n        \u003cli\u003e\n                \u003cstrong\u003eRegister for dynDNS (free!)\u003c/strong\u003e\u003cbr /\u003e\n                        Enter your e-mail address and the desired domain name into the form right here. You will receive an e-mail with your user credentials.\n        \u003c/li\u003e\n        \u003cli\u003e\n                \u003cstrong\u003eConfigure your router\u003c/strong\u003e\u003cbr /\u003e\n                Configure your router with these credentials. You will also need to enter an update URL which your router will use to notify us when its IP address changes. The sign-up email contains all necessary information.\n        \u003c/li\u003e\n        \u003cli\u003e\n                \u003cstrong\u003eCheck settings\u003c/strong\u003e\u003cbr /\u003e\n                We set up a testing procedure for you that allows you to check your configuration easily. The link for it is in your sign-up email as well.\n        \u003c/li\u003e\n\u003c/ol\u003e\n\n\u003cp\u003edeSEC's mission is to spread the use of secure Internet technology. This is why we offer our dynDNS service permanently free of charge and free of ads.\u003c/p\u003e",
+            "title": "\u003cspan class=\"icon-home\"\u003e\u003c/span\u003edynDNS – Fixed URLs with varying IP address"
+        }
+    },
     "products": {
         "anydns": {
-            "content": "\u003cp\u003eIn addition to our standard features (DNSSEC, IPv6, and REST API), this package offers DANE as well as advanced reliability with a 100% Service Level Agreement.\u003c/p\u003e\u003cp\u003eBy means of physically redundant DNS servers at various geographic locations we ensure that all DNS requests can be served reliably and as fast as possible at any time.\u003c/p\u003e",
             "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "anycast",
             "feature3": "IPv6",
             "feature4": "DNSSEC, DANE",
             "feature5": "REST-API",
-            "link": "Sign up for Beta Test",
+            "link": "Sign up for Beta Test (free)",
             "name": "anyDNS",
             "price": "starting at 0 €",
             "pricing": {
@@ -189,8 +207,7 @@
                     "product": "Plan"
                 },
                 "title": "Preliminary Pricing (after Beta Test)"
-            },
-            "title": "\u003cspan class=\"icon-earth\"\u003e\u003c/span\u003eanyDNS – Highly Reliable DNS"
+            }
         },
         "beta": {
             "apply": {
@@ -212,9 +229,7 @@
                 "waiting": "Applying ..."
             }
         },
-        "content": "deSEC provides professional DNS hosting with IPv6 support on Google-scale infrastructure. As a matter of course, we enable our customers to secure their DNS information with DNSSEC and DANE. And best of all: During our launch phase, all services are offered free of charge.",
         "dyndns": {
-            "content": "\u003cp\u003eNeed to access your network attached storage at home? dynDNS allows you to assign a fixed URL to devices with frequently changing IP address, based on your domain.\u003c/p\u003e\u003cp\u003eThis plan supports our standard features DNSSEC and REST API.\u003c/p\u003e",
             "feature1": "99% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "dyndns",
             "feature3": "IPv6",
@@ -238,16 +253,14 @@
                     "email": "This email address is already associated with a deSEC user account. Please contact \u003ca href=\"mailto:support@desec.io\"\u003eour support\u003c/a\u003e to retrieve your account.",
                     "unknown": "Sorry, there was an error. Please try again later."
                 },
-                "headline": "Sign up for dynDNS now",
+                "headline": "Sign up for dynDNS now (it's free)",
                 "signup": "sign up",
                 "success": "Congratulations, your domain was registered. We sent you an email with your account details."
             },
             "teaser": {
                 "text": "\u003cp\u003edynDNS gives your Internet router at home a name, so that you can access it remotely to control your smart home, access your network attached storage device or connect to your PC at home.\u003c/p\u003e\u003cp\u003edeSEC offers this service permanently for free and secured with DNSSEC for home use.\u003c/p\u003e"
-            },
-            "title": "\u003cspan class=\"icon-home\"\u003e\u003c/span\u003edynDNS – Fixed URLs with varying IP address"
+            }
         },
-        "headline": "Products",
         "title": "Products"
     },
     "registration": {
