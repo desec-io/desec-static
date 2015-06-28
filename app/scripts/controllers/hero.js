@@ -11,13 +11,17 @@ angular.module('desecClientApp').controller('HeroCtrl', function($scope, $timeou
 			$timeout.cancel(timer);
 	}
 	
+	function setTimer() {
+		timer = $timeout(nextSlide, 10000);
+	}
+	
 	function nextSlide() {
 		cancelTimer();
 		$scope.slideIndex = ($scope.slideIndex + 1) % SLIDE_COUNT;
-		$timeout(nextSlide, 10000);
+		setTimer();
 	}
 	
-	$timeout(nextSlide, 10000);
+	setTimer();
 	
 	$scope.showSlide = function(idx) {
 		cancelTimer();
