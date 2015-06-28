@@ -202,10 +202,10 @@ dd {
 	transition: all 1s ease-in-out;
 	width: calc(2*100%);
 
-	&.slide1 {
+	&.slide0 {
 		margin-left: calc(0*-100%);
 	}
-	&.slide2 {
+	&.slide1 {
 		margin-left: calc(1*-100%);
 	}
 
