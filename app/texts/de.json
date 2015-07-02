@@ -199,7 +199,7 @@
                     "product3": "premium",
                     "product4": "gold"
                 },
-                "text": "\u003cp\u003eWenn Sie größere Record-Volumina benötigen, wenden Sie sich bitte direkt an uns.\u003c/p\u003e\n",
+                "text": "\u003cp\u003eDas Pricing richtet sich lediglich nach der Anzahl der DNS-Records; die Anzahl der Zonen und Queries ist nicht relevant. Sollten Sie größere Record-Volumina benötigen, wenden Sie sich bitte direkt an uns.\u003c/p\u003e\n",
                 "th": {
                     "nQueries": "Anzahl Queries",
                     "nRecords": "Anzahl DNS-Records",

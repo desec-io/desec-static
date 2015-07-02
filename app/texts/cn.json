@@ -199,14 +199,14 @@
                     "product3": "premium",
                     "product4": "gold"
                 },
-                "text": "\u003cp\u003eIf you need more records, please get in touch with us directly.\u003c/p\u003e",
+                "text": "\u003cp\u003ePricing only depends on the number of DNS records; the number of zones or queries is not relevant. If you need more records, please get in touch with us directly.\u003c/p\u003e",
                 "th": {
                     "nQueries": "Number of Queries",
                     "nRecords": "Number of DNS records",
                     "price": "Price",
                     "product": "Plan"
                 },
-                "title": "Preliminary Pricing (after Beta Test)"
+                "title": "Preliminary Pricing (effective after Beta Test)"
             }
         },
         "beta": {
@@ -235,7 +235,7 @@
             "feature3": "IPv6",
             "feature4": "DNSSEC",
             "feature5": "REST-API",
-            "link": "马上试用",
+            "link": "Try it now, it's free",
             "name": "dynDNS",
             "price": "免费",
             "signup": {
