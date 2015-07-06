@@ -8,11 +8,6 @@
 		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/" />
 	</url>
 	<url>
-		<loc>https://desec.io/#!/en/product/dyndns</loc>
-		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/dyndns" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/dyndns" />
-	</url>
-	<url>
 		<loc>https://desec.io/#!/de/</loc>
 		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/" />
 		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/" />
@@ -23,12 +18,9 @@
 		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/" />
 	</url>
 	<url>
-		<loc>https://desec.io/#!/en/product/anydns</loc>
-		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/anydns" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/anydns" />
-	</url>
-	<url>
-		<loc>https://desec.io/#!/imprint</loc>
+		<loc>https://desec.io/#!/en/product/dyndns</loc>
+		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/dyndns" />
+		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/dyndns" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/de/product/dyndns</loc>
@@ -36,18 +28,26 @@
 		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/dyndns" />
 	</url>
 	<url>
-		<loc>https://desec.io/#!/de/product/anydns</loc>
-		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/product/anydns" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/anydns" />
-	</url>
-	<url>
 		<loc>https://desec.io/#!/cn/product/dyndns</loc>
 		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/product/dyndns" />
 		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/dyndns" />
 	</url>
 	<url>
+		<loc>https://desec.io/#!/en/product/anydns</loc>
+		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/anydns" />
+		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/anydns" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/de/product/anydns</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/product/anydns" />
+		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/anydns" />
+	</url>
+	<url>
 		<loc>https://desec.io/#!/cn/product/anydns</loc>
 		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/product/anydns" />
 		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/anydns" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/imprint</loc>
 	</url>
 </urlset>
