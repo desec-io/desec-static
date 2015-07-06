@@ -48,6 +48,21 @@
 		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/anydns" />
 	</url>
 	<url>
+		<loc>https://desec.io/#!/en/tools/logjam-scanner</loc>
+		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/tools/logjam-scanner" />
+		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/tools/logjam-scanner" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/de/tools/logjam-scanner</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/tools/logjam-scanner" />
+		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/tools/logjam-scanner" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/cn/tools/logjam-scanner</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/tools/logjam-scanner" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/tools/logjam-scanner" />
+	</url>
+	<url>
 		<loc>https://desec.io/#!/imprint</loc>
 	</url>
 </urlset>
