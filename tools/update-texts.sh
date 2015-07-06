@@ -1,5 +1,8 @@
 #!/bin/bash
 
+OUTFILE=/dev/null
+#OUTFILE=/dev/stdout
+
 # Some colors for output
 GREY='\033[1;30m'
 GREEN='\033[1;32m'
@@ -39,7 +42,7 @@ if [ ! -d "translations-updater" ] ; then
 	# Install translations updater
 	echo "INSTALLING TRANSLATIONS-UPDATER"
 	echo -e "${GREY}"
-	git clone -q git@github.com:dothiv/translations-updater.git 2> /dev/null > /dev/null
+	git clone -q git@github.com:dothiv/translations-updater.git 2> $OUTFILE > $OUTFILE
 	cd translations-updater
 	go get -d -v ./... && go build -v ./...
 	cd ..
@@ -50,7 +53,7 @@ fi
 # download
 URL="https://docs.google.com/spreadsheet/ccc?key=${KEY}&output=csv"
 echo -n "Downloading... "
-wget -o /dev/null -O texts.csv "${URL}"
+wget -o $OUTFILE -O texts.csv "${URL}"
 echo "done."
 
 # Check if download was successful
@@ -71,8 +74,8 @@ do
 		-code="key" \
 		-val="${LANG}" \
 		-target="converted/${LANG}.json" \
-		> /dev/null \
-		2> /dev/null
+		> $OUTFILE \
+		2> $OUTFILE
 	
 	# Check if file present
 	if [ ! -f "converted/${LANG}.json" ] ; then
