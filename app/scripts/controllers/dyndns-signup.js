@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('desecClientApp')
-	.controller('DyndnsSignupCtrl', function ($scope, auth, domain) {
+	.controller('DyndnsSignupCtrl', function ($scope, auth, domain, $analytics) {
 
 		$scope.loading = false;
 		$scope.password = Math.abs(Math.random().toString().split('').reduce(function(p,c){return (p<<5)-p+c})).toString(36).substr(0,11);
@@ -52,6 +52,7 @@ angular.module('desecClientApp')
 				function() { // success
 					$scope.loading = false;
 					$scope.success = true;
+					$analytics.eventTrack('signupsuccess', {  category: 'dyndns', label: 'signupsuccess' });
 				},
 				function() { // error
 					$scope.error = 'products.dyndns.signup.error.domain';

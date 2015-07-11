@@ -25,7 +25,7 @@ div.wizard(ng-controller="DyndnsSignupCtrl")
 									span.input-group-addon .dedyn.io
 		.wizard-footer.group
 			.buttons
-				button.btn.btn-primary(ng-disabled="loading || success", ng-click="signup()")
+				button.btn.btn-primary(ng-disabled="loading || success", ng-click="signup()", analytics-on="click",analytics-event="attemptsignup",analytics-category="dyndns")
 					span.icon-spinner.spinner(ng-show="loading")
 					|  
 					| {{ 'products.dyndns.signup.signup' | translate }}
