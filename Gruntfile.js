@@ -212,9 +212,10 @@ module.exports = function (grunt) {
 			dist: {
 				src: [
 					'<%= yeoman.dist %>/scripts/{,*/}*.js',
-					'<%= yeoman.dist %>/styles/{,*/}*.css',
+					'<%= yeoman.dist %>/{,*/}*.css',
 					'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-					'<%= yeoman.dist %>/styles/fonts/*'
+					'<%= yeoman.dist %>/fonts/*',
+					'<%= yeoman.dist %>/texts/*',
 				]
 			}
 		},
@@ -223,7 +224,7 @@ module.exports = function (grunt) {
 		// concat, minify and revision files. Creates configurations in memory so
 		// additional tasks can operate on them
 		useminPrepare: {
-			html: '.tmp/index.html',
+			html: '<%= yeoman.dist %>/index.html',
 			options: {
 				dest: '<%= yeoman.dist %>',
 				flow: {
@@ -240,8 +241,8 @@ module.exports = function (grunt) {
 
 		// Performs rewrites based on filerev and the useminPrepare configuration
 		usemin: {
-			html: ['.tmp/{,*/}*.html'],
-			css: ['.tmp/{,*/}*.css'],
+			html: ['<%= yeoman.dist %>/**/*.html'],
+			css: ['<%= yeoman.dist %>/*.css'],
 			options: {
 				assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images']
 			}
@@ -260,15 +261,18 @@ module.exports = function (grunt) {
 		//     }
 		//   }
 		// },
-		// uglify: {
-		//   dist: {
-		//     files: {
-		//       '<%= yeoman.dist %>/scripts/scripts.js': [
-		//         '<%= yeoman.dist %>/scripts/scripts.js'
-		//       ]
-		//     }
-		//   }
-		// },
+		uglify: {
+			dist: {
+					files: {
+						'<%= yeoman.dist %>/scripts/custom.js': [
+							'<%= yeoman.dist %>/scripts/custom.js'
+						],
+						'<%= yeoman.dist %>/scripts/vendor.js': [
+							'<%= yeoman.dist %>/scripts/vendor.js'
+						]
+				}
+			}
+		},
 		// concat: {
 		//   dist: {}
 		// },
@@ -320,7 +324,7 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						cwd: '.tmp',
+						cwd: '<%= yeoman.dist %>',
 						src: ['*.html', 'views/{,*/}*.html'],
 						dest: '<%= yeoman.dist %>'
 					}
@@ -335,9 +339,9 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						cwd: '.tmp/concat/scripts',
+						cwd: '<%= yeoman.dist %>/scripts',
 						src: ['*.js', '!oldieshim.js'],
-						dest: '.tmp/concat/scripts'
+						dest: '<%= yeoman.dist %>/scripts'
 					}
 				]
 			}
@@ -425,7 +429,7 @@ module.exports = function (grunt) {
 					{
 						expand: true,
 						cwd: '<%= yeoman.app %>',
-						dest: '.tmp',
+						dest: '<%= yeoman.dist %>',
 						src: ['*.jade', 'views/**/*.jade'],
 						ext: '.html'
 					}
@@ -532,13 +536,13 @@ module.exports = function (grunt) {
 		'concat',
 		'concurrent:dist',
 		'autoprefixer',
-		'ngAnnotate',
 		'copy:dist',
 		'cssmin',
-		//'uglify',
-		//'filerev',
+		'ngAnnotate',
+		'uglify',
+		'filerev',
 		'usemin',
-		'htmlmin'
+		'htmlmin',
 	]);
 
 	grunt.registerTask('deploylive', [
