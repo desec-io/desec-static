@@ -32,7 +32,7 @@ section.page-block
 				.row
 					.col-md-4
 					.col-md-4
-						button.btn.btn-primary.btn-lg.btn-block(ng-click="scan()",translate="logjamscanner.form.scan")
+						button.btn.btn-primary.btn-lg.btn-block(ng-click="scan()",translate="logjamscanner.form.scan",analytics-on="click",analytics-event="{{port}}/{{starttls}}",analytics-category="logjamscanner")
 		
 		div(ng-show="status=='scanning'")
 			h2
