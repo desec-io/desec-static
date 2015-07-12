@@ -126,6 +126,11 @@
         }
     },
     "menu": {
+        "docs": {
+            "dyndnsclient": "dynDNS Client konfigurieren",
+            "headline": "Doku",
+            "updateapidetails": "Update-API Details"
+        },
         "home": "Menü",
         "products": {
             "anydns": "anyDNS",

@@ -63,6 +63,36 @@
 		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/tools/logjam-scanner" />
 	</url>
 	<url>
+		<loc>https://desec.io/#!/en/docs/dyndns-client</loc>
+		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/docs/dyndns-client" />
+		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/docs/dyndns-client" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/de/docs/dyndns-client</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/docs/dyndns-client" />
+		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/docs/dyndns-client" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/cn/docs/dyndns-client</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/docs/dyndns-client" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/docs/dyndns-client" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/en/docs/update-api-details</loc>
+		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/docs/update-api-details" />
+		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/docs/update-api-details" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/de/docs/update-api-details</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/docs/update-api-details" />
+		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/docs/update-api-details" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/cn/docs/update-api-details</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/docs/update-api-details" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/docs/update-api-details" />
+	</url>
+	<url>
 		<loc>https://desec.io/#!/imprint</loc>
 	</url>
 </urlset>

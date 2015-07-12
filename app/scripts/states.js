@@ -134,7 +134,22 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 			url: "/dyndns-check?domain",
 			templateUrl: "views/dyndns-check.html"
 		})
-
+	
+		.state('i18n.docs', {
+			url: '/docs',
+			template: '<ui-view/>'
+		})		
+		
+		.state('i18n.docs.dyndnsclient', {
+			url: "/dyndns-client",
+			templateUrl: "views/docs/dyndns-client.html"
+		})
+		
+		.state('i18n.docs.updateapidetails', {
+			url: "/update-api-details",
+			templateUrl: "views/docs/update-api-details.html"
+		})
+	
 	$urlRouterProvider.otherwise('/');
 	
 });
