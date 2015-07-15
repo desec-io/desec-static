@@ -3,10 +3,10 @@ section.product.page-block
 		.row.page-header
 			h2 Update API Details
 			span
-				| Sometimes using the existing solutions just doesn't work for you. Here are the details on how our update API works.
-				| We provide this API to be compartible with most dynDNS clients. However, we also provide a RESTful API that is
-				| more powerful and always preferred over this legacy interface.
-			
+				| Sometimes, using the existing solutions just doesn't work for you. Here are the details on how our update API works.
+				| We provide this API to be compatible with most dynDNS clients. However, we also provide a RESTful API that is
+				| more powerful and always preferred over the legacy interface described here.
+
 		.row
 			.col-md-offset-3.col-md-9
 				h3 The Request
@@ -14,15 +14,15 @@ section.product.page-block
 					| Updates are made via HTTP/HTTPS GET-Requests. You can connect via IPv4 or IPv6 to <code>update.dedyn.io</code>.
 					| To enforce IPv6, use <code>update6.dedyn.io</code>.
 				p
-					| Please be aware that while we still accept HTTP-Requests, we <em>urge</em> you to use HTTPS. For that reason, we also
-					| sent an HSTS-Header when you connect via HTTPS.
+					| Please be aware that while we still accept unencrypted requests, we <em>urge</em> you to use HTTPS. For that reason, we also
+					| send an HSTS-Header when connecting via HTTPS.
 				h4 Authentication
 				p
 					| You can authenticate your client in serveral ways.
 					ol
 						li
-							| Preferred method: HTTP Basic Authentication. Encode your username and password as provided upon registration with deSEC
-							| in the <code>Authorization: Basic ...</code> header. This is the method virtually all dynDNS clients use out-of-the-box.
+							| Preferred method: HTTP Basic Authentication. Encode your username and password as provided upon registration
+							| in the <code>Authorization: Basic ...</code> header. This is the method virtually all dynDNS clients use out of the box.
 						li
 							| REST API method: HTTP Token Authentication. Send an <code>Authorization: Token <em>YourPassword</em></code> header
 							| along with your request. This method is used by our REST API as well.
@@ -32,18 +32,18 @@ section.product.page-block
 					| If we cannot authenticate you, the API will return an HTTP 401 status code.
 				h4 Determine Hostname
 				p
-					| To update the DNS accordingly, our servers need to determine the hostname you want to update, as our API does not limit
-					| users to just stick with one hostname. To determine the hostname, we use the following values, ordered by priority:
+					| To update your dynamic DNS records, our servers need to determine the hostname you want to update, as our API does not limit
+					| users to stick with just one hostname. To determine the hostname, we use the following values, ordered by priority:
 					ol
 						li <code>hostname</code> URL parameter, unless it is set to 'YES' (this sometimes happens with dynDNS update clients).
 						li <code>host_id</code> URL parameter, if set.
 						li The username as provided in the HTTP Basic Authorization header.
 						li The username as provided in the <code>username</code> URL parameter.
-						li After successful authentication (no matter how), the only hostname that is associated with your user account.
+						li After successful authentication (no matter how), the only hostname that is associated with your user account (if not ambiguous).
 					| If we cannot determine a hostname to update, the API will return an HTTP 404 status code.
 				h4 Determine IP addresses
 				p
-					| The last ingredient we need for an successful update of your DNS records is the addresses we shall store in the 
+					| The last ingredient we need for a successful update of your DNS records is your IPv4 and/or IPv6 addresses, for storage in the 
 					| <code>A</code> and <code>AAAA</code> records.
 				p
 					| For IPv4, our API will use the first IPv4 address it can find in the URL parameters <code>myip</code>, <code>myipv4</code>,
@@ -53,11 +53,10 @@ section.product.page-block
 					| For IPv6, the procedure is similar. We check <code>myipv6</code>, <code>ipv6</code>, <code>myip</code>, <code>ip</code>
 					| URL parameters (in this order) and the IP that was used to connect to the API for IPv6 addresses and use the first one
 					| found. If none is found, the <code>AAAA</code> record will be deleted.
-				
+
 				h3 The Response
 				p
 					| If successful, the server will return status 200 and <code>good</code> as content in the response body
 					| (as required in the dyndns2 protocol specification).
 				p
 					| If authorization fails, the server will return status 401; if the domain couldn't be determined, status 404.
-					
