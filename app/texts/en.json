@@ -37,14 +37,10 @@
             "title": "What makes deSEC secure?"
         },
         "q6": {
-            "content": "deSEC has won a startup competition and is funded by the Heinz Nixdorf Foundation and the Foundation of German Business, from Q4/2014 to Q4/2015. This provides us with sufficient funds.",
-            "title": "How can deSEC provide free services?"
-        },
-        "q7": {
             "content": "No, that's not possible. deSEC is not a registrar. However, each domain has DNS information that needs to be stored somewhere. Often, this is handled by the registrar where the domain was ordered. However, by letting deSEC manage the DNS information of your domain, you can benefit from DANE and other neat features.",
             "title": "Can I register a domain name with deSEC? Is deSEC a registrar?"
         },
-        "q8": {
+        "q7": {
             "content": "You can set up any number of DNS records, of any type.",
             "title": "Are there any usage limitations or quotas?"
         }

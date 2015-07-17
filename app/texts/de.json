@@ -37,14 +37,10 @@
             "title": "Warum ist deSEC sicher?"
         },
         "q6": {
-            "content": "deSEC wird von der Heinz-Nixdorf-Stiftung und der Stiftung der Deutschen Wirtschaft im Rahmen eines Startup-Wettbewerbs von Q4/2014 bis Q4/2015 gefördert und mit ausreichenden Finanzmitteln versorgt.",
-            "title": "Wie finanziert sich deSEC?"
-        },
-        "q7": {
             "content": "Nein. Es ist nicht möglich, bei deSEC eine Domain (z.B. desec.io) anzumelden, denn deSEC ist kein sog. Registrar. Für jede registrierte Domain müssen aber auch DNS-Informationen abgelegt werden. Das übernimmt häufig der Registrar. Wer jedoch deSEC beauftragt, die DNS-Informationen für eine bereits registrierte Domain zu verwalten, kann dabei von DANE und anderen Profi-Features profitieren.",
             "title": "Kann ich bei deSEC eine Domain anmelden? Ist deSEC ein Registrar?"
         },
-        "q8": {
+        "q7": {
             "content": "Die Anzahl und der Typ von DNS-Einträgen sind bei uns nicht beschränkt.",
             "title": "Gibt es Nutzungsbeschränkungen?"
         }
