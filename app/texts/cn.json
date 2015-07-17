@@ -219,7 +219,7 @@
                     "placeholder": "johndoe@example.com"
                 },
                 "geodns": {
-                    "label": "Optional: I am interested in geoDNS, i.e. visitor-location-dependent DNS replies, for an additional fee of 25 € per zone."
+                    "label": "Optional: I am interested in geoDNS, i.e. visitor-location-dependent DNS replies, for an additional monthly fee of 25 € per zone."
                 },
                 "headline": "申请免费使用Beta",
                 "more": "请输入另一个邮箱",

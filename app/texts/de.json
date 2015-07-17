@@ -219,7 +219,7 @@
                     "placeholder": "max@example.com"
                 },
                 "geodns": {
-                    "label": "Optional: Ich interessiere mich für geoDNS, d.h. Besucherstandort-abhängige DNS-Antworten, für einen Aufpreis von 25 € je Zone."
+                    "label": "Optional: Ich interessiere mich für geoDNS, d.h. Besucherstandort-abhängige DNS-Antworten, für einen monatlichen Aufpreis von 25 € je Zone."
                 },
                 "headline": "Jetzt für den kostenlosen Betatest anmelden",
                 "more": "weitere Adresse anmelden",
