@@ -240,7 +240,7 @@
             "name": "dynDNS",
             "price": "kostenlos",
             "signup": {
-                "check": "Account einrichten",
+                "check": "Account prüfen",
                 "domains": {
                     "invalid": "Dieser Domainname ist ungültig.",
                     "label": "Domain-Name",
