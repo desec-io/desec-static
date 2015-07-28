@@ -240,8 +240,9 @@
             "name": "dynDNS",
             "price": "免费",
             "signup": {
-                "check": "account setup",
+                "check": "check account setup",
                 "domains": {
+                    "invalid": "The domain name you chose is invalid.",
                     "label": "domain name",
                     "placeholder": ""
                 },

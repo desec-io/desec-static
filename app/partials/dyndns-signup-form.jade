@@ -1,7 +1,7 @@
 div.wizard(ng-controller="DyndnsSignupCtrl")
 	div.header
 		h3(translate="products.dyndns.signup.headline")
-	form.wizard-form.body(novalidate)
+	form.wizard-form.body(novalidate, name="dyndnssignup")
 		
 		.wizard-step.active
 			.tabs
@@ -20,12 +20,14 @@ div.wizard(ng-controller="DyndnsSignupCtrl")
 						.col-sm-12
 							.form-group
 								label(for="domain", translate="products.dyndns.signup.domains.label")
+								|  
+								span(ng-show="!dyndnssignup.domain.$valid && !dyndnssignup.domain.$pristine",translate="products.dyndns.signup.domains.invalid")
 								.input-group
-									input.form-control.text-right(type="text", name="domain", ng-model="domain", ng-disabled="loading || success", placeholder="{{ 'products.dyndns.signup.domains.placeholder' | translate }}", required="")
+									input.form-control.text-right(type="text", name="domain", pattern="[A-Za-z][A-Za-z0-9]*", ng-model="domain", ng-disabled="loading || success", placeholder="{{ 'products.dyndns.signup.domains.placeholder' | translate }}", required="")
 									span.input-group-addon .dedyn.io
 		.wizard-footer.group
 			.buttons
-				button.btn.btn-primary(ng-disabled="loading || success", ng-click="signup()", analytics-on="click",analytics-event="attemptsignup",analytics-category="dyndns")
+				button.btn.btn-primary(ng-disabled="loading || success || !dyndnssignup.domain.$valid", ng-click="signup()", analytics-on="click",analytics-event="attemptsignup",analytics-category="dyndns")
 					span.icon-spinner.spinner(ng-show="loading")
 					|  
 					| {{ 'products.dyndns.signup.signup' | translate }}

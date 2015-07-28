@@ -242,6 +242,7 @@
             "signup": {
                 "check": "Account einrichten",
                 "domains": {
+                    "invalid": "Dieser Domainname ist ungültig.",
                     "label": "Domain-Name",
                     "placeholder": ""
                 },

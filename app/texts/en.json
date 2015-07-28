@@ -242,6 +242,7 @@
             "signup": {
                 "check": "account setup",
                 "domains": {
+                    "invalid": "The domain name you chose is invalid.",
                     "label": "domain name",
                     "placeholder": ""
                 },
