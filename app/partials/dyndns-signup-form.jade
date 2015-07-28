@@ -23,7 +23,7 @@ div.wizard(ng-controller="DyndnsSignupCtrl")
 								|  
 								span(ng-show="!dyndnssignup.domain.$valid && !dyndnssignup.domain.$pristine",translate="products.dyndns.signup.domains.invalid")
 								.input-group
-									input.form-control.text-right(type="text", name="domain", pattern="[A-Za-z][A-Za-z0-9]*", ng-model="domain", ng-disabled="loading || success", placeholder="{{ 'products.dyndns.signup.domains.placeholder' | translate }}", required="")
+									input.form-control.text-right(type="text", name="domain", pattern="[A-Za-z][A-Za-z0-9\-]*", ng-model="domain", ng-disabled="loading || success", placeholder="{{ 'products.dyndns.signup.domains.placeholder' | translate }}", required="")
 									span.input-group-addon .dedyn.io
 		.wizard-footer.group
 			.buttons
