@@ -21,7 +21,7 @@ angular.module('desecClientApp').controller('HeroCtrl', function($scope, $timeou
 		setTimer();
 	}
 	
-	setTimer();
+	//setTimer(); // uncomment this to start playing the slideshow automatically
 	
 	$scope.showSlide = function(idx) {
 		cancelTimer();
