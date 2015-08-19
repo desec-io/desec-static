@@ -55,7 +55,7 @@
             "title": "DANE-Records"
         },
         "dnssec": {
-            "content": "Alle von deSEC bereitgestellten DNS-Zonen werden mit DNSSEC vor Fälschung geschützt. DNSSEC-Records werden von modernen Betriebssystemen und Browsern standardmäßig bei DNS-Anfragen überprüft und stellen die gegenwärtig sicherste Technologie dar, um DNS-Anworten vor Manipulation zu schützen. So können Sie sicherstellen, stets zum richtigen Server verbunden zu werden, und man-in-the-middle-Attacken auf DNS-Ebene ausschließen.",
+            "content": "Alle von deSEC bereitgestellten DNS-Zonen werden mit DNSSEC vor Fälschung geschützt. DNSSEC-Records werden von moderner Software standardmäßig bei DNS-Anfragen überprüft und stellen die gegenwärtig sicherste Technologie dar, um DNS-Anworten vor Manipulation zu schützen. So können Sie sicherstellen, stets zum richtigen Server verbunden zu werden, und man-in-the-middle-Attacken auf DNS-Ebene ausschließen.",
             "title": "Sicherheit durch DNSSEC"
         },
         "easy": {

@@ -55,7 +55,7 @@
             "title": "DANE记录"
         },
         "dnssec": {
-            "content": "All zones hosted by deSEC are secured with DNSSEC to protect them from being tampered with during transmission. DNSSEC records are checked by modern operating systems and browsers by default when DNS requests are being processed. The DNSSEC standard currently is the safest technology to protect DNS lookups from manipulation. Our advanced DNS service thus closes a critical loophole for man-in-the-middle attacks, ensuring that you are always connected to the right server.",
+            "content": "All zones hosted by deSEC are secured with DNSSEC to protect them from being tampered with during transmission. DNSSEC records are checked by modern client-side software by default when DNS requests are being processed. The DNSSEC standard currently is the safest technology to protect DNS lookups from manipulation. Our advanced DNS service thus closes a critical loophole for man-in-the-middle attacks, ensuring that you are always connected to the right server.",
             "title": "更可靠的系统：DNSSEC"
         },
         "easy": {
