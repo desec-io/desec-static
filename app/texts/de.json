@@ -261,7 +261,8 @@
             },
             "teaser": {
                 "text": "\u003cp\u003edynDNS gibt Ihrem Router zu Hause einen gleichbleibenden Namen. Damit können Sie beispielsweise von unterwegs auf Ihren heimischen Computer zugreifen, mit Ihrem Smart Home Verbindung aufnehmen oder auf Ihr NAS zugreifen.\u003c/p\u003e\u003cp\u003eDabei sichern wir als erster Anbieter alle Remote-Zugriffe auf Ihr Heimnetzwerk mit DNSSEC gegen Manipulation ab, und Sie können beruhigt von unterwegs auf Ihr Netzwerk zugreifen.\u003c/p\u003e"
-            }
+            },
+            "video": "\u003ciframe src=\"https://www.youtube.com/embed/LcQ0XBQjFAA\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"\u003e\u003c/iframe\u003e"
         },
         "title": "Produkte"
     },

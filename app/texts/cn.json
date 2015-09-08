@@ -261,7 +261,8 @@
             },
             "teaser": {
                 "text": "\u003cp\u003edynDNS gives your Internet router at home a name, so that you can access it remotely to control your smart home, access your network attached storage device or connect to your PC at home.\u003c/p\u003e\u003cp\u003edeSEC offers this service permanently for free and secured with DNSSEC for home use.\u003c/p\u003e"
-            }
+            },
+            "video": "\u003ciframe src=\"https://www.youtube.com/embed/BnPfQBOvXpc\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"\u003e\u003c/iframe\u003e"
         },
         "title": "五种套餐"
     },
