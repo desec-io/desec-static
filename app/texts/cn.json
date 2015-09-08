@@ -65,7 +65,8 @@
         "headline": "特色"
     },
     "footer": {
-        "content": "© 2015 deSEC GbR, Berlin •",
+        "contact": "Contact",
+        "content": "© 2015 deSEC GbR, Berlin",
         "imprint": "版本说明"
     },
     "hero": {

@@ -65,7 +65,8 @@
         "headline": "Features"
     },
     "footer": {
-        "content": "© 2015 deSEC GbR, Berlin •",
+        "contact": "Contact",
+        "content": "© 2015 deSEC GbR, Berlin",
         "imprint": "Imprint"
     },
     "hero": {
