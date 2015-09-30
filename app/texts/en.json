@@ -67,7 +67,8 @@
     "footer": {
         "contact": "Contact",
         "content": "© 2015 deSEC GbR, Berlin",
-        "imprint": "Imprint"
+        "imprint": "Imprint",
+        "privacyPolicy": "Privacy Policy"
     },
     "hero": {
         "content": "\u003cp\u003eWe provide secure DNS hosting with DNSSEC and DANE.\u003cbr /\u003eWe spread innovative technologies.\u003cbr /\u003eWe make the Internet a better place.\u003c/p\u003e",

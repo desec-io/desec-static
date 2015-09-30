@@ -79,10 +79,15 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 				$state.go('i18n.home', {lang: $translate.preferredLanguage()});
 			}
 		})
-		
+
 		.state('imprint', {
 			url: '/imprint',
 			templateUrl: "views/imprint.html"
+		})
+
+		.state('privacy-policy', {
+			url: '/privacy-policy',
+			templateUrl: "views/privacy-policy.html"
 		})
 
 		.state('i18n.home', {

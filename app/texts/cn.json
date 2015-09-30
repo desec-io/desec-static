@@ -67,7 +67,8 @@
     "footer": {
         "contact": "Contact",
         "content": "© 2015 deSEC GbR, Berlin",
-        "imprint": "版本说明"
+        "imprint": "版本说明",
+        "privacyPolicy": "Privacy Policy"
     },
     "hero": {
         "content": "\u003cp\u003e我们用DNSSEC和DANE给与DNS更高安全性。\u003cbr /\u003e我们传播先进科技。\u003cbr /\u003e我们致力于把网络变得更好。\u003c/p\u003e",
