@@ -100,24 +100,9 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 			templateUrl: "views/products/dyndns.html"
 		})
 
-		.state('i18n.product.tunneldns', {
-			url: "/tunneldns",
-			templateUrl: "views/products/tunneldns.html"
-		})
-
 		.state('i18n.product.anydns', {
 			url: "/anydns",
 			templateUrl: "views/products/anydns.html"
-		})
-
-		.state('i18n.product.geodns', {
-			url: "/geodns",
-			templateUrl: "views/products/geodns.html"
-		})
-
-		.state('i18n.product.golddns', {
-			url: "/golddns",
-			templateUrl: "views/products/golddns.html"
 		})
 
 		.state('i18n.tools', {
