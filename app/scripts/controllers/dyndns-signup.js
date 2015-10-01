@@ -5,8 +5,7 @@ angular.module('desecClientApp')
 
 		$scope.loading = false;
 		$scope.password = Math.abs(Math.random().toString().split('').reduce(function(p,c){return (p<<5)-p+c})).toString(36).substr(0,11);
-		$scope.email = '';
-		$scope.user = null;
+		$scope.email = $scope.user = auth.user();
 		
 		$scope.signup = function() {
 
