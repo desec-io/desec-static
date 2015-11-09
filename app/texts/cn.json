@@ -101,7 +101,7 @@
         "result": {
             "danger": {
                 "headline": "This Service is Seriously Insecure!",
-                "text": "\u003ca href=\"https://weakdh.org/sysadmin.html\"\u003eImmediately disable\u003c/a\u003e export cipher suits to secure your TLS connections!"
+                "text": "\u003ca href=\"https://weakdh.org/sysadmin.html\"\u003eImmediately disable\u003c/a\u003e export cipher suites to secure your TLS connections!"
             },
             "good": {
                 "headline": "Looks good, your service is not affected by Logjam",

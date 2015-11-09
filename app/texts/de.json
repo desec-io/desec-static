@@ -101,11 +101,11 @@
         "result": {
             "danger": {
                 "headline": "Dieser Dienst ist unsicher!",
-                "text": "Die Unterstützung von export cipher suits sollte \u003ca href=\"https://weakdh.org/sysadmin.html\"\u003esofort abgestellt\u003c/a\u003e werden!"
+                "text": "Die Unterstützung von export cipher suites sollte \u003ca href=\"https://weakdh.org/sysadmin.html\"\u003esofort abgestellt\u003c/a\u003e werden!"
             },
             "good": {
                 "headline": "Sieht gut aus, dieser Dienst ist nicht von Logjam betroffen",
-                "text": "Dieser Dienst unterstützt keine export cipher suits, and benutzt entweder EDH überhaupt nicht, oder mit Parametern, die länger sind als 1024bit."
+                "text": "Dieser Dienst unterstützt keine export cipher suites, und benutzt entweder EDH überhaupt nicht, oder mit Parametern, die länger sind als 1024bit."
             },
             "link": "Link zu diesem Scan",
             "scan": "Einen weiteren Dienst prüfen",
