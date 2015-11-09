@@ -27,7 +27,7 @@ section.product.page-block
 							| REST API method: HTTP Token Authentication. Send an <code>Authorization: Token <em>YourPassword</em></code> header
 							| along with your request. This method is used by our REST API as well.
 						li
-							| Set <code>username</code> and <code>password</code> URL parameters. We <em>strongly discourage</em> using this method, but provide it
+							| Set <code>username</code> and <code>password</code> query string parameters (<code>GET ?username=...&password=...</code>). We <em>strongly discourage</em> using this method, but provide it
 							| as an emergency solution for situations where folks need to deal with old and/or crappy clients.
 					| If we cannot authenticate you, the API will return an HTTP 401 status code.
 				h4 Determine Hostname
@@ -35,10 +35,10 @@ section.product.page-block
 					| To update your dynamic DNS records, our servers need to determine the hostname you want to update, as our API does not limit
 					| users to stick with just one hostname. To determine the hostname, we use the following values, ordered by priority:
 					ol
-						li <code>hostname</code> URL parameter, unless it is set to 'YES' (this sometimes happens with dynDNS update clients).
-						li <code>host_id</code> URL parameter, if set.
+						li <code>hostname</code> query string parameter, unless it is set to 'YES' (this sometimes happens with dynDNS update clients).
+						li <code>host_id</code> query string parameter, if set.
 						li The username as provided in the HTTP Basic Authorization header.
-						li The username as provided in the <code>username</code> URL parameter.
+						li The username as provided in the <code>username</code> query string parameter.
 						li After successful authentication (no matter how), the only hostname that is associated with your user account (if not ambiguous).
 					| If we cannot determine a hostname to update, the API will return an HTTP 404 status code.
 				h4 Determine IP addresses
@@ -46,12 +46,12 @@ section.product.page-block
 					| The last ingredient we need for a successful update of your DNS records is your IPv4 and/or IPv6 addresses, for storage in the 
 					| <code>A</code> and <code>AAAA</code> records.
 				p
-					| For IPv4, our API will use the first IPv4 address it can find in the URL parameters <code>myip</code>, <code>myipv4</code>,
+					| For IPv4, our API will use the first IPv4 address it can find in the query string parameters <code>myip</code>, <code>myipv4</code>,
 					| <code>ip</code> (in this order). If none is found, it will use the IP that connected to the API, if a IPv4 connection was
 					| made. If no address is found, the <code>A</code> record will be deleted from the DNS.
 				p
 					| For IPv6, the procedure is similar. We check <code>myipv6</code>, <code>ipv6</code>, <code>myip</code>, <code>ip</code>
-					| URL parameters (in this order) and the IP that was used to connect to the API for IPv6 addresses and use the first one
+					| query string parameters (in this order) and the IP that was used to connect to the API for IPv6 addresses and use the first one
 					| found. If none is found, the <code>AAAA</code> record will be deleted.
 
 				h3 The Response
