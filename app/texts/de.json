@@ -20,6 +20,10 @@
             "content": "\u003cp\u003edeSEC will die Sicherheit des Internets verbessern. Der Schwerpunkt liegt auf der Verbreitung sicherer Verschlüsselungstechnologien. Sensible Kundendaten werden nur in Deutschland gespeichert und sind vor unberechtigtem Zugriff, z.B. durch amerikanische Geheimdienste, geschützt. Die deutschen Datenschutzgesetze gehören zu den schärfsten weltweit.\u003c/p\u003e\n\u003cp\u003eDas erste Produkt von deSEC ist ein hochsicherer DNS-Service. Da die technischen Standards des Internets überwiegend aus den 1980-er Jahren stammen, sind die Daten nicht automatisch vor Spionage oder sogar Manipulation geschützt. Wir wollen neue technologische Ideen der vergangenen Jahre nutzen, um solchen Missbrauch zu verhindern und das Internet sicherer zu machen.\u003c/p\u003e\n\u003cp\u003eWir fangen damit an, die DNS-Informationen kryptografisch abzusichern, um sie vor Manipulation zu schützen. Dazu betreiben wir weltweit DNS-Systeme auf hochverfügbarer Infrastruktur, die wir mit der DNSSEC-Technologie ausrüsten. Zusätzlich erhöhen wir die Sicherheit verschlüsselter Verbindungen mittels DANE (s.u.).\u003c/p\u003e",
             "title": "Was macht deSEC?"
         },
+        "q10": {
+            "content": "Zur Zeit gibt es keine Expiration Policy. Falls sich das ändert (wovon wir nicht ausgehen), werden wir unsere Nutzer mindestens einen Monat im Voraus informieren.",
+            "title": "Wann laufen Hostnamen ab?"
+        },
         "q2": {
             "content": "Das DNS sorgt dafür, dass Internetnutzer mit dem korrekten Server verbunden werden, wenn sie eine Website aufrufen oder eine E-Mail versenden. Zu diesem Zweck übersetzt es Domainnamen (z.B. www.desec.io) in Zahlen (IP-Adressen), die zur Kommunikation von Computern untereinander benutzt werden \u0026ndash; analog zu einem Telefonbuch. Darüber hinaus können im DNS auch weitere Informationen, die eine Domain betreffen, hinterlegt werden. deSEC nutzt solche Informationen, um die Echtheit verschlüsselter Verbindungen sicherzustellen.",
             "title": "Was ist das DNS?"
@@ -41,8 +45,16 @@
             "title": "Kann ich bei deSEC eine Domain anmelden? Ist deSEC ein Registrar?"
         },
         "q7": {
-            "content": "Die Anzahl und der Typ von DNS-Einträgen sind bei uns nicht beschränkt.",
-            "title": "Gibt es Nutzungsbeschränkungen?"
+            "content": "Nein, aber es ist möglich, dass wir in der Zukunft eine Beschränkung einführen (z.B. nicht öfter als 1/min).",
+            "title": "Ist die Anzahl der dynDNS-Updates pro Tag beschränkt?"
+        },
+        "q8": {
+            "content": "\u003cp\u003eZur Zeit können A- und AAAA-Records kostenlos verwendet werden.\u003c/p\u003e\n\u003cp\u003eUnser zur Zeit in Entwicklung befindliches anyDNS-Produkt wird andere Record Types unterstützen. \u003ca href=\"#!/de/product/anydns\"\u003eMelden Sie sich zum anyDNS-Betatest an\u003c/a\u003e, um auf dem Laufenden zu bleiben.\u003c/p\u003e",
+            "title": "Unterstützt dynDNS A-, AAAA-, TXT-, MX-, CNAME-Records?"
+        },
+        "q9": {
+            "content": "Momentan können mit dynDNS keine Subdomains registriert werden. Mit anyDNS wird dies möglich sein. 10 Records sind kostenfrei enthalten; für mehr Records fallen Kosten an.",
+            "title": "Kann ich mit dynDNS Subdomains registrieren?"
         }
     },
     "features": {
