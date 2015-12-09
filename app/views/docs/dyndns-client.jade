@@ -72,13 +72,17 @@ section.product.page-block
 					| If your setup does not allow your public IP address to be determined from one of your interfaces, you can let ddclient use our
 					| servers to determine your address. To do so, you will need
 					code curl
-					| installed. Then, simply add
+					| installed. Then, right above the
+					code server=update.dedyn.io
+					| line, simply add the following line
 					pre use=cmd, cmd='curl https://checkipv4.dedyn.io/'
-					| to your ddclient configuration file. (We provide the same service for dual stack and IPv6 at
+					| to your ddclient configuration file.
+				p
+					| (We provide the same service for dual stack and IPv6 at
 					code https://checkip.dedyn.io/
 					| and
 					code https://checkipv6.dedyn.io/
-					|, respectively, however ddclient doesn't support IPv6 addresses at the time of writing.)
+					|, respectively; however, ddclient doesn't support IPv6 addresses at the time of writing.)
 				h4 Optional: Add IPv6 Support
 				p
 					| Unfortunately, ddclient doesn't support IPv6 yet. However, if you have a native IPv6 connection to the Internet,
