@@ -74,7 +74,7 @@ describe('dyndns signup controller', function () {
 			});
 			
 			function expectUnsuccessfulScope() {
-				expect(scope.user).toBeNull();
+				expect(scope.user).toBeUndefined();
 				expect(scope.loading).toBeFalsy();
 				expect(scope.error).not.toBe('');
 				expect(scope.success).toBeFalsy();

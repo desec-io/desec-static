@@ -20,12 +20,10 @@ describe('dyndns signup controller', function () {
 		$controller = _$controller_;
 		$httpBackend = _$httpBackend_;
 		$httpBackend.when('GET', 'texts/en.json').respond({});
-		var mockLocation = {
-			search: function() {
-				return { domain: 'foobar.dedyn.io' };
-			}
+		var mockStateParams = {
+			domain: 'foobar.dedyn.io'
 		};
-		DyndnsCheckCtrl = $controller('DyndnsCheckCtrl', {'$scope': scope, '$location': mockLocation});
+		DyndnsCheckCtrl = $controller('DyndnsCheckCtrl', {'$scope': scope, '$stateParams': mockStateParams});
 	}));
 
 	afterEach(function () {
