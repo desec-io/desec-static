@@ -54,7 +54,7 @@ describe('dyndns signup controller', function () {
 			});
 
 			it('updates the scope correctly', function() {
-				expect(scope.user).toBe('shitman@desec.io');
+				expect(scope.user.username).toBe('shitman@desec.io');
 				expect(scope.loading).toBe(false);
 				expect(scope.error).toBe('');
 				expect(scope.success).toBeTruthy();
@@ -74,7 +74,7 @@ describe('dyndns signup controller', function () {
 			});
 			
 			function expectUnsuccessfulScope() {
-				expect(scope.user).toBeUndefined();
+				expect(scope.user.username).toBeUndefined();
 				expect(scope.loading).toBeFalsy();
 				expect(scope.error).not.toBe('');
 				expect(scope.success).toBeFalsy();
@@ -137,7 +137,7 @@ describe('dyndns signup controller', function () {
 			
 			function expectHalfSuccessfulScope() {
 				expect(scope.error).not.toBe('');
-				expect(scope.user).not.toBeNull();
+				expect(scope.user.username).not.toBeNull();
 				expect(scope.loading).toBeFalsy();
 				expect(scope.success).toBeFalsy();
 			}
@@ -161,7 +161,7 @@ describe('dyndns signup controller', function () {
 				$httpBackend.flush();
 
 				expect(scope.error).toBe('');
-				expect(scope.user).not.toBeNull();
+				expect(scope.user.username).not.toBeNull();
 				expect(scope.loading).toBeFalsy();
 				expect(scope.success).toBeTruthy();
 			});

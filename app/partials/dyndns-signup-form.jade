@@ -16,7 +16,7 @@ div.wizard(ng-controller="DyndnsSignupCtrl")
 						.col-sm-12
 							.form-group
 								label(for="email", translate="products.dyndns.signup.email.label")
-								input.form-control(type="email", name="email", ng-model="email", ng-disabled="user || loading || success", placeholder="{{ 'products.dyndns.signup.email.placeholder' | translate }}", required="")
+								input.form-control(type="email", name="email", ng-model="email", ng-disabled="user.username || loading || success", placeholder="{{ 'products.dyndns.signup.email.placeholder' | translate }}", required="")
 						.col-sm-12
 							.form-group
 								label(for="domain", translate="products.dyndns.signup.domains.label")

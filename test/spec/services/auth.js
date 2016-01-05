@@ -34,7 +34,23 @@ describe('auth service', function () {
 		//dealoc(element); // TODO see if we need to dealoc
 	});
 
+	var userBefore;
+	var usernameBefore;
+
+	beforeEach(function() {
+		userBefore = auth.user;
+		usernameBefore = auth.user.username;
+	});
+
+	afterEach(function() {
+		expect(auth.user).toBe(userBefore);
+	});
+	
 	describe('register function', function() {
+
+		afterEach(function() {
+			expect(auth.user.username).toBe(usernameBefore);
+		});
 		
 		it('POSTs the email address and password to /api/auth/register', function() {
 			$httpBackend.expect('POST', '/api/auth/register', {'email':'shitman@desec.io', 'password':'shit'})
@@ -64,6 +80,10 @@ describe('auth service', function () {
 	});
 	
 	describe('login function', function() {
+
+		beforeEach(function() {
+			expect(auth.user.username).toBeUndefined();
+		});
 		
 		it('POSTs the credentials to /api/auth/login', function() {
 			$httpBackend.expect('POST', '/api/auth/login', {'email':'johndoe@desec.io', 'password':'john'})
@@ -87,6 +107,7 @@ describe('auth service', function () {
 			auth.login('johndoe@desec.io', 'john').then(function() { result = 1; }, function() { result = 2; });
 			$httpBackend.flush();
 			expect(result).toBe(1);
+			expect(auth.user.username).toBe('johndoe@desec.io');
 		});
 
 		it('rejects the returned promise when login fails', function() {
@@ -108,8 +129,8 @@ describe('auth service', function () {
 				.respond(200, '{"auth_token":"ThisIsATestAuthToken"}');
 			auth.login('johndoe@desec.io', 'john');
 			$httpBackend.flush();
-		})
-		
+		});
+
 		it('POSTs to /api/auth/logout', function() {
 			$httpBackend.expect('POST', '/api/auth/logout').respond(200);
 			auth.logout();
@@ -129,6 +150,7 @@ describe('auth service', function () {
 			auth.logout().then(function() { result = 1; }, function() { result = 2; });
 			$httpBackend.flush();
 			expect(result).toBe(1);
+			expect(auth.user.username).toBeUndefined();
 		});
 
 		it('rejects the returned promise when logout fails', function() {
@@ -141,4 +163,20 @@ describe('auth service', function () {
 		
 	});
 	
+	describe('user object', function() {
+
+		it('throws when overwriting user object', function() {
+			expect(function() {
+				auth.user = { username: undefined };
+			}).toThrow();
+		});
+
+		it('throws when overwriting user name', function() {
+			expect(function() {
+				auth.user.username = "damnit";
+			}).toThrow();
+		});
+
+	});
+
 });

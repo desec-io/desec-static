@@ -12,9 +12,13 @@ angular.module('desecClientApp')
 		
 		/**
 		 * Email of the currently logged in user, if state == 2, undefined otherwise.
-		 * @type {string}
 		 */
-		var current = undefined;
+		var _username = undefined;
+		var current = {
+			get username() {
+				return _username;
+			},
+		};
 		
 		/**
 		 * The current authentication state.
@@ -67,7 +71,7 @@ angular.module('desecClientApp')
 			})
 			.success(function(data) {
 					state = 2;
-					current = email;
+					_username = email;
 					set$httpAuthInfo(data['auth_token']);
 					deferred.resolve(email);
 				})
@@ -91,20 +95,16 @@ angular.module('desecClientApp')
 			$http.post('/api/auth/logout')
 				.success(function(data) {
 					state = 0;
-					current = undefined;
+					_username = undefined;
 					set$httpAuthInfo();
 					deferred.resolve();
 				})
 				.error(function() {
 					state = 2;
 					deferred.reject();
-				})
+				});
 
 			return deferred.promise;
-		}
-		
-		function user() {
-			return current;
 		}
 		
 		// remove all pre-set auth info
@@ -114,6 +114,6 @@ angular.module('desecClientApp')
 			register: register,
 			login: login,
 			logout: logout,
-			user: user,
+			get user() { return current; },
 		};
 	});
