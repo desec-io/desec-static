@@ -94,6 +94,11 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 			url: "/",
 			templateUrl: "views/homepage.html"
 		})
+
+		.state('i18n.donation', {
+			url: "/donation",
+			templateUrl: "views/donation.html"
+		})
 		
 		.state('i18n.product', {
 			url: '/product',

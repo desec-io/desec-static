@@ -1,0 +1,74 @@
+section.product.page-block
+	.container
+		.row.page-header
+			h2(translate='donation.headline')
+			span(translate='donation.teaser')
+		.row
+			.col-md-12
+				h3(translate='donation.intro.headline')
+				p(translate='donation.intro.text')
+				
+		.row
+			.col-md-6
+				div.wizard()
+					div.header
+						h3(translate='donation.banktransfer.headline')
+					form.wizard-form.body(novalidate, name="donation")
+						.wizard-step.active
+							.tabs
+								.tab.active
+									.row
+										p(translate='donation.banktransfer.text')
+										
+			.col-md-6
+				div.wizard(ng-controller="DonationCtrl")
+					div.header
+						h3(translate='donation.directdebit.headline')
+					form.wizard-form.body(novalidate, name="donation")
+
+						.wizard-step.active
+							.tabs
+								.tab.active
+									.row(ng-show="error")
+										.col-sm-12
+											.alert.alert-danger(translate="{{error}}")
+									.row(ng-show="success")
+										.col-sm-12
+											.alert.alert-success(translate="donation.directdebit.form.success")
+									.row
+										.col-sm-12
+											.form-group
+												label(for="name", translate="donation.directdebit.form.name.label")
+												span(ng-show="!donation.name.$valid && !donation.name.$pristine",translate="donation.directdebit.form.name.required")
+												input.form-control(type="text", name="name", ng-model="d.name", ng-disabled="loading || success", placeholder="{{ 'donation.directdebit.form.name.placeholder' | translate }}", required="")
+										.col-sm-12
+											.form-group
+												label(for="iban", translate="donation.directdebit.form.iban.label")
+												span(ng-show="!donation.iban.$valid && !donation.iban.$pristine",translate="donation.directdebit.form.iban.required")
+												input.form-control(type="text", name="iban", ng-model="d.iban", ng-disabled="loading || success", placeholder="{{ 'donation.directdebit.form.iban.placeholder' | translate }}", required="")
+										.col-sm-12
+											.form-group
+												label(for="bic", translate="donation.directdebit.form.bic.label")
+												span(ng-show="!donation.bic.$valid && !donation.bic.$pristine",translate="donation.directdebit.form.bic.required")
+												input.form-control(type="text", name="bic", ng-model="d.bic", ng-disabled="loading || success", placeholder="{{ 'donation.directdebit.form.bic.placeholder' | translate }}", required="")
+										.col-sm-12
+											.form-group
+												label(for="amount", translate="donation.directdebit.form.amount.label")
+												span(ng-show="!donation.amount.$valid && !donation.amount.$pristine",translate="donation.directdebit.form.amount.required")
+												input.form-control(type="number", name="amount", ng-model="d.amount", ng-disabled="loading || success", placeholder="{{ 'donation.directdebit.form.amount.placeholder' | translate }}", required="")
+										.col-sm-12
+											.form-group
+												label(for="message", translate="donation.directdebit.form.message.label")
+												input.form-control(type="text", name="message", ng-model="d.message", ng-disabled="loading || success", placeholder="{{ 'donation.directdebit.form.message.placeholder' | translate }}")
+										.col-sm-12
+											.form-group
+												label(for="email", translate="donation.directdebit.form.email.label")
+												input.form-control(type="text", name="email", ng-model="d.email", ng-disabled="loading || success", placeholder="{{ 'donation.directdebit.form.email.placeholder' | translate }}")
+												
+						.wizard-footer.group
+							.buttons
+								button.btn.btn-primary(ng-disabled="loading || success || !donation.$valid", ng-click="donate()", analytics-on="click",analytics-event="donation",analytics-category="donation")
+									span.icon-spinner.spinner(ng-show="loading")
+									| {{ 'donation.form.submit' | translate }}
+								
+				
