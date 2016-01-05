@@ -18,7 +18,11 @@
         "headline": "FAQ",
         "q1": {
             "content": "\u003cp\u003edeSEC is commited to making the Internet more secure. Our main goal is to spread the use of secure encryption technology. Private customer data are stored securely in Germany where they are protected from illegitimate third-party access (like foreign intelligence agencies): The German privacy laws are amongst the most restrictive ones world-wide.\u003c/p\u003e\n\u003cp\u003edeSEC's first product is a highly secure DNS service. Being from the 80s and not initially meant for the masses, the Internet was not designed with security in mind. Data transmitted through the Internet is by default not protected against espionage and manipulation. deSEC uses recent innovative technologies to avert such abuse, and to make the Internet more secure.\u003c/p\u003e\n\u003cp\u003eWe start by cryptographically securing DNS information, to protect it from manipulation. To that end, we operate DNS servers world-wide and equipped with the DNSSEC technology, based on Google-scale infrastructure. Additionally, we increase the security of encrypted connections using DANE (see below).\u003c/p\u003e",
-            "title": "What is deSEC working on?"
+            "title": "What is deSEC's mission?"
+        },
+        "q10": {
+            "content": "At the moment, there is no expiration policy. In case this would change, we would inform our users at least one month ahead (but we don't expect this to change).",
+            "title": "When do hostnames expire?"
         },
         "q2": {
             "content": "The DNS technology ensures that Internet users can connect to the intended web or e-mail server when browsing the web or communicating online. To do so, it translates domain names (like www.desec.io) into a machine number (IP address) that is used for communication between computers. Being the phonebook of the Internet, the DNS also allows additional information to be stored. deSEC uses such information to validate the authenticity of encrypted connections.",
@@ -41,8 +45,16 @@
             "title": "Can I register a domain name with deSEC? Is deSEC a registrar?"
         },
         "q7": {
-            "content": "You can set up any number of DNS records, of any type.",
-            "title": "Are there any usage limitations or quotas?"
+            "content": "No, although we might enforce something like a once-per-minute limit in the future.",
+            "title": "Is there a limit on how many Dynamic DNS updates per day can be made?"
+        },
+        "q8": {
+            "content": "\u003cp\u003eYou can currently add A and AAAA for free.\u003c/p\u003e\n\u003cp\u003eSupport for the other records will be available with our anyDNS product which is currently under development. Please \u003ca href=\"#!/en/product/anydns\"\u003esign up for the anyDNS beta test\u003c/a\u003e to stay up to date.\u003c/p\u003e",
+            "title": "With dynDNS, can I update A and AAAA, TXT, MX, CNAME records?"
+        },
+        "q9": {
+            "content": "For dynDNS, you can currently not register subdomains. For anyDNS, you will be able to set up arbitrary subdomains. Up to 10 records will be free; for additional records, you will need a paid plan.",
+            "title": "Is it possible to register subdomains with dynDNS?"
         }
     },
     "features": {
@@ -101,7 +113,7 @@
         "result": {
             "danger": {
                 "headline": "This Service is Seriously Insecure!",
-                "text": "\u003ca href=\"https://weakdh.org/sysadmin.html\"\u003eImmediately disable\u003c/a\u003e export cipher suits to secure your TLS connections!"
+                "text": "\u003ca href=\"https://weakdh.org/sysadmin.html\"\u003eImmediately disable\u003c/a\u003e export cipher suites to secure your TLS connections!"
             },
             "good": {
                 "headline": "Looks good, your service is not affected by Logjam",

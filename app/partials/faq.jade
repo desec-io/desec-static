@@ -8,7 +8,7 @@ section#faq.page-block.faq(analytics-on="scrollby", analytics-event="faq", analy
 				.icon.icon-bubbles3
 			.col-lg-8.col-md-8.col-sm-8
 				#accordion-faq.panel-group(ng-controller="FaqCtrl")
-					.panel(ng-repeat="n in [1,2,3,4,5,6,7]")
+					.panel(ng-repeat="n in [1,2,3,4,5,6,7,8,9,10]")
 						a.panel-heading.collapsed(ng-click="showFaq($index+1)",ng-class="{collapsed: faq!={{n}} }",href="",analytics-on="click",analytics-event="{{n}}",analytics-category="faq")
 							span(translate="faq.q{{n}}.title")
 							.indicator
