@@ -8,19 +8,23 @@
             "form": {
                 "amount": {
                     "label": "Euro Amount",
-                    "placeholder": "10.00"
+                    "placeholder": "10.00",
+                    "required": "Input required"
                 },
                 "bic": {
                     "label": "BIC",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "required": "Input required"
                 },
                 "email": {
                     "label": "Email address (optional, for mandate reference)",
                     "placeholder": ""
                 },
+                "error": "An error has occurred.",
                 "iban": {
                     "label": "IBAN",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "required": "Input required"
                 },
                 "message": {
                     "label": "Message (optional)",
@@ -28,8 +32,10 @@
                 },
                 "name": {
                     "label": "Accout holder",
-                    "placeholder": "Full name"
-                }
+                    "placeholder": "Full name",
+                    "required": "Input required"
+                },
+                "success": "Thank you!"
             },
             "headline": "Donate by Direct Debit"
         },
@@ -39,7 +45,7 @@
         "headline": "Donate to deSEC",
         "intro": {
             "headline": "Support deSEC's quest to make the Internet more secure!",
-            "text": "\u003cdd\u003e\n        \u003cdt\u003eWhy donate for deSEC?\u003c/dt\u003e\n        \u003cdd\u003edeSEC is dedicated to enhance the security of data transmission via the Internet, by introducing state-of-the art encryption technology. Sensitive client data is stored only in Germany, and safely protected from unauthorized access by criminals or government agencies. Your donation is used to improve our technical infrastructure for our free dynDNS service, and ensures its smooth operation.\u003c/dd\u003e\n        \u003cdt\u003eEvery donation counts!\u003c/dt\u003e\n        \u003cdd\u003eYour donation gives you a way to say \"Thanks!\". It also supports the future developments of our services which make the Internet more secure. If you would like to contribute to this, or if you are simpliy excited about our free dynDNS service, please support us with your donation and encourage others to do alike!\u003c/dd\u003e\n\u003c/dl\u003e"
+            "text": "\u003cdd\u003e\n        \u003cdt\u003eWhy donate to deSEC?\u003c/dt\u003e\n        \u003cdd\u003edeSEC is dedicated to enhance the security of data transmission via the Internet, by introducing state-of-the art encryption technology. Sensitive client data is stored only in Germany, and safely protected from unauthorized access by criminals or government agencies. Your donation is used to improve our technical infrastructure for our free dynDNS service and ensures its smooth operation.\u003c/dd\u003e\n        \u003cdt\u003eEvery donation counts!\u003c/dt\u003e\n        \u003cdd\u003eYour donation gives you a way to say \"Thanks!\". It also supports the future developments of our services which make the Internet more secure. If you would like to contribute to this, or if you are simpliy excited about our free dynDNS service, please support us with your donation and encourage others to do alike!\u003c/dd\u003e\n\u003c/dl\u003e"
         },
         "teaser": "You like deSEC? Donate now to support us in our mission. Your donation shows us we're on the right track."
     },

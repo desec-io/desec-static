@@ -8,19 +8,23 @@
             "form": {
                 "amount": {
                     "label": "Betrag in €",
-                    "placeholder": "10.00"
+                    "placeholder": "10.00",
+                    "required": "Eingabe erforderlich"
                 },
                 "bic": {
                     "label": "BIC",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "required": "Eingabe erforderlich"
                 },
                 "email": {
                     "label": "E-Mail-Adresse (optional, für Mandatsreferenz)",
                     "placeholder": ""
                 },
+                "error": "Es ist ein Fehler auftgetreten.",
                 "iban": {
                     "label": "IBAN",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "required": "Eingabe erforderlich"
                 },
                 "message": {
                     "label": "Nachricht (optional)",
@@ -28,8 +32,10 @@
                 },
                 "name": {
                     "label": "Kontoinhaber",
-                    "placeholder": "Vorname Nachname"
-                }
+                    "placeholder": "Vorname Nachname",
+                    "required": "Eingabe erforderlich"
+                },
+                "success": "Vielen Dank!"
             },
             "headline": "Spende per Lastschrift"
         },
