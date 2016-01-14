@@ -15,6 +15,8 @@ header.stiky-header(ng-controller="NavigationCtrl")
 			span.line
 		nav.main-navi(ng-show="open")
 			ul
+				li
+					a(ui-sref="i18n.donation({lang: lang})",translate="menu.donation")
 				li.has-dropdown
 					a(href="")
 						| {{ 'menu.docs.headline' | translate }}
