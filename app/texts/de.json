@@ -1,4 +1,48 @@
 {
+    "donation": {
+        "banktransfer": {
+            "headline": "Überweisung an deSEC",
+            "text": "\u003cp\u003eWir nehmen auch Spenden per Überweisung entgegen. Unsere Kontoverbindung lautet:\u003c/p\u003e\n\u003cp style=\"text-align: center\"\u003e\n        deSEC\u003cbr /\u003e\n        IBAN: DE56 7603 0080 0220 2414 74\u003cbr /\u003e\n        BIC: CSDBDE71XXX\u003cbr /\u003e\n        BNP Paribas\n\u003c/p\u003e"
+        },
+        "directdebit": {
+            "form": {
+                "amount": {
+                    "label": "Betrag in €",
+                    "placeholder": "10.00"
+                },
+                "bic": {
+                    "label": "BIC",
+                    "placeholder": ""
+                },
+                "email": {
+                    "label": "E-Mail-Adresse (optional, für Mandatsreferenz)",
+                    "placeholder": ""
+                },
+                "iban": {
+                    "label": "IBAN",
+                    "placeholder": ""
+                },
+                "message": {
+                    "label": "Nachricht (optional)",
+                    "placeholder": ""
+                },
+                "name": {
+                    "label": "Kontoinhaber",
+                    "placeholder": "Vorname Nachname"
+                }
+            },
+            "headline": "Spende per Lastschrift"
+        },
+        "form": {
+            "submit": "Jetzt spenden"
+        },
+        "headline": "Für deSEC spenden",
+        "intro": {
+            "headline": "Unterstütze uns dabei, das Internet sicherer zu machen!",
+            "text": "\u003cdl\u003e\n        \u003cdt\u003eWarum an deSEC spenden?\u003c/dt\u003e\n        \u003cdd\u003edeSEC verbessert die Sicherheit des Internets. Der Schwerpunkt liegt auf der Verbreitung sicherer Verschlüsselungstechnologien. Sensible Kundendaten werden nur in Deutschland gespeichert und sind vor unberechtigtem Zugriff, z.B. durch amerikanische Geheimdienste oder durch Kriminelle, geschützt. Deine Spende hilft dabei, die Infrastruktur für unseren kostenlosen dynDNS-Dienst zu verbessern, und stellt dessen reibungslosen Betrieb sicher.\u003c/dd\u003e\n        \u003cdt\u003eJeder Euro zählt!\u003c/dt\u003e\n        \u003cdd\u003eJede Spende gibt dir die Chance, uns Danke zu sagen und die Weiterentwicklung unserer Dienste zu unterstützen, um das Internet sicherer zu machen. Wenn du uns dabei helfen möchtest oder du einfach nur von unserem kostenlosen dynDNS-Dienst begeistert bist, unterstütze uns bitte mit einer Spende und ermutige andere, es dir gleich zu tun!\u003c/dd\u003e\n\u003c/dl\u003e"
+        },
+        "teaser": "Dir gefällt deSEC? Dann spende jetzt, um unsere Arbeit zu unterstützen. Jede Spende zeigt uns, dass wir auf dem richtigen Weg sind!"
+    },
     "dyndnscheck": {
         "check": "Nochmal überprüfen",
         "error": {

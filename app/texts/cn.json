@@ -1,4 +1,48 @@
 {
+    "donation": {
+        "banktransfer": {
+            "headline": "Make a bank transfer to deSEC",
+            "text": "\u003cp\u003eWe also accept donations by bank transfer. Here are our account details:\u003c/p\u003e\n\u003cp style=\"text-align: center\"\u003e\n        deSEC\u003cbr /\u003e\n        IBAN: DE56 7603 0080 0220 2414 74\u003cbr /\u003e\n        BIC: CSDBDE71XXX\u003cbr /\u003e\n        BNP Paribas\n\u003c/p\u003e"
+        },
+        "directdebit": {
+            "form": {
+                "amount": {
+                    "label": "Euro Amount",
+                    "placeholder": "10.00"
+                },
+                "bic": {
+                    "label": "BIC",
+                    "placeholder": ""
+                },
+                "email": {
+                    "label": "Email address (optional, for mandate reference)",
+                    "placeholder": ""
+                },
+                "iban": {
+                    "label": "IBAN",
+                    "placeholder": ""
+                },
+                "message": {
+                    "label": "Message (optional)",
+                    "placeholder": ""
+                },
+                "name": {
+                    "label": "Accout holder",
+                    "placeholder": "Full name"
+                }
+            },
+            "headline": "Donate by Direct Debit"
+        },
+        "form": {
+            "submit": "Donate now"
+        },
+        "headline": "Donate to deSEC",
+        "intro": {
+            "headline": "Support deSEC's quest to make the Internet more secure!",
+            "text": "\u003cdd\u003e\n        \u003cdt\u003eWhy donate for deSEC?\u003c/dt\u003e\n        \u003cdd\u003edeSEC is dedicated to enhance the security of data transmission via the Internet, by introducing state-of-the art encryption technology. Sensitive client data is stored only in Germany, and safely protected from unauthorized access by criminals or government agencies. Your donation is used to improve our technical infrastructure for our free dynDNS service, and ensures its smooth operation.\u003c/dd\u003e\n        \u003cdt\u003eEvery donation counts!\u003c/dt\u003e\n        \u003cdd\u003eYour donation gives you a way to say \"Thanks!\". It also supports the future developments of our services which make the Internet more secure. If you would like to contribute to this, or if you are simpliy excited about our free dynDNS service, please support us with your donation and encourage others to do alike!\u003c/dd\u003e\n\u003c/dl\u003e"
+        },
+        "teaser": "You like deSEC? Donate now to support us in our mission. Your donation shows us we're on the right track."
+    },
     "dyndnscheck": {
         "check": "Recheck",
         "error": {
