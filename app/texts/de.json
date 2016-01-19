@@ -20,7 +20,7 @@
                     "label": "E-Mail-Adresse (optional, für Mandatsreferenz)",
                     "placeholder": ""
                 },
-                "error": "Es ist ein Fehler auftgetreten. Bitte \u003ca href=\"https://encrypt.to/0x3EF22D2F\" onclick=\"return !window.open(this.href)\"\u003einformiere\u003c/a\u003e uns darüber.",
+                "error": "Es ist ein Fehler auftgetreten. Bitte \u003ca href=\"https://encrypt.to/0x3EF22D2F\" target=\"_blank\"\u003einformiere\u003c/a\u003e uns darüber.",
                 "iban": {
                     "label": "IBAN",
                     "placeholder": "",
