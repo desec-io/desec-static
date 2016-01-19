@@ -4,7 +4,7 @@ angular.module('desecClientApp')
 	.controller('DonationCtrl', function ($scope, auth, $http, $translate) {
 
 		$scope.loading = false;
-		$scope.d = {};
+		$scope.d = { amount: 10 };
 		$scope.success = false;
 		$scope.error = '';
 		
