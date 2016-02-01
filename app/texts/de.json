@@ -99,11 +99,11 @@
             "title": "Ist die Anzahl der dynDNS-Updates pro Tag beschränkt?"
         },
         "q8": {
-            "content": "\u003cp\u003eZur Zeit können A- und AAAA-Records kostenlos verwendet werden.\u003c/p\u003e\n\u003cp\u003eUnser zur Zeit in Entwicklung befindliches anyDNS-Produkt wird andere Record Types unterstützen. \u003ca href=\"#!/de/product/anydns\"\u003eMelden Sie sich zum anyDNS-Betatest an\u003c/a\u003e, um auf dem Laufenden zu bleiben.\u003c/p\u003e",
+            "content": "\u003cp\u003eZur Zeit können A- und AAAA-Records kostenlos verwendet werden.\u003c/p\u003e\n\u003cp\u003eUnser zur Zeit in Entwicklung befindliches AnycastDNS-Produkt wird andere Record Types unterstützen. \u003ca href=\"#!/de/product/anycastdns\"\u003eMelden Sie sich zum AnycastDNS-Betatest an\u003c/a\u003e, um auf dem Laufenden zu bleiben.\u003c/p\u003e",
             "title": "Unterstützt dynDNS A-, AAAA-, TXT-, MX-, CNAME-Records?"
         },
         "q9": {
-            "content": "Momentan können mit dynDNS keine Subdomains registriert werden. Mit anyDNS wird dies möglich sein. 10 Records sind kostenfrei enthalten; für mehr Records fallen Kosten an.",
+            "content": "Momentan können mit dynDNS keine Subdomains registriert werden. Mit AnycastDNS wird dies möglich sein. 10 Records sind kostenfrei enthalten; für mehr Records fallen Kosten an.",
             "title": "Kann ich mit dynDNS Subdomains registrieren?"
         }
     },
@@ -194,7 +194,7 @@
         "donation": "Spenden",
         "home": "Menü",
         "products": {
-            "anydns": "anyDNS",
+            "anycastdns": "AnycastDNS",
             "dyndns": "dynDNS",
             "headline": "Produkte"
         },
@@ -204,7 +204,7 @@
         }
     },
     "meta": {
-        "anydns": {
+        "anycastdns": {
             "desc": "",
             "title": ""
         },
@@ -218,8 +218,8 @@
         }
     },
     "plans": {
-        "anydns": {
-            "content": "\u003cp\u003eSie suchen professionelles DNS Hosting für Ihre Zonen? Mit anyDNS von deSEC profitieren Sie von neuesten Sicherheitsstandards, einem benutzerfreundlichen Interface und garantierter Erreichbarkeit Ihrer Domains.\u003c/p\u003e\n\u003cp\u003eNeben unseren Standard-Features (DNSSEC, IPv6, und REST API) bietet dieses Paket DANE und garantiert 100% Verfügbarkeit.\u003c/p\u003e"
+        "anycastdns": {
+            "content": "\u003cp\u003eSie suchen professionelles DNS Hosting für Ihre Zonen? Mit AnycastDNS von deSEC profitieren Sie von neuesten Sicherheitsstandards, einem benutzerfreundlichen Interface und garantierter Erreichbarkeit Ihrer Domains.\u003c/p\u003e\n\u003cp\u003eNeben unseren Standard-Features (DNSSEC, IPv6, und REST API) bietet dieses Paket DANE und garantiert 100% Verfügbarkeit.\u003c/p\u003e"
         },
         "dyndns": {
             "content": "\u003cp\u003eSie wollen auf Ihren heimischen Netzwerkspeicher zugreifen? Mit dynDNS haben Sie die Möglichkeit, auch private Internetanschlüsse mit wechselnder IP-Adresse anhand einer festen Domain zu erreichen.\u003c/p\u003e\u003cp\u003eDieses Paket unterstützt unsere Standard-Features (DNSSEC, IPv6) sowie dynamische Updates via REST-API.\u003c/p\u003e"
@@ -227,9 +227,9 @@
         "headline": "Produkte"
     },
     "product": {
-        "anydns": {
-            "content": "\u003cp\u003eUnser Managed DNS Hosting Service anyDNS bietet Ihnen neben den neuesten Sicherheitsstandards ein benutzerfreundliches Interface und Hochverfügbarkeit durch 100% SLA. DNSSEC, DANE, IPv6 und REST API sind enthalten. Melden Sie sich kostenlos zum Test an und sehen Sie selbst!\u003c/p\u003e",
-            "title": "\u003cspan class=\"icon-earth\"\u003e\u003c/span\u003eanyDNS – Die verlässliche DNS-Lösung"
+        "anycastdns": {
+            "content": "\u003cp\u003eUnser Managed DNS Hosting Service AnycastDNS bietet Ihnen neben den neuesten Sicherheitsstandards ein benutzerfreundliches Interface und Hochverfügbarkeit durch 100% SLA. DNSSEC, DANE, IPv6 und REST API sind enthalten. Melden Sie sich kostenlos zum Test an und sehen Sie selbst!\u003c/p\u003e",
+            "title": "\u003cspan class=\"icon-earth\"\u003e\u003c/span\u003eAnycastDNS – Die verlässliche DNS-Lösung"
         },
         "dyndns": {
             "content": "\u003cp\u003eMit unserem dynDNS-Service können Sie Ihren Router unter einer festen Adresse (z.B. max.dedyn.io) erreichbar machen und so aus der Ferne auf Computer, NAS oder IP-Webcam in Ihrem Heimnetzwerk zugreifen.\u003c/p\u003e\n\n\u003cp\u003eUnser dynDNS-Service unterstützt standardmäßig IPv6 (sowohl Eintragung von IPv6-IPs als auch Erreichbarkeit unserer Nameserver) und DNSSEC ohne weitere Konfiguration. Updates sind auch über unsere REST-API möglich.\u003c/p\u003e\n\n\u003cp\u003eSie kommen mit 3 Schritten zum Ziel:\u003c/p\u003e\n\n\u003col\u003e\n        \u003cli\u003e\n                \u003cstrong\u003eKostenlos für dynDNS anmelden\u003c/strong\u003e\u003cbr /\u003e\n                Tragen Sie Ihre E-Mail-Adresse und Ihre Wunschdomain ins nebenstehende Formular ein. Sie bekommen von uns eine E-Mail mit Ihren Benutzerdaten für die Nutzung von dynDNS zugeschickt.\n        \u003c/li\u003e\n        \u003cli\u003e\n                \u003cstrong\u003eRouter konfigurieren\u003c/strong\u003e\u003cbr /\u003e\n                Tragen Sie diese Zugangsdaten zusammen mit der Update-URL, über die Ihr Router uns seine IP mitteilt, in die Konfiguration Ihres Routers ein. Alle Informationen befinden sich in der Anmeldemail.\n        \u003c/li\u003e\n        \u003cli\u003e\n                \u003cstrong\u003eEinstellungen überprüfen\u003c/strong\u003e\u003cbr /\u003e\n                Mit unserer Testfunktion können Sie überprüfen, ob die Konfiguration ihres Routers funktioniert hat. In Ihrer Anmeldemail finden Sie dazu einen Link.\n        \u003c/li\u003e\n\u003c/ol\u003e\n\n\u003cp\u003edeSEC hat es sich zum Ziel gemacht, die Verbreitung von sicheren Technologien im Internet zu fördern. Deshalb bieten wir unseren dynDNS-Dienst dauerhaft kostenlos und werbefrei an.\u003c/p\u003e",
@@ -237,14 +237,14 @@
         }
     },
     "products": {
-        "anydns": {
+        "anycastdns": {
             "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "anycast",
             "feature3": "IPv6",
             "feature4": "DNSSEC, DANE",
             "feature5": "REST-API",
             "link": "Kostenlos für Betatest registrieren",
-            "name": "anyDNS",
+            "name": "AnycastDNS",
             "price": "ab 0 €",
             "pricing": {
                 "td": {

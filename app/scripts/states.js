@@ -110,9 +110,9 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 			templateUrl: "views/products/dyndns.html"
 		})
 
-		.state('i18n.product.anydns', {
-			url: "/anydns",
-			templateUrl: "views/products/anydns.html"
+		.state('i18n.product.anycastdns', {
+			url: "/anycastdns",
+			templateUrl: "views/products/anycastdns.html"
 		})
 
 		.state('i18n.tools', {
