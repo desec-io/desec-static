@@ -110,6 +110,11 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 			templateUrl: "views/products/dyndns.html"
 		})
 
+		.state('i18n.product.anydns', {
+			url: "/anydns",
+			redirectTo: "i18n.product.anycastdns"
+		})
+		
 		.state('i18n.product.anycastdns', {
 			url: "/anycastdns",
 			templateUrl: "views/products/anycastdns.html"
@@ -146,5 +151,17 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 		})
 	
 	$urlRouterProvider.otherwise('/');
+	
+});
+
+angular.module('desecClientApp').run(function($rootScope, $state) {
+	
+	// Honor redirectTo paramters
+	$rootScope.$on('$stateChangeStart', function(evt, to, params) {
+		if (to.redirectTo) {
+			evt.preventDefault();
+			$state.go(to.redirectTo, params)
+		}
+	});
 	
 });
