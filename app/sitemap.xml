@@ -33,19 +33,19 @@
 		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/dyndns" />
 	</url>
 	<url>
-		<loc>https://desec.io/#!/en/product/anycastdns</loc>
-		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/anycastdns" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/anycastdns" />
+		<loc>https://desec.io/#!/en/product/dnshosting</loc>
+		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/dnshosting" />
+		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/dnshosting" />
 	</url>
 	<url>
-		<loc>https://desec.io/#!/de/product/anycastdns</loc>
-		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/product/anycastdns" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/anycastdns" />
+		<loc>https://desec.io/#!/de/product/dnshosting</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/product/dnshosting" />
+		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/dnshosting" />
 	</url>
 	<url>
-		<loc>https://desec.io/#!/cn/product/anycastdns</loc>
-		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/product/anycastdns" />
-		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/anycastdns" />
+		<loc>https://desec.io/#!/cn/product/dnshosting</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/product/dnshosting" />
+		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/dnshosting" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/en/tools/logjam-scanner</loc>

@@ -112,12 +112,12 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 
 		.state('i18n.product.anydns', {
 			url: "/anydns",
-			redirectTo: "i18n.product.anycastdns"
+			redirectTo: "i18n.product.dnshosting"
 		})
 		
-		.state('i18n.product.anycastdns', {
-			url: "/anycastdns",
-			templateUrl: "views/products/anycastdns.html"
+		.state('i18n.product.dnshosting', {
+			url: "/dnshosting",
+			templateUrl: "views/products/dnshosting.html"
 		})
 
 		.state('i18n.tools', {

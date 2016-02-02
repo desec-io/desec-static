@@ -99,11 +99,11 @@
             "title": "Is there a limit on how many Dynamic DNS updates per day can be made?"
         },
         "q8": {
-            "content": "\u003cp\u003eYou can currently add A and AAAA for free.\u003c/p\u003e\n\u003cp\u003eSupport for the other records will be available with our AnycastDNS product which is currently under development. Please \u003ca href=\"#!/en/product/anycastdns\"\u003esign up for the AnycastDNS beta test\u003c/a\u003e to stay up to date.\u003c/p\u003e",
+            "content": "\u003cp\u003eYou can currently add A and AAAA for free.\u003c/p\u003e\n\u003cp\u003eSupport for the other records will be available with our DNS hosting product which is currently under development. Please \u003ca href=\"#!/en/product/dnshosting\"\u003esign up for the DNS hosting beta test\u003c/a\u003e to stay up to date.\u003c/p\u003e",
             "title": "With dynDNS, can I update A and AAAA, TXT, MX, CNAME records?"
         },
         "q9": {
-            "content": "For dynDNS, you can currently not register subdomains. For AnycastDNS, you will be able to set up arbitrary subdomains. Up to 10 records will be free; for additional records, you will need a paid plan.",
+            "content": "For dynDNS, you can currently not register subdomains. With our DNS hosting, you will be able to set up arbitrary subdomains. Up to 10 records will be free; for additional records, you will need a paid plan.",
             "title": "Is it possible to register subdomains with dynDNS?"
         }
     },
@@ -194,7 +194,7 @@
         "donation": "Donate",
         "home": "Menu",
         "products": {
-            "anycastdns": "AnycastDNS",
+            "dnshosting": "DNS Hosting",
             "dyndns": "dynDNS",
             "headline": "Products"
         },
@@ -204,7 +204,7 @@
         }
     },
     "meta": {
-        "anycastdns": {
+        "dnshosting": {
             "desc": "",
             "title": ""
         },
@@ -218,8 +218,8 @@
         }
     },
     "plans": {
-        "anycastdns": {
-            "content": "\u003cp\u003eLooking for enterprise-level DNS hosting? With AnycastDNS, you can benefit from the most up-to-date security technologies, a user-friendly interface, and guaranteed availability of your zones.\u003c/p\u003e\n\u003cp\u003eIn addition to our standard features (DNSSEC, IPv6, and REST API), this package supports DANE as well as advanced reliability with a 100% Service Level Agreement.\u003c/p\u003e"
+        "dnshosting": {
+            "content": "\u003cp\u003eLooking for enterprise-level DNS hosting? With DNS hosting by deSEC, you can benefit from the most up-to-date security technologies, a user-friendly interface, and guaranteed availability of your zones.\u003c/p\u003e\n\u003cp\u003eIn addition to our standard features (DNSSEC, IPv6, and REST API), this package supports DANE as well as advanced reliability with a 100% Service Level Agreement.\u003c/p\u003e"
         },
         "dyndns": {
             "content": "\u003cp\u003eNeed to access your network attached storage at home from everywhere? dynDNS allows you to assign a fixed domain name to devices with frequently changing IP address, like your Internet router at home.\u003c/p\u003e\u003cp\u003eThis plan supports our standard features (DNSSEC, IPv6) as well as dynamic updates via our REST API.\u003c/p\u003e"
@@ -227,9 +227,9 @@
         "headline": "Products"
     },
     "product": {
-        "anycastdns": {
-            "content": "\u003cp\u003eAnycastDNS, our managed DNS hosting service, comes with supreme security technologies as well as with a user-friendly interface and a 100% SLA. DNSSEC, DANE, IPv6, and REST API access are included. Just give it try during our free test!\u003c/p\u003e",
-            "title": "\u003cspan class=\"icon-earth\"\u003e\u003c/span\u003eAnycastDNS – Highly Reliable DNS"
+        "dnshosting": {
+            "content": "\u003cp\u003eOur managed DNS hosting service comes with supreme security technologies as well as with a user-friendly interface and a 100% SLA. DNSSEC, DANE, IPv6, and REST API access are included. Just give it try during our free test!\u003c/p\u003e",
+            "title": "\u003cspan class=\"icon-earth\"\u003e\u003c/span\u003eDNS Hosting"
         },
         "dyndns": {
             "content": "\u003cp\u003eWith dynDNS, you can make your router available under a static name (e.g. max.dedyn.io) so that you can access your computer, NAS, IP webcam remotely.\u003c/p\u003e\n\n\u003cp\u003eOur service comes with out-of-the-box support for IPv6 (both for storing IPv6 IP addresses and for querying our nameservers) and DNSSEC, without any additional configuration. Updates can also be triggered using our REST API.\u003c/p\u003e\n\n\u003cp\u003eHere's how to get started:\u003c/p\u003e\n\n\u003col\u003e\n        \u003cli\u003e\n                \u003cstrong\u003eRegister for dynDNS (free!)\u003c/strong\u003e\u003cbr /\u003e\n                        Enter your e-mail address and the desired domain name into the form right here. You will receive an e-mail with your user credentials.\n        \u003c/li\u003e\n        \u003cli\u003e\n                \u003cstrong\u003eConfigure your router\u003c/strong\u003e\u003cbr /\u003e\n                Configure your router with these credentials. You will also need to enter an update URL which your router will use to notify us when its IP address changes. The sign-up email contains all necessary information.\n        \u003c/li\u003e\n        \u003cli\u003e\n                \u003cstrong\u003eCheck settings\u003c/strong\u003e\u003cbr /\u003e\n                We set up a testing procedure for you that allows you to check your configuration easily. The link for it is in your sign-up email as well.\n        \u003c/li\u003e\n\u003c/ol\u003e\n\n\u003cp\u003edeSEC's mission is to spread the use of secure Internet technology. This is why we offer our dynDNS service permanently free of charge and free of ads.\u003c/p\u003e",
@@ -237,14 +237,34 @@
         }
     },
     "products": {
-        "anycastdns": {
+        "beta": {
+            "apply": {
+                "again": "Back",
+                "back": "Try Again",
+                "email": {
+                    "label": "Email address",
+                    "placeholder": "johndoe@example.com"
+                },
+                "geodns": {
+                    "label": "Optional: I am interested in geoDNS, i.e. visitor-location-dependent DNS replies, for an additional monthly fee of 25 € per zone."
+                },
+                "headline": "Apply for Free Beta Access",
+                "more": "enter another e-mail address",
+                "product": {
+                    "label": "Intended pricing plan (after free evaluation; optional)"
+                },
+                "submit": "Apply",
+                "waiting": "Applying ..."
+            }
+        },
+        "dnshosting": {
             "feature1": "100% \u003cabbr title=\"Service Level Agreement\"\u003eSLA\u003c/abbr\u003e",
             "feature2": "anycast",
             "feature3": "IPv6",
             "feature4": "DNSSEC, DANE",
             "feature5": "REST-API",
             "link": "Sign up for Beta Test (free)",
-            "name": "AnycastDNS",
+            "name": "DNS Hosting",
             "price": "starting at 0 €",
             "pricing": {
                 "td": {
@@ -273,26 +293,6 @@
                     "product": "Plan"
                 },
                 "title": "Preliminary Pricing (effective after Beta Test)"
-            }
-        },
-        "beta": {
-            "apply": {
-                "again": "Back",
-                "back": "Try Again",
-                "email": {
-                    "label": "Email address",
-                    "placeholder": "johndoe@example.com"
-                },
-                "geodns": {
-                    "label": "Optional: I am interested in geoDNS, i.e. visitor-location-dependent DNS replies, for an additional monthly fee of 25 € per zone."
-                },
-                "headline": "Apply for Free Beta Access",
-                "more": "enter another e-mail address",
-                "product": {
-                    "label": "Intended pricing plan (after free evaluation; optional)"
-                },
-                "submit": "Apply",
-                "waiting": "Applying ..."
             }
         },
         "dyndns": {
