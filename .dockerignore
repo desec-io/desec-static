@@ -1,0 +1,4 @@
+# ignore everything expect for dist 
+# (this increases build-performance)
+*
+!dist
