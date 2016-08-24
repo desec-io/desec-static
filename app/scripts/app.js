@@ -13,7 +13,7 @@ angular.module('desecClientApp', [
 		'pascalprecht.translate',
 		'mailchimp',
 		'angulartics',
-		'angulartics.google.analytics',
+		'angulartics.piwik',
 		'angulartics.scroll',
 		'ngAnimate',
 	])

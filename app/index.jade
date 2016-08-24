@@ -47,8 +47,6 @@ html(ng-app="desecClientApp")
 
 	// Body
 	body.space-top(ng-controller="ScrollToTopCtrl")
-		include partials/googleanalytics.jade
-		
 		include partials/preloader.jade
 		include partials/header.jade
 		
@@ -71,7 +69,7 @@ html(ng-app="desecClientApp")
 		script(src="/bower_components/angular-sanitize/angular-sanitize.js")
 		script(src="/bower_components/angular-mailchimp/angular-mailchimp.js")
 		script(src="/bower_components/angulartics/src/angulartics.js")
-		script(src="/bower_components/angulartics/src/angulartics-ga.js")
+		script(src="/bower_components/angulartics/src/angulartics-piwik.js")
 		script(src="/bower_components/ultima/js/libs/jquery-1.10.2.min.js")
 		script(src="/bower_components/ultima/js/plugins/waypoints.min.js")
 		// endbuild
