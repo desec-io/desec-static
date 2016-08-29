@@ -28,7 +28,7 @@ module.exports = function (config) {
 			'bower_components/angular-animate/angular-animate.js',
 			'bower_components/angular-mailchimp/angular-mailchimp.js',
 			'bower_components/angulartics/src/angulartics.js',
-			'bower_components/angulartics/src/angulartics-ga.js',
+			'bower_components/angulartics-piwik/src/angulartics-piwik.js',
 			'bower_components/ultima/js/libs/jquery-1.10.2.min.js',
 			'bower_components/ultima/js/plugins/waypoints.min.js',
 			'app/scripts/**/*.js',
