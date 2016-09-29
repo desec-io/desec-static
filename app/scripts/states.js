@@ -12,7 +12,7 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 	$locationProvider.hashPrefix('!');
 	
 	// available languages, first one is preferred
-	var languages = ['en', 'de', 'cn'];
+	var languages = ['en', 'de'];
 
 	// preferred language
 	$translateProvider
@@ -24,11 +24,6 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 			'de_DE': 'de',
 			'de_CH': 'de',
 			'de_AT': 'de',
-			'zh_CN': 'cn',
-			'zh_HK': 'cn',
-			'zh_MO': 'cn',
-			'zh_SG': 'cn',
-			'zh_TW': 'cn',
 		})
 		.determinePreferredLanguage();
 	

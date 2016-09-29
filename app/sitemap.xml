@@ -5,92 +5,58 @@
 	<url>
 		<loc>https://desec.io/#!/en/</loc>
 		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/de/</loc>
 		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/" />
-	</url>
-	<url>
-		<loc>https://desec.io/#!/cn/</loc>
-		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/" />
-		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/en/product/dyndns</loc>
 		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/dyndns" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/dyndns" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/de/product/dyndns</loc>
 		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/product/dyndns" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/dyndns" />
-	</url>
-	<url>
-		<loc>https://desec.io/#!/cn/product/dyndns</loc>
-		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/product/dyndns" />
-		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/dyndns" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/en/product/dnshosting</loc>
 		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/dnshosting" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/dnshosting" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/de/product/dnshosting</loc>
 		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/product/dnshosting" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/product/dnshosting" />
-	</url>
-	<url>
-		<loc>https://desec.io/#!/cn/product/dnshosting</loc>
-		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/product/dnshosting" />
-		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/product/dnshosting" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/en/tools/logjam-scanner</loc>
 		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/tools/logjam-scanner" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/tools/logjam-scanner" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/de/tools/logjam-scanner</loc>
 		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/tools/logjam-scanner" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/tools/logjam-scanner" />
-	</url>
-	<url>
-		<loc>https://desec.io/#!/cn/tools/logjam-scanner</loc>
-		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/tools/logjam-scanner" />
-		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/tools/logjam-scanner" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/en/docs/dyndns-client</loc>
 		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/docs/dyndns-client" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/docs/dyndns-client" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/de/docs/dyndns-client</loc>
 		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/docs/dyndns-client" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/docs/dyndns-client" />
-	</url>
-	<url>
-		<loc>https://desec.io/#!/cn/docs/dyndns-client</loc>
-		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/docs/dyndns-client" />
-		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/docs/dyndns-client" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/en/docs/update-api-details</loc>
 		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/docs/update-api-details" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/docs/update-api-details" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/de/docs/update-api-details</loc>
 		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/docs/update-api-details" />
-		<xhtml:link rel="alternate" hreflang="cn" href="https://desec.io/#!/cn/docs/update-api-details" />
 	</url>
 	<url>
-		<loc>https://desec.io/#!/cn/docs/update-api-details</loc>
-		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/docs/update-api-details" />
-		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/docs/update-api-details" />
+		<loc>https://desec.io/#!/en/donation</loc>
+		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/donation" />
+	</url>
+	<url>
+		<loc>https://desec.io/#!/de/donation</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/donation" />
 	</url>
 	<url>
 		<loc>https://desec.io/#!/imprint</loc>

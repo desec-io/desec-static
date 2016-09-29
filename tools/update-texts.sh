@@ -13,7 +13,7 @@ NOCOLOR='\033[0m'
 KEY='1KjSRdmU0Fl8S_oYdHWq8H42_iEU811W4GFc9re3rAdM'
 
 # Languages
-LANGS='de en cn'
+LANGS='de en'
 
 # exit if a command fails
 set -e
