@@ -14,8 +14,6 @@ section.page-block
 					h4(translate="dyndnscheck.success.headline",translate-values="{domainname:domainname}")
 					p(translate="dyndnscheck.success.text",translate-values="{ipaddr:ipaddr}")
 					p(translate="dyndnscheck.success.ipv6only",ng-show="domain.a.length==0")
-					p
-						a(ui-sref="i18n.tools.logjam({lang: lang, domain: domainname})",translate="dyndnscheck.success.logjam")
 					
 				.alert.alert-warning(ng-show="domain.a.length==0&&domain.aaaa.length==0")
 					h4(translate="dyndnscheck.error.headline",translate-values="{domainname:domainname}")
