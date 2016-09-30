@@ -67,7 +67,7 @@
     "faq": {
         "headline": "FAQ",
         "q1": {
-            "content": "\u003cp\u003edeSEC will die Sicherheit des Internets verbessern. Der Schwerpunkt liegt auf der Verbreitung sicherer Verschlüsselungstechnologien. Sensible Kundendaten werden nur in Deutschland gespeichert und sind vor unberechtigtem Zugriff, z.B. durch amerikanische Geheimdienste, geschützt. Die deutschen Datenschutzgesetze gehören zu den schärfsten weltweit.\u003c/p\u003e\n\u003cp\u003eDas erste Produkt von deSEC ist ein hochsicherer DNS-Service. Da die technischen Standards des Internets überwiegend aus den 1980-er Jahren stammen, sind die Daten nicht automatisch vor Spionage oder sogar Manipulation geschützt. Wir wollen neue technologische Ideen der vergangenen Jahre nutzen, um solchen Missbrauch zu verhindern und das Internet sicherer zu machen.\u003c/p\u003e\n\u003cp\u003eWir fangen damit an, die DNS-Informationen kryptografisch abzusichern, um sie vor Manipulation zu schützen. Dazu betreiben wir weltweit DNS-Systeme auf hochverfügbarer Infrastruktur, die wir mit der DNSSEC-Technologie ausrüsten. Zusätzlich erhöhen wir die Sicherheit verschlüsselter Verbindungen mittels DANE (s.u.).\u003c/p\u003e",
+            "content": "\u003cp\u003edeSEC will die Sicherheit des Internets verbessern. Der Schwerpunkt liegt auf der Verbreitung sicherer Verschlüsselungstechnologien. Sensible Kundendaten werden nur in Deutschland gespeichert und sind vor unberechtigtem Zugriff, z.B. durch amerikanische Geheimdienste, geschützt. Die deutschen Datenschutzgesetze gehören zu den schärfsten weltweit.\u003c/p\u003e\n\u003cp\u003eDas erste Projekt von deSEC ist ein hochsicherer DNS-Service. Da die technischen Standards des Internets überwiegend aus den 1980-er Jahren stammen, sind die Daten nicht automatisch vor Spionage oder sogar Manipulation geschützt. Wir wollen neue technologische Ideen der vergangenen Jahre nutzen, um solchen Missbrauch zu verhindern und das Internet sicherer zu machen.\u003c/p\u003e\n\u003cp\u003eWir fangen damit an, die DNS-Informationen kryptografisch abzusichern, um sie vor Manipulation zu schützen. Dazu betreiben wir weltweit DNS-Systeme auf hochverfügbarer Infrastruktur, die wir mit der DNSSEC-Technologie ausrüsten. Zusätzlich möchten wir die Sicherheit verschlüsselter Verbindungen mittels DANE erhöhen (s.u.).\u003c/p\u003e",
             "title": "Was macht deSEC?"
         },
         "q10": {
@@ -75,7 +75,7 @@
             "title": "Wann laufen Hostnamen ab?"
         },
         "q2": {
-            "content": "Das DNS sorgt dafür, dass Internetnutzer mit dem korrekten Server verbunden werden, wenn sie eine Website aufrufen oder eine E-Mail versenden. Zu diesem Zweck übersetzt es Domainnamen (z.B. www.desec.io) in Zahlen (IP-Adressen), die zur Kommunikation von Computern untereinander benutzt werden \u0026ndash; analog zu einem Telefonbuch. Darüber hinaus können im DNS auch weitere Informationen, die eine Domain betreffen, hinterlegt werden. deSEC nutzt solche Informationen, um die Echtheit verschlüsselter Verbindungen sicherzustellen.",
+            "content": "Das DNS sorgt dafür, dass Internetnutzer mit dem korrekten Server verbunden werden, wenn sie eine Website aufrufen oder eine E-Mail versenden. Zu diesem Zweck übersetzt es Domainnamen (z.B. desec.io) in Zahlen (IP-Adressen), die zur Kommunikation von Computern untereinander benutzt werden \u0026ndash; analog zu einem Telefonbuch. Darüber hinaus können im DNS auch weitere Informationen, die eine Domain betreffen, hinterlegt werden. deSEC nutzt solche Informationen, um die Echtheit verschlüsselter Verbindungen sicherzustellen.",
             "title": "Was ist das DNS?"
         },
         "q3": {
@@ -83,15 +83,15 @@
             "title": "Was ist DNSSEC?"
         },
         "q4": {
-            "content": "\u003cp\u003eWie zuvor beschrieben stellt DNSSEC sicher, dass Daten im Internet zum korrekten Server geleitet werden – ähnlich wie bei der Benutzung eines manipulationssicheren Telefonbuchs. Aber selbst dann ist es möglich, dass sich Wegelagerer in die Datenautobahn einklinken, mitlesen und die Daten unauffällig an das eigentliche Ziel weiterleiten. Selbst bei verschlüsselten Verbindungen können solche Angreifer mitlesen. Sie müssen zwar eine Art Reisepass (SSL/TLS-Zertifikat) vorzeigen, aber es ist für professionelle Hacker kein großes Problem, sich einen solchen Reisepass ausstellen zu lassen. Dieses Zertifikat sieht dann gültig aus, hätte aber gar nicht ausgestellt werden dürfen.\u003c/p\u003e\n\u003cp\u003eUm solche Fälle zu enttarnen, fügt DANE zusätzliche Reisepass-Informationen in den DNS-Katalog (das \"Telefonbuch des Internets\") ein. Diese Informationen werden mittels DNSSEC (s.o.) manipulationssicher geschützt. Durch die Kombination von DNSSEC und DANE werden also zwei Ziele erreicht:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eDie Verbindung wird zum korrekten Server geleitet (z.B. der Server der Bank beim Onlinebanking).\u003c/li\u003e\n\u003cli\u003eBei der Datenübertragung wird nur der Pass der Bank akzeptiert. Angreifer an der Leitung zur Bank, die über einen Doppelgänger-Pass verfügen, fliegen auf.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eSo steht einer sicheren und vertrauenswürdigen Datenübertragung nichts im Wege.\u003c/p\u003e",
+            "content": "\u003cp\u003eWie zuvor beschrieben stellt DNSSEC sicher, dass Daten im Internet zum korrekten Server geleitet werden – ähnlich wie bei der Benutzung eines manipulationssicheren Telefonbuchs. Aber selbst dann ist es möglich, dass sich Wegelagerer in die Datenautobahn einklinken, mitlesen und die Daten unauffällig an das eigentliche Ziel weiterleiten. Selbst bei verschlüsselten Verbindungen können solche Angreifer mitlesen. Sie müssen zwar eine Art Reisepass (SSL/TLS-Zertifikat) vorzeigen, aber es ist für professionelle Hacker kein großes Problem, sich einen solchen Reisepass ausstellen zu lassen. Dieses Zertifikat sieht dann gültig aus, hätte aber gar nicht ausgestellt werden dürfen.\u003c/p\u003e\n\u003cp\u003eUm solche Fälle zu enttarnen, fügt DANE zusätzliche Zertifikatsinformationen in das DNS (das \"Telefonbuch des Internets\") ein. Diese Informationen werden mittels DNSSEC (s.o.) manipulationssicher geschützt. Durch die Kombination von DNSSEC und DANE werden also zwei Ziele erreicht:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eDie Verbindung wird zum korrekten Server geleitet (z.B. der Server der Bank beim Onlinebanking).\u003c/li\u003e\n\u003cli\u003eBei der Datenübertragung wird nur der Pass der Bank akzeptiert. Angreifer an der Leitung zur Bank, die über einen Doppelgänger-Pass verfügen, fliegen auf.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eSo steht einer sicheren und vertrauenswürdigen Datenübertragung nichts im Wege.\u003c/p\u003e",
             "title": "Was ist DANE?"
         },
         "q5": {
-            "content": "\u003cp\u003eZur Zeit bietet deSEC DNS-Dienstleistungen an. Das DNS fungiert als Nachschlagewerk des Internets und erlaubt es, Benutzer mit der richtigen Gegenstelle, zum Beispiel ihrer Bank, zu verbinden. Diese Nachschlageinformationen sind natürlich öffentlich.\u003c/p\u003e\n\u003cp\u003eAllerdings sind die DNS-Informationen bei deSEC besonders vor Manipulationen geschützt. Das dafür eingesetzte DNSSEC-Verfahren setzt einen geheimen Schlüssel voraus, den wir benutzen, um die DNS-Informationen gegen Manipulationen zu sperren. Wer in Besitz dieses Schlüssels gelangt, kann Manipulationen vornehmen.\u003c/p\u003e\n\u003cp\u003eDer geheime Schlüssel befindet sich ausschließlich in Deutschland und ist nicht über das öffentliche Internet erreichbar. Unsere DNS-Informationen werden mit dem geheimen Schlüssel in einem geschützten Raum gegen Manipulationen gesperrt. Diese manipulationssicheren Informationen werden danach im DNS-Nachschlageverzeichnis öffentlich verfügbar gemacht, damit Internetnutzer auf dieser Grundlage sichere Datenverbindungen aufbauen können.\u003c/p\u003e",
+            "content": "\u003cp\u003edeSEC stellt DNS-Dienstleistungen zur Verfügung. Das DNS fungiert als Nachschlagewerk des Internets und erlaubt es, Benutzer mit der richtigen Gegenstelle, zum Beispiel ihrer Bank, zu verbinden. Diese Nachschlageinformationen sind natürlich öffentlich.\u003c/p\u003e\n\u003cp\u003eAllerdings sind die DNS-Informationen bei deSEC besonders vor Manipulationen geschützt. Das dafür eingesetzte DNSSEC-Verfahren setzt einen geheimen Schlüssel voraus, den wir benutzen, um die DNS-Informationen gegen Manipulationen zu sperren. Wer in Besitz dieses Schlüssels gelangt, kann Manipulationen vornehmen.\u003c/p\u003e\n\u003cp\u003eDer geheime Schlüssel befindet sich ausschließlich in Deutschland und ist nicht über das öffentliche Internet erreichbar. Unsere DNS-Informationen werden mit dem geheimen Schlüssel in einem geschützten Raum gegen Manipulationen gesperrt. Diese manipulationssicheren Informationen werden danach im DNS-Nachschlageverzeichnis öffentlich verfügbar gemacht, damit Internetnutzer auf dieser Grundlage sichere Datenverbindungen aufbauen können.\u003c/p\u003e",
             "title": "Warum ist deSEC sicher?"
         },
         "q6": {
-            "content": "Nein. Es ist nicht möglich, bei deSEC eine Domain (z.B. desec.io) anzumelden, denn deSEC ist kein sog. Registrar. Für jede registrierte Domain müssen aber auch DNS-Informationen abgelegt werden. Das übernimmt häufig der Registrar. Wer jedoch deSEC beauftragt, die DNS-Informationen für eine bereits registrierte Domain zu verwalten, kann dabei von DANE und anderen Profi-Features profitieren.",
+            "content": "Nein. Es ist nicht möglich, bei deSEC eine Domain (z.B. desec.io) anzumelden, denn deSEC ist kein sog. Registrar. Für jede registrierte Domain müssen aber auch DNS-Informationen abgelegt werden. Das übernimmt häufig der Registrar. Wer jedoch deSEC beauftragt, die DNS-Informationen für eine bereits registrierte Domain zu verwalten, kann dabei von DANE und anderen Sicherheitsfeatures profitieren.",
             "title": "Kann ich bei deSEC eine Domain anmelden? Ist deSEC ein Registrar?"
         },
         "q7": {
@@ -99,26 +99,26 @@
             "title": "Ist die Anzahl der dynDNS-Updates pro Tag beschränkt?"
         },
         "q8": {
-            "content": "\u003cp\u003eZur Zeit können A- und AAAA-Records kostenlos verwendet werden.\u003c/p\u003e\n\u003cp\u003eUnser zur Zeit in Entwicklung befindliches DNS Hosting-Produkt wird andere Record Types unterstützen. \u003ca href=\"#!/de/product/dnshosting\"\u003eMelden Sie sich zum DNS Hosting-Betatest an\u003c/a\u003e, um auf dem Laufenden zu bleiben.\u003c/p\u003e",
+            "content": "\u003cp\u003eDerzeit können A- und AAAA-Records kostenlos verwendet werden.\u003c/p\u003e\n\u003cp\u003eZusätzlich zum dynDNS-Service entwickeln wir auch einen umfassenden DNS-Dienst, der andere Record Types unterstützen wird. \u003ca href=\"#!/de/product/dnshosting\"\u003eMelden Sie sich zum Betatest an\u003c/a\u003e, um auf dem Laufenden zu bleiben.\u003c/p\u003e",
             "title": "Unterstützt dynDNS A-, AAAA-, TXT-, MX-, CNAME-Records?"
         },
         "q9": {
-            "content": "Momentan können mit dynDNS keine Subdomains registriert werden. Mit unserem DNS Hosting wird dies möglich sein. 10 Records sind kostenfrei enthalten; für mehr Records fallen Kosten an.",
+            "content": "Momentan können mit dynDNS keine Subdomains registriert werden.",
             "title": "Kann ich mit dynDNS Subdomains registrieren?"
         }
     },
     "features": {
         "availability": {
-            "content": "deSEC garantiert die Verfügbarkeit seines DNS-Dienstes weltweit. Durch langjährige Erfahrung im Webhosting wissen wir nur zu gut, wie kritisch die Erreichbarkeit von Domains ist. Deshalb setzen wir auf redundante Server-Infrastruktur, um sicherzustellen, dass Ihre Zonen stets für Ihre Kunden verfügbar sind. Für unsere kostenpflichtigen Dienste garantieren wir dabei ein SLA von 100%.",
+            "content": "deSEC bietet höchste Verfügbarkeit seines DNS-Dienstes weltweit. Durch langjährige Erfahrung im Webhosting wissen wir nur zu gut, wie kritisch die Erreichbarkeit von Domains ist. Deshalb setzen wir auf redundante Server-Infrastruktur, um sicherzustellen, dass Ihre Zonen stets für Ihre Kunden verfügbar sind.",
             "title": "Verfügbarkeit garantiert"
         },
         "dane": {
-            "content": "deSEC generiert Ihre DANE/TLSA-Records aus Ihren SSL-Zertifikatsinformationen, um E-Mail-Übertragung und die Benutzung von selbstsignierten Zertifikaten so einfach und sicher wie möglich zu machen..",
+            "content": "deSEC wird es ermöglichen, DANE/TLSA-Records aus Ihren SSL-Zertifikatsinformationen zu generieren, um E-Mail-Übertragung und die Benutzung von selbstsignierten Zertifikaten so einfach und sicher wie möglich zu machen..",
             "title": "DANE-Records"
         },
         "dnssec": {
-            "content": "Alle von deSEC bereitgestellten DNS-Zonen werden mit DNSSEC vor Fälschung geschützt. DNSSEC-Records werden von moderner Software standardmäßig bei DNS-Anfragen überprüft und stellen die gegenwärtig sicherste Technologie dar, um DNS-Anworten vor Manipulation zu schützen. So können Sie sicherstellen, stets zum richtigen Server verbunden zu werden, und man-in-the-middle-Attacken auf DNS-Ebene ausschließen.",
-            "title": "Sicherheit durch DNSSEC"
+            "content": "Alle von deSEC bereitgestellten DNS-Zonen werden mit DNSSEC vor Fälschung geschützt. DNSSEC-Records werden von moderner Software bei DNS-Anfragen überprüft und stellen die gegenwärtig sicherste Technologie dar, um DNS-Anworten vor Manipulation zu schützen und man-in-the-middle-Attacken auf DNS-Ebene ausschließen.",
+            "title": "DNSSEC"
         },
         "easy": {
             "content": "Wir kennen das Problem: Die Verwaltung von DNS-Zonen dauert immer länger, als sie sollte. Egal ob Sie einzelne Einträge oder etliche Zonen auf einmal aktualisieren möchten oder Records für spezielle Anwendungen hinzufügen wollen: Unser innovatives Interface bietet einen einfachen und komfortablen Weg, um Ihr Ziel zu erreichen.",
@@ -188,15 +188,16 @@
     "menu": {
         "docs": {
             "dyndnsclient": "dynDNS Client konfigurieren",
-            "headline": "Doku",
+            "headline": "Docs",
             "updateapidetails": "Update-API Details"
         },
         "donation": "Spenden",
+        "git": "GitHub",
         "home": "Menü",
         "products": {
             "dnshosting": "DNS Hosting",
             "dyndns": "dynDNS",
-            "headline": "Produkte"
+            "headline": "Services"
         },
         "tools": {
             "headline": "Tools",
@@ -219,16 +220,16 @@
     },
     "plans": {
         "dnshosting": {
-            "content": "\u003cp\u003eSie suchen professionelles DNS Hosting für Ihre Zonen? Mit DNS Hosting von deSEC profitieren Sie von neuesten Sicherheitsstandards, einem benutzerfreundlichen Interface und garantierter Erreichbarkeit Ihrer Domains.\u003c/p\u003e\n\u003cp\u003eNeben unseren Standard-Features (DNSSEC, IPv6, und REST API) bietet dieses Paket DANE und garantiert 100% Verfügbarkeit.\u003c/p\u003e"
+            "content": "\u003cp\u003eSie suchen sicheres DNS-Hosting für Ihre Zonen? Mit dem DNS-Dienst von deSEC profitieren Sie von neuesten Sicherheitsstandards, einem benutzerfreundlichen Interface und höchster Erreichbarkeit Ihrer Domains.\u003c/p\u003e\n\u003cp\u003eDieser DNS-Service bieter DNSSEC + DANE, IPv6 sowie Zugriff via REST API.\u003c/p\u003e"
         },
         "dyndns": {
             "content": "\u003cp\u003eSie wollen auf Ihren heimischen Netzwerkspeicher zugreifen? Mit dynDNS haben Sie die Möglichkeit, auch private Internetanschlüsse mit wechselnder IP-Adresse anhand einer festen Domain zu erreichen.\u003c/p\u003e\u003cp\u003eDieses Paket unterstützt unsere Standard-Features (DNSSEC, IPv6) sowie dynamische Updates via REST-API.\u003c/p\u003e"
         },
-        "headline": "Produkte"
+        "headline": "Services"
     },
     "product": {
         "dnshosting": {
-            "content": "\u003cp\u003eUnser Managed DNS Hosting Service bietet Ihnen neben den neuesten Sicherheitsstandards ein benutzerfreundliches Interface und Hochverfügbarkeit durch 100% SLA. DNSSEC, DANE, IPv6 und REST API sind enthalten. Melden Sie sich kostenlos zum Test an und sehen Sie selbst!\u003c/p\u003e",
+            "content": "\u003cp\u003eUnser Managed DNS Hosting Service bietet Ihnen neben den neuesten Sicherheitsstandards ein benutzerfreundliches Interface und hohe Verfügbarkeit. DNSSEC, DANE, IPv6 und REST API sind enthalten. Melden Sie sich kostenlos zum Test an und sehen Sie selbst!\u003c/p\u003e",
             "title": "\u003cspan class=\"icon-earth\"\u003e\u003c/span\u003eDNS Hosting"
         },
         "dyndns": {
@@ -246,12 +247,12 @@
                     "placeholder": "max@example.com"
                 },
                 "geodns": {
-                    "label": "Optional: Ich interessiere mich für geoDNS, d.h. Besucherstandort-abhängige DNS-Antworten, für einen monatlichen Aufpreis von 25 € je Zone."
+                    "label": "Marktstudie (optional): Ich würde geoDNS, d.h. Besucherstandort-abhängige DNS-Antworten, für einen monatlichen Aufpreis von 25 € je Zone nutzen wollen."
                 },
-                "headline": "Jetzt für den kostenlosen Betatest anmelden",
+                "headline": "Jetzt zum kostenlosen Betatest anmelden",
                 "more": "weitere Adresse anmelden",
                 "product": {
-                    "label": "Bevorzugter Tarif (nach dem Test; optional)"
+                    "label": "Marktstudie (optional): Bevorzugter Tarif"
                 },
                 "submit": "Anmelden",
                 "waiting": "Anmeldung läuft ..."
@@ -285,14 +286,14 @@
                     "product3": "premium",
                     "product4": "gold"
                 },
-                "text": "\u003cp\u003eDas Pricing richtet sich lediglich nach der Anzahl der DNS-Records; die Anzahl der Zonen und Queries ist nicht relevant. Sollten Sie größere Record-Volumina benötigen, wenden Sie sich bitte direkt an uns.\u003c/p\u003e\n",
+                "text": "\u003cp\u003eUm den DNS-Markt besser zu verstehen, haben wir einige Dummy-Tarife entwickelt. Wir möchten Sie bitten, an unserer Marktstudie teilzunehmen, indem Sie bei Ihrer Anmeldung zum Betatest angeben, welchen Tarif für Ihre Zwecke am geeignesten wäre.\u003c/p\u003e\n\u003cp\u003eDas vorgeschlagene Pricing richtet sich lediglich nach der Anzahl der DNS-Records; die Anzahl der Zonen und Queries ist nicht relevant.\u003c/p\u003e",
                 "th": {
                     "nQueries": "Anzahl Queries",
                     "nRecords": "Anzahl DNS-Records",
-                    "price": "Preis (brutto)",
+                    "price": "Preis",
                     "product": "Tarif"
                 },
-                "title": "Voraussichtliche Preise (nach dem Beta-Test)"
+                "title": "Marktstudie: Preisumfrage"
             }
         },
         "dyndns": {
@@ -329,11 +330,7 @@
             },
             "video": "\u003ciframe src=\"https://www.youtube.com/embed/LcQ0XBQjFAA\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"\u003e\u003c/iframe\u003e"
         },
-        "title": "Produkte"
-    },
-    "registration": {
-        "content": "Interessieren Sie sich für unsere DNS-Dienstleistungen mit DNSSEC und DANE? Gerne halten wir Sie auf dem neuesten Stand unserer Entwicklungen – hinterlassen Sie einfach hier Ihre E-Mail-Adresse.",
-        "title": "Vorregistrierung"
+        "title": "Services"
     },
     "team": {
         "headline": "Das Team",
