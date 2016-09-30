@@ -8,7 +8,17 @@ section.product.page-block
 				| we appreciate your feedback. <a href="mailto:input@desec.io">Shoot us an email!</a>
 		.row
 			.col-md-offset-3.col-md-9
-				h3 Option 1: Use Your Router
+				p
+					| To update your dynDNS IP address, there are three options:
+					ol(ng-controller="anchorCtrl")
+						li
+							a(href="",ng-click="gotoAnchor('option1')") Use your router
+						li
+							a(href="",ng-click="gotoAnchor('option2')") Use ddclient
+						li
+							a(href="",ng-click="gotoAnchor('option3')") Third-party clients
+				
+				h3(id="option1") Option 1: Use Your Router
 				p
 					| For most folks, using the integrated dynDNS client of their router will be easiest. The configuration
 					| procedures vary for all routers which is why we can't provide a tutorial for all of them. However,
@@ -28,6 +38,7 @@ section.product.page-block
 						li
 							| Password 
 							em (as provided in the email we sent you)
+				
 				h4 IPv6 Support
 				p
 					| There is a chance that your router already properly supports pushing its IPv6 address to us. If 
@@ -43,7 +54,7 @@ section.product.page-block
 					| To find out the placeholder names for your router, please refer to the manual of your device.
 
 
-				h3 Option 2: Use ddclient
+				h3(id="option2") Option 2: Use ddclient
 				p
 					| If you're on Debian, Ubuntu or any other Linux distribution that provides you with the ddclient package, 
 					| you can use it to update your IP address with our servers. Although there is no official IPv6 support in 
@@ -106,7 +117,7 @@ section.product.page-block
 					| to see if your domain is v6-ready.
 				
 				
-				h3 Option 3: Third-party clients
+				h3(id="option3") Option 3: Third-party clients
 				p
 					| In the list below, you find third-party software that we have been told can be used with our dynDNS service.
 					| Please note that we do not provide any support for these programs. In case of any problems, please contact the respective author. 
