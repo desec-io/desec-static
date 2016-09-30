@@ -60,6 +60,7 @@ section.product.page-block
 					code update.dedyn.io
 					| as the dynamic DNS server. Next, tell ddclient to use the "dyndns2" protocol to perform updates. Afterwards, enter the username and password we sent you via email upon registration.
 					| Last, tell ddclient how to detect your IP address, your domain name and the update interval.
+				
 				h4 Enable SSL by Default
 				p
 					| ddclient doesn't use SSL by default. To fix this, open
@@ -69,11 +70,13 @@ section.product.page-block
 					| above the
 					code server=
 					| statement.
+				
 				h4 Test Your Setup
 				p
 					| On the command line, use
 					code sudo ddclient -force
 					| to see if everything works as expected.
+				
 				h4 Optional: Determine IP Address Remotely
 				p
 					| If your setup does not allow your public IP address to be determined from one of your interfaces, you can let ddclient use our
@@ -90,6 +93,7 @@ section.product.page-block
 					| and
 					code https://checkipv6.dedyn.io/
 					|, respectively; however, ddclient doesn't support IPv6 addresses at the time of writing.)
+				
 				h4 Optional: Add IPv6 Support
 				p
 					| Unfortunately, ddclient doesn't support IPv6 yet. However, if you have a native IPv6 connection to the Internet,
@@ -100,3 +104,12 @@ section.product.page-block
 					| statement. Our server will then use the remote IPv6 address to generate your AAAA record. After another update, use
 					code host yourname.dedyn.io ns2.desec.io
 					| to see if your domain is v6-ready.
+				
+				
+				h3 Option 3: Third-party clients
+				p
+					| In the list below, you find third-party software that we have been told can be used with our dynDNS service.
+					| Please note that we do not provide any support for these programs. In case of any problems, please contact the respective author. 
+					ul
+						li
+							a(href="https://github.com/Nesos-ita/DynamicDnsUpdater",target="_blank") DynamicDnsUpdater (Nesos-ita)
