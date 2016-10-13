@@ -20,7 +20,7 @@
                     "label": "Email address (optional, for mandate reference)",
                     "placeholder": ""
                 },
-                "error": "An error has occurred. Please \u003ca href=\"https://encrypt.to/0x3EF22D2F\" target=\"_blank\"\u003elet us know\u003c/a\u003e!",
+                "error": "An error has occurred. Please \u003ca href=\"https://encrypt.to/0x7963D427FD32AC6FD20FD0B1EFD6143A3EF22D2F\" target=\"_blank\"\u003elet us know\u003c/a\u003e!",
                 "iban": {
                     "label": "IBAN",
                     "placeholder": "",
