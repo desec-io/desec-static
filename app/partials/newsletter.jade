@@ -50,6 +50,4 @@ div.wizard
 				button.btn(ng-show="mailchimp.result==='error'||mailchimp.result===true", ng-click="mailchimp.result=undefined",translate="products.beta.apply.back")
 				button.btn.btn-primary(ng-disabled="MailchimpSubscriptionForm.$invalid", ng-show="!mailchimp.result", ng-click="mailchimp.result=true;addSubscription(mailchimp);",translate="products.beta.apply.submit", analytics-event="newsletter-signup", analytics-category="{{mailchimp.PRODUCT}}", analytics-on="click")
 				button.btn.btn-primary(ng-disabled="true", ng-show="mailchimp.result===true",translate="products.beta.apply.submit")
-				
-		
 

@@ -5,25 +5,5 @@ section.product.page-block(ng-controller="DyndnsSignupCtrl")
 		.row
 			.col-md-6
 				div(translate="product.dyndns.content")
-				//dl
-					dt
-						span.icon-signup
-						| {{'features.easy.title'|translate}}
-					dd(translate="features.easy.content")
-					dt
-						span.icon-clock
-						| {{'features.availability.title'|translate}}
-					dd(translate="features.availability.content")
-					dt
-						span.icon-shield
-						| {{'features.dnssec.title'|translate}}
-					dd(translate="features.dnssec.content")
-				//.pricing-plan
-					ul
-						li(translate="products.dyndns.feature1")
-						li(translate="products.dyndns.feature2")
-						li(translate="products.dyndns.feature3")
-						li(translate="products.dyndns.feature4")
-						li(translate="products.dyndns.feature5")
 			.col-md-6(ng-init="product='dyndns'")
 				include ../../partials/dyndns-signup-form.jade
