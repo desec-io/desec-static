@@ -42,7 +42,7 @@ angular.module('desecClientApp')
 				canceler.resolve();
 			canceler = $q.defer();
 			
-			$http.get('/api/scan/logjam', { timeout: canceler.promise, params: { host: $scope.host, port: $scope.port, starttls: $scope.starttls }})
+			$http.get('/api/v1/scan/logjam', { timeout: canceler.promise, params: { host: $scope.host, port: $scope.port, starttls: $scope.starttls }})
 				.success(function(data) {
 					$scope.status = 'result';
 					$scope.result = data;

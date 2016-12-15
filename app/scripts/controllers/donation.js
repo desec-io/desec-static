@@ -13,7 +13,7 @@ angular.module('desecClientApp')
 			$scope.loading = true;
 			$scope.error = '';
 			
-			$http.post('/api/donation/', $scope.d).then(
+			$http.post('/api/v1/donation/', $scope.d).then(
 				// sucess
 				function(resp) {
 					$scope.loading = false;

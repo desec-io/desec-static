@@ -21,7 +21,7 @@ angular.module('desecClientApp')
 		$scope.state = 0;
 		$scope.register = function(email, password) {
 			$scope.state = 1;
-			$http.post('/api/auth/register', {
+			$http.post('/api/v1/auth/register', {
 				email: email,
 				password: password,
 			})

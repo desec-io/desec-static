@@ -6,7 +6,7 @@ angular.module('desecClientApp')
 		$scope.check = function() {
 			$scope.loading = true;
 			$scope.domainname = $stateParams.domain;
-			$http.get('/api/dns', { params: { domain: $scope.domainname } })
+			$http.get('/api/v1/dns', { params: { domain: $scope.domainname } })
 				.success(function(data) {
 					$scope.domain = data;
 					$scope.loading = false;

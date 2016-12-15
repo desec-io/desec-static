@@ -28,22 +28,22 @@ describe('auth service', function () {
 
 	describe('domain resource', function() {
 
-		it('POSTs to /api/domains/ if created', function() {
+		it('POSTs to /api/v1/domains/ if created', function() {
 			var values = {
 				'name': 'test.dedyn.io',
 				'dyn': true
 			};
 			var resp_values = angular.copy(values);
 			resp_values['id'] = 1337;
-			$httpBackend.expect('POST', '/api/domains/', values)
+			$httpBackend.expect('POST', '/api/v1/domains/', values)
 				.respond(201, resp_values);
 			var d = new domain(values);
 			d.$post();
 			$httpBackend.flush();
 		});
 
-		it('GETs /api/domains/@id when asking for specific id', function() {
-			$httpBackend.expect('GET', '/api/domains/4711/')
+		it('GETs /api/v1/domains/@id when asking for specific id', function() {
+			$httpBackend.expect('GET', '/api/v1/domains/4711/')
 				.respond(200, JSON.stringify({'name': 'koellsch.dedyn.io', 'id': 4711}));
 			domain.get({'id': 4711});
 			$httpBackend.flush();
@@ -54,14 +54,14 @@ describe('auth service', function () {
 			var d;
 			
 			beforeEach(function() {
-				$httpBackend.expect('GET', '/api/domains/4711/')
+				$httpBackend.expect('GET', '/api/v1/domains/4711/')
 					.respond(200, JSON.stringify({'name': 'koellsch.dedyn.io', 'id': 4711}));
 				d = domain.get({'id': 4711});
 				$httpBackend.flush();
 			});
 			
 			it('can PUT the domain', function() {
-				$httpBackend.expect('PUT', '/api/domains/4711/')
+				$httpBackend.expect('PUT', '/api/v1/domains/4711/')
 					.respond(200, JSON.stringify({'name': 'koellsch.dedyn.io', 'id': 4711, a: '10.1.2.3'}));
 				d.a = '10.1.2.3';
 				d.$update();
@@ -69,7 +69,7 @@ describe('auth service', function () {
 			});
 			
 			it('can DELETE the domain', function() {
-				$httpBackend.expect('DELETE', '/api/domains/4711/')
+				$httpBackend.expect('DELETE', '/api/v1/domains/4711/')
 					.respond(200);
 				d.$delete();
 				$httpBackend.flush();

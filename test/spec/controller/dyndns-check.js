@@ -41,7 +41,7 @@ describe('dyndns signup controller', function () {
 		describe('when successful', function () {
 
 			beforeEach(function () {
-				$httpBackend.expect('GET', '/api/dns?domain=foobar.dedyn.io')
+				$httpBackend.expect('GET', '/api/v1/dns?domain=foobar.dedyn.io')
 					.respond(200, JSON.stringify({'a': ['10.1.2.3'], 'aaaa': []}));
 				$httpBackend.flush();
 			});
@@ -58,7 +58,7 @@ describe('dyndns signup controller', function () {
 		describe('when unsuccessful', function () {
 
 			beforeEach(function () {
-				$httpBackend.expect('GET', '/api/dns?domain=foobar.dedyn.io')
+				$httpBackend.expect('GET', '/api/v1/dns?domain=foobar.dedyn.io')
 					.respond(200, JSON.stringify({'a': [], 'aaaa': []}));
 				$httpBackend.flush();
 			});
@@ -74,22 +74,22 @@ describe('dyndns signup controller', function () {
 		
 		it('checks again when check() is called', function() {
 			// once when controller is initiated
-			$httpBackend.expect('GET', '/api/dns?domain=foobar.dedyn.io').respond(400);
+			$httpBackend.expect('GET', '/api/v1/dns?domain=foobar.dedyn.io').respond(400);
 			// once when we call check()
-			$httpBackend.expect('GET', '/api/dns?domain=foobar.dedyn.io').respond(400);
+			$httpBackend.expect('GET', '/api/v1/dns?domain=foobar.dedyn.io').respond(400);
 			scope.check();
 			$httpBackend.flush();
 		});
 		
 		it('handles ipv6-only hosts successfully', function() {
-			$httpBackend.expect('GET', '/api/dns?domain=foobar.dedyn.io')
+			$httpBackend.expect('GET', '/api/v1/dns?domain=foobar.dedyn.io')
 				.respond(200, JSON.stringify({'a': [], 'aaaa': ['::1']}));
 			$httpBackend.flush();
 			expect(scope.ipaddr).toBe('::1');
 		});
 		
 		it('shows both addresses for dual-ip hosts', function() {
-			$httpBackend.expect('GET', '/api/dns?domain=foobar.dedyn.io')
+			$httpBackend.expect('GET', '/api/v1/dns?domain=foobar.dedyn.io')
 				.respond(200, JSON.stringify({'a': ['10.1.2.3'], 'aaaa': ['::1']}));
 			$httpBackend.flush();
 			expect(scope.ipaddr).toMatch(/10\.1\.2\.3/);

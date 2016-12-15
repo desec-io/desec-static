@@ -43,11 +43,11 @@ describe('dyndns signup controller', function () {
 			beforeEach(function() {
 				scope.email = 'shitman@desec.io';
 				scope.domain = 'shitman';
-				$httpBackend.expect('POST', '/api/auth/register')
+				$httpBackend.expect('POST', '/api/v1/auth/register')
 					.respond(200, JSON.stringify({'email': 'shitman@desec.io'}));
-				$httpBackend.expect('POST', '/api/auth/login')
+				$httpBackend.expect('POST', '/api/v1/auth/login')
 					.respond(200, JSON.stringify({'auth_token': 'UnitTestAuthToken'}));
-				$httpBackend.expect('POST', '/api/domains/')
+				$httpBackend.expect('POST', '/api/v1/domains/')
 					.respond(200);
 				scope.signup();
 				$httpBackend.flush();
@@ -67,7 +67,7 @@ describe('dyndns signup controller', function () {
 			beforeEach(function() {
 				scope.email = 'alreadytaken@desec.io';
 				scope.domain = 'doesntmatter';
-				$httpBackend.expect('POST', '/api/auth/register')
+				$httpBackend.expect('POST', '/api/v1/auth/register')
 					.respond(400);
 				scope.signup();
 				$httpBackend.flush();
@@ -85,7 +85,7 @@ describe('dyndns signup controller', function () {
 			});
 			
 			it('attepts to re-register on the second call', function() {
-				$httpBackend.expect('POST', '/api/auth/register')
+				$httpBackend.expect('POST', '/api/v1/auth/register')
 					.respond(400);
 				scope.signup();
 				$httpBackend.flush();
@@ -103,9 +103,9 @@ describe('dyndns signup controller', function () {
 			beforeEach(function() {
 				scope.email = 'alreadytaken@desec.io';
 				scope.domain = 'doesntmatter';
-				$httpBackend.expect('POST', '/api/auth/register')
+				$httpBackend.expect('POST', '/api/v1/auth/register')
 					.respond(201);
-				$httpBackend.expect('POST', '/api/auth/login')
+				$httpBackend.expect('POST', '/api/v1/auth/login')
 					.respond(400);
 				scope.signup();
 				$httpBackend.flush();
@@ -125,11 +125,11 @@ describe('dyndns signup controller', function () {
 			beforeEach(function() {
 				scope.email = 'alreadytaken@desec.io';
 				scope.domain = 'doesntmatter';
-				$httpBackend.expect('POST', '/api/auth/register')
+				$httpBackend.expect('POST', '/api/v1/auth/register')
 					.respond(201);
-				$httpBackend.expect('POST', '/api/auth/login')
+				$httpBackend.expect('POST', '/api/v1/auth/login')
 					.respond(200, JSON.stringify({'auth_token': 'UnitTestAuthToken'}));
-				$httpBackend.expect('POST', '/api/domains/')
+				$httpBackend.expect('POST', '/api/v1/domains/')
 					.respond(400);
 				scope.signup();
 				$httpBackend.flush();
@@ -147,7 +147,7 @@ describe('dyndns signup controller', function () {
 			});
 			
 			it('tries registering the domain on the next call', function() {
-				$httpBackend.expect('POST', '/api/domains/')
+				$httpBackend.expect('POST', '/api/v1/domains/')
 					.respond(400);
 				scope.signup();
 				$httpBackend.flush();
@@ -155,7 +155,7 @@ describe('dyndns signup controller', function () {
 			});
 			
 			it('updates the scope to successful after an successful registration attempt', function() {
-				$httpBackend.expect('POST', '/api/domains/')
+				$httpBackend.expect('POST', '/api/v1/domains/')
 					.respond(201);
 				scope.signup();
 				$httpBackend.flush();

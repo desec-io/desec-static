@@ -21,7 +21,7 @@ angular.module('desecClientApp')
 		
 		$scope.domainadd = function(domain, port, cert) {
 			$scope.state = 1;
-			$http.post('/api/domains/', {
+			$http.post('/api/v1/domains/', {
 				name: domain,
 				port: port,
 				cert_info: cert,

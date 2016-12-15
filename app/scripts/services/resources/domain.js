@@ -4,7 +4,7 @@ angular.module('desecClientApp')
 	.factory('domain', function ($resource, resourceDefaultActions) {
 		return $resource(
 			// URL
-			'/api/domains/:id/',
+			'/api/v1/domains/:id/',
 			
 			// Parameters
 			{

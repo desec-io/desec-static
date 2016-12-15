@@ -21,7 +21,7 @@ angular.module('desecClientApp')
 		
 		$scope.domaintest = function(domain) {
 			$scope.state = 1;
-			$http.get('/api/test/' + domain)
+			$http.get('/api/v1/test/' + domain)
 			.success(function(data, status, headers, config) {
 					$scope.state = 2;
 					scope.protected = data.protected;

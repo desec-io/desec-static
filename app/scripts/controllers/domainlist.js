@@ -9,7 +9,7 @@
  */
 angular.module('desecClientApp')
 	.controller('DomainListCtrl', function ($scope, $http) {
-		$http.get('/api/domains/').success(function(data) {
+		$http.get('/api/v1/domains/').success(function(data) {
 			$scope.domains = data;
 		});
 	});

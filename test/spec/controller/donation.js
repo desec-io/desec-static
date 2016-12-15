@@ -49,7 +49,7 @@ describe('donation controller', function () {
 					message: '',
 					email: '',
 				};
-				$httpBackend.expect('POST', '/api/donation/')
+				$httpBackend.expect('POST', '/api/v1/donation/')
 					.respond(200, JSON.stringify(scope.d));
 				scope.donate();
 				$httpBackend.flush();
@@ -74,7 +74,7 @@ describe('donation controller', function () {
 					message: '',
 					email: '',
 				};
-				$httpBackend.expect('POST', '/api/donation/')
+				$httpBackend.expect('POST', '/api/v1/donation/')
 					.respond(400, JSON.stringify({}));
 				scope.donate();
 				$httpBackend.flush();
