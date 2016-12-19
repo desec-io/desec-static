@@ -2,7 +2,7 @@
     "donation": {
         "banktransfer": {
             "headline": "Überweisung an deSEC",
-            "text": "\u003cp\u003eWir nehmen auch Spenden per Überweisung entgegen. Unsere Kontoverbindung lautet:\u003c/p\u003e\n\u003cp style=\"text-align: center\"\u003e\n        deSEC\u003cbr /\u003e\n        IBAN: DE56 7603 0080 0220 2414 74\u003cbr /\u003e\n        BIC: CSDBDE71XXX\u003cbr /\u003e\n        BNP Paribas\n\u003c/p\u003e"
+            "text": "\u003cp\u003eWir nehmen auch Spenden per Überweisung entgegen. Unsere Kontoverbindung lautet:\u003c/p\u003e\n\u003cp style=\"text-align: center\"\u003e\n        deSEC\u003cbr /\u003e\n        IBAN: DE55 1203 0000 1012 4521 63\u003cbr /\u003e\n        BIC: BYLADEM1001\u003cbr /\u003e\n        Deutsche Kreditbank (DKB)\n\u003c/p\u003e"
         },
         "directdebit": {
             "form": {
