@@ -73,6 +73,10 @@
             "content": "Zur Zeit gibt es keine Expiration Policy. Falls sich das ändert (wovon wir nicht ausgehen), werden wir unsere Nutzer mindestens einen Monat im Voraus informieren.",
             "title": "Wann laufen Hostnamen ab?"
         },
+        "q11": {
+            "content": "Das deSEC-Team besteht aus Akademikern mit naturwissenschaftlich-mathematischem und unternehmerischem Hintergrund. Wir können auf mehr als 15 Jahre Erfahrung im Betrieb von Serverinfrastruktur und Bereitstellung von Internetdienstleistungen zurückgreifen.",
+            "title": "Wer steht hinter deSEC?"
+        },
         "q2": {
             "content": "Das DNS sorgt dafür, dass Internetnutzer mit dem korrekten Server verbunden werden, wenn sie eine Website aufrufen oder eine E-Mail versenden. Zu diesem Zweck übersetzt es Domainnamen (z.B. desec.io) in Zahlen (IP-Adressen), die zur Kommunikation von Computern untereinander benutzt werden \u0026ndash; analog zu einem Telefonbuch. Darüber hinaus können im DNS auch weitere Informationen, die eine Domain betreffen, hinterlegt werden. deSEC nutzt solche Informationen, um die Echtheit verschlüsselter Verbindungen sicherzustellen.",
             "title": "Was ist das DNS?"
@@ -277,9 +281,5 @@
             "video": "\u003ciframe src=\"https://www.youtube.com/embed/LcQ0XBQjFAA\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"\u003e\u003c/iframe\u003e"
         },
         "title": "Services"
-    },
-    "team": {
-        "headline": "Das Team",
-        "subheadline": "Hinter deSEC steht ein Team aus Akademikern mit naturwissenschaftlich-mathematischem sowie rechtswissenschaftlichem und unternehmerischem Hintergrund. Wir können auf mehr als 10 Jahre Erfahrung im Betrieb von Serverinfrastruktur und Bereitstellung von Internetdienstleistungen zurückgreifen."
     }
 }

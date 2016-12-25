@@ -73,6 +73,10 @@
             "content": "At the moment, there is no expiration policy. In case this would change, we would inform our users at least one month ahead (but we don't expect this to change).",
             "title": "When do hostnames expire?"
         },
+        "q11": {
+            "content": "The deSEC team is comprised of academics with both scientific as well as business background. We can rely on more than 15 years of experience in both running of server infrastructure and provisioning of Internet services.",
+            "title": "Who is behind deSEC?"
+        },
         "q2": {
             "content": "The DNS technology ensures that Internet users can connect to the intended web or e-mail server when browsing the web or communicating online. To do so, it translates domain names (like desec.io) into a machine number (IP address) that is used for communication between computers. Being the phonebook of the Internet, the DNS also allows additional information to be stored. deSEC uses such information to validate the authenticity of encrypted connections.",
             "title": "What is the DNS system?"
@@ -277,9 +281,5 @@
             "video": "\u003ciframe src=\"https://www.youtube.com/embed/BnPfQBOvXpc\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"\u003e\u003c/iframe\u003e"
         },
         "title": "Services"
-    },
-    "team": {
-        "headline": "The Team",
-        "subheadline": "Behind deSEC is a team of academics with both scientific as well as legal and business education. We can rely on more than 10 years of experience in both running of server infrastructure and provisioning of Internet services."
     }
 }
