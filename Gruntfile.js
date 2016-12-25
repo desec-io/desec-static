@@ -436,37 +436,6 @@ module.exports = function (grunt) {
 				]
 			}
 		},
-
-		// Deploy via sftp
-		// authentication information stored in .ftppass (not under version control)
-		'sftp-deploy': {
-			staging: {
-				auth: {
-					host: 'desec.io',
-					port: 22,
-					authKey: 'desec-io'
-				},
-				src: '<%= yeoman.dist %>',
-				dest: '/var/www/webclient-staging',
-				exclusions: [],
-				serverSep: '/',
-				concurrency: 4,
-				progress: true
-			},
-			live: {
-				auth: {
-					host: 'desec.io',
-					port: 22,
-					authKey: 'desec-io'
-				},
-				src: '<%= yeoman.dist %>',
-				dest: '/var/www/webclient-live',
-				exclusions: [],
-				serverSep: '/',
-				concurrency: 4,
-				progress: true
-			}
-		},
 	});
 	
 	grunt.registerTask('fillcache', 'Request all known application URLs from the sitemap once with _escaped_fragment_, discarding the reply', function() {
@@ -543,16 +512,6 @@ module.exports = function (grunt) {
 		'filerev',
 		'usemin',
 		'htmlmin',
-	]);
-
-	grunt.registerTask('deploylive', [
-		'build',
-		'sftp-deploy:live'
-	]);
-
-	grunt.registerTask('deploy', [
-		'build',
-		'sftp-deploy:staging'
 	]);
 
 	grunt.registerTask('default', [
