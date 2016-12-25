@@ -60,7 +60,6 @@
         "success": {
             "headline": "{{domainname}} ist bereit!",
             "ipv6only": "Ihre Domain hat aktuell nur eine IPv6-Adresse, jedoch keine IPv4-Adresse.",
-            "logjam": "Testen Sie Ihre Dienste auf die Logjam-Schwachstelle.",
             "text": "Sie haben {{ipaddr}} als IP-Adresse hinterlegt."
         }
     },
@@ -136,55 +135,6 @@
         "content": "\u003cp\u003eSicheres DNS-Hosting mit DNSSEC und DANE.\u003cbr /\u003eZukunftsträchtige Technologien.\u003cbr /\u003eEin besseres Internet.\u003c/p\u003e",
         "title": "Sicherheit aus Deutschland."
     },
-    "logjamscanner": {
-        "error": {
-            "headline": "Ein Fehler ist aufgetreten",
-            "scan": "Einen weiteren Dienst prüfen",
-            "text": "Bitte überprüfen Sie den Hostnamen, Port und die STARTTLS-Einstellungen auf Korrektheit."
-        },
-        "form": {
-            "host": {
-                "label": "Hostname"
-            },
-            "port": {
-                "label": "TCP-Port"
-            },
-            "presets": {
-                "label": "Vorauswahlen"
-            },
-            "scan": "Dienst überprüfen",
-            "starttls": {
-                "label": "STARTTLS benutzen für:",
-                "no": "(STARTTLS nicht benutzen, direkt mit TLS verbinden)"
-            }
-        },
-        "headline": "Logjam-Scanner",
-        "intro": "\u003cp\u003eIm Mai 2015 haben Sicherheitsforscher die Logjam-Attacke auf TLS \u003ca href=\"https://weakdh.org/\"\u003everöffentlicht\u003c/a\u003e. Logjam verwendet eine Schwachstelle im TLS-Protokoll um die Verschlüsselungsstärke der Verbindung auf \"export\" herunterzusetzen, es werden 512bit Diffie-Hellman Parameter verwendet. Gleichzeitig kann das diskrete Logarithmus-Problem, auf dem die Sicherheit vom DH Schlüsselaustausch basiert, nach einer etwa einwöchentlichen Vorberechnung in wenigen Minuten geknackt werden kann. Kombiniert man beide Methoden, kann ein man-in-the-middle Angreifer TLS-Verbindungen abhören und übermittelte Daten verändern.\u003c/p\u003e\n\u003cp\u003eDaher müssen der 512bit DH Schlüsselaustausch als unsicher betrachtet werden; für den Schlüsselaustausch mit 1024bit muss davon ausgegangen werden, dass ein Angreifer mit der Ressourcenstärke eines Staates diesen ebenfalls kompromittieren kann.\u003c/p\u003e\n\u003cp\u003eDieser Test überprüft, ob der angegebene Dienst 512bit DH Parameter verwendet, und ob Verbindungen zum Dienst von downgrade-Attacken betroffen sind. Die beste Wertung dieses Tests erreicht man, wenn der Dienst mehr als 1024bit zum DH-Schlüsselaustausch verwendet, und Export Cipher Suites vom Server nicht akzeptiert werden.\u003c/p\u003e\n\u003cp\u003edeSEC ist ein Internetsicherheitsdienstleister. Wir laden Sie ein, uns auf \u003ca href=\"#!/de/\"\u003eunserer Website\u003c/a\u003e besser kennenzulernen.\u003cp\u003e",
-        "result": {
-            "danger": {
-                "headline": "Dieser Dienst ist unsicher!",
-                "text": "Die Unterstützung von export cipher suites sollte \u003ca href=\"https://weakdh.org/sysadmin.html\"\u003esofort abgestellt\u003c/a\u003e werden!"
-            },
-            "good": {
-                "headline": "Sieht gut aus, dieser Dienst ist nicht von Logjam betroffen",
-                "text": "Dieser Dienst unterstützt keine export cipher suites, und benutzt entweder EDH überhaupt nicht, oder mit Parametern, die länger sind als 1024bit."
-            },
-            "link": "Link zu diesem Scan",
-            "scan": "Einen weiteren Dienst prüfen",
-            "warning": {
-                "headline": "Ugh, dieser Dienst ist mit staatlichen Resourcen angreifbar",
-                "text": "Gewöhnliche Kriminelle sind wohl nicht in der Lage, diesen Dienst abzuhören; aber große Organisationen mit staatlichen Resourcen können es wohl. Besser auf große (wenigstens 2048bit) DH-Parameter \u003ca href=\"https://weakdh.org/sysadmin.html\"\u003eumstellen\u003c/a\u003e."
-            }
-        },
-        "scanning": {
-            "cancel": "Prüfung abbrechen",
-            "headline": "Moment, Prüfung läuft ..."
-        },
-        "teaser": {
-            "button": "Logjam-Scanner",
-            "text": "\u003cp\u003eWir haben einen Scanner für die Logjam-Sicherheitslücke entwickelt, der nicht nur Webservers, sondern auch Email- (IMAP, POP und SMTP) und Jabber-Server überprüfen kann, um Administratoren beim Beseitigen der Sicherheitslücke zu unterstützen.\u003c/p\u003e"
-        }
-    },
     "menu": {
         "docs": {
             "dyndnsclient": "dynDNS Client konfigurieren",
@@ -198,10 +148,6 @@
             "dnshosting": "DNS Hosting",
             "dyndns": "dynDNS",
             "headline": "Services"
-        },
-        "tools": {
-            "headline": "Tools",
-            "logjam": "Logjam-Scanner"
         }
     },
     "meta": {

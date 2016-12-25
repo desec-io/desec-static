@@ -19,18 +19,9 @@ section.hero#hero(analytics-on="scrollby", analytics-event="hero", analytics-cat
 							.scalable.scalable-16-9
 								.scalable-content(translate="products.dyndns.video")
 				.slide(ng-show="slideIndex == 1")
-					.row
-						.col-md-5
-							h1(translate="logjamscanner.headline")
-							div(translate="logjamscanner.teaser.text")
-							a.btn.btn-primary(ui-sref="i18n.tools.logjam",translate="logjamscanner.teaser.button")
-						.col-md-7
-							img(src='/images/tablet.png',alt='')
-		.bx-controls.bx-has-pager
+		//.bx-controls.bx-has-pager
 			.bx-pager.bx-default-pager
 				.bx-pager-item
 					a.bx-pager-link(href='', ng-click="showSlide(0)", ng-class="{active: slideIndex == 0}") 1
 				.bx-pager-item
 					a.bx-pager-link(href='', ng-click="showSlide(1)", ng-class="{active: slideIndex == 1}") 2
-				//.bx-pager-item
-					a.bx-pager-link(href='', ng-click="showSlide(2)", ng-class="{active: slideIndex == 2}") 3

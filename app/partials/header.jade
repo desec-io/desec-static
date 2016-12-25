@@ -37,13 +37,6 @@ header.stiky-header(ng-controller="NavigationCtrl")
 							a(ui-sref="i18n.docs.dyndnsclient({lang: lang})",translate="menu.docs.dyndnsclient",ng-click="close()")
 						li
 							a(ui-sref="i18n.docs.updateapidetails({lang: lang})",translate="menu.docs.updateapidetails",ng-click="close()")
-				//li.has-dropdown
-					a(href="")
-						| {{ 'menu.tools.headline' | translate }}
-						i.fa.fa-caret-down
-					ul.dropdown
-						li
-							a(ui-sref="i18n.tools.logjam({lang: lang})",translate="menu.tools.logjam",ng-click="close()")
 				li.has-dropdown(ng-controller="LangChooserCtrl",ng-show="i18n.enabled")
 					a(href="",ng-show="i18n")
 						| Language

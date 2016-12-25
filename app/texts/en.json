@@ -60,7 +60,6 @@
         "success": {
             "headline": "{{domainname}} is ready to use!",
             "ipv6only": "Your domain only has an IPv6 address, but no IPv4 address.",
-            "logjam": "Check the services you provide with our scanner for the logjam vulnerability.",
             "text": "We have your IP address {{ipaddr}} on record."
         }
     },
@@ -136,55 +135,6 @@
         "content": "\u003cp\u003eWe provide secure DNS hosting with DNSSEC and DANE.\u003cbr /\u003eWe spread innovative technologies.\u003cbr /\u003eWe make the Internet a better place.\u003c/p\u003e",
         "title": "Security made in Germany."
     },
-    "logjamscanner": {
-        "error": {
-            "headline": "Error While Scanning",
-            "scan": "Scan Another Service",
-            "text": "Please make sure the hostname is valid, and there is a TLS-enabled service listening on the given TCP port."
-        },
-        "form": {
-            "host": {
-                "label": "Server host name"
-            },
-            "port": {
-                "label": "TCP port"
-            },
-            "presets": {
-                "label": "Presets"
-            },
-            "scan": "Scan Host",
-            "starttls": {
-                "label": "Use STARTTLS with protocol:",
-                "no": "(don't use STARTTLS, connect directly with TLS)"
-            }
-        },
-        "headline": "Logjam Scanner",
-        "intro": "\u003cp\u003eIn May 2015, researchers \u003ca href=\"https://weakdh.org/\"\u003epublished\u003c/a\u003e the logjam attack on TLS. Logjam uses a weakness in the TLS protocol to downgrade a connection to use 512bit Diffie-Hellman parameters. At the same time, the discrete logarithm problem, on which the security of a ephemeral Diffie-Hellman key exchange relies, can be broken within minutes for 512bit parameter size, after a precomputation of just a week. Together, these weaknesses enable a man-in-the-middle attacker to eavesdrop on the data transmitted over TLS and tamper with it.\u003c/p\u003e\n\u003cp\u003eTherefore, DH key exchange with 512bit should be considered insecure in general, and parameters with 1024bit or less should be considered to be broken for an attacker with nation-level computational resources.\u003c/p\u003e\n\u003cp\u003eThis test checks the ephemeral DH parameters size of a given server and checks if the connection is vulnerable to downgrade attacks. Green rating of this test is achieved by using more than 1024bit DH parameter size (or no ephemeral DH key exchange at all), and no support for 512bit DH key exchange (\"export ciphers\").\u003c/p\u003e\n\u003cp\u003edeSEC is an Internet security service provider. To learn more about us, please \u003ca href=\"#!/en/\"\u003evisit our web site\u003c/a\u003e.\u003c/p\u003e",
-        "result": {
-            "danger": {
-                "headline": "This Service is Seriously Insecure!",
-                "text": "\u003ca href=\"https://weakdh.org/sysadmin.html\"\u003eImmediately disable\u003c/a\u003e export cipher suites to secure your TLS connections!"
-            },
-            "good": {
-                "headline": "Looks good, your service is not affected by Logjam",
-                "text": "Your server does not support 512bit export-grade DH key exchange, and either uses large DH parameters, or does not use ephemeral DH at all."
-            },
-            "link": "Link to this scan",
-            "scan": "Scan Another Service",
-            "warning": {
-                "headline": "Ugh, Your Service Is Vulnerable To Nation-State Resource Attackers",
-                "text": "While the common criminal is unlikely to eavasdrop on your connections, large government agencies may. Best \u003ca href=\"https://weakdh.org/sysadmin.html\"\u003eupgrade\u003c/a\u003e to larger (at least 2048bit) DH parameters."
-            }
-        },
-        "scanning": {
-            "cancel": "Cancel Scan",
-            "headline": "Scanning, please hang on ..."
-        },
-        "teaser": {
-            "button": "Logjam-Scanner",
-            "text": "\u003cp\u003eWe developed a scanner for the Logjam vulnerability that is not only able to scan web servers on port 443, but also mail servers (IMAP, POP and SMTP) and jabber servers, to help people see if they need to update their servers and services.\u003c/p\u003e"
-        }
-    },
     "menu": {
         "docs": {
             "dyndnsclient": "Configure dynDNS Client",
@@ -198,10 +148,6 @@
             "dnshosting": "DNS Hosting",
             "dyndns": "dynDNS",
             "headline": "Services"
-        },
-        "tools": {
-            "headline": "Tools",
-            "logjam": "Logjam Scanner"
         }
     },
     "meta": {

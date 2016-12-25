@@ -27,14 +27,6 @@
 		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/product/dnshosting" />
 	</url>
 	<url>
-		<loc>https://desec.io/#!/en/tools/logjam-scanner</loc>
-		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/tools/logjam-scanner" />
-	</url>
-	<url>
-		<loc>https://desec.io/#!/de/tools/logjam-scanner</loc>
-		<xhtml:link rel="alternate" hreflang="en" href="https://desec.io/#!/en/tools/logjam-scanner" />
-	</url>
-	<url>
 		<loc>https://desec.io/#!/en/docs/dyndns-client</loc>
 		<xhtml:link rel="alternate" hreflang="de" href="https://desec.io/#!/de/docs/dyndns-client" />
 	</url>
