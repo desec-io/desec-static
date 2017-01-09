@@ -55,11 +55,11 @@ section.product.page-block
 
 
 				h3(id="option2") Option 2: Use ddclient
+				h4 Automatic configuration (Debian-/Ubuntu-based systems)
 				p
 					| If you're on Debian, Ubuntu or any other Linux distribution that provides you with the ddclient package, 
 					| you can use it to update your IP address with our servers. Although there is no official IPv6 support in 
 					| ddclient yet, you can use it to update your IPv6 address under certain conditions (see below).
-				h4 Install ddclient
 				p
 					| To install ddclient, use
 					code sudo apt-get install ddclient
@@ -71,8 +71,7 @@ section.product.page-block
 					code update.dedyn.io
 					| as the dynamic DNS server. Next, tell ddclient to use the "dyndns2" protocol to perform updates. Afterwards, enter the username and password we sent you via email upon registration.
 					| Last, tell ddclient how to detect your IP address, your domain name and the update interval.
-				
-				h4 Enable SSL by Default
+				h5 Enable SSL by Default
 				p
 					| ddclient doesn't use SSL by default. To fix this, open
 					code /etc/ddclient.conf
@@ -81,6 +80,20 @@ section.product.page-block
 					| above the
 					code server=
 					| statement.
+				
+				h4 Manual configuration (other systems)
+				p
+					| After installing ddclient, you can start with a
+					code ddclient.conf
+					| configuration file similar to this one, with the three placeholders replaced by your domain name and password:
+				pre
+					| protocol=dyndns2
+					| use=cmd, cmd='curl https://checkipv4.dedyn.io/'
+					| ssl=yes
+					| server=update.dedyn.io
+					| login=[domain]
+					| password='[password]'
+					| [domain]
 				
 				h4 Test Your Setup
 				p
