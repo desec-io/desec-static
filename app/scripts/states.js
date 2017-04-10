@@ -139,6 +139,11 @@ angular.module('desecClientApp').config(function ($urlRouterProvider, $stateProv
 			url: "/update-api-details",
 			templateUrl: "views/docs/update-api-details.html"
 		})
+
+		.state('i18n.docs.certbot', {
+			url: "/certbot",
+			templateUrl: "views/docs/certbot.html"
+		})
 	
 	$urlRouterProvider.otherwise('/');
 	

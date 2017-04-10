@@ -1,0 +1,54 @@
+section.product.page-block
+	.container
+		.row.page-header
+			h2 How to Obtain a Let's Encrypt Certificate for Your dedyn.io Domain
+			span
+				| deSEC supports the DNS challenge protocol to make it easy for you to obtain certificates for
+				| your domain name easily from anywhere. All you need is <a href="https://certbot.eff.org/">certbot</a>,
+				| your credentials and our certbot hook script.
+				| As always, we appreciate your feedback. <a href="mailto:input@desec.io">Shoot us an email!</a>
+		.row
+			.col-md-offset-3.col-md-9
+				p
+					| To obtain a Let's Encrypt Certificate for your dedyn.io domain, follow these steps.
+				
+				h3 Install Certbot
+				p.
+					There are many ways to install certbot, depending on your distribution and preference.
+					Please follow instructions on <a href="https://certbot.eff.org/">certbot.eff.org</a>.
+
+				h3 Install Hook Script
+				p.
+					To authenticate your dedyn.io domain against Let's Encrypt using the DNS challenge mechanism,
+					you will need to update your domain according to instructions provided by Let's Encrypt.
+					<a href="https://github.com/desec-io/certbot-hook">Our hook script</a> automatizes this process for you.
+					To use it, download the <a href="https://raw.githubusercontent.com/desec-io/certbot-hook/master/hook.sh">hook.sh</a>
+					and <a href="https://raw.githubusercontent.com/desec-io/certbot-hook/master/.dedynauth">.dedynauth</a>
+					files and place them into a directory of your choice.
+
+				h3 Set Up Hook Script
+				p.
+					You need to provide your dedyn.io credentials to the hook script,
+					so the script can update your domain information on your behalf.
+					To do so, edit the .dedynauth file to look something like
+				pre.
+					export DEDYN_TOKEN=your token
+					export DEDYN_NAME=yourdomain.dedyn.io
+				
+				h3 Run Certbot
+				p.
+					To obtain your certificate, run certbot in manual mode, setup to use the dedyn hook scripts you just downloaded.
+					For detailed instructions on how to use certbot, please refer to the certbot manual.
+					A typical use of certbot is listed below.
+					Please notice that you need to insert your domain name one more time.
+					(Also, for users not familiar with bash, please note that you need to remove the <code>\</code> if you reformat
+					the command to fit one line.)
+					Depending on how you installed certbot, you may need to replace <code>./certbot-auto</code> with just <code>certbot-auto</code>.
+					Please also note that the hook script may wait up to two minutes to be sure that the challenge was correctly published.
+				pre.
+					./certbot-auto --manual \
+					--text \
+					--preferred-challenges dns \
+					--manual-auth-hook ./hook.sh \
+					-d "YOURDOMAINNAME.dedyn.io" \
+					certonly

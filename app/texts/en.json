@@ -141,6 +141,7 @@
     },
     "menu": {
         "docs": {
+            "certbot": "Obtain Let's Encrypt Certificate",
             "dyndnsclient": "Configure dynDNS Client",
             "headline": "Docs",
             "updateapidetails": "Update API Details"
