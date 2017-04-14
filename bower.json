@@ -11,12 +11,12 @@
     "angular-sanitize": "~1.3.0",
     "angular-touch": "~1.3.0",
     "angular-route": "~1.3.0",
-    "ultima": "git@github.com:nils-wisiol/ultima",
+    "ultima": "./ultima",
     "angular-translate": "~2.5.2",
     "angular-ui-router": "~0.2.13",
     "angular-translate-loader-static-files": "~2.5.2",
     "angular-mailchimp": "*",
-    "angulartics": "~0.17.2",
+    "angulartics": "~1.0",
     "angulartics-piwik": "~1.0.4"
   },
   "devDependencies": {
