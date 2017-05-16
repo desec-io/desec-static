@@ -1,7 +1,7 @@
 FROM nginx:stable
 
 RUN apt-get update \
-	&& apt-get install -y curl \
+	&& apt-get install -y curl gnupg \
 	&& curl -sL https://deb.nodesource.com/setup_6.x | bash - \
 	&& apt-get update \
 	&& apt-get install -y --no-install-recommends bzip2 git nodejs ruby-compass \
