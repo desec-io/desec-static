@@ -45,6 +45,7 @@ angular.module('desecClientApp')
 			$http.post('/api/v1/auth/register/', {
 				email: email,
 				password: password,
+				dyn: true,
 			})
 			.success(function() {
 					deferred.resolve(email);

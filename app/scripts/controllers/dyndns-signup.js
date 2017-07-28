@@ -44,7 +44,6 @@ angular.module('desecClientApp')
 		function registerDomain() {
 			var d = new domain({
 				'name': $scope.domain + '.dedyn.io',
-				'dyn': true
 			});
 			d.$post(
 				null,
