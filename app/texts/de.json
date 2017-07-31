@@ -60,7 +60,7 @@
         "success": {
             "headline": "{{domainname}} ist bereit!",
             "ipv6only": "Ihre Domain hat aktuell nur eine IPv6-Adresse, jedoch keine IPv4-Adresse.",
-            "text": "Sie haben {{ipaddr}} als IP-Adresse hinterlegt."
+            "text": "Sie haben {{ipaddr}} als IP-Adresse hinterlegt. \u003ca href=\"#!/en/docs/certbot\"\u003eBesorgen Sie jetzt ein Let's Encrypt Zertifikat für Ihre Domain.\u003c/a\u003e"
         }
     },
     "faq": {

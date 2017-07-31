@@ -60,7 +60,7 @@
         "success": {
             "headline": "{{domainname}} is ready to use!",
             "ipv6only": "Your domain only has an IPv6 address, but no IPv4 address.",
-            "text": "We have your IP address {{ipaddr}} on record."
+            "text": "We have your IP address {{ipaddr}} on record.  \u003ca href=\"#!/en/docs/certbot\"\u003eGet a Let's Encrypt certificate for your domain.\u003c/a\u003e"
         }
     },
     "faq": {
