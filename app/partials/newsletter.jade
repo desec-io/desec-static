@@ -31,6 +31,7 @@ div.wizard
 								label
 									input(type="checkbox", name="geodns", ng-init="mailchimp.GEODNS='plain'", ng-model="mailchimp.GEODNS", ng-true-value="'geodns'", ng-false-value="'plain'")
 									div(translate="products.beta.apply.geodns.label")
+							| {{'products.beta.apply.note'|translate}}
 		.wizard-step(ng-class="{active: mailchimp.result}")
 			.tabs
 				.tab.active.row

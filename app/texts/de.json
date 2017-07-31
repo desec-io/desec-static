@@ -102,7 +102,7 @@
             "title": "Ist die Anzahl der dynDNS-Updates pro Tag beschränkt?"
         },
         "q8": {
-            "content": "\u003cp\u003eDerzeit können A- und AAAA-Records kostenlos verwendet werden.\u003c/p\u003e\n\u003cp\u003eZusätzlich zum dynDNS-Service entwickeln wir auch einen umfassenden DNS-Dienst, der andere Record Types unterstützen wird. \u003ca href=\"#!/de/product/dnshosting\"\u003eMelden Sie sich zum Betatest an\u003c/a\u003e, um auf dem Laufenden zu bleiben.\u003c/p\u003e",
+            "content": "\u003cp\u003eDerzeit können A- und AAAA-Records kostenlos verwendet werden.\u003c/p\u003e\n\u003cp\u003eZusätzlich zum dynDNS-Service betreiben wir auch einen umfassenden DNS-Dienst, der andere Record Types unterstützt. \u003ca href=\"#!/de/product/dnshosting\"\u003eMelden Sie sich jetzt zum Beta-Test an!\u003c/a\u003e\u003c/p\u003e",
             "title": "Unterstützt dynDNS A-, AAAA-, TXT-, MX-, CNAME-Records?"
         },
         "q9": {
@@ -141,10 +141,11 @@
     },
     "menu": {
         "docs": {
-            "certbot": "Let's Encrypt Zertifikat beantragen",
-            "dyndnsclient": "dynDNS Client konfigurieren",
+            "certbot": "dynDNS: Zertifikat beantragen (Let's Encrypt)",
+            "dyndnsclient": "dynDNS: Client konfigurieren",
             "headline": "Docs",
-            "updateapidetails": "Update-API Details"
+            "restapi": "REST-API für DNS-Hosting",
+            "updateapidetails": "dynDNS: Update-API"
         },
         "donation": "Spenden",
         "git": "GitHub",
@@ -180,7 +181,7 @@
     },
     "product": {
         "dnshosting": {
-            "content": "\u003cp\u003eUnser Managed DNS Hosting Service bietet Ihnen neben den neuesten Sicherheitsstandards ein benutzerfreundliches Interface und hohe Verfügbarkeit. DNSSEC, DANE, IPv6 und REST API sind enthalten. Melden Sie sich kostenlos zum Test an und sehen Sie selbst!\u003c/p\u003e",
+            "content": "\u003cp\u003eUnser Managed DNS Hosting Service bietet Ihnen neben den neuesten Sicherheitsstandards ein benutzerfreundliches Interface und hohe Verfügbarkeit. DNSSEC, DANE, IPv6 und REST API sind enthalten. Probieren Sie es aus!\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eUnser kostenloser Beta-Test ist nun verfügbar.\u003c/strong\u003e Alle Features sind stabil benutzbar, mit Ausnahme der grafischen Benutzeroberfläche, welche später folgen wird. In der Zwischenzeit können Sie bereits unsere \u003ca href=\"/docs.html\"\u003egut dokumentierte\u003c/a\u003e REST-API nutzen.\u003c/p\u003e\n\n\u003cp\u003eInteressiert? Melden Sie sich hier an! Und wenn Ihnen unser Dienst gefällt, würde wir uns über eine kleine \u003ca href=\"/#!/de/donation\"\u003eSpende\u003c/a\u003e freuen, solange er kostenlos ist.\u003c/p\u003e",
             "title": "\u003cspan class=\"icon-earth\"\u003e\u003c/span\u003eDNS Hosting"
         },
         "dyndns": {
@@ -200,8 +201,9 @@
                 "geodns": {
                     "label": "Marktstudie (optional): Ich würde geoDNS, d.h. Besucherstandort-abhängige DNS-Antworten, für einen monatlichen Aufpreis von 25 € je Zone nutzen wollen."
                 },
-                "headline": "Jetzt zum kostenlosen Betatest anmelden",
+                "headline": "Jetzt zum kostenlosen Beta-Test anmelden",
                 "more": "weitere Adresse anmelden",
+                "note": "Nach der Anmeldung werden wir uns per E-Mail bei Ihnen melden und Ihnen mitteilen, wie Sie loslegen können.",
                 "product": {
                     "label": "Marktstudie (optional): Bevorzugter Tarif"
                 },
@@ -215,7 +217,7 @@
             "feature3": "IPv6",
             "feature4": "DNSSEC, DANE",
             "feature5": "REST-API",
-            "link": "Kostenlos für Betatest registrieren",
+            "link": "Kostenlos zum Beta-Test anmelden",
             "name": "DNS Hosting",
             "price": "ab 0 €",
             "pricing": {
@@ -237,7 +239,7 @@
                     "product3": "premium",
                     "product4": "gold"
                 },
-                "text": "\u003cp\u003eUm den DNS-Markt besser zu verstehen, haben wir einige Dummy-Tarife entwickelt. Wir möchten Sie bitten, an unserer Marktstudie teilzunehmen, indem Sie bei Ihrer Anmeldung zum Betatest angeben, welchen Tarif für Ihre Zwecke am geeignesten wäre.\u003c/p\u003e\n\u003cp\u003eDas vorgeschlagene Pricing richtet sich lediglich nach der Anzahl der DNS-Records; die Anzahl der Zonen und Queries ist nicht relevant.\u003c/p\u003e",
+                "text": "\u003cp\u003eUm den DNS-Markt besser zu verstehen, haben wir einige Dummy-Tarife entwickelt. Wir möchten Sie bitten, an unserer Marktstudie teilzunehmen, indem Sie bei Ihrer Anmeldung zum Beta-Test angeben, welchen Tarif für Ihre Zwecke am geeignesten wäre.\u003c/p\u003e\n\u003cp\u003eDas vorgeschlagene Pricing richtet sich lediglich nach der Anzahl der DNS-Records; die Anzahl der Zonen und Queries ist nicht relevant.\u003c/p\u003e",
                 "th": {
                     "nQueries": "Anzahl Queries",
                     "nRecords": "Anzahl DNS-Records",
