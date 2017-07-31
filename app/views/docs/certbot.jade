@@ -3,7 +3,7 @@ section.product.page-block
 		.row.page-header
 			h2 How to Obtain a Let's Encrypt Certificate for Your dedyn.io Domain
 			span
-				| deSEC supports the DNS challenge protocol to make it easy for you to obtain certificates for
+				| dynDNS by deSEC supports the DNS challenge protocol to make it easy for you to obtain certificates for
 				| your domain name easily from anywhere. All you need is <a href="https://certbot.eff.org/">certbot</a>,
 				| your credentials and our certbot hook script.
 				| As always, we appreciate your feedback. <a href="mailto:input@desec.io">Shoot us an email!</a>
@@ -43,10 +43,11 @@ section.product.page-block
 					Please notice that you need to insert your domain name one more time.
 					(Also, for users not familiar with bash, please note that you need to remove the <code>\</code> if you reformat
 					the command to fit one line.)
-					Depending on how you installed certbot, you may need to replace <code>./certbot-auto</code> with just <code>certbot-auto</code>.
+					Depending on how you installed certbot, you may need to replace <code>certbot</code> with <code>./certbot-auto</code>
+					(assuming that the <code>certbot-auto</code> executable is located in the current directory).
 					Please also note that the hook script may wait up to two minutes to be sure that the challenge was correctly published.
 				pre.
-					./certbot-auto --manual \
+					certbot --manual \
 					--text \
 					--preferred-challenges dns \
 					--manual-auth-hook ./hook.sh \
