@@ -276,7 +276,7 @@
                 },
                 "headline": "Sign up for dynDNS now (it's free)",
                 "signup": "sign up",
-                "success": "\u003cp\u003eCongratulations, your domain has been registered. We sent you an email with your account details.\u003c/p\u003e\n\n\u003cp\u003eWe may also have sent you a second email with a request to solve a captcha. In some cases, this is required before you can use your domain. Please also double-check your spam folder.\u003c/p\u003e"
+                "success": "\u003cp\u003e\u003cstrong\u003eCongratulations, your domain has been registered.\u003c/strong\u003e We sent you an email with your account details.\u003c/p\u003e\n\n\u003cp\u003eWe may also have sent you a second email with a request to solve a captcha. In some cases, this is required before you can use your domain. Please also double-check your spam folder.\u003c/p\u003e"
             },
             "teaser": {
                 "text": "\u003cp\u003edynDNS gives your Internet router at home a name, so that you can access it remotely to control your smart home, access your network attached storage device or connect to your PC at home.\u003c/p\u003e\u003cp\u003edeSEC offers this service permanently for free and secured with DNSSEC for home use.\u003c/p\u003e"

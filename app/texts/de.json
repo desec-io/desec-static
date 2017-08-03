@@ -276,7 +276,7 @@
                 },
                 "headline": "Jetzt kostenlos für dynDNS anmelden",
                 "signup": "Anmelden",
-                "success": "\u003cp\u003eGlückwunsch, Ihre Domain wurde registriert. Wir haben Ihnen eine E-Mail mit Ihren Zugangsdaten zugeschickt.\u003c/p\u003e\n\n\u003cp\u003eEventuell haben Sie auch eine zweite E-Mail erhalten mit der Aufforderung, ein Captcha zu lösen, bevor Sie Ihre Domain in Betrieb nehmen können. Bitte überprüfen Sie ggf. Ihren Spam-Ordner.\u003c/p\u003e"
+                "success": "\u003cp\u003e\u003cstrong\u003eGlückwunsch, Ihre Domain wurde registriert.\u003c/strong\u003e Wir haben Ihnen eine E-Mail mit Ihren Zugangsdaten zugeschickt.\u003c/p\u003e\n\n\u003cp\u003eEventuell haben Sie auch eine zweite E-Mail erhalten mit der Aufforderung, ein Captcha zu lösen, bevor Sie Ihre Domain in Betrieb nehmen können. Bitte überprüfen Sie ggf. Ihren Spam-Ordner.\u003c/p\u003e"
             },
             "teaser": {
                 "text": "\u003cp\u003edynDNS gibt Ihrem Router zu Hause einen gleichbleibenden Namen. Damit können Sie beispielsweise von unterwegs auf Ihren heimischen Computer zugreifen, mit Ihrem Smart Home Verbindung aufnehmen oder auf Ihr NAS zugreifen.\u003c/p\u003e\u003cp\u003eDabei sichern wir als erster Anbieter alle Remote-Zugriffe auf Ihr Heimnetzwerk mit DNSSEC gegen Manipulation ab, und Sie können beruhigt von unterwegs auf Ihr Netzwerk zugreifen.\u003c/p\u003e"

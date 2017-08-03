@@ -968,6 +968,12 @@ invalid or an invalid <span class="docutils literal">type</span> was provided, <
 returned.  If the RRset could not be created for another reason (for example
 because another RRset with the same name and type exists already, or because
 not all required fields were provided), the API responds with <span class="docutils literal">400 Bad Request</span>.</p>
+<p>Note that the values of <span class="docutils literal">type</span> and <span class="docutils literal">subname</span> as well as the <span class="docutils literal">records</span>
+items are strings, and as such the JSON specification requires them to be
+enclosed in double quotes (with the quotes being part of the field value);
+your shell or programming language may require another layer of quotes!  By
+contrast, <span class="docutils literal">ttl</span> is an integer field, so the JSON value does not contain
+quotes.</p>
 </div>
 <div class="section" id="retrieving-all-rrsets-in-a-zone">
 <h2><a class="toc-backref" href="#id14">Retrieving all RRsets in a Zone</a></h2>
@@ -1002,10 +1008,6 @@ parameter, like this:</p>
 <p>This approach also allows to retrieve all records associated with the zone
 apex (i.e. <span class="docutils literal">example.com</span> where <span class="docutils literal">subname</span> is empty), by querying
 <span class="docutils literal"><span class="pre">rrsets/?subname=</span></span>.</p>
-<p>Note the three dots after <span class="docutils literal">{subname}</span>.  You can think of them as
-abbreviating the rest of the DNS name.  This approach also allows to retrieve
-all records associated with the zone apex (i.e. <span class="docutils literal">example.com</span> where
-<span class="docutils literal">subname</span> is empty), by simply using the <span class="docutils literal"><span class="pre">rrsets/.../</span></span>.</p>
 </div>
 </div>
 <div class="section" id="retrieving-a-specific-rrset">
@@ -1017,11 +1019,12 @@ like this:</p>
 <pre class="literal-block">http GET \
     https://desec.io/api/v1/domains/{domain}/rrsets/{subname}.../{type}/ \
     Authorization:&quot;Token {token}&quot;</pre>
-<p>Note the three dots after <span class="docutils literal">{subname}</span>; you can think of them as abbreviating
-the rest of the DNS name.  This will only return one RRset (i.e., the response
-is not a JSON array).</p>
-<p>The response status code is <span class="docutils literal">200 OK</span> if the requested RRset exists, and
-<span class="docutils literal">404 Not Found</span> otherwise.</p>
+<p>This will return only one RRset (i.e., the response is not a JSON array).  The
+response status code is <span class="docutils literal">200 OK</span> if the requested RRset exists, and <span class="docutils literal">404 Not Found</span> otherwise.</p>
+<p>Note the three dots after <span class="docutils literal">{subname}</span>.  You can think of them as abbreviating
+the rest of the DNS name.  To retrieve all records associated with the zone
+apex (i.e. <span class="docutils literal">example.com</span> where <span class="docutils literal">subname</span> is empty), simply use
+<span class="docutils literal"><span class="pre">rrsets/.../</span></span>.</p>
 </div>
 <div class="section" id="modifying-an-rrset">
 <h2><a class="toc-backref" href="#id18">Modifying an RRset</a></h2>
@@ -1217,12 +1220,8 @@ by <span class="docutils literal">subname</span> or <span class="docutils litera
 </div>
 <div class="section" id="getting-help">
 <h1><a class="toc-backref" href="#id25">Getting Help</a></h1>
-<p>There are several ways of getting help:</p>
-<ul class="simple">
-<li><p>Check out the documentation and usage examples at <a class="reference external" href="https://desec.io/">https://desec.io/</a></p></li>
-<li><p>This documentation</p></li>
-<li><p>Shoot us an email at <a class="reference external" href="mailto:support&#64;desec.io">support&#64;desec.io</a></p></li>
-</ul>
+<p>If you need help beyond this documentation, please do not hesitate and
+shoot us an email at <a class="reference external" href="mailto:support&#64;desec.io">support&#64;desec.io</a>.</p>
 </div>
 <div class="section" id="about-this-document">
 <h1><a class="toc-backref" href="#id26">About this document</a></h1>
@@ -1232,7 +1231,7 @@ at <a class="reference external" href="https://github.com/desec-io/desec-stack">
 </div>
 <div class="footer">
 <hr class="footer" />
-<p>Generated on: 2017-07-31.
+<p>Generated on: 2017-08-03.
 </p>
 
 </div>
