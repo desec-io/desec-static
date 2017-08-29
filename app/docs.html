@@ -1086,13 +1086,14 @@ problem to enable such functionality.</p>
 order to secure the data stored in your zones.  RRsets of this type are
 generated and served automatically by our nameservers.  However, you can
 neither read nor manipulate these RRsets through the API.  When attempting
-such operations, <span class="docutils literal">403 Forbidden</span> is returned.</p>
+such operations, <span class="docutils literal">403 Forbidden</span> or <span class="docutils literal">400 Bad Request</span> is returned,
+respectively.</p>
 </dd>
 </dl>
 <dl id="soa-caveat">
 <dt><span class="docutils literal">SOA</span> record</dt>
 <dd><p>The <span class="docutils literal">SOA</span> record cannot be read or written through this interface.  When
-attempting to create, modify or otherwise access an <span class="docutils literal">SOA</span> record, <span class="docutils literal">403 Forbidden</span> is returned.</p>
+attempting to create, modify or otherwise access an <span class="docutils literal">SOA</span> record, <span class="docutils literal">400 Bad Request</span> or <span class="docutils literal">403 Forbidden</span> is returned, respectively.</p>
 <p>The rationale behind this is that the content of the <span class="docutils literal">SOA</span> record is
 entirely determined by the DNS operator, and users should not have to bother
 with this kind of metadata.  Upon zone changes, the backend automatically
@@ -1231,7 +1232,7 @@ at <a class="reference external" href="https://github.com/desec-io/desec-stack">
 </div>
 <div class="footer">
 <hr class="footer" />
-<p>Generated on: 2017-08-03.
+<p>Generated on: 2017-08-29.
 </p>
 
 </div>
