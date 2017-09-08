@@ -596,14 +596,17 @@ td {
 <li><p><a class="reference internal" href="#creating-a-domain" id="id6">Creating a Domain</a></p></li>
 <li><p><a class="reference internal" href="#listing-domains" id="id7">Listing Domains</a></p></li>
 <li><p><a class="reference internal" href="#retrieving-a-specific-domain" id="id8">Retrieving a Specific Domain</a></p></li>
-<li><p><a class="reference internal" href="#modifying-a-domain-deprecated" id="id9">Modifying a Domain (deprecated)</a></p></li>
-<li><p><a class="reference internal" href="#deleting-a-domain" id="id10">Deleting a Domain</a></p></li>
+<li><p><a class="reference internal" href="#deleting-a-domain" id="id9">Deleting a Domain</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#retrieving-and-manipulating-dns-information" id="id11">Retrieving and Manipulating DNS Information</a></p>
+<li><p><a class="reference internal" href="#retrieving-and-manipulating-dns-information" id="id10">Retrieving and Manipulating DNS Information</a></p>
 <ul>
-<li><p><a class="reference internal" href="#rrset-field-reference" id="id12">RRset Field Reference</a></p></li>
-<li><p><a class="reference internal" href="#creating-an-rrset" id="id13">Creating an RRset</a></p></li>
+<li><p><a class="reference internal" href="#rrset-field-reference" id="id11">RRset Field Reference</a></p></li>
+<li><p><a class="reference internal" href="#creating-an-rrset" id="id12">Creating an RRset</a></p>
+<ul>
+<li><p><a class="reference internal" href="#creating-a-tlsa-rrset" id="id13">Creating a TLSA RRset</a></p></li>
+</ul>
+</li>
 <li><p><a class="reference internal" href="#retrieving-all-rrsets-in-a-zone" id="id14">Retrieving all RRsets in a Zone</a></p>
 <ul>
 <li><p><a class="reference internal" href="#filtering-by-record-type" id="id15">Filtering by Record Type</a></p></li>
@@ -630,11 +633,15 @@ td {
 <div class="section" id="introduction">
 <h1><a class="toc-backref" href="#id2">Introduction</a></h1>
 <p>The deSEC DNS API is a REST interface that allows easy management of DNS
-information. The interface design aims for simplicity so that tasks such as
+information.  The interface design aims for simplicity so that tasks such as
 creating domains and manipulating DNS records can be handled with ease and in
 an intuitive fashion.</p>
-<p>We recommend using <a class="reference external" href="https://httpie.org/">HTTPie</a> for communication with the API, but <span class="docutils literal">curl</span> or
-any other decent HTTP client will work as well.</p>
+<p>Server-side operations, such as creation of domains or DNS records, expect
+JSON-formatted user input in the body of the <span class="docutils literal">POST</span>, <span class="docutils literal">PATCH</span>, or <span class="docutils literal">PUT</span>
+request (see below).  The request is required to come with a <span class="docutils literal"><span class="pre">Content-Type:</span> application/json</span> header field.</p>
+<p>For communication with the API, we recommend using <a class="reference external" href="https://httpie.org/">HTTPie</a> which takes care
+of JSON encoding and the content type header automatically.  Of course,
+<span class="docutils literal">curl</span> or any other decent HTTP client will work as well.</p>
 </div>
 <div class="section" id="user-registration-and-management">
 <h1><a class="toc-backref" href="#id3">User Registration and Management</a></h1>
@@ -670,61 +677,10 @@ section.</p>
             &quot;keytype&quot;: &quot;csk&quot;
         },
         ...
-    ],
-    &quot;arecord&quot;: &quot;192.0.2.1&quot;,             # or null
-    &quot;aaaarecord&quot;: &quot;2001:db8::deec:1&quot;,   # or null
-    &quot;acme_challenge&quot;: &quot;&quot;
+    ]
 }</pre>
 <p>Field details:</p>
 <dl>
-<dt><span class="docutils literal">aaaarecord</span></dt>
-<dd><dl class="field-list simple">
-<dt>Access mode</dt>
-<dd><p>read, write</p>
-</dd>
-<dt>Notice</dt>
-<dd><p>this field is deprecated</p>
-</dd>
-</dl>
-<p>String with an IPv6 address that will be written to the <span class="docutils literal">AAAA</span> RRset of
-the zone apex, or <span class="docutils literal">null</span>.  If <span class="docutils literal">null</span>, the RRset is removed.</p>
-<p>This was originally introduced to set an IPv6 address for deSEC's dynamic
-DNS service dedyn.io.  However, it has some drawbacks (redundancy with
-<a class="reference internal" href="#modifying-an-rrset">Modifying an RRset</a> as well as inability to set multiple addresses).</p>
-<p><em>Do not rely on this field; it may be removed in the future.</em></p>
-</dd>
-<dt><span class="docutils literal">acme_challenge</span></dt>
-<dd><dl class="field-list simple">
-<dt>Access mode</dt>
-<dd><p>read, write</p>
-</dd>
-<dt>Notice</dt>
-<dd><p>this field is deprecated</p>
-</dd>
-</dl>
-<p>String to be written to the <span class="docutils literal">TXT</span> RRset of <span class="docutils literal"><span class="pre">_acme-challenge.{name}</span></span>.
-To set an empty challenge, use <span class="docutils literal">&quot;&quot;</span>.  The maximum length is 255.</p>
-<p>This was originally introduced to set an ACME challenge to allow obtaining
-certificates from Let's Encrypt using deSEC's dynamic DNS service
-dedyn.io.  However, it is redundant with <a class="reference internal" href="#modifying-an-rrset">Modifying an RRset</a>.</p>
-<p><em>Do not rely on this field; it may be removed in the future.</em></p>
-</dd>
-<dt><span class="docutils literal">arecord</span></dt>
-<dd><dl class="field-list simple">
-<dt>Access mode</dt>
-<dd><p>read, write</p>
-</dd>
-<dt>Notice</dt>
-<dd><p>this field is deprecated</p>
-</dd>
-</dl>
-<p>String with an IPv4 address that will be written to the <span class="docutils literal">A</span> RRset of the
-zone apex, or <span class="docutils literal">null</span>.  If <span class="docutils literal">null</span>, the RRset is removed.</p>
-<p>This was originally introduced to set an IPv4 address for deSEC's dynamic
-DNS service dedyn.io.  However, it has some drawbacks (redundancy with
-<a class="reference internal" href="#modifying-an-rrset">Modifying an RRset</a> as well as inability to set multiple addresses).</p>
-<p><em>Do not rely on this field; it may be removed in the future.</em></p>
-</dd>
 <dt><span class="docutils literal">keys</span></dt>
 <dd><dl class="field-list simple">
 <dt>Access mode</dt>
@@ -774,12 +730,10 @@ endpoint, like this:</p>
     https://desec.io/api/v1/domains/ \
     Authorization:&quot;Token {token}&quot; \
     name:='&quot;example.com&quot;'</pre>
-<p>Only the <span class="docutils literal">name</span> field is mandatory; <span class="docutils literal">arecord</span>, <span class="docutils literal">acme_challenge</span>, and
-<span class="docutils literal">aaaarecord</span> are optional and deprecated.</p>
+<p>Only the <span class="docutils literal">name</span> field is mandatory.</p>
 <p>Upon success, the response status code will be <span class="docutils literal">201 Created</span>, with the
 domain object contained in the response body.  <span class="docutils literal">400 Bad Request</span> is returned
-if the request contained malformed data such as syntactically invalid field
-contents for <span class="docutils literal">arecord</span> or <span class="docutils literal">aaaarecord</span>.  If the object could not be
+if the request contained malformed data.  If the object could not be
 created although the request was wellformed, the API responds with <span class="docutils literal">403 Forbidden</span> if the maximum number of domains for this user has been reached,
 and with <span class="docutils literal">409 Conflict</span> otherwise.  This can happen, for example, if there
 already is a domain with the same name or if the domain name is considered
@@ -811,39 +765,15 @@ any domains; in this case, the response body will be an empty JSON array.</p>
 returns the domain object in the reponse body.  Otherwise, the return status
 code is <span class="docutils literal">404 Not Found</span>.</p>
 </div>
-<div class="section" id="modifying-a-domain-deprecated">
-<h2><a class="toc-backref" href="#id9">Modifying a Domain (deprecated)</a></h2>
-<p>To modify a domain, use the endpoint that you would also use to retrieve that
-specific domain.  The API allows changing the values of the <span class="docutils literal">arecord</span>,
-<span class="docutils literal">acme_challenge</span>, and <span class="docutils literal">aaaarecord</span> fields using the <span class="docutils literal">PATCH</span> method.
-Only the field(s) provided in the request will be modified, with everything
-else untouched.  Examples:</p>
-<pre class="literal-block"># Set AAAA record
-http PATCH \
-    https://desec.io/api/v1/domains/{name}/ \
-    Authorization:&quot;Token {token}&quot; \
-    aaaarecord:='&quot;2001:db8::deec:1&quot;'
-
-# Remove A record and set empty ACME challenge
-http PATCH \
-    https://desec.io/api/v1/domains/{name}/ \
-    Authorization:&quot;Token {token}&quot; \
-    acme_challenge:='&quot;&quot;' arecord:='null'</pre>
-<p>If the domain was updated successfully, the response status code is <span class="docutils literal">200 OK</span>
-and the updated domain object is returned in the response body.  In case of
-malformed request data such as syntactically invalid field contents for
-<span class="docutils literal">arecord</span> or <span class="docutils literal">aaaarecord</span>, <span class="docutils literal">400 Bad Request</span> is returned.  If the domain
-does not exist or you don't own it, the status code is <span class="docutils literal">404 Not Found</span>.</p>
-</div>
 <div class="section" id="deleting-a-domain">
-<h2><a class="toc-backref" href="#id10">Deleting a Domain</a></h2>
+<h2><a class="toc-backref" href="#id9">Deleting a Domain</a></h2>
 <p>To delete a domain, send a <span class="docutils literal">DELETE</span> request to the endpoint representing the
 domain.  Upon success or if the domain did not exist or was not yours in the
 first place, the response status code is <span class="docutils literal">204 No Content</span>.</p>
 </div>
 </div>
 <div class="section" id="retrieving-and-manipulating-dns-information">
-<h1><a class="toc-backref" href="#id11">Retrieving and Manipulating DNS Information</a></h1>
+<h1><a class="toc-backref" href="#id10">Retrieving and Manipulating DNS Information</a></h1>
 <p>All DNS information is composed of so-called <em>Resource Record Sets</em>
 (<em>RRsets</em>).  An RRset is the set of all Resource Records of a given record
 type for a given name.  For example, the name <span class="docutils literal">example.com</span> may have an
@@ -862,7 +792,7 @@ that don't exist or you don't own, the API responds with a <span class="docutils
 status code.  For a quick overview of the available endpoints, methods, and
 operations, see <a class="reference internal" href="#endpoint-reference">Endpoint Reference</a>.</p>
 <div class="section" id="rrset-field-reference">
-<span id="rrset-object"></span><h2><a class="toc-backref" href="#id12">RRset Field Reference</a></h2>
+<span id="rrset-object"></span><h2><a class="toc-backref" href="#id11">RRset Field Reference</a></h2>
 <p>A JSON object representing an RRset has the following structure:</p>
 <pre class="literal-block">{
     &quot;domain&quot;: &quot;example.com&quot;,
@@ -953,7 +883,7 @@ cannot access the <span class="docutils literal">SOA</span>, see <a class="refer
 </dl>
 </div>
 <div class="section" id="creating-an-rrset">
-<h2><a class="toc-backref" href="#id13">Creating an RRset</a></h2>
+<h2><a class="toc-backref" href="#id12">Creating an RRset</a></h2>
 <p>To create a new RRset, simply issue a <span class="docutils literal">POST</span> request to the
 <span class="docutils literal"><span class="pre">/api/v1/domains/{domain}/rrsets/</span></span> endpoint, like this:</p>
 <pre class="literal-block">http POST \
@@ -974,6 +904,26 @@ enclosed in double quotes (with the quotes being part of the field value);
 your shell or programming language may require another layer of quotes!  By
 contrast, <span class="docutils literal">ttl</span> is an integer field, so the JSON value does not contain
 quotes.</p>
+<div class="section" id="creating-a-tlsa-rrset">
+<h3><a class="toc-backref" href="#id13">Creating a TLSA RRset</a></h3>
+<p>A common use case is the creation of a <span class="docutils literal">TLSA</span> RRset which carries information
+about the TLS certificate used by the server that the domain points to.  For
+example, to create a <span class="docutils literal">TLSA</span> RRset for <span class="docutils literal">www.example.com</span>, you can run:</p>
+<pre class="literal-block">http POST \
+    https://desec.io/api/v1/domains/example.com/rrsets/ \
+    Authorization:&quot;Token {token}&quot; \
+    subname:='&quot;_443._tcp.www&quot;' type:='&quot;TLSA&quot;' ttl:=3600 \
+    records:='[&quot;3 1 1 11501875615d4.....dd122bbf9190&quot;]'</pre>
+<p><strong>Note:</strong> The <span class="docutils literal">subname</span> is prefixed with <span class="docutils literal"><span class="pre">_{port}._{transport_protocol}</span></span>.
+For a HTTPS server, this will usually be <span class="docutils literal">_443._tcp</span> (for an otherwise empty
+<span class="docutils literal">subname</span>), or <span class="docutils literal">_443._tcp.www</span> for the common <span class="docutils literal">www</span> domain prefix.  For
+other use cases, the values have to be adapted accordingly (e.g. <span class="docutils literal">_993._tcp</span>
+for an IMAPS server).</p>
+<p>To generate the <span class="docutils literal">TLSA</span> from your certificate, you can use a tool like
+<a class="reference external" href="https://www.huque.com/bin/gen_tlsa">https://www.huque.com/bin/gen_tlsa</a>.  We are planning to provide a tool that is
+connected directly to our API in the future.  For full detail on how <span class="docutils literal">TLSA</span>
+records work, please refer to RFC 6698.</p>
+</div>
 </div>
 <div class="section" id="retrieving-all-rrsets-in-a-zone">
 <h2><a class="toc-backref" href="#id14">Retrieving all RRsets in a Zone</a></h2>
@@ -1232,7 +1182,7 @@ at <a class="reference external" href="https://github.com/desec-io/desec-stack">
 </div>
 <div class="footer">
 <hr class="footer" />
-<p>Generated on: 2017-08-29.
+<p>Generated on: 2017-09-08.
 </p>
 
 </div>
