@@ -42,7 +42,7 @@ angular.module('desecClientApp')
 		function register(email, password) {
 			var deferred = $q.defer();
 			
-			$http.post('/api/v1/auth/register/', {
+			$http.post('/api/v1/auth/users/create/', {
 				email: email,
 				password: password,
 				dyn: true,
@@ -66,7 +66,7 @@ angular.module('desecClientApp')
 			}
 			
 			state = 1;
-			$http.post('/api/v1/auth/login/', {
+			$http.post('/api/v1/auth/token/create/', {
 				email: email,
 				password: password,
 			})
@@ -93,7 +93,7 @@ angular.module('desecClientApp')
 			}
 			
 			state = 3;
-			$http.post('/api/v1/auth/logout/')
+			$http.post('/api/v1/auth/token/destroy/')
 				.success(function(data) {
 					state = 0;
 					_username = undefined;
