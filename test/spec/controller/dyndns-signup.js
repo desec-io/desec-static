@@ -43,9 +43,9 @@ describe('dyndns signup controller', function () {
 			beforeEach(function() {
 				scope.email = 'shitman@desec.io';
 				scope.domain = 'shitman';
-				$httpBackend.expect('POST', '/api/v1/auth/register')
+				$httpBackend.expect('POST', '/api/v1/auth/users/create/')
 					.respond(200, JSON.stringify({'email': 'shitman@desec.io'}));
-				$httpBackend.expect('POST', '/api/v1/auth/login')
+				$httpBackend.expect('POST', '/api/v1/auth/token/create/')
 					.respond(200, JSON.stringify({'auth_token': 'UnitTestAuthToken'}));
 				$httpBackend.expect('POST', '/api/v1/domains/')
 					.respond(200);
@@ -67,7 +67,7 @@ describe('dyndns signup controller', function () {
 			beforeEach(function() {
 				scope.email = 'alreadytaken@desec.io';
 				scope.domain = 'doesntmatter';
-				$httpBackend.expect('POST', '/api/v1/auth/register')
+				$httpBackend.expect('POST', '/api/v1/auth/users/create/')
 					.respond(400);
 				scope.signup();
 				$httpBackend.flush();
@@ -85,7 +85,7 @@ describe('dyndns signup controller', function () {
 			});
 			
 			it('attepts to re-register on the second call', function() {
-				$httpBackend.expect('POST', '/api/v1/auth/register')
+				$httpBackend.expect('POST', '/api/v1/auth/users/create/')
 					.respond(400);
 				scope.signup();
 				$httpBackend.flush();
@@ -103,9 +103,9 @@ describe('dyndns signup controller', function () {
 			beforeEach(function() {
 				scope.email = 'alreadytaken@desec.io';
 				scope.domain = 'doesntmatter';
-				$httpBackend.expect('POST', '/api/v1/auth/register')
+				$httpBackend.expect('POST', '/api/v1/auth/users/create/')
 					.respond(201);
-				$httpBackend.expect('POST', '/api/v1/auth/login')
+				$httpBackend.expect('POST', '/api/v1/auth/token/create/')
 					.respond(400);
 				scope.signup();
 				$httpBackend.flush();
@@ -125,9 +125,9 @@ describe('dyndns signup controller', function () {
 			beforeEach(function() {
 				scope.email = 'alreadytaken@desec.io';
 				scope.domain = 'doesntmatter';
-				$httpBackend.expect('POST', '/api/v1/auth/register')
+				$httpBackend.expect('POST', '/api/v1/auth/users/create/')
 					.respond(201);
-				$httpBackend.expect('POST', '/api/v1/auth/login')
+				$httpBackend.expect('POST', '/api/v1/auth/token/create/')
 					.respond(200, JSON.stringify({'auth_token': 'UnitTestAuthToken'}));
 				$httpBackend.expect('POST', '/api/v1/domains/')
 					.respond(400);

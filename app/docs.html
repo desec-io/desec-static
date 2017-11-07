@@ -646,11 +646,11 @@ of JSON encoding and the content type header automatically.  Of course,
 <div class="section" id="user-registration-and-management">
 <h1><a class="toc-backref" href="#id3">User Registration and Management</a></h1>
 <p>User management is handled via Django's djoser library.  For usage, please
-check the <a class="reference external" href="https://djoser.readthedocs.io/en/latest/endpoints.html">djoser endpoint documentation</a>.</p>
+check the <a class="reference external" href="https://djoser.readthedocs.io/en/latest/getting_started.html#available-endpoints">djoser endpoint documentation</a>.</p>
 <p>Most operations require authentication of the domain owner using a token that
-is returned by djoser's <span class="docutils literal">login/</span> endpoint.  To authenticate, this token is
-transmitted via the HTTP <span class="docutils literal">Authorization</span> header, as shown in the examples in
-this document.</p>
+is returned by djoser's <span class="docutils literal">token/create/</span> endpoint.  To authenticate, this
+token is transmitted via the HTTP <span class="docutils literal">Authorization</span> header, as shown in the
+examples in this document.</p>
 </div>
 <div class="section" id="domain-management">
 <h1><a class="toc-backref" href="#id4">Domain Management</a></h1>
@@ -1112,7 +1112,7 @@ create a <span class="docutils literal">TXT</span> RRset with HTTPie:</p>
 <div class="section" id="endpoint-reference">
 <h1><a class="toc-backref" href="#id24">Endpoint Reference</a></h1>
 <p>Endpoints related to <a class="reference internal" href="#user-registration-and-management">User Registration and Management</a> are described in the
-<a class="reference external" href="https://djoser.readthedocs.io/en/latest/endpoints.html">djoser endpoint documentation</a>.  The following table summarizes basic
+<a class="reference external" href="https://djoser.readthedocs.io/en/latest/getting_started.html#available-endpoints">djoser endpoint documentation</a>.  The following table summarizes basic
 information about the deSEC API endpoints used for <a class="reference internal" href="#domain-management">Domain Management</a> and
 <a class="reference internal" href="#retrieving-and-manipulating-dns-information">Retrieving and Manipulating DNS Information</a>.</p>
 <table>
@@ -1182,7 +1182,7 @@ at <a class="reference external" href="https://github.com/desec-io/desec-stack">
 </div>
 <div class="footer">
 <hr class="footer" />
-<p>Generated on: 2017-09-08.
+<p>Generated on: 2017-11-07.
 </p>
 
 </div>

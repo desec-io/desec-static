@@ -52,15 +52,15 @@ describe('auth service', function () {
 			expect(auth.user.username).toBe(usernameBefore);
 		});
 		
-		it('POSTs the email address and password to /api/v1/auth/register', function() {
-			$httpBackend.expect('POST', '/api/v1/auth/register', {'email':'shitman@desec.io', 'password':'shit'})
+		it('POSTs the email address and password to /api/v1/auth/users/create/', function() {
+			$httpBackend.expect('POST', '/api/v1/auth/users/create/', {'email':'shitman@desec.io', 'password':'shit'})
 				.respond(201, '{"email":"shitman@desec.io"}');
 			auth.register('shitman@desec.io', 'shit');
 			$httpBackend.flush();
 		});
 
 		it('resolves the returned promise when successfully registered', function() {
-			$httpBackend.expect('POST', '/api/v1/auth/register', {'email':'shitman@desec.io', 'password':'shit'})
+			$httpBackend.expect('POST', '/api/v1/auth/users/create/', {'email':'shitman@desec.io', 'password':'shit'})
 				.respond(200, '{"auth_token":"ThisIsATestAuthToken"}');
 			var result = 0;
 			auth.register('shitman@desec.io', 'shit').then(function() { result = 1; }, function() { result = 2; });
@@ -69,7 +69,7 @@ describe('auth service', function () {
 		});
 
 		it('rejects the returned promise when registration fails', function() {
-			$httpBackend.expect('POST', '/api/v1/auth/register', {'email':'shitman@desec.io', 'password':'shit'})
+			$httpBackend.expect('POST', '/api/v1/auth/users/create/', {'email':'shitman@desec.io', 'password':'shit'})
 				.respond(400);
 			var result = 0;
 			auth.register('shitman@desec.io', 'shit').then(function() { result = 1; }, function() { result = 2; });
@@ -85,15 +85,15 @@ describe('auth service', function () {
 			expect(auth.user.username).toBeUndefined();
 		});
 		
-		it('POSTs the credentials to /api/v1/auth/login', function() {
-			$httpBackend.expect('POST', '/api/v1/auth/login', {'email':'johndoe@desec.io', 'password':'john'})
+		it('POSTs the credentials to /api/v1/auth/token/create/', function() {
+			$httpBackend.expect('POST', '/api/v1/auth/token/create/', {'email':'johndoe@desec.io', 'password':'john'})
 				.respond(200, '{"auth_token":"ThisIsATestAuthToken"}');
 			auth.login('johndoe@desec.io', 'john');
 			$httpBackend.flush();
 		});
 		
 		it('sets the received auth token to be used with $http', function() {
-			$httpBackend.expect('POST', '/api/v1/auth/login', {'email':'johndoe@desec.io', 'password':'john'})
+			$httpBackend.expect('POST', '/api/v1/auth/token/create/', {'email':'johndoe@desec.io', 'password':'john'})
 				.respond(200, '{"auth_token":"ThisIsATestAuthToken"}');
 			auth.login('johndoe@desec.io', 'john');
 			$httpBackend.flush();
@@ -101,7 +101,7 @@ describe('auth service', function () {
 		});
 		
 		it('resolves the returned promise when successfully logged in', function() {
-			$httpBackend.expect('POST', '/api/v1/auth/login', {'email':'johndoe@desec.io', 'password':'john'})
+			$httpBackend.expect('POST', '/api/v1/auth/token/create/', {'email':'johndoe@desec.io', 'password':'john'})
 				.respond(200, '{"auth_token":"ThisIsATestAuthToken"}');
 			var result = 0;
 			auth.login('johndoe@desec.io', 'john').then(function() { result = 1; }, function() { result = 2; });
@@ -111,7 +111,7 @@ describe('auth service', function () {
 		});
 
 		it('rejects the returned promise when login fails', function() {
-			$httpBackend.expect('POST', '/api/v1/auth/login', {'email':'johndoe@desec.io', 'password':'john'})
+			$httpBackend.expect('POST', '/api/v1/auth/token/create/', {'email':'johndoe@desec.io', 'password':'john'})
 				.respond(400);
 			var result = 0;
 			auth.login('johndoe@desec.io', 'john').then(function() { result = 1; }, function() { result = 2; });
@@ -125,27 +125,27 @@ describe('auth service', function () {
 		
 		beforeEach(function() {
 			// simulate login
-			$httpBackend.expect('POST', '/api/v1/auth/login', {'email':'johndoe@desec.io', 'password':'john'})
+			$httpBackend.expect('POST', '/api/v1/auth/token/create/', {'email':'johndoe@desec.io', 'password':'john'})
 				.respond(200, '{"auth_token":"ThisIsATestAuthToken"}');
 			auth.login('johndoe@desec.io', 'john');
 			$httpBackend.flush();
 		});
 
-		it('POSTs to /api/v1/auth/logout', function() {
-			$httpBackend.expect('POST', '/api/v1/auth/logout').respond(200);
+		it('POSTs to /api/v1/auth/token/destroy/', function() {
+			$httpBackend.expect('POST', '/api/v1/auth/token/destroy/').respond(200);
 			auth.logout();
 			$httpBackend.flush();
 		});
 
 		it('clears auth token to be used with $http', function() {
-			$httpBackend.expect('POST', '/api/v1/auth/logout').respond(200);
+			$httpBackend.expect('POST', '/api/v1/auth/token/destroy/').respond(200);
 			auth.logout();
 			$httpBackend.flush();
 			expect($http.defaults.headers.common.Authorization).toBe('');
 		});
 
 		it('resolves the returned promise when successfully logged out', function() {
-			$httpBackend.expect('POST', '/api/v1/auth/logout').respond(200);
+			$httpBackend.expect('POST', '/api/v1/auth/token/destroy/').respond(200);
 			var result = 0;
 			auth.logout().then(function() { result = 1; }, function() { result = 2; });
 			$httpBackend.flush();
@@ -154,7 +154,7 @@ describe('auth service', function () {
 		});
 
 		it('rejects the returned promise when logout fails', function() {
-			$httpBackend.expect('POST', '/api/v1/auth/logout').respond(400);
+			$httpBackend.expect('POST', '/api/v1/auth/token/destroy/').respond(400);
 			var result = 0;
 			auth.logout().then(function() { result = 1; }, function() { result = 2; });
 			$httpBackend.flush();
