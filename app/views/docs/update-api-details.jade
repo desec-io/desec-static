@@ -47,12 +47,12 @@ section.product.page-block
 					| <code>A</code> and <code>AAAA</code> records.
 				p
 					| For IPv4, our API will use the first IPv4 address it can find in the query string parameters <code>myip</code>, <code>myipv4</code>,
-					| <code>ip</code> (in this order). If none is found, it will use the IP that connected to the API, if a IPv4 connection was
-					| made. If no address is found, the <code>A</code> record will be deleted from the DNS.
+					| <code>ip</code> (in this order). If none of them is set, it will use the IP that connected to the API, if a IPv4 connection was
+					| made. If no address is found or if a query string parameter was set to an empty value, the <code>A</code> record will be deleted from the DNS.
 				p
 					| For IPv6, the procedure is similar. We check <code>myipv6</code>, <code>ipv6</code>, <code>myip</code>, <code>ip</code>
 					| query string parameters (in this order) and the IP that was used to connect to the API for IPv6 addresses and use the first one
-					| found. If none is found, the <code>AAAA</code> record will be deleted.
+					| found. If no address is found or if a query string parameter was set to an empty value, the <code>AAAA</code> record will be deleted.
 
 				h3 The Response
 				p
