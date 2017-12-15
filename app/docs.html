@@ -690,7 +690,9 @@ section.</p>
 <p>Array with DNSSEC key information.  Each entry contains <span class="docutils literal">DNSKEY</span> and
 <span class="docutils literal">DS</span> record contents (the latter being computed from the former), and
 some extra information.  For delegation of DNSSEC-secured domains, the
-domain registry needs to publish these <span class="docutils literal">DS</span> records.</p>
+parent domain needs to publish these <span class="docutils literal">DS</span> records.  (This usually
+involves telling your registrar/registry about those records, and they
+will publish them for you.)</p>
 <p>Notes:</p>
 <ul class="simple">
 <li><p>Newly created domains are assigned a key after a short while (usually
@@ -893,11 +895,12 @@ cannot access the <span class="docutils literal">SOA</span>, see <a class="refer
 <p><span class="docutils literal">type</span>, <span class="docutils literal">records</span>, and <span class="docutils literal">ttl</span> are mandatory, whereas the <span class="docutils literal">subname</span>
 field is optional.</p>
 <p>Upon success, the response status code will be <span class="docutils literal">201 Created</span>, with the RRset
-contained in the response body.  If the <span class="docutils literal">records</span> value was semantically
-invalid or an invalid <span class="docutils literal">type</span> was provided, <span class="docutils literal">422 Unprocessable Entity</span> is
-returned.  If the RRset could not be created for another reason (for example
-because another RRset with the same name and type exists already, or because
-not all required fields were provided), the API responds with <span class="docutils literal">400 Bad Request</span>.</p>
+contained in the response body.  If another RRset with the same name and type
+exists already, the API responds with <span class="docutils literal">409 Conflict</span>.  If there is a
+syntactical error (e.g. not all required fields were provided or the type was
+not specified in uppercase), the API responds with <span class="docutils literal">400 Bad Request</span>.  If
+field values were semantically invalid (e.g. when you provide an unknown record
+type, or an <cite>A</cite> value that is not an IPv4 address), <span class="docutils literal">422 Unprocessable Entity</span> is returned.</p>
 <p>Note that the values of <span class="docutils literal">type</span> and <span class="docutils literal">subname</span> as well as the <span class="docutils literal">records</span>
 items are strings, and as such the JSON specification requires them to be
 enclosed in double quotes (with the quotes being part of the field value);
@@ -991,9 +994,11 @@ http PATCH \
     https://desec.io/api/v1/domains/{domain}/rrsets/{subname}.../{type}/ \
     Authorization:&quot;Token {token}&quot; ttl:=86400</pre>
 <p>If the RRset was updated successfully, the API returns <span class="docutils literal">200 OK</span> with the
-updated RRset in the reponse body.  If not all required fields were provided,
-the API responds with <span class="docutils literal">400 Bad Request</span>.  If the <span class="docutils literal">records</span> value was
-semantically invalid, <span class="docutils literal">422 Unprocessable Entity</span> is returned.  If the RRset
+updated RRset in the reponse body.  If there is a syntactical error (e.g. not
+all required fields were provided or the type was not specified in uppercase),
+the API responds with <span class="docutils literal">400 Bad Request</span>.  If field values were semantically
+invalid (e.g. when you provide an unknown record type, or an <cite>A</cite> value that is
+not an IPv4 address), <span class="docutils literal">422 Unprocessable Entity</span> is returned.  If the RRset
 does not exist, <span class="docutils literal">404 Not Found</span> is returned.</p>
 </div>
 <div class="section" id="deleting-an-rrset">
@@ -1182,7 +1187,7 @@ at <a class="reference external" href="https://github.com/desec-io/desec-stack">
 </div>
 <div class="footer">
 <hr class="footer" />
-<p>Generated on: 2017-11-07.
+<p>Generated on: 2017-12-15.
 </p>
 
 </div>
