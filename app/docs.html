@@ -605,29 +605,44 @@ td {
 <li><p><a class="reference internal" href="#creating-an-rrset" id="id12">Creating an RRset</a></p>
 <ul>
 <li><p><a class="reference internal" href="#creating-a-tlsa-rrset" id="id13">Creating a TLSA RRset</a></p></li>
+<li><p><a class="reference internal" href="#bulk-creation-of-rrsets" id="id14">Bulk Creation of RRsets</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#retrieving-all-rrsets-in-a-zone" id="id14">Retrieving all RRsets in a Zone</a></p>
+<li><p><a class="reference internal" href="#retrieving-all-rrsets-in-a-zone" id="id15">Retrieving all RRsets in a Zone</a></p>
 <ul>
-<li><p><a class="reference internal" href="#filtering-by-record-type" id="id15">Filtering by Record Type</a></p></li>
-<li><p><a class="reference internal" href="#filtering-by-subname" id="id16">Filtering by Subname</a></p></li>
+<li><p><a class="reference internal" href="#filtering-by-record-type" id="id16">Filtering by Record Type</a></p></li>
+<li><p><a class="reference internal" href="#filtering-by-subname" id="id17">Filtering by Subname</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#retrieving-a-specific-rrset" id="id17">Retrieving a Specific RRset</a></p></li>
-<li><p><a class="reference internal" href="#modifying-an-rrset" id="id18">Modifying an RRset</a></p></li>
-<li><p><a class="reference internal" href="#deleting-an-rrset" id="id19">Deleting an RRset</a></p></li>
-<li><p><a class="reference internal" href="#general-notes" id="id20">General Notes</a></p></li>
-<li><p><a class="reference internal" href="#notes-on-certain-record-types" id="id21">Notes on Certain Record Types</a></p>
+<li><p><a class="reference internal" href="#retrieving-a-specific-rrset" id="id18">Retrieving a Specific RRset</a></p></li>
+<li><p><a class="reference internal" href="#modifying-an-rrset" id="id19">Modifying an RRset</a></p>
 <ul>
-<li><p><a class="reference internal" href="#restricted-types" id="id22">Restricted Types</a></p></li>
-<li><p><a class="reference internal" href="#caveats" id="id23">Caveats</a></p></li>
+<li><p><a class="reference internal" href="#bulk-modification-of-rrsets" id="id20">Bulk Modification of RRsets</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#deleting-an-rrset" id="id21">Deleting an RRset</a></p>
+<ul>
+<li><p><a class="reference internal" href="#bulk-deletion-of-rrsets" id="id22">Bulk Deletion of RRsets</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#bulk-operations" id="id23">Bulk Operations</a></p>
+<ul>
+<li><p><a class="reference internal" href="#atomicity" id="id24">Atomicity</a></p></li>
+<li><p><a class="reference internal" href="#field-requirements" id="id25">Field requirements</a></p></li>
+<li><p><a class="reference internal" href="#input-validation" id="id26">Input validation</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#notes" id="id27">Notes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#restricted-types" id="id28">Restricted Types</a></p></li>
+<li><p><a class="reference internal" href="#caveats" id="id29">Caveats</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#endpoint-reference" id="id24">Endpoint Reference</a></p></li>
-<li><p><a class="reference internal" href="#getting-help" id="id25">Getting Help</a></p></li>
-<li><p><a class="reference internal" href="#about-this-document" id="id26">About this document</a></p></li>
+<li><p><a class="reference internal" href="#endpoint-reference" id="id30">Endpoint Reference</a></p></li>
+<li><p><a class="reference internal" href="#getting-help" id="id31">Getting Help</a></p></li>
+<li><p><a class="reference internal" href="#about-this-document" id="id32">About this document</a></p></li>
 </ul>
 </div>
 <div class="section" id="introduction">
@@ -927,9 +942,23 @@ for an IMAPS server).</p>
 connected directly to our API in the future.  For full detail on how <span class="docutils literal">TLSA</span>
 records work, please refer to RFC 6698.</p>
 </div>
+<div class="section" id="bulk-creation-of-rrsets">
+<h3><a class="toc-backref" href="#id14">Bulk Creation of RRsets</a></h3>
+<p>It is often desirable to create several RRsets at once.  This is achieved by
+sending an array of RRset objects to the <span class="docutils literal">rrsets/</span> endpoint (instead of just
+one), like this:</p>
+<pre class="literal-block">curl -X POST https://desec.io/api/v1/domains/{domain}/rrsets/ \
+    -H &quot;Content-Type: application/json&quot; -H &quot;Authorization: Token {token}&quot; \
+    -d '[{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;A&quot;, &quot;ttl&quot;: 3600, records: [&quot;1.2.3.4&quot;]},' \
+        '{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;AAAA&quot;, &quot;ttl&quot;: 3600, records: [&quot;c0::fefe&quot;]},' \
+        '...]'</pre>
+<p>This is especially useful for bootstrapping a new domain.</p>
+<p>For details about input validation and return status codes, please refer to
+<a class="reference internal" href="#bulk-operations">Bulk Operations</a>.</p>
+</div>
 </div>
 <div class="section" id="retrieving-all-rrsets-in-a-zone">
-<h2><a class="toc-backref" href="#id14">Retrieving all RRsets in a Zone</a></h2>
+<h2><a class="toc-backref" href="#id15">Retrieving all RRsets in a Zone</a></h2>
 <p>The <span class="docutils literal"><span class="pre">/api/v1/domains/{domain}/rrsets/</span></span> endpoint reponds to <span class="docutils literal">GET</span> requests
 with an array of <a class="reference internal" href="#rrset-object">RRset object</a>s. For example, you may issue the following
 command:</p>
@@ -941,7 +970,7 @@ command:</p>
 RRsets in the zone; in this case, the response body will be an empty JSON
 array.</p>
 <div class="section" id="filtering-by-record-type">
-<h3><a class="toc-backref" href="#id15">Filtering by Record Type</a></h3>
+<h3><a class="toc-backref" href="#id16">Filtering by Record Type</a></h3>
 <p>To retrieve an array of all RRsets from your zone that have a specific type
 (e.g. all <span class="docutils literal">A</span> records, regardless of <span class="docutils literal">subname</span>), augment the previous
 <span class="docutils literal">GET</span> request with a <span class="docutils literal">type</span> query parameter carrying the desired RRset type
@@ -951,7 +980,7 @@ like:</p>
     Authorization:&quot;Token {token}&quot;</pre>
 </div>
 <div class="section" id="filtering-by-subname">
-<h3><a class="toc-backref" href="#id16">Filtering by Subname</a></h3>
+<h3><a class="toc-backref" href="#id17">Filtering by Subname</a></h3>
 <p>To filter the RRsets array by subname (e.g. to retrieve all records in the
 <span class="docutils literal">www</span> subdomain, regardless of their type), use the <span class="docutils literal">subname</span> query
 parameter, like this:</p>
@@ -964,7 +993,7 @@ apex (i.e. <span class="docutils literal">example.com</span> where <span class="
 </div>
 </div>
 <div class="section" id="retrieving-a-specific-rrset">
-<h2><a class="toc-backref" href="#id17">Retrieving a Specific RRset</a></h2>
+<h2><a class="toc-backref" href="#id18">Retrieving a Specific RRset</a></h2>
 <p>To retrieve an RRset with a specific name and type from your zone (e.g. the
 <span class="docutils literal">A</span> record for the <span class="docutils literal">www</span> subdomain), issue a <span class="docutils literal">GET</span> request with the
 <span class="docutils literal">subname</span> information and the type appended to the <span class="docutils literal">rrsets/</span> endpoint,
@@ -980,7 +1009,7 @@ apex (i.e. <span class="docutils literal">example.com</span> where <span class="
 <span class="docutils literal"><span class="pre">rrsets/.../</span></span>.</p>
 </div>
 <div class="section" id="modifying-an-rrset">
-<h2><a class="toc-backref" href="#id18">Modifying an RRset</a></h2>
+<h2><a class="toc-backref" href="#id19">Modifying an RRset</a></h2>
 <p>To modify an RRset, use the endpoint that you would also use to retrieve that
 specific RRset.  The API allows changing the values of <span class="docutils literal">records</span> and
 <span class="docutils literal">ttl</span>.  When using the <span class="docutils literal">PATCH</span> method, only fields you would like to modify
@@ -1000,17 +1029,109 @@ the API responds with <span class="docutils literal">400 Bad Request</span>.  If
 invalid (e.g. when you provide an unknown record type, or an <cite>A</cite> value that is
 not an IPv4 address), <span class="docutils literal">422 Unprocessable Entity</span> is returned.  If the RRset
 does not exist, <span class="docutils literal">404 Not Found</span> is returned.</p>
+<div class="section" id="bulk-modification-of-rrsets">
+<h3><a class="toc-backref" href="#id20">Bulk Modification of RRsets</a></h3>
+<p>It is sometimes desirable to modify several RRsets at once.  This is achieved
+by sending an array of RRset objects to the <span class="docutils literal">rrsets/</span> endpoint (instead of
+just one), like this:</p>
+<pre class="literal-block">curl -X PUT https://desec.io/api/v1/domains/{domain}/rrsets/ \
+    -H &quot;Content-Type: application/json&quot; -H &quot;Authorization: Token {token}&quot; \
+    -d '[{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;A&quot;, &quot;ttl&quot;: 3600, records: [&quot;1.2.3.4&quot;]},' \
+        '{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;AAAA&quot;, &quot;ttl&quot;: 3600, records: [&quot;c0::fefe&quot;]},' \
+        '...]'</pre>
+<p><span class="docutils literal">subname</span> and <span class="docutils literal">type</span> must be specified for each given RRset.  For <span class="docutils literal">ttl</span>
+and <span class="docutils literal">records</span>, the usual rules apply.</p>
+<p>For details about input validation and return status codes, please refer to
+<a class="reference internal" href="#bulk-operations">Bulk Operations</a>.</p>
+</div>
 </div>
 <div class="section" id="deleting-an-rrset">
-<h2><a class="toc-backref" href="#id19">Deleting an RRset</a></h2>
+<h2><a class="toc-backref" href="#id21">Deleting an RRset</a></h2>
 <p>To delete an RRset, you can send a <span class="docutils literal">DELETE</span> request to the endpoint
 representing the RRset. Alternatively, you can modify it and provide an empty
 array for the <span class="docutils literal">records</span> field (<span class="docutils literal">[]</span>).</p>
 <p>Upon success or if the RRset did not exist in the first place, the response
 status code is <span class="docutils literal">204 No Content</span>.</p>
+<div class="section" id="bulk-deletion-of-rrsets">
+<h3><a class="toc-backref" href="#id22">Bulk Deletion of RRsets</a></h3>
+<p>It is sometimes desirable to delete RRsets as using a bulk request.  This is
+achieved by sending the RRset with an empty records list <span class="docutils literal">[]</span> to the
+<span class="docutils literal">rrsets/</span> endpoint, using the <span class="docutils literal">PATCH</span> or <span class="docutils literal">PUT</span> method:</p>
+<pre class="literal-block">curl -X PATCH https://desec.io/api/v1/domains/{domain}/rrsets/ \
+    -H &quot;Content-Type: application/json&quot; -H &quot;Authorization: Token {token}&quot; \
+    -d '[{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;A&quot;, &quot;ttl&quot;: 3600, records: [&quot;1.2.3.4&quot;]},' \
+        '{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;AAAA&quot;, records: []},' \
+        '...]'</pre>
+<p>For details about input validation and return status codes, please refer to
+<a class="reference internal" href="#bulk-operations">Bulk Operations</a>.</p>
 </div>
-<div class="section" id="general-notes">
-<h2><a class="toc-backref" href="#id20">General Notes</a></h2>
+</div>
+<div class="section" id="bulk-operations">
+<h2><a class="toc-backref" href="#id23">Bulk Operations</a></h2>
+<p>The <span class="docutils literal">rrsets/</span> endpoint supports bulk operations via the <span class="docutils literal">POST</span>, <span class="docutils literal">PATCH</span>,
+and <span class="docutils literal">PUT</span> request methods. You can simply send an array of RRset objects
+(instead of just one), like this:</p>
+<pre class="literal-block">curl -X PATCH https://desec.io/api/v1/domains/{domain}/rrsets/ \
+    -H &quot;Content-Type: application/json&quot; -H &quot;Authorization: Token {token}&quot; \
+    -d '[{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;A&quot;,    &quot;ttl&quot;: 3600, records: [&quot;1.2.3.4&quot;]},' \
+        '{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;AAAA&quot;, &quot;ttl&quot;: 3600, records: [&quot;c0::fefe&quot;, &quot;c0ff::ee&quot;]},' \
+        '{&quot;subname&quot;: &quot;backup&quot;, &quot;type&quot;: &quot;MX&quot;, records: []},' \
+        '...]'</pre>
+<div class="section" id="atomicity">
+<h3><a class="toc-backref" href="#id24">Atomicity</a></h3>
+<p>Bulk operations are performed atomically, i.e. either all given RRsets are
+accepted and published in (or deleted from) the DNS, or none of them are.</p>
+<p>This allows you to smoothly apply large DNS changes to your domain <em>without</em>
+running into the undesirable situation of an error showing up half-way through
+the process when some changes already have been applied.</p>
+</div>
+<div class="section" id="field-requirements">
+<h3><a class="toc-backref" href="#id25">Field requirements</a></h3>
+<p>In all cases, the <span class="docutils literal">subname</span> field is optional.  If missing, the empty subname
+is assumed.</p>
+<p>For the <span class="docutils literal">POST</span> and <span class="docutils literal">PUT</span> methods, all other fields are required for each
+given RRset.  With <span class="docutils literal">POST</span>, only new RRsets are acceptable (i.e. the domain
+must not yet have an RRset with the same subname and type), while <span class="docutils literal">PUT</span>
+allows both creating new RRsets and modifying existing ones.</p>
+<p>For the <span class="docutils literal">PATCH</span> method, only <span class="docutils literal">type</span> is required; if you want to modify only
+<span class="docutils literal">ttl</span> or <span class="docutils literal">records</span>, you can skip the other field.  To create a new RRset
+using <span class="docutils literal">PATCH</span>, all fields but <span class="docutils literal">subname</span> must be specified.</p>
+<p>To delete an RRset during a bulk operation, use <span class="docutils literal">PATCH</span> or <span class="docutils literal">PUT</span> and set
+records to <span class="docutils literal">[]</span>.</p>
+</div>
+<div class="section" id="input-validation">
+<h3><a class="toc-backref" href="#id26">Input validation</a></h3>
+<p>For efficiency and other reasons, there are three stages of input validation:</p>
+<ol class="arabic simple">
+<li><p>Basic syntactical and semantical checks for missing JSON fields, negative
+TTL and such.</p></li>
+<li><p>Uniqueness validation.  This is both to avoid the creation of multiple
+RRsets with the same subname and type, and to uncover bulk requests
+containing multiple parts that refer to the same subname and type.</p></li>
+<li><p>Lastly, we check whether the given type is a supported DNS record type, and
+whether the given record contents are consistent with the type.</p></li>
+</ol>
+<p>Errors are collected at each stage; if at least one error occured, the request
+is aborted at the end of the stage, and the error(s) are returned.  Only if no
+error occurred, will the request be allowed to proceed to the next stage.</p>
+<p>In stages 1 and 2, errors are presented as a list of errors, with each list
+item referring to one part of the bulk request, in the same order.  Parts that
+did not cause errors have an empty error object <span class="docutils literal">{}</span>, and parts with errors
+contain more details describing the error.  Unfortunately, in step 3, the API
+currently does not associate the error message with the RRset that caused it.</p>
+<p>The successive treatment of stages 1 and 2 means that one bulk part with a
+stage-2 error may appear valid (<span class="docutils literal">{}</span>) as long as another RRset has a stage-1
+error.  Only after the stage-1 error is resolved, the request will reach stage
+2, at which point an error may occur for the bulk part that previously seemed
+valid.</p>
+<p>Errors in stages 1 and 2 cause status code <span class="docutils literal">400</span> (regardless of the exact
+reason(s) which may vary across bulk parts), and errors from stage 3 cause
+status code <span class="docutils literal">422</span>.</p>
+</div>
+</div>
+<div class="section" id="notes">
+<h2><a class="toc-backref" href="#id27">Notes</a></h2>
+<p>Consider the following general remarks that apply to our API as a whole:</p>
 <ul class="simple">
 <li><p>All operations are performed on RRsets, not on the individual Resource
 Records.</p></li>
@@ -1021,16 +1142,13 @@ requirement of the DNS specification and not an API design choice.)</p></li>
 <li><p>We have not done extensive testing for reverse DNS, but things should work in
 principle.  If you encounter any problems, please let us know.</p></li>
 </ul>
-</div>
-<div class="section" id="notes-on-certain-record-types">
-<h2><a class="toc-backref" href="#id21">Notes on Certain Record Types</a></h2>
 <p>Generally, the API supports all <a class="reference external" href="https://doc.powerdns.com/md/types/">RRset types supported by PowerDNS</a>, with a
 few exceptions for such record types that the backend manages automatically.
 Thus, these restrictions are not limitations from a practical point of view.
 Furthermore, special care needs to be taken with some types of records, as
 explained below.</p>
 <div class="section" id="restricted-types">
-<h3><a class="toc-backref" href="#id22">Restricted Types</a></h3>
+<h3><a class="toc-backref" href="#id28">Restricted Types</a></h3>
 <p><strong>Note:</strong>  Some record types are supported by the API, but not currently
 served by our nameservers (such as <span class="docutils literal">ALIAS</span> or <span class="docutils literal">DNAME</span>).  If you wish to
 use such record types, shoot us an email.  In most cases, it should not be a
@@ -1059,13 +1177,16 @@ it using a standard DNS query.</p>
 </dl>
 </div>
 <div class="section" id="caveats">
-<h3><a class="toc-backref" href="#id23">Caveats</a></h3>
+<h3><a class="toc-backref" href="#id29">Caveats</a></h3>
 <dl id="caveat-on-the-priority-field">
 <dt>Record types with priority field</dt>
-<dd><p>The deSEC DNS API does not explicitly support priority fields (as used for
-<span class="docutils literal">MX</span> or <span class="docutils literal">SRV</span> records and the like).</p>
-<p>Instead, the priority is expected to be specified at the beginning of the
-record content, separated from the rest of it by a space.</p>
+<dd><p>The deSEC DNS API does not explicitly support structured records fields
+(such as the priority field used for <span class="docutils literal">MX</span>, <span class="docutils literal">SRV</span> and the like).</p>
+<p>Instead, those fields are expected to be concatenated in the conventional
+order used for zone files, with spaces in between them. For <span class="docutils literal">MX</span> RRsets,
+that means that the priority is located at the beginning of the record
+content, separated from the rest of it by a space (e.g.
+<span class="docutils literal">10 mx.example.com.</span>).</p>
 </dd>
 <dt><span class="docutils literal">CNAME</span> record</dt>
 <dd><ul>
@@ -1095,10 +1216,14 @@ the zone apex, consider using an <span class="docutils literal">ALIAS</span> RRs
 name, which must be terminated by a dot <span class="docutils literal">.</span>.  Example: <span class="docutils literal">10 mail.a4a.de.</span></p>
 </dd>
 <dt><span class="docutils literal">NS</span> record</dt>
-<dd><p>The use of wildcard RRsets (with one component of <span class="docutils literal">subname</span> being equal
-to <span class="docutils literal">*</span>) of type <span class="docutils literal">NS</span> is <strong>discouraged</strong>.  This is because the behavior
-of wildcard <span class="docutils literal">NS</span> records in conjunction with DNSSEC is undefined, per
-RFC 4592, Sec. 4.2.</p>
+<dd><ul class="simple">
+<li><p>The record value must be terminated by a dot <span class="docutils literal">.</span> (as in
+<span class="docutils literal">ns1.desec.io.</span>).</p></li>
+<li><p>The use of wildcard RRsets (with one component of <span class="docutils literal">subname</span> being equal
+to <span class="docutils literal">*</span>) of type <span class="docutils literal">NS</span> is <strong>discouraged</strong>.  This is because the
+behavior of wildcard <span class="docutils literal">NS</span> records in conjunction with DNSSEC is
+undefined, per RFC 4592, Sec. 4.2.</p></li>
+</ul>
 </dd>
 <dt><span class="docutils literal">TXT</span> record</dt>
 <dd><p>The contents of the <span class="docutils literal">TXT</span> record must be enclosed in double quotes.
@@ -1115,7 +1240,7 @@ create a <span class="docutils literal">TXT</span> RRset with HTTPie:</p>
 </div>
 </div>
 <div class="section" id="endpoint-reference">
-<h1><a class="toc-backref" href="#id24">Endpoint Reference</a></h1>
+<h1><a class="toc-backref" href="#id30">Endpoint Reference</a></h1>
 <p>Endpoints related to <a class="reference internal" href="#user-registration-and-management">User Registration and Management</a> are described in the
 <a class="reference external" href="https://djoser.readthedocs.io/en/latest/getting_started.html#available-endpoints">djoser endpoint documentation</a>.  The following table summarizes basic
 information about the deSEC API endpoints used for <a class="reference internal" href="#domain-management">Domain Management</a> and
@@ -1150,13 +1275,19 @@ information about the deSEC API endpoints used for <a class="reference internal"
 <tr><td><p><span class="docutils literal">DELETE</span></p></td>
 <td><p>Delete a domain</p></td>
 </tr>
-<tr><td rowspan="2"><p>...<span class="docutils literal"><span class="pre">/{domain}/rrsets/</span></span></p></td>
+<tr><td rowspan="4"><p>...<span class="docutils literal"><span class="pre">/{domain}/rrsets/</span></span></p></td>
 <td><p><span class="docutils literal">GET</span></p></td>
 <td><p>Retrieve all RRsets from <span class="docutils literal">domain</span>, filter
 by <span class="docutils literal">subname</span> or <span class="docutils literal">type</span> query parameter</p></td>
 </tr>
 <tr><td><p><span class="docutils literal">POST</span></p></td>
-<td><p>Create an RRset</p></td>
+<td><p>Create one or more RRsets</p></td>
+</tr>
+<tr><td><p><span class="docutils literal">PATCH</span></p></td>
+<td><p>Create, modify or delete one or more RRsets</p></td>
+</tr>
+<tr><td><p><span class="docutils literal">PUT</span></p></td>
+<td><p>Create, modify or delete one or more RRsets</p></td>
 </tr>
 <tr><td rowspan="4"><p>...<span class="docutils literal"><span class="pre">/{domain}/rrsets/{subname}.../{type}/</span></span></p></td>
 <td><p><span class="docutils literal">GET</span></p></td>
@@ -1175,19 +1306,19 @@ by <span class="docutils literal">subname</span> or <span class="docutils litera
 </table>
 </div>
 <div class="section" id="getting-help">
-<h1><a class="toc-backref" href="#id25">Getting Help</a></h1>
+<h1><a class="toc-backref" href="#id31">Getting Help</a></h1>
 <p>If you need help beyond this documentation, please do not hesitate and
 shoot us an email at <a class="reference external" href="mailto:support&#64;desec.io">support&#64;desec.io</a>.</p>
 </div>
 <div class="section" id="about-this-document">
-<h1><a class="toc-backref" href="#id26">About this document</a></h1>
+<h1><a class="toc-backref" href="#id32">About this document</a></h1>
 <p>To add to our documentation or fix a mistake, please submit a Pull Request
 at <a class="reference external" href="https://github.com/desec-io/desec-stack">https://github.com/desec-io/desec-stack</a>.</p>
 </div>
 </div>
 <div class="footer">
 <hr class="footer" />
-<p>Generated on: 2017-12-15.
+<p>Generated on: 2018-05-04.
 </p>
 
 </div>
