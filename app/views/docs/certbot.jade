@@ -54,3 +54,6 @@ section.product.page-block
 					--manual-auth-hook ./hook.sh \
 					-d "YOURDOMAINNAME.dedyn.io" \
 					certonly
+				p.
+					<strong>Note:</strong> To include subdomains in your certificate, you can specify the <code>-d</code> argument several times,
+					e.g. <code>-d "YOURDOMAINNAME.dedyn.io" -d "www.YOURDOMAINNAME.dedyn.io"</code>.
