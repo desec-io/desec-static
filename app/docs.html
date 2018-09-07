@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="generator" content="Docutils 0.13.1: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
 <title>deSEC DNS API Documentation</title>
 <style type="text/css">
 
 /* Minimal style sheet for the HTML output of Docutils.                    */
 /*                                                                         */
 /* :Author: Günter Milde, based on html4css1.css by David Goodger          */
-/* :Id: $Id: minimal.css 7952 2016-07-26 18:15:59Z milde $               */
+/* :Id: $Id: minimal.css 8036 2017-02-14 13:05:46Z milde $               */
 /* :Copyright: © 2015 Günter Milde.                                        */
 /* :License: Released under the terms of the `2-Clause BSD license`_,      */
 /*    in short:                                                            */
@@ -212,7 +212,7 @@ table.align-right {
   margin-left: auto;
 }
 /* reset inner alignment in figures and tables */
-div.align-left, div.align-center, div.align-right,
+/* div.align-left, div.align-center, div.align-right, */
 table.align-left, table.align-center, table.align-right
 { text-align: inherit }
 
@@ -274,7 +274,7 @@ table.borderless td, table.borderless th {
 /* Rules for easy reading and pre-defined style variants.		   */
 /*                                                                         */
 /* :Author: Günter Milde, based on html4css1.css by David Goodger          */
-/* :Id: $Id: plain.css 7952 2016-07-26 18:15:59Z milde $               */
+/* :Id: $Id: plain.css 8120 2017-06-22 21:02:40Z milde $               */
 /* :Copyright: © 2015 Günter Milde.                                        */
 /* :License: Released under the terms of the `2-Clause BSD license`_,      */
 /*    in short:                                                            */
@@ -338,9 +338,9 @@ dl > dd {
 
 /* Definition Lists         */
 
-dl > dd p:first-child { margin-top: 0; }
+dl > dd > p:first-child { margin-top: 0; }
 /* :last-child is not part of CSS 2.1 (introduced in CSS 3) */
-/* dl > dd p:last-child  { margin-bottom: 0; } */
+dl > dd > p:last-child  { margin-bottom: 0; }
 
 /* lists nested in definition lists */
 /* :only-child is not part of CSS 2.1 (introduced in CSS 3) */
@@ -579,6 +579,7 @@ body {
 td {
     vertical-align: top;
 }
+
 </style>
 </head>
 <body>
@@ -589,60 +590,80 @@ td {
 <p class="topic-title first">Table of Contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#introduction" id="id2">Introduction</a></p></li>
-<li><p><a class="reference internal" href="#user-registration-and-management" id="id3">User Registration and Management</a></p></li>
-<li><p><a class="reference internal" href="#domain-management" id="id4">Domain Management</a></p>
+<li><p><a class="reference internal" href="#user-registration-and-management" id="id3">User Registration and Management</a></p>
 <ul>
-<li><p><a class="reference internal" href="#domain-field-reference" id="id5">Domain Field Reference</a></p></li>
-<li><p><a class="reference internal" href="#creating-a-domain" id="id6">Creating a Domain</a></p></li>
-<li><p><a class="reference internal" href="#listing-domains" id="id7">Listing Domains</a></p></li>
-<li><p><a class="reference internal" href="#retrieving-a-specific-domain" id="id8">Retrieving a Specific Domain</a></p></li>
-<li><p><a class="reference internal" href="#deleting-a-domain" id="id9">Deleting a Domain</a></p></li>
+<li><p><a class="reference internal" href="#getting-started" id="id4">Getting Started</a></p></li>
+<li><p><a class="reference internal" href="#registration" id="id5">Registration</a></p>
+<ul>
+<li><p><a class="reference internal" href="#preventing-abuse" id="id6">Preventing Abuse</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#retrieving-and-manipulating-dns-information" id="id10">Retrieving and Manipulating DNS Information</a></p>
+<li><p><a class="reference internal" href="#log-in" id="id7">Log In</a></p></li>
+<li><p><a class="reference internal" href="#log-out" id="id8">Log Out</a></p></li>
+<li><p><a class="reference internal" href="#additional-tokens" id="id9">Additional Tokens</a></p>
 <ul>
-<li><p><a class="reference internal" href="#rrset-field-reference" id="id11">RRset Field Reference</a></p></li>
-<li><p><a class="reference internal" href="#creating-an-rrset" id="id12">Creating an RRset</a></p>
-<ul>
-<li><p><a class="reference internal" href="#creating-a-tlsa-rrset" id="id13">Creating a TLSA RRset</a></p></li>
-<li><p><a class="reference internal" href="#bulk-creation-of-rrsets" id="id14">Bulk Creation of RRsets</a></p></li>
+<li><p><a class="reference internal" href="#retrieving-all-current-tokens" id="id10">Retrieving All Current Tokens</a></p></li>
+<li><p><a class="reference internal" href="#create-additional-tokens" id="id11">Create Additional Tokens</a></p></li>
+<li><p><a class="reference internal" href="#delete-tokens" id="id12">Delete Tokens</a></p></li>
+<li><p><a class="reference internal" href="#token-security-considerations" id="id13">Token Security Considerations</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#retrieving-all-rrsets-in-a-zone" id="id15">Retrieving all RRsets in a Zone</a></p>
+<li><p><a class="reference internal" href="#password-recovery" id="id14">Password Recovery</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#domain-management" id="id15">Domain Management</a></p>
 <ul>
-<li><p><a class="reference internal" href="#filtering-by-record-type" id="id16">Filtering by Record Type</a></p></li>
-<li><p><a class="reference internal" href="#filtering-by-subname" id="id17">Filtering by Subname</a></p></li>
+<li><p><a class="reference internal" href="#domain-field-reference" id="id16">Domain Field Reference</a></p></li>
+<li><p><a class="reference internal" href="#creating-a-domain" id="id17">Creating a Domain</a></p></li>
+<li><p><a class="reference internal" href="#listing-domains" id="id18">Listing Domains</a></p></li>
+<li><p><a class="reference internal" href="#retrieving-a-specific-domain" id="id19">Retrieving a Specific Domain</a></p></li>
+<li><p><a class="reference internal" href="#deleting-a-domain" id="id20">Deleting a Domain</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#retrieving-a-specific-rrset" id="id18">Retrieving a Specific RRset</a></p></li>
-<li><p><a class="reference internal" href="#modifying-an-rrset" id="id19">Modifying an RRset</a></p>
+<li><p><a class="reference internal" href="#retrieving-and-manipulating-dns-information" id="id21">Retrieving and Manipulating DNS Information</a></p>
 <ul>
-<li><p><a class="reference internal" href="#bulk-modification-of-rrsets" id="id20">Bulk Modification of RRsets</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#deleting-an-rrset" id="id21">Deleting an RRset</a></p>
+<li><p><a class="reference internal" href="#rrset-field-reference" id="id22">RRset Field Reference</a></p></li>
+<li><p><a class="reference internal" href="#creating-an-rrset" id="id23">Creating an RRset</a></p>
 <ul>
-<li><p><a class="reference internal" href="#bulk-deletion-of-rrsets" id="id22">Bulk Deletion of RRsets</a></p></li>
+<li><p><a class="reference internal" href="#creating-a-tlsa-rrset" id="id24">Creating a TLSA RRset</a></p></li>
+<li><p><a class="reference internal" href="#bulk-creation-of-rrsets" id="id25">Bulk Creation of RRsets</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#bulk-operations" id="id23">Bulk Operations</a></p>
+<li><p><a class="reference internal" href="#retrieving-all-rrsets-in-a-zone" id="id26">Retrieving all RRsets in a Zone</a></p>
 <ul>
-<li><p><a class="reference internal" href="#atomicity" id="id24">Atomicity</a></p></li>
-<li><p><a class="reference internal" href="#field-requirements" id="id25">Field requirements</a></p></li>
-<li><p><a class="reference internal" href="#input-validation" id="id26">Input validation</a></p></li>
+<li><p><a class="reference internal" href="#filtering-by-record-type" id="id27">Filtering by Record Type</a></p></li>
+<li><p><a class="reference internal" href="#filtering-by-subname" id="id28">Filtering by Subname</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#notes" id="id27">Notes</a></p>
+<li><p><a class="reference internal" href="#retrieving-a-specific-rrset" id="id29">Retrieving a Specific RRset</a></p></li>
+<li><p><a class="reference internal" href="#modifying-an-rrset" id="id30">Modifying an RRset</a></p>
 <ul>
-<li><p><a class="reference internal" href="#restricted-types" id="id28">Restricted Types</a></p></li>
-<li><p><a class="reference internal" href="#caveats" id="id29">Caveats</a></p></li>
+<li><p><a class="reference internal" href="#bulk-modification-of-rrsets" id="id31">Bulk Modification of RRsets</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#deleting-an-rrset" id="id32">Deleting an RRset</a></p>
+<ul>
+<li><p><a class="reference internal" href="#bulk-deletion-of-rrsets" id="id33">Bulk Deletion of RRsets</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#bulk-operations" id="id34">Bulk Operations</a></p>
+<ul>
+<li><p><a class="reference internal" href="#atomicity" id="id35">Atomicity</a></p></li>
+<li><p><a class="reference internal" href="#field-requirements" id="id36">Field requirements</a></p></li>
+<li><p><a class="reference internal" href="#input-validation" id="id37">Input validation</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#notes" id="id38">Notes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#restricted-types" id="id39">Restricted Types</a></p></li>
+<li><p><a class="reference internal" href="#caveats" id="id40">Caveats</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#endpoint-reference" id="id30">Endpoint Reference</a></p></li>
-<li><p><a class="reference internal" href="#getting-help" id="id31">Getting Help</a></p></li>
-<li><p><a class="reference internal" href="#about-this-document" id="id32">About this document</a></p></li>
+<li><p><a class="reference internal" href="#endpoint-reference" id="id41">Endpoint Reference</a></p></li>
+<li><p><a class="reference internal" href="#getting-help" id="id42">Getting Help</a></p></li>
+<li><p><a class="reference internal" href="#about-this-document" id="id43">About this document</a></p></li>
 </ul>
 </div>
 <div class="section" id="introduction">
@@ -660,21 +681,220 @@ of JSON encoding and the content type header automatically.  Of course,
 </div>
 <div class="section" id="user-registration-and-management">
 <h1><a class="toc-backref" href="#id3">User Registration and Management</a></h1>
-<p>User management is handled via Django's djoser library.  For usage, please
-check the <a class="reference external" href="https://djoser.readthedocs.io/en/latest/getting_started.html#available-endpoints">djoser endpoint documentation</a>.</p>
-<p>Most operations require authentication of the domain owner using a token that
-is returned by djoser's <span class="docutils literal">token/create/</span> endpoint.  To authenticate, this
-token is transmitted via the HTTP <span class="docutils literal">Authorization</span> header, as shown in the
-examples in this document.</p>
+<div class="section" id="getting-started">
+<h2><a class="toc-backref" href="#id4">Getting Started</a></h2>
+<p>Access to the domain management API is granted to registered and logged in users only. User accounts
+can register free of charge through the API, providing an email address and a
+password. To register an user account, issue a request like this:</p>
+<pre class="literal-block">http POST \
+    https://desec.io/api/v1/auth/users/create/ \
+    email:='&quot;anemailaddress&#64;example.com&quot;' \
+    password:='&quot;yourpassword&quot;'</pre>
+<p>Your email address is required for account recovery, in case you forgot your
+password, for contacting support, etc. It is deSEC's policy to require users
+to provide their real email address so that support requests can be verified.
+Note that while we do not enforce restrictions on your password, please do not
+choose a weak one.</p>
+<p>Once a user account has been registered, you will be able to log in. Log in is
+done by asking the API for a token that can be used to authorize subsequent DNS
+management requests. To obtain such a token, send your email address and password to the
+<span class="docutils literal">/auth/token/create/</span> endpoint:</p>
+<pre class="literal-block">http POST \
+    https://desec.io/api/v1/auth/token/create/ \
+    email:='&quot;anemailaddress&#64;example.com&quot;' \
+    password:='&quot;yourpassword&quot;'</pre>
+<p>The API will reply with a token like:</p>
+<pre class="literal-block">{
+    &quot;auth_token&quot;: &quot;i+T3b1h/OI+H9ab8tRS98stGtURe&quot;
+}</pre>
+<p>Most interactions with the API require authentication of the domain owner using
+this token. To authenticate, the token is transmitted via the HTTP
+<span class="docutils literal">Authorization</span> header, as shown in the examples in this document.</p>
+<p>Additionally, the API provides you with the <span class="docutils literal">tokens/</span> endpoint which you can
+use to create and destroy additional tokens (see below). Such token can be used
+to authenticate devices independently of your current login session, such as
+routers. They can be revoked individually.</p>
+</div>
+<div class="section" id="registration">
+<h2><a class="toc-backref" href="#id5">Registration</a></h2>
+<p>The API provides an endpoint to register new user accounts. New accounts
+require an email address and a password.</p>
+<p>Your email address is required for account recovery, in case you forgot your
+password, for contacting support, etc. It is deSEC's policy to require users
+to provide their real email address so that support requests can be verified.
+Note that while we do not enforce restrictions on your password, please do not
+choose a weak one.</p>
+<p>Upon successful registration, the server will reply with <span class="docutils literal">201 Created</span> and
+send you a welcome email. If there is a problem with your email or password,
+the server will reply with <span class="docutils literal">400 Bad Request</span> and give a human-readable
+error message that may look like:</p>
+<pre class="literal-block">HTTP/1.1 400 Bad Request
+
+{
+    &quot;password&quot;: [
+        &quot;This field may not be blank.&quot;
+    ]
+}</pre>
+<p>Your password information will be stored on our servers using <a class="reference external" href="https://docs.djangoproject.com/en/2.1/topics/auth/passwords/">Django's default
+method, PBKDF2</a>.</p>
+<div class="section" id="preventing-abuse">
+<h3><a class="toc-backref" href="#id6">Preventing Abuse</a></h3>
+<p>We enforce some limits on user creation requests to make abuse harder. In cases
+where our heuristic suspects abuse, the server will still reply with
+<span class="docutils literal">201 Created</span> but will send you an email asking to solve a
+Google ReCaptcha. We implemented this as privacy-friendly as possible, but
+recommend solving the captcha using some additional privacy measures such as an
+anonymous browser-tab, VPN, etc. Before solving the captcha, the account will
+be on hold, that is, it will be possible to log in and issue most requests as
+normal; however, any DNS settings will not be deployed to our servers.</p>
+</div>
+</div>
+<div class="section" id="log-in">
+<h2><a class="toc-backref" href="#id7">Log In</a></h2>
+<p>All interactions with the API that require authentication must be authenticated
+using a token that identifies the user and authorizes the request. The process
+of obtaining such a token is what we call log in.</p>
+<p>To obtain an authentication token, log in by sending your email address and
+password to the token create endpoint of the API:</p>
+<pre class="literal-block">http POST \
+    https://desec.io/api/v1/auth/token/create/ \
+    email:='&quot;anemailaddress&#64;example.com&quot;' \
+    password:='&quot;yourpassword&quot;'</pre>
+<p>If email address and password match our records, the server will reply with
+<span class="docutils literal">201 Created</span> and send you the token as part of the response body:</p>
+<pre class="literal-block">{
+    &quot;auth_token&quot;: &quot;i+T3b1h/OI+H9ab8tRS98stGtURe&quot;
+}</pre>
+<p>Note that every time you POST to this endpoint, a <em>new</em> Token will be created,
+while old tokens <em>remain valid</em>.</p>
+<p>To authorize subsequent requests with the new token, set the HTTP <span class="docutils literal">Authorization</span>
+header to the token value, prefixed with <span class="docutils literal">Token</span>:</p>
+<pre class="literal-block">http POST \
+    http://desec.io/api/v1/ \
+    Authorization:&quot;Token i+T3b1h/OI+H9ab8tRS98stGtURe&quot;</pre>
+</div>
+<div class="section" id="log-out">
+<h2><a class="toc-backref" href="#id8">Log Out</a></h2>
+<p>To invalidate an authentication token (log out), send a <span class="docutils literal">POST</span> request to
+the token destroy endpoint, using the token in question in the <span class="docutils literal">Authorization</span>
+header:</p>
+<pre class="literal-block">http POST \
+    https://desec.io/api/v1/auth/token/destroy/ \
+    Authorization:&quot;Token i+T3b1h/OI+H9ab8tRS98stGtURe&quot;</pre>
+<p>The server will delete the token and respond with <span class="docutils literal">204 No Content</span>.</p>
+</div>
+<div class="section" id="additional-tokens">
+<h2><a class="toc-backref" href="#id9">Additional Tokens</a></h2>
+<p>To make authentication more flexible, the API can provide you with multiple
+authentication tokens. To that end, we provide a set of token management
+endpoints that are separate from the above-mentioned log in and log out
+endpoints. The most notable difference is that the log in endpoint needs
+authentication with email address and password, whereas the token management
+endpoint is authenticated using already issued tokens.</p>
+<div class="section" id="retrieving-all-current-tokens">
+<h3><a class="toc-backref" href="#id10">Retrieving All Current Tokens</a></h3>
+<p>To retrieve a list of currently valid tokens, issue a <span class="docutils literal">GET</span> request:</p>
+<pre class="literal-block">http \
+    https://desec.io/api/v1/tokens/ \
+    Authorization:&quot;Token mu4W4MHuSc0HyrGD1h/dnKuZBond&quot;</pre>
+<p>The server will respond with a list of token objects, each containing a
+timestamp when the token was created (note the <span class="docutils literal">Z</span> indicating the UTC
+timezone), an ID to identify that token, as well as the secret token value
+itself. Each token can carry a name that has no operational
+relevance to the API and is for user reference only. All tokens created
+by the log in endpoint will have &quot;login&quot; as name.</p>
+<pre class="literal-block">[
+    {
+        &quot;created&quot;: &quot;2018-09-06T07:05:54.080564Z&quot;,
+        &quot;id&quot;: 14423,
+        &quot;value&quot;: &quot;4yScSMFFNdAlk6WZuLIwYBVYnXPF&quot;,
+        &quot;name&quot;: &quot;login&quot;
+    },
+    {
+        &quot;created&quot;: &quot;2018-09-06T08:53:26.428396Z&quot;,
+        &quot;id&quot;: 36483,
+        &quot;value&quot;: &quot;mu4W4MHuSc0HyrGD1h/dnKuZBond&quot;,
+        &quot;name&quot;: &quot;&quot;
+    }
+]</pre>
+</div>
+<div class="section" id="create-additional-tokens">
+<h3><a class="toc-backref" href="#id11">Create Additional Tokens</a></h3>
+<p>To create another token using the token management interface, issue a
+<span class="docutils literal">POST</span> request to the same endpoint:</p>
+<pre class="literal-block">http POST \
+    https://desec.io/api/v1/tokens/ \
+    Authorization:&quot;Token mu4W4MHuSc0HyrGD1h/dnKuZBond&quot; \
+    name:='&quot;my new token&quot;'</pre>
+<p>Note that the name is optional and will be empty if not specified. The server
+will reply with <span class="docutils literal">201 Created</span> and the created token in the response body:</p>
+<pre class="literal-block">{
+    &quot;created&quot;: &quot;2018-09-06T09:08:43.762697Z&quot;,
+    &quot;id&quot;: 73658,
+    &quot;value&quot;: &quot;4pnk7u+NHvrEkFzrhFDRTjGFyX+S&quot;,
+    &quot;name&quot;: &quot;my new token&quot;
+}</pre>
+</div>
+<div class="section" id="delete-tokens">
+<h3><a class="toc-backref" href="#id12">Delete Tokens</a></h3>
+<p>To delete an existing token via the token management endpoints, issue a
+<span class="docutils literal">DELETE</span> request on the token's endpoint:</p>
+<pre class="literal-block">http DELETE \
+    https://desec.io/api/v1/tokens/:id/ \
+    Authorization:&quot;Token mu4W4MHuSc0HyrGD1h/dnKuZBond&quot;</pre>
+<p>The server will reply with <span class="docutils literal">204 No Content</span>, even if the token was not found.</p>
+<p>Note that, for now, all tokens have equal power -- every token can authorize
+any action. We may implement specialized tokens in the future.</p>
+</div>
+<div class="section" id="token-security-considerations">
+<h3><a class="toc-backref" href="#id13">Token Security Considerations</a></h3>
+<p>This section is for information only. Token length and encoding may be subject
+to change in the future.</p>
+<p>Any token is generated from 168 bits of true randomness at the server. Guessing
+the token correctly is hence practically impossible. The value corresponds to 21
+bytes and is represented by 28 characters in Base64 encoding. That is, any token
+will only consist of characters <span class="docutils literal"><span class="pre">A-Z</span></span>, <span class="docutils literal"><span class="pre">a-z</span></span>, <span class="docutils literal">/</span>, and <span class="docutils literal">+</span>. (We do not
+have any <span class="docutils literal">=</span> padding at the end because the string length is a multiple of 4.)</p>
+<p>As all tokens are stored in plain text on the server, the user may not choose
+the token value individually to prevent re-using passwords as tokens at deSEC.</p>
+<p>Old versions of deSEC encoded 20-byte tokens in 40 characters with hexadecimal
+representation. Such tokens will not be issued anymore, but remain valid until
+invalidated by the user.</p>
+</div>
+</div>
+<div class="section" id="password-recovery">
+<h2><a class="toc-backref" href="#id14">Password Recovery</a></h2>
+<p>To reset your account password, you will need to have access to your email
+account. It is a two step process. First, let us know you want to reset your
+password by issuing a POST request:</p>
+<pre class="literal-block">http POST \
+    https://desec.io/api/v1/auth/password/reset/ \
+    email:='&quot;youremail&#64;example.com&quot;'</pre>
+<p>The server will respond with <span class="docutils literal">204 No Content</span> regardless of whether the email
+address is known or not. If the email address has a user account associated,
+we will send an email containing a <span class="docutils literal">uid</span> and a <span class="docutils literal">token</span>, encoded into a
+URL that will look like this:</p>
+<pre class="literal-block">https://desec.io/#/password/reset/confirm/MQ/4zd-1d20102485862f7bae7b</pre>
+<p>In this example, the <span class="docutils literal">uid</span> is <span class="docutils literal">MQ</span>, and <span class="docutils literal"><span class="pre">4zd-1d...</span></span> is the <span class="docutils literal">token</span>. To
+reset your account password, issue a <span class="docutils literal">POST</span> request containing <span class="docutils literal">uid</span>,
+<span class="docutils literal">token</span> and the new password:</p>
+<pre class="literal-block">http POST \
+    https://desec.io/api/v1/auth/password/reset/confirm/ \
+    uid:='&quot;MQ&quot;'
+    token:='&quot;4zd-1d20102485862f7bae7b&quot;'
+    new_password:='&quot;your new password&quot;'</pre>
+<p>Please note that the password reset token and the API authentication token are
+unrelated and only coincidentally carry the same name. (Sorry about that!)</p>
+</div>
 </div>
 <div class="section" id="domain-management">
-<h1><a class="toc-backref" href="#id4">Domain Management</a></h1>
+<h1><a class="toc-backref" href="#id15">Domain Management</a></h1>
 <p>Domain management is done through the <span class="docutils literal">/api/v1/domains/</span> endpoint.  The
 following sections describe how to create, list, modify, and delete domains
 using JSON objects.  The structure of the JSON objects is detailed in the next
 section.</p>
 <div class="section" id="domain-field-reference">
-<span id="domain-object"></span><h2><a class="toc-backref" href="#id5">Domain Field Reference</a></h2>
+<span id="domain-object"></span><h2><a class="toc-backref" href="#id16">Domain Field Reference</a></h2>
 <p>A JSON object representing a domain has the following structure:</p>
 <pre class="literal-block">{
     &quot;name&quot;: &quot;example.com&quot;,
@@ -740,7 +960,7 @@ beginning of the name).  The maximum length is 191.</p>
 </dl>
 </div>
 <div class="section" id="creating-a-domain">
-<h2><a class="toc-backref" href="#id6">Creating a Domain</a></h2>
+<h2><a class="toc-backref" href="#id17">Creating a Domain</a></h2>
 <p>To create a new domain, issue a <span class="docutils literal">POST</span> request to the <span class="docutils literal">/api/v1/domains/</span>
 endpoint, like this:</p>
 <pre class="literal-block">http POST \
@@ -760,7 +980,7 @@ response body <em>may</em> provide further, human-readable information on the po
 violation that occurred.</p>
 </div>
 <div class="section" id="listing-domains">
-<h2><a class="toc-backref" href="#id7">Listing Domains</a></h2>
+<h2><a class="toc-backref" href="#id18">Listing Domains</a></h2>
 <p>The <span class="docutils literal">/api/v1/domains/</span> endpoint reponds to <span class="docutils literal">GET</span> requests with an array of
 <a class="reference internal" href="#domain-object">domain object</a>s. For example, you may issue the following command:</p>
 <pre class="literal-block">http GET \
@@ -771,7 +991,7 @@ violation that occurred.</p>
 any domains; in this case, the response body will be an empty JSON array.</p>
 </div>
 <div class="section" id="retrieving-a-specific-domain">
-<h2><a class="toc-backref" href="#id8">Retrieving a Specific Domain</a></h2>
+<h2><a class="toc-backref" href="#id19">Retrieving a Specific Domain</a></h2>
 <p>To retrieve a domain with a specific name, issue a <span class="docutils literal">GET</span> request with the
 <span class="docutils literal">name</span> appended to the <span class="docutils literal">domains/</span> endpoint, like this:</p>
 <pre class="literal-block">http GET \
@@ -783,14 +1003,14 @@ returns the domain object in the reponse body.  Otherwise, the return status
 code is <span class="docutils literal">404 Not Found</span>.</p>
 </div>
 <div class="section" id="deleting-a-domain">
-<h2><a class="toc-backref" href="#id9">Deleting a Domain</a></h2>
+<h2><a class="toc-backref" href="#id20">Deleting a Domain</a></h2>
 <p>To delete a domain, send a <span class="docutils literal">DELETE</span> request to the endpoint representing the
 domain.  Upon success or if the domain did not exist or was not yours in the
 first place, the response status code is <span class="docutils literal">204 No Content</span>.</p>
 </div>
 </div>
 <div class="section" id="retrieving-and-manipulating-dns-information">
-<h1><a class="toc-backref" href="#id10">Retrieving and Manipulating DNS Information</a></h1>
+<h1><a class="toc-backref" href="#id21">Retrieving and Manipulating DNS Information</a></h1>
 <p>All DNS information is composed of so-called <em>Resource Record Sets</em>
 (<em>RRsets</em>).  An RRset is the set of all Resource Records of a given record
 type for a given name.  For example, the name <span class="docutils literal">example.com</span> may have an
@@ -803,13 +1023,13 @@ as:</p>
 <p>Each of these lines is a Resource Record, and together they form an RRset.</p>
 <p>The basic units accessible through the API are RRsets, each represented by a
 JSON object.  The object structure is detailed in the next section.</p>
-<p>The relevant endpoints all reside under <span class="docutils literal"><span class="pre">/api/v1/domains/{domain}/rrsets/</span></span>,
-where <span class="docutils literal">{domain}</span> is the name of a domain you own.  When operating on domains
+<p>The relevant endpoints all reside under <span class="docutils literal"><span class="pre">/api/v1/domains/:name/rrsets/</span></span>,
+where <span class="docutils literal">:name</span> is the name of a domain you own.  When operating on domains
 that don't exist or you don't own, the API responds with a <span class="docutils literal">404 Not Found</span>
 status code.  For a quick overview of the available endpoints, methods, and
 operations, see <a class="reference internal" href="#endpoint-reference">Endpoint Reference</a>.</p>
 <div class="section" id="rrset-field-reference">
-<span id="rrset-object"></span><h2><a class="toc-backref" href="#id11">RRset Field Reference</a></h2>
+<span id="rrset-object"></span><h2><a class="toc-backref" href="#id22">RRset Field Reference</a></h2>
 <p>A JSON object representing an RRset has the following structure:</p>
 <pre class="literal-block">{
     &quot;domain&quot;: &quot;example.com&quot;,
@@ -845,7 +1065,7 @@ has a similar <span class="docutils literal">NS</span> RRset which, this time ho
 </dd>
 </dl>
 <p>The full DNS name of the RRset.  If <span class="docutils literal">subname</span> is empty, this is equal to
-<span class="docutils literal">{domain}.</span>, otherwise it is equal to <span class="docutils literal"><span class="pre">{subname}.{domain}.</span></span>.</p>
+<span class="docutils literal">:name.</span>, otherwise it is equal to <span class="docutils literal"><span class="pre">:subname.:name.</span></span>.</p>
 </dd>
 <dt><span class="docutils literal">records</span></dt>
 <dd><dl class="field-list simple">
@@ -853,9 +1073,14 @@ has a similar <span class="docutils literal">NS</span> RRset which, this time ho
 <dd><p>read, write</p>
 </dd>
 </dl>
-<p>Array of record content strings.  The maximum number of array elements is
-4091, and the maximum length of the array is 64,000 (after JSON encoding).
-Note the <a class="reference internal" href="#caveat-on-the-priority-field">caveat on the priority field</a>.</p>
+<p>Array of record content strings.  Please note that when a record value
+contains a domain name, it is in almost all cases required to add a final
+dot after the domain name.  This applies, for example, to the <span class="docutils literal">CNAME</span>,
+<span class="docutils literal">MX</span>, and <span class="docutils literal">SRV</span> record types.  A typical <span class="docutils literal">MX</span> value would thus be
+be <span class="docutils literal">10 mx.example.com.</span> (note the trailing dot).</p>
+<p>Please also consider the <a class="reference internal" href="#caveat-on-the-priority-field">caveat on the priority field</a>.</p>
+<p>The maximum number of array elements is 4091, and the maximum length of
+the array is 64,000 (after JSON encoding).</p>
 </dd>
 <dt><span class="docutils literal">subname</span></dt>
 <dd><dl class="field-list simple">
@@ -900,11 +1125,11 @@ cannot access the <span class="docutils literal">SOA</span>, see <a class="refer
 </dl>
 </div>
 <div class="section" id="creating-an-rrset">
-<h2><a class="toc-backref" href="#id12">Creating an RRset</a></h2>
+<h2><a class="toc-backref" href="#id23">Creating an RRset</a></h2>
 <p>To create a new RRset, simply issue a <span class="docutils literal">POST</span> request to the
-<span class="docutils literal"><span class="pre">/api/v1/domains/{domain}/rrsets/</span></span> endpoint, like this:</p>
+<span class="docutils literal"><span class="pre">/api/v1/domains/:name/rrsets/</span></span> endpoint, like this:</p>
 <pre class="literal-block">http POST \
-    https://desec.io/api/v1/domains/{domain}/rrsets/ \
+    https://desec.io/api/v1/domains/:name/rrsets/ \
     Authorization:&quot;Token {token}&quot; \
     subname:='&quot;www&quot;' type:='&quot;A&quot;' records:='[&quot;127.0.0.1&quot;,&quot;127.0.0.2&quot;]' ttl:=3600</pre>
 <p><span class="docutils literal">type</span>, <span class="docutils literal">records</span>, and <span class="docutils literal">ttl</span> are mandatory, whereas the <span class="docutils literal">subname</span>
@@ -923,7 +1148,7 @@ your shell or programming language may require another layer of quotes!  By
 contrast, <span class="docutils literal">ttl</span> is an integer field, so the JSON value does not contain
 quotes.</p>
 <div class="section" id="creating-a-tlsa-rrset">
-<h3><a class="toc-backref" href="#id13">Creating a TLSA RRset</a></h3>
+<h3><a class="toc-backref" href="#id24">Creating a TLSA RRset</a></h3>
 <p>A common use case is the creation of a <span class="docutils literal">TLSA</span> RRset which carries information
 about the TLS certificate used by the server that the domain points to.  For
 example, to create a <span class="docutils literal">TLSA</span> RRset for <span class="docutils literal">www.example.com</span>, you can run:</p>
@@ -943,14 +1168,14 @@ connected directly to our API in the future.  For full detail on how <span class
 records work, please refer to RFC 6698.</p>
 </div>
 <div class="section" id="bulk-creation-of-rrsets">
-<h3><a class="toc-backref" href="#id14">Bulk Creation of RRsets</a></h3>
+<h3><a class="toc-backref" href="#id25">Bulk Creation of RRsets</a></h3>
 <p>It is often desirable to create several RRsets at once.  This is achieved by
 sending an array of RRset objects to the <span class="docutils literal">rrsets/</span> endpoint (instead of just
 one), like this:</p>
-<pre class="literal-block">curl -X POST https://desec.io/api/v1/domains/{domain}/rrsets/ \
+<pre class="literal-block">curl -X POST https://desec.io/api/v1/domains/:name/rrsets/ \
     -H &quot;Content-Type: application/json&quot; -H &quot;Authorization: Token {token}&quot; \
-    -d '[{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;A&quot;, &quot;ttl&quot;: 3600, records: [&quot;1.2.3.4&quot;]},' \
-        '{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;AAAA&quot;, &quot;ttl&quot;: 3600, records: [&quot;c0::fefe&quot;]},' \
+    -d '[{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;A&quot;, &quot;ttl&quot;: 3600, &quot;records&quot;: [&quot;1.2.3.4&quot;]},' \
+        '{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;AAAA&quot;, &quot;ttl&quot;: 3600, &quot;records&quot;: [&quot;c0::fefe&quot;]},' \
         '...]'</pre>
 <p>This is especially useful for bootstrapping a new domain.</p>
 <p>For details about input validation and return status codes, please refer to
@@ -958,34 +1183,34 @@ one), like this:</p>
 </div>
 </div>
 <div class="section" id="retrieving-all-rrsets-in-a-zone">
-<h2><a class="toc-backref" href="#id15">Retrieving all RRsets in a Zone</a></h2>
-<p>The <span class="docutils literal"><span class="pre">/api/v1/domains/{domain}/rrsets/</span></span> endpoint reponds to <span class="docutils literal">GET</span> requests
+<h2><a class="toc-backref" href="#id26">Retrieving all RRsets in a Zone</a></h2>
+<p>The <span class="docutils literal"><span class="pre">/api/v1/domains/:name/rrsets/</span></span> endpoint reponds to <span class="docutils literal">GET</span> requests
 with an array of <a class="reference internal" href="#rrset-object">RRset object</a>s. For example, you may issue the following
 command:</p>
 <pre class="literal-block">http GET \
-    https://desec.io/api/v1/domains/{domain}/rrsets/ \
+    https://desec.io/api/v1/domains/:name/rrsets/ \
     Authorization:&quot;Token {token}&quot;</pre>
 <p>to retrieve the contents of a zone that you own.</p>
 <p>The response status code is <span class="docutils literal">200 OK</span>.  This is true also if there are no
 RRsets in the zone; in this case, the response body will be an empty JSON
 array.</p>
 <div class="section" id="filtering-by-record-type">
-<h3><a class="toc-backref" href="#id16">Filtering by Record Type</a></h3>
+<h3><a class="toc-backref" href="#id27">Filtering by Record Type</a></h3>
 <p>To retrieve an array of all RRsets from your zone that have a specific type
 (e.g. all <span class="docutils literal">A</span> records, regardless of <span class="docutils literal">subname</span>), augment the previous
 <span class="docutils literal">GET</span> request with a <span class="docutils literal">type</span> query parameter carrying the desired RRset type
 like:</p>
 <pre class="literal-block">http GET \
-    https://desec.io/api/v1/domains/{domain}/rrsets/?type={type} \
+    https://desec.io/api/v1/domains/:name/rrsets/?type=:type \
     Authorization:&quot;Token {token}&quot;</pre>
 </div>
 <div class="section" id="filtering-by-subname">
-<h3><a class="toc-backref" href="#id17">Filtering by Subname</a></h3>
+<h3><a class="toc-backref" href="#id28">Filtering by Subname</a></h3>
 <p>To filter the RRsets array by subname (e.g. to retrieve all records in the
 <span class="docutils literal">www</span> subdomain, regardless of their type), use the <span class="docutils literal">subname</span> query
 parameter, like this:</p>
 <pre class="literal-block">http GET \
-    https://desec.io/api/v1/domains/{domain}/rrsets/?subname={subname} \
+    https://desec.io/api/v1/domains/:name/rrsets/?subname=:subname \
     Authorization:&quot;Token {token}&quot;</pre>
 <p>This approach also allows to retrieve all records associated with the zone
 apex (i.e. <span class="docutils literal">example.com</span> where <span class="docutils literal">subname</span> is empty), by querying
@@ -993,34 +1218,34 @@ apex (i.e. <span class="docutils literal">example.com</span> where <span class="
 </div>
 </div>
 <div class="section" id="retrieving-a-specific-rrset">
-<h2><a class="toc-backref" href="#id18">Retrieving a Specific RRset</a></h2>
+<h2><a class="toc-backref" href="#id29">Retrieving a Specific RRset</a></h2>
 <p>To retrieve an RRset with a specific name and type from your zone (e.g. the
 <span class="docutils literal">A</span> record for the <span class="docutils literal">www</span> subdomain), issue a <span class="docutils literal">GET</span> request with the
 <span class="docutils literal">subname</span> information and the type appended to the <span class="docutils literal">rrsets/</span> endpoint,
 like this:</p>
 <pre class="literal-block">http GET \
-    https://desec.io/api/v1/domains/{domain}/rrsets/{subname}.../{type}/ \
+    https://desec.io/api/v1/domains/:name/rrsets/:subname.../:type/ \
     Authorization:&quot;Token {token}&quot;</pre>
 <p>This will return only one RRset (i.e., the response is not a JSON array).  The
 response status code is <span class="docutils literal">200 OK</span> if the requested RRset exists, and <span class="docutils literal">404 Not Found</span> otherwise.</p>
-<p>Note the three dots after <span class="docutils literal">{subname}</span>.  You can think of them as abbreviating
+<p>Note the three dots after <span class="docutils literal">:subname</span>.  You can think of them as abbreviating
 the rest of the DNS name.  To retrieve all records associated with the zone
 apex (i.e. <span class="docutils literal">example.com</span> where <span class="docutils literal">subname</span> is empty), simply use
 <span class="docutils literal"><span class="pre">rrsets/.../</span></span>.</p>
 </div>
 <div class="section" id="modifying-an-rrset">
-<h2><a class="toc-backref" href="#id19">Modifying an RRset</a></h2>
+<h2><a class="toc-backref" href="#id30">Modifying an RRset</a></h2>
 <p>To modify an RRset, use the endpoint that you would also use to retrieve that
 specific RRset.  The API allows changing the values of <span class="docutils literal">records</span> and
 <span class="docutils literal">ttl</span>.  When using the <span class="docutils literal">PATCH</span> method, only fields you would like to modify
 need to be provided, where the <span class="docutils literal">PUT</span> method requires specification of both
 fields.  Examples:</p>
 <pre class="literal-block">http PUT \
-    https://desec.io/api/v1/domains/{domain}/rrsets/{subname}.../{type}/ \
+    https://desec.io/api/v1/domains/:name/rrsets/:subname.../:type/ \
     Authorization:&quot;Token {token}&quot; records:='[&quot;127.0.0.1&quot;]' ttl:=3600
 
 http PATCH \
-    https://desec.io/api/v1/domains/{domain}/rrsets/{subname}.../{type}/ \
+    https://desec.io/api/v1/domains/:name/rrsets/:subname.../:type/ \
     Authorization:&quot;Token {token}&quot; ttl:=86400</pre>
 <p>If the RRset was updated successfully, the API returns <span class="docutils literal">200 OK</span> with the
 updated RRset in the reponse body.  If there is a syntactical error (e.g. not
@@ -1030,14 +1255,14 @@ invalid (e.g. when you provide an unknown record type, or an <cite>A</cite> valu
 not an IPv4 address), <span class="docutils literal">422 Unprocessable Entity</span> is returned.  If the RRset
 does not exist, <span class="docutils literal">404 Not Found</span> is returned.</p>
 <div class="section" id="bulk-modification-of-rrsets">
-<h3><a class="toc-backref" href="#id20">Bulk Modification of RRsets</a></h3>
+<h3><a class="toc-backref" href="#id31">Bulk Modification of RRsets</a></h3>
 <p>It is sometimes desirable to modify several RRsets at once.  This is achieved
 by sending an array of RRset objects to the <span class="docutils literal">rrsets/</span> endpoint (instead of
 just one), like this:</p>
-<pre class="literal-block">curl -X PUT https://desec.io/api/v1/domains/{domain}/rrsets/ \
+<pre class="literal-block">curl -X PUT https://desec.io/api/v1/domains/:name/rrsets/ \
     -H &quot;Content-Type: application/json&quot; -H &quot;Authorization: Token {token}&quot; \
-    -d '[{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;A&quot;, &quot;ttl&quot;: 3600, records: [&quot;1.2.3.4&quot;]},' \
-        '{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;AAAA&quot;, &quot;ttl&quot;: 3600, records: [&quot;c0::fefe&quot;]},' \
+    -d '[{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;A&quot;, &quot;ttl&quot;: 3600, &quot;records&quot;: [&quot;1.2.3.4&quot;]},' \
+        '{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;AAAA&quot;, &quot;ttl&quot;: 3600, &quot;records&quot;: [&quot;c0::fefe&quot;]},' \
         '...]'</pre>
 <p><span class="docutils literal">subname</span> and <span class="docutils literal">type</span> must be specified for each given RRset.  For <span class="docutils literal">ttl</span>
 and <span class="docutils literal">records</span>, the usual rules apply.</p>
@@ -1046,39 +1271,39 @@ and <span class="docutils literal">records</span>, the usual rules apply.</p>
 </div>
 </div>
 <div class="section" id="deleting-an-rrset">
-<h2><a class="toc-backref" href="#id21">Deleting an RRset</a></h2>
+<h2><a class="toc-backref" href="#id32">Deleting an RRset</a></h2>
 <p>To delete an RRset, you can send a <span class="docutils literal">DELETE</span> request to the endpoint
 representing the RRset. Alternatively, you can modify it and provide an empty
 array for the <span class="docutils literal">records</span> field (<span class="docutils literal">[]</span>).</p>
 <p>Upon success or if the RRset did not exist in the first place, the response
 status code is <span class="docutils literal">204 No Content</span>.</p>
 <div class="section" id="bulk-deletion-of-rrsets">
-<h3><a class="toc-backref" href="#id22">Bulk Deletion of RRsets</a></h3>
+<h3><a class="toc-backref" href="#id33">Bulk Deletion of RRsets</a></h3>
 <p>It is sometimes desirable to delete RRsets as using a bulk request.  This is
 achieved by sending the RRset with an empty records list <span class="docutils literal">[]</span> to the
 <span class="docutils literal">rrsets/</span> endpoint, using the <span class="docutils literal">PATCH</span> or <span class="docutils literal">PUT</span> method:</p>
-<pre class="literal-block">curl -X PATCH https://desec.io/api/v1/domains/{domain}/rrsets/ \
+<pre class="literal-block">curl -X PATCH https://desec.io/api/v1/domains/:name/rrsets/ \
     -H &quot;Content-Type: application/json&quot; -H &quot;Authorization: Token {token}&quot; \
-    -d '[{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;A&quot;, &quot;ttl&quot;: 3600, records: [&quot;1.2.3.4&quot;]},' \
-        '{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;AAAA&quot;, records: []},' \
+    -d '[{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;A&quot;, &quot;ttl&quot;: 3600, &quot;records&quot;: [&quot;1.2.3.4&quot;]},' \
+        '{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;AAAA&quot;, &quot;records&quot;: []},' \
         '...]'</pre>
 <p>For details about input validation and return status codes, please refer to
 <a class="reference internal" href="#bulk-operations">Bulk Operations</a>.</p>
 </div>
 </div>
 <div class="section" id="bulk-operations">
-<h2><a class="toc-backref" href="#id23">Bulk Operations</a></h2>
+<h2><a class="toc-backref" href="#id34">Bulk Operations</a></h2>
 <p>The <span class="docutils literal">rrsets/</span> endpoint supports bulk operations via the <span class="docutils literal">POST</span>, <span class="docutils literal">PATCH</span>,
 and <span class="docutils literal">PUT</span> request methods. You can simply send an array of RRset objects
 (instead of just one), like this:</p>
-<pre class="literal-block">curl -X PATCH https://desec.io/api/v1/domains/{domain}/rrsets/ \
+<pre class="literal-block">curl -X PATCH https://desec.io/api/v1/domains/:name/rrsets/ \
     -H &quot;Content-Type: application/json&quot; -H &quot;Authorization: Token {token}&quot; \
-    -d '[{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;A&quot;,    &quot;ttl&quot;: 3600, records: [&quot;1.2.3.4&quot;]},' \
-        '{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;AAAA&quot;, &quot;ttl&quot;: 3600, records: [&quot;c0::fefe&quot;, &quot;c0ff::ee&quot;]},' \
-        '{&quot;subname&quot;: &quot;backup&quot;, &quot;type&quot;: &quot;MX&quot;, records: []},' \
+    -d '[{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;A&quot;,    &quot;ttl&quot;: 3600, &quot;records&quot;: [&quot;1.2.3.4&quot;]},' \
+        '{&quot;subname&quot;: &quot;www&quot;, &quot;type&quot;: &quot;AAAA&quot;, &quot;ttl&quot;: 3600, &quot;records&quot;: [&quot;c0::fefe&quot;, &quot;c0ff::ee&quot;]},' \
+        '{&quot;subname&quot;: &quot;backup&quot;, &quot;type&quot;: &quot;MX&quot;, &quot;records&quot;: []},' \
         '...]'</pre>
 <div class="section" id="atomicity">
-<h3><a class="toc-backref" href="#id24">Atomicity</a></h3>
+<h3><a class="toc-backref" href="#id35">Atomicity</a></h3>
 <p>Bulk operations are performed atomically, i.e. either all given RRsets are
 accepted and published in (or deleted from) the DNS, or none of them are.</p>
 <p>This allows you to smoothly apply large DNS changes to your domain <em>without</em>
@@ -1086,7 +1311,7 @@ running into the undesirable situation of an error showing up half-way through
 the process when some changes already have been applied.</p>
 </div>
 <div class="section" id="field-requirements">
-<h3><a class="toc-backref" href="#id25">Field requirements</a></h3>
+<h3><a class="toc-backref" href="#id36">Field requirements</a></h3>
 <p>In all cases, the <span class="docutils literal">subname</span> field is optional.  If missing, the empty subname
 is assumed.</p>
 <p>For the <span class="docutils literal">POST</span> and <span class="docutils literal">PUT</span> methods, all other fields are required for each
@@ -1100,7 +1325,7 @@ using <span class="docutils literal">PATCH</span>, all fields but <span class="d
 records to <span class="docutils literal">[]</span>.</p>
 </div>
 <div class="section" id="input-validation">
-<h3><a class="toc-backref" href="#id26">Input validation</a></h3>
+<h3><a class="toc-backref" href="#id37">Input validation</a></h3>
 <p>For efficiency and other reasons, there are three stages of input validation:</p>
 <ol class="arabic simple">
 <li><p>Basic syntactical and semantical checks for missing JSON fields, negative
@@ -1130,7 +1355,7 @@ status code <span class="docutils literal">422</span>.</p>
 </div>
 </div>
 <div class="section" id="notes">
-<h2><a class="toc-backref" href="#id27">Notes</a></h2>
+<h2><a class="toc-backref" href="#id38">Notes</a></h2>
 <p>Consider the following general remarks that apply to our API as a whole:</p>
 <ul class="simple">
 <li><p>All operations are performed on RRsets, not on the individual Resource
@@ -1148,12 +1373,15 @@ Thus, these restrictions are not limitations from a practical point of view.
 Furthermore, special care needs to be taken with some types of records, as
 explained below.</p>
 <div class="section" id="restricted-types">
-<h3><a class="toc-backref" href="#id28">Restricted Types</a></h3>
-<p><strong>Note:</strong>  Some record types are supported by the API, but not currently
-served by our nameservers (such as <span class="docutils literal">ALIAS</span> or <span class="docutils literal">DNAME</span>).  If you wish to
-use such record types, shoot us an email.  In most cases, it should not be a
-problem to enable such functionality.</p>
+<h3><a class="toc-backref" href="#id39">Restricted Types</a></h3>
 <dl class="simple">
+<dt><span class="docutils literal">ALIAS</span>, <span class="docutils literal">DNAME</span></dt>
+<dd><p>These record types are used very rarely in the wild.  Due to conflicts with
+the security guarantees we would like to give, these record types are
+disabled in our API.  If you attempt to create such RRsets, you will receive
+a <span class="docutils literal">400 Bad Request</span> response.  In case you have a good reason for using
+these record types, shoot us an email and we can discuss your case.</p>
+</dd>
 <dt><span class="docutils literal">DNSKEY</span>, <span class="docutils literal">NSEC3PARAM</span>, <span class="docutils literal">RRSIG</span></dt>
 <dd><p>These record types are meant to provide DNSSEC-related information in
 order to secure the data stored in your zones.  RRsets of this type are
@@ -1177,7 +1405,7 @@ it using a standard DNS query.</p>
 </dl>
 </div>
 <div class="section" id="caveats">
-<h3><a class="toc-backref" href="#id29">Caveats</a></h3>
+<h3><a class="toc-backref" href="#id40">Caveats</a></h3>
 <dl id="caveat-on-the-priority-field">
 <dt>Record types with priority field</dt>
 <dd><p>The deSEC DNS API does not explicitly support structured records fields
@@ -1231,7 +1459,7 @@ Thus, when <span class="docutils literal">POST</span>ing to the API, make sure t
 as required by the client you are using.  Here's an example of how to
 create a <span class="docutils literal">TXT</span> RRset with HTTPie:</p>
 <pre class="literal-block">http POST \
-    https://desec.io/api/v1/domains/{domain}/rrsets/ \
+    https://desec.io/api/v1/domains/:name/rrsets/ \
     Authorization:&quot;Token {token}&quot; \
     type:='&quot;TXT&quot;' records:='[&quot;\&quot;test value1\&quot;&quot;,&quot;\&quot;value2\&quot;&quot;]' ttl:=3600</pre>
 </dd>
@@ -1240,11 +1468,57 @@ create a <span class="docutils literal">TXT</span> RRset with HTTPie:</p>
 </div>
 </div>
 <div class="section" id="endpoint-reference">
-<h1><a class="toc-backref" href="#id30">Endpoint Reference</a></h1>
-<p>Endpoints related to <a class="reference internal" href="#user-registration-and-management">User Registration and Management</a> are described in the
-<a class="reference external" href="https://djoser.readthedocs.io/en/latest/getting_started.html#available-endpoints">djoser endpoint documentation</a>.  The following table summarizes basic
-information about the deSEC API endpoints used for <a class="reference internal" href="#domain-management">Domain Management</a> and
-<a class="reference internal" href="#retrieving-and-manipulating-dns-information">Retrieving and Manipulating DNS Information</a>.</p>
+<h1><a class="toc-backref" href="#id41">Endpoint Reference</a></h1>
+<p>The following table summarizes basic information about the deSEC API endpoints used
+for <a class="reference internal" href="#user-registration-and-management">User Registration and Management</a>.</p>
+<table>
+<colgroup>
+<col style="width: 46%" />
+<col style="width: 11%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr><th class="head"><p>Endpoint <span class="docutils literal">/api/v1</span>...</p></th>
+<th class="head"><p>Methods</p></th>
+<th class="head"><p>Use case</p></th>
+</tr>
+</thead>
+<tbody>
+<tr><td><p>...<span class="docutils literal">/auth/users/create/</span></p></td>
+<td><p><span class="docutils literal">POST</span></p></td>
+<td><p>Create user account</p></td>
+</tr>
+<tr><td><p>...<span class="docutils literal">/auth/password/reset/</span></p></td>
+<td><p><span class="docutils literal">POST</span></p></td>
+<td><p>Request password reset</p></td>
+</tr>
+<tr><td><p>...<span class="docutils literal">/auth/password/reset/confirm/</span></p></td>
+<td><p><span class="docutils literal">POST</span></p></td>
+<td><p>Confirm password reset</p></td>
+</tr>
+<tr><td><p>...<span class="docutils literal">/auth/token/create/</span></p></td>
+<td><p><span class="docutils literal">POST</span></p></td>
+<td><p>Log in and request authentication token</p></td>
+</tr>
+<tr><td><p>...<span class="docutils literal">/auth/token/destroy/</span></p></td>
+<td><p><span class="docutils literal">POST</span></p></td>
+<td><p>Log out and destroy authentication token</p></td>
+</tr>
+<tr><td rowspan="2"><p>...<span class="docutils literal">/tokens/</span></p></td>
+<td><p><span class="docutils literal">GET</span></p></td>
+<td><p>Retrieve all current tokens</p></td>
+</tr>
+<tr><td><p><span class="docutils literal">POST</span></p></td>
+<td><p>Create new token</p></td>
+</tr>
+<tr><td><p>...<span class="docutils literal"><span class="pre">/tokens/:id/</span></span></p></td>
+<td><p><span class="docutils literal">DELETE</span></p></td>
+<td><p>Delete token</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following table summarizes basic information about the deSEC API endpoints used
+for <a class="reference internal" href="#domain-management">Domain Management</a> and <a class="reference internal" href="#retrieving-and-manipulating-dns-information">Retrieving and Manipulating DNS Information</a>.</p>
 <table>
 <colgroup>
 <col style="width: 46%" />
@@ -1265,7 +1539,7 @@ information about the deSEC API endpoints used for <a class="reference internal"
 <tr><td><p><span class="docutils literal">POST</span></p></td>
 <td><p>Create a domain</p></td>
 </tr>
-<tr><td rowspan="3"><p>...<span class="docutils literal">/{domain}/</span></p></td>
+<tr><td rowspan="3"><p>...<span class="docutils literal">/:name/</span></p></td>
 <td><p><span class="docutils literal">GET</span></p></td>
 <td><p>Retrieve a specific domain</p></td>
 </tr>
@@ -1275,7 +1549,7 @@ information about the deSEC API endpoints used for <a class="reference internal"
 <tr><td><p><span class="docutils literal">DELETE</span></p></td>
 <td><p>Delete a domain</p></td>
 </tr>
-<tr><td rowspan="4"><p>...<span class="docutils literal"><span class="pre">/{domain}/rrsets/</span></span></p></td>
+<tr><td rowspan="4"><p>...<span class="docutils literal">/:name/rrsets/</span></p></td>
 <td><p><span class="docutils literal">GET</span></p></td>
 <td><p>Retrieve all RRsets from <span class="docutils literal">domain</span>, filter
 by <span class="docutils literal">subname</span> or <span class="docutils literal">type</span> query parameter</p></td>
@@ -1289,7 +1563,7 @@ by <span class="docutils literal">subname</span> or <span class="docutils litera
 <tr><td><p><span class="docutils literal">PUT</span></p></td>
 <td><p>Create, modify or delete one or more RRsets</p></td>
 </tr>
-<tr><td rowspan="4"><p>...<span class="docutils literal"><span class="pre">/{domain}/rrsets/{subname}.../{type}/</span></span></p></td>
+<tr><td rowspan="4"><p>...<span class="docutils literal"><span class="pre">/:name/rrsets/:subname.../:type/</span></span></p></td>
 <td><p><span class="docutils literal">GET</span></p></td>
 <td><p>Retrieve a specific RRset</p></td>
 </tr>
@@ -1306,19 +1580,19 @@ by <span class="docutils literal">subname</span> or <span class="docutils litera
 </table>
 </div>
 <div class="section" id="getting-help">
-<h1><a class="toc-backref" href="#id31">Getting Help</a></h1>
+<h1><a class="toc-backref" href="#id42">Getting Help</a></h1>
 <p>If you need help beyond this documentation, please do not hesitate and
 shoot us an email at <a class="reference external" href="mailto:support&#64;desec.io">support&#64;desec.io</a>.</p>
 </div>
 <div class="section" id="about-this-document">
-<h1><a class="toc-backref" href="#id32">About this document</a></h1>
+<h1><a class="toc-backref" href="#id43">About this document</a></h1>
 <p>To add to our documentation or fix a mistake, please submit a Pull Request
 at <a class="reference external" href="https://github.com/desec-io/desec-stack">https://github.com/desec-io/desec-stack</a>.</p>
 </div>
 </div>
 <div class="footer">
 <hr class="footer" />
-<p>Generated on: 2018-05-04.
+<p>Generated on: 2018-09-07.
 </p>
 
 </div>
