@@ -31,7 +31,7 @@
                     "placeholder": ""
                 },
                 "name": {
-                    "label": "Accout holder",
+                    "label": "Account holder",
                     "placeholder": "Full name",
                     "required": "Input required"
                 },
@@ -131,7 +131,7 @@
     },
     "footer": {
         "contact": "Contact",
-        "content": "© 2019 deSEC, Berlin",
+        "content": "© 2019 deSEC Verein, Berlin",
         "imprint": "Imprint",
         "privacyPolicy": "Privacy Policy"
     },
@@ -181,7 +181,7 @@
     },
     "product": {
         "dnshosting": {
-            "content": "\u003cp\u003eOur managed DNS hosting service comes with supreme security technologies as well as with a user-friendly interface and high availability. DNSSEC, DANE, IPv6, and REST API access are included. Just give it try!\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eOur free beta test is now available.\u003c/strong\u003e All features are stable and ready for use, with the exception of the graphical user interface which will follow later on. You can use our \u003ca href=\"/docs.html\"\u003ewell-documented\u003c/a\u003e REST API for now.\u003c/p\u003e\n\n\u003cp\u003eInterested? Sign up right here! And if you like our service, please consider \u003ca href=\"/#!/en/donation\"\u003edonating\u003c/a\u003e while it's free.\u003c/p\u003e",
+            "content": "\u003cp\u003eOur managed DNS hosting service comes with supreme security technologies as well as with a user-friendly interface and high availability. DNSSEC, DANE, IPv6, and REST API access are included. Just give it try!\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eOur free beta test is now available.\u003c/strong\u003e All features are stable and ready for use, with the exception of the graphical user interface which will follow later on. You can use our \u003ca href=\"https://desec.readthedocs.org/\"\u003ewell-documented\u003c/a\u003e REST API for now.\u003c/p\u003e\n\n\u003cp\u003eInterested? Sign up right here! And if you like our service, please consider \u003ca href=\"/#!/en/donation\"\u003edonating\u003c/a\u003e as it's free.\u003c/p\u003e",
             "title": "\u003cspan class=\"icon-earth\"\u003e\u003c/span\u003eDNS Hosting"
         },
         "dyndns": {

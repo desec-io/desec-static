@@ -131,7 +131,7 @@
     },
     "footer": {
         "contact": "Kontakt",
-        "content": "© 2019 deSEC, Berlin",
+        "content": "© 2019 deSEC Verein, Berlin",
         "imprint": "Impressum",
         "privacyPolicy": "Datenschutzerklärung"
     },
@@ -181,7 +181,7 @@
     },
     "product": {
         "dnshosting": {
-            "content": "\u003cp\u003eUnser Managed DNS Hosting Service bietet Ihnen neben den neuesten Sicherheitsstandards ein benutzerfreundliches Interface und hohe Verfügbarkeit. DNSSEC, DANE, IPv6 und REST API sind enthalten. Probieren Sie es aus!\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eUnser kostenloser Beta-Test ist nun verfügbar.\u003c/strong\u003e Alle Features sind stabil benutzbar, mit Ausnahme der grafischen Benutzeroberfläche, welche später folgen wird. In der Zwischenzeit können Sie bereits unsere \u003ca href=\"/docs.html\"\u003egut dokumentierte\u003c/a\u003e REST-API nutzen.\u003c/p\u003e\n\n\u003cp\u003eInteressiert? Melden Sie sich hier an! Und wenn Ihnen unser Dienst gefällt, würde wir uns über eine kleine \u003ca href=\"/#!/de/donation\"\u003eSpende\u003c/a\u003e freuen, solange er kostenlos ist.\u003c/p\u003e",
+            "content": "\u003cp\u003eUnser Managed DNS Hosting Service bietet Ihnen neben den neuesten Sicherheitsstandards ein benutzerfreundliches Interface und hohe Verfügbarkeit. DNSSEC, DANE, IPv6 und REST API sind enthalten. Probieren Sie es aus!\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eUnser kostenloser Beta-Test ist nun verfügbar.\u003c/strong\u003e Alle Features sind stabil benutzbar, mit Ausnahme der grafischen Benutzeroberfläche, welche später folgen wird. In der Zwischenzeit können Sie bereits unsere \u003ca href=\"https://desec.readthedocs.org/\"\u003egut dokumentierte\u003c/a\u003e REST-API nutzen.\u003c/p\u003e\n\n\u003cp\u003eInteressiert? Melden Sie sich hier an! Und wenn Ihnen unser Dienst gefällt, würde wir uns über eine kleine \u003ca href=\"/#!/de/donation\"\u003eSpende\u003c/a\u003e freuen, solange er kostenlos ist.\u003c/p\u003e",
             "title": "\u003cspan class=\"icon-earth\"\u003e\u003c/span\u003eDNS Hosting"
         },
         "dyndns": {
