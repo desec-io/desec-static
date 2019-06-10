@@ -22,4 +22,6 @@ COPY Gruntfile.js ./
 COPY app ./app
 RUN grunt build
 
+COPY security-headers.conf /etc/nginx/conf.d/
+
 RUN cp -a dist/. /usr/share/nginx/html && rm -rf /usr/src/app
