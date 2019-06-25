@@ -1,4 +1,5 @@
-FROM nginx:stable
+ARG DOCKER_REGISTRY
+FROM ${DOCKER_REGISTRY}nginx:stable
 
 RUN apt-get update \
 	&& apt-get install -y curl gnupg \
