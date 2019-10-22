@@ -5,9 +5,9 @@ RUN apt-get update \
 	&& apt-get install -y curl gnupg \
 	&& curl -sL https://deb.nodesource.com/setup_6.x | bash - \
 	&& apt-get update \
-	&& apt-get install -y --no-install-recommends bzip2 git nodejs ruby-compass \
+	&& apt-get install -y --no-install-recommends bzip2 git nodejs npm compass-blueprint-plugin \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/* \
-	&& npm install -g grunt grunt-cli karma bower
+	&& npm install -g grunt grunt-cli bower
 
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
